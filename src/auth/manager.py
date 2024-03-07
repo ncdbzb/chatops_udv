@@ -1,7 +1,7 @@
 import jwt
 from typing import Optional
 
-from fastapi import Depends, Request
+from fastapi import Depends, Request, Response
 from fastapi_users import BaseUserManager, exceptions, IntegerIDMixin, models, schemas, InvalidPasswordException
 from fastapi_users.jwt import generate_jwt, decode_jwt
 
@@ -101,6 +101,11 @@ class UserManager(IntegerIDMixin, BaseUserManager[AuthUser, int]):
         user_dict["hashed_password"] = self.password_helper.hash(password)
 
         user_dict.pop("confirmation_password")
+        user_dict["is_active"] = True
+        user_dict["is_superuser"] = False
+        user_dict["is_verified"] = False
+        if 'company_representative' not in user_dict:
+            user_dict["company_representative"] = False
 
         created_user = await self.user_db.create(user_dict)
 
@@ -159,6 +164,24 @@ class UserManager(IntegerIDMixin, BaseUserManager[AuthUser, int]):
         await self.on_after_verify(verified_user, request)
 
         return verified_user
+
+    async def on_after_login(
+        self,
+        user: models.UP,
+        request: Optional[Request] = None,
+        response: Optional[Response] = None,
+    ) -> None:
+        """
+        Perform logic after user login.
+
+        *You should overload this method to add your own logic.*
+
+        :param user: The user that is logging in
+        :param request: Optional FastAPI request
+        :param response: Optional response built by the transport.
+        Defaults to None
+        """
+        return  # pragma: no cover
 
 
 async def get_user_manager(user_db=Depends(get_user_db)):

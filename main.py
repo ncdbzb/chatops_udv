@@ -7,13 +7,19 @@ from src.auth.schemas import UserRead, UserCreate, UserUpdate
 from src.auth.routers.verify_router import router as verify_router
 from src.auth.routers.forgot_pass_router import router as forgot_pass_router
 from src.docs.router import router as upload_docs_router
+from src.llm_service.utils import send_data_to_llm
 
 app = FastAPI(
-    title="UDV LLM"
+    title="UDV LLM",
 )
 
 origins = [
     "http://localhost:3000",
+    "http://localhost:3000/signUp",
+    "http://localhost:8001",
+    "http://localhost:3000/logIn",
+    "http://localhost:3000/request",
+
 ]
 
 app.add_middleware(
@@ -26,7 +32,7 @@ app.add_middleware(
 )
 
 app.include_router(
-    fastapi_users.get_auth_router(auth_backend),
+    fastapi_users.get_auth_router(auth_backend, requires_verification=True),
     prefix="/auth",
     tags=["Auth"],
 )
@@ -35,16 +41,6 @@ app.include_router(
     prefix="/auth",
     tags=["Auth"],
 )
-# app.include_router(
-#     fastapi_users.get_reset_password_router(),
-#     prefix="/auth",
-#     tags=["Auth"],
-# )
-# app.include_router(
-#     fastapi_users.get_verify_router(UserRead),
-#     prefix="/auth",
-#     tags=["Auth"],
-# )
 app.include_router(
     fastapi_users.get_users_router(UserRead, UserUpdate),
     prefix="/users",
@@ -72,9 +68,16 @@ async def hello():
     return {'result': 'start_page'}
 
 
-@app.post('/test1')
-async def hello(numQuestions: str):
-    return {'result': numQuestions}
+@app.post("/get_answer")
+async def send_data(data: dict):
+    result = await send_data_to_llm('process_questions', data)
+    return {"result_from_gigachatAPI": result}
+
+
+@app.post("/get_test")
+async def send_data(data: dict):
+    result = await send_data_to_llm('process_data', data)
+    return {"result_from_gigachatAPI": result}
 
 
 @app.get("/protected-route")

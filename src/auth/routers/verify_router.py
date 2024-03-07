@@ -4,7 +4,6 @@ from fastapi_users import exceptions, models
 from fastapi_users.manager import BaseUserManager
 from fastapi_users.router.common import ErrorCode, ErrorModel
 
-from src.auth.schemas import UserRead as user_schema
 from src.auth.manager import get_user_manager
 
 
@@ -13,7 +12,6 @@ router = APIRouter()
 
 @router.get(
     "/verify/{token}",
-    response_model=user_schema,
     name="verify:verify",
     responses={
         status.HTTP_400_BAD_REQUEST: {
@@ -44,8 +42,7 @@ async def verify(
     user_manager: BaseUserManager[models.UP, models.ID] = Depends(get_user_manager),
 ):
     try:
-        user = await user_manager.verify(token, request)
-        # return schemas.model_validate(user_schema, user)
+        await user_manager.verify(token, request)
         return {
             "status_code": 200,
             "data": "Successful verification!",
