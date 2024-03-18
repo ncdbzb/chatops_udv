@@ -1,18 +1,27 @@
-version: '3'
+version: '3.8'
 services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    env_file:
+      - .env
+    environment:
+      DB_PASS: ${DB_PASS}
+    command: -p 5433
+    expose:
+      - 5433
+
   fastapi:
     build:
       context: .
+      dockerfile: Dockerfile.api
     env_file:
       - .env
+    container_name: fastapi_app
+    command: ["/chatops_udv/docker/app.sh"]
+    restart: always
     ports:
       - "8000:8000"
     depends_on:
       - db
-  db:
-    image: postgres:latest
-    container_name: postgres_db
-    ports:
-      - "5433:5433"
-    env_file:
-      - .env
