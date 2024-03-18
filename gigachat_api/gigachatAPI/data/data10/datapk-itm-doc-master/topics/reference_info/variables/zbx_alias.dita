@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_alias">
+    <glossterm>ZBX_ALIAS</glossterm>
+    <glossdef><p>Задает псевдоним ключу элемента данных. Его можно использовать для замены длинных и
+            сложных ключей элементов данных на более простые и короткие. Можно добавлять несколько
+            параметров псевдонима. Разрешено указывать несколько параметров с одинаковым ключом
+            Alias. Несколько ключей Alias могут ссылаться на один и тот же ключ. Псевдонимы можно
+            использовать в HostMetadataItem, но нельзя в HostnameItem параметрах.</p><b>Значение в
+            конфигурации ITM-K при поставке:</b>""</glossdef>
+</glossentry>

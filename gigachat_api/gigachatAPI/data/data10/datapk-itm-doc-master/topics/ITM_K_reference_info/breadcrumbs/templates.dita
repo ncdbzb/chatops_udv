@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="templates">
+    <glossterm>Шаблоны</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Шаблоны»</title>
+            <image href="../../../images/Pages/configuration_templates.png" id="configuration_templates">
+                <alt>Страница «Шаблоны»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

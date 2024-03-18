@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="postgres_user">
+    <glossterm>POSTGRES_USER</glossterm>
+    <glossdef><p>Имя пользователя для управления базой данных DATAPK ITM.</p><p> Рекомендуется
+            вместо данной переменной использовать переменную POSTGRES_USER_FILE для указания ссылки
+            на файл с именем пользователя БД.</p><b>Значение в конфигурации ITM-K при
+                поставке:</b>datapkitm
+            <note type="tip">Рекомендуется закомментировать и не
+            использовать данную переменную при установке Jatoba в качестве СУБД для DATAPK ITM –
+            СУБД Jatoba использует файл .POSTGRES_USER для определения имени пользователя
+        БД.</note></glossdef>
+</glossentry>

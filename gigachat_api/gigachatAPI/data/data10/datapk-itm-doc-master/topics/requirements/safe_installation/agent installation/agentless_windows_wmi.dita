@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agentless_windows_wmi">
+    <title>Настройка безагентного сбора на ОС Windows с помощью протокола WMI</title>
+    <taskbody>
+        <prereq><note>ОМ, на котором ранее был настроен сбор по WMI для DATAPK, не требует дополнительной настройки
+                WMI для DATAPK ITM-K.</note></prereq>
+        <context>Для настройки безагентного сбора на ОС Windows с помощью протокола WMI:</context>
+        <steps>
+            <step>
+                <cmd>На <term keyref="monitoring_object">объекте мониторинга</term> добавьте учетную
+                    запись (УЗ) для сбора данных и предоставьте права.</cmd>
+            </step>
+            <step>
+                <cmd>В брандмауэре отредактируйте настройки профиля у правил для «Инструментария
+                    управления Windows».</cmd>
+            </step>
+            <step>
+                <cmd>Измените тип подключения через реестр.</cmd>
+            </step>
+            <step>
+                <cmd>Измените политики для неопознанных сетей.</cmd>
+            </step>
+            <step>
+                <cmd>Перезагрузите ОС и зайдите под созданной УЗ.</cmd>
+            </step>
+        </steps>
+        <postreq><p>Подробная настройка <term keyref="monitoring_object">объектов мониторинга</term> в
+            веб-интерфейсе описана в разделе<xref
+                href="../../../usage/monitoring%20objects%20and%20hosts/monitoring_objects_hosts.dita">
+                «Объекты мониторинга. Узлы сети»</xref>.</p></postreq>
+    </taskbody>
+</task>

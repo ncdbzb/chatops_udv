@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hardware_requirements">
+    <title>Требования к аппаратному обеспечению</title>
+    <body>
+        <p>В таблице  приведены требования к аппаратному обеспечению уровней филиала и
+            предприятия.</p>
+      
+        <table id="table_rk5_1vm_frb" frame="all" rowsep="1" colsep="1">
+            <title>Системные требования для аппаратной платформы DATAPK ITM уровней филиала и
+                предприятия</title>
+            <tgroup cols="7">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <colspec colnum="3" colname="col3"/>
+                <colspec colnum="4" colname="col4"/>
+                <colspec colnum="5" colname="col5"/>
+                <colspec colnum="6" colname="col6"/>
+                <colspec colnum="7" colname="col7"/>
+                <tbody>
+                    <row valign="top">
+                        <entry><b>Вариант исполнения</b></entry>
+                        <entry><b>Суммарный объем объектов мониторинга с учетом подчиненных
+                                серверов</b></entry>
+                        <entry>
+                            <p><b>Кол-во CPU (шт.) / кол-во ядер (шт.) / частота (ГГц)</b></p>
+                        </entry>
+                        <entry><b>Объем ОЗУ</b></entry>
+                        <entry><b>Объем дисковой подсистемы</b></entry>
+                        <entry><b>Объем дисковой подсистемы для ОС</b></entry>
+                        <entry><b>Сетевой адаптер</b></entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Средняя инсталляция</entry>
+                        <entry>Менее 2500 </entry>
+                        <entry>
+                            <p>1 CPU</p>
+                            <p>4 </p>
+                            <p>2.1 ГГц</p>
+                        </entry>
+                        <entry>32</entry>
+                        <entry>
+                            <p>Не менее 2 ТБ, </p>
+                            <p>от 10К SAS, </p>
+                            <p>RAID1 + 1 Hot Spare</p>
+                        </entry>
+                        <entry>Не менее 240 Гбайт, RAID1</entry>
+                        <entry>100/1000 Мбит/с - 2 шт. или более</entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Большая инсталляция</entry>
+                        <entry>Более 2500 </entry>
+                        <entry>
+                            <p>1 CPU</p>
+                            <p>4 </p>
+                            <p>2.1 ГГц</p>
+                        </entry>
+                        <entry>32</entry>
+                        <entry>
+                            <p>Не менее 3 ТБ, </p>
+                            <p>от 10К SAS, </p>
+                            <p>RAID6 + 1 Hot Spare</p>
+                        </entry>
+                        <entry>Не менее 240 Гбайт, RAID1</entry>
+                        <entry>100/1000 Мбит/с - 2 шт. или более</entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Очень большая инсталляция</entry>
+                        <entry>Более 10000</entry>
+                        <entry>
+                            <p>1 CPU</p>
+                            <p>8 </p>
+                            <p>2.1 ГГц</p>
+                        </entry>
+                        <entry>64</entry>
+                        <entry>
+                            <p>Не менее 4 ТБ, </p>
+                            <p>от 10К SAS, </p>
+                            <p>RAID6 + 1 Hot Spare</p>
+                        </entry>
+                        <entry>Не менее 240 Гбайт, RAID1</entry>
+                        <entry>100/1000 Мбит/с - 2 шт. или более</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>В таблице приведены требования к аппаратному обеспечению уровня технологического
+            объекта.</p>
+        
+        <table id="table_sk5_1vm_frb" frame="all" rowsep="1" colsep="1">
+            <title>Системные требования для аппаратной платформы DATAPK ITM-A уровня технологического
+                объекта</title>
+            <tgroup cols="7">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <colspec colnum="3" colname="col3"/>
+                <colspec colnum="4" colname="col4"/>
+                <colspec colnum="5" colname="col5"/>
+                <colspec colnum="6" colname="col6"/>
+                <colspec colnum="7" colname="col7"/>
+                <tbody>
+                    <row valign="top">
+                        <entry><b>Вариант исполнения</b></entry>
+                        <entry><b>Суммарный объем объектов мониторинга с учетом подчиненных
+                                серверов</b></entry>
+                        <entry>
+                            <p><b>Кол-во CPU (шт.) / кол-во ядер (шт.) / частота (ГГц)</b></p>
+                        </entry>
+                        <entry><b>Объем ОЗУ</b></entry>
+                        <entry><b>Объем дисковой подсистемы</b></entry>
+                        <entry><b>Объем дисковой подсистемы для ОС</b></entry>
+                        <entry><b>Сетевой адаптер</b></entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Средняя инсталляция</entry>
+                        <entry>Менее 1000</entry>
+                        <entry>
+                            <p>1 CPU</p>
+                            <p>4 </p>
+                            <p>2.1 ГГц</p>
+                        </entry>
+                        <entry>16</entry>
+                        <entry>
+                            <p>Не менее 1 ТБ, </p>
+                            <p>от 10К SAS, </p>
+                            <p>RAID1 + 1 Hot Spare</p>
+                        </entry>
+                        <entry>Не менее 240 Гбайт, RAID1</entry>
+                        <entry>100/1000 Мбит/с - 2 шт. или более</entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Большая инсталляция</entry>
+                        <entry>Более 1000</entry>
+                        <entry>
+                            <p>1 CPU</p>
+                            <p>4 </p>
+                            <p>2.1 ГГц</p>
+                        </entry>
+                        <entry>32</entry>
+                        <entry>
+                            <p>Не менее 2 ТБ, </p>
+                            <p>от 10К SAS, </p>
+                            <p>RAID1 + 1 Hot Spare</p>
+                        </entry>
+                        <entry>Не менее 240 Гбайт, RAID1</entry>
+                        <entry>100/1000 Мбит/с - 2 шт. или более</entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Очень большая инсталляция</entry>
+                        <entry>Более 10000</entry>
+                        <entry>
+                            <p>1 CPU</p>
+                            <p>8 </p>
+                            <p>2.1 ГГц</p>
+                        </entry>
+                        <entry>64</entry>
+                        <entry>
+                            <p>Не менее 4 ТБ, </p>
+                            <p>от 10К SAS, </p>
+                            <p>RAID6 + 1 Hot Spare</p>
+                        </entry>
+                        <entry>Не менее 240 Гбайт, RAID1</entry>
+                        <entry>100/1000 Мбит/с - 2 шт. или более</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Клиентское аппаратное и программное обеспечение должно удовлетворять следующим
+            минимальным системным требованиям, приведенным в таблице.</p>
+       
+        <table id="table_tk5_1vm_frb" frame="all" rowsep="1" colsep="1">
+            <title>Минимальные системные требования для клиентского ПО</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="1.41*"/>
+                <tbody>
+                    <row>
+                        <entry><b><ph id="_Hlk29807092">Компонент</ph></b></entry>
+                        <entry><b>Требования </b></entry>
+                    </row>
+                    <row>
+                        <entry>Процессор</entry>
+                        <entry>По характеристикам не ниже Pentium IV и с тактовой частотой не менее
+                            2 ГГц</entry>
+                    </row>
+                    <row>
+                        <entry>ОЗУ</entry>
+                        <entry>1 Гб</entry>
+                    </row>
+                    <row>
+                        <entry>Свободное пространство на жестком диске</entry>
+                        <entry>1 Гб</entry>
+                    </row>
+                    <row>
+                        <entry>Сетевая карта</entry>
+                        <entry>10/100/1000 Мбит/с</entry>
+                    </row>
+                    <row>
+                        <entry>Дисплей</entry>
+                        <entry>Разрешающая способность: 1024x768 точек или больше</entry>
+                    </row>
+                    <row>
+                        <entry>Другое</entry>
+                        <entry>Клавиатура, компьютерная мышь</entry>
+                    </row>
+                    <row>
+                        <entry>Операционные системы</entry>
+                        <entry>Microsoft Windows 8.1 иновее, Microsoft Windows Server 2012 иновее,
+                            CentOS 7, Red Hat Enterprise Linux 7 и новее</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

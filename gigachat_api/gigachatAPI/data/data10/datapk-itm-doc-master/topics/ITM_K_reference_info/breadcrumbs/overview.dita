@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="overview">
+    <glossterm>Обзор</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Обзор»</title>
+            <image href="../../../images/Pages/monitoring_overview.png" id="monitoring_overview">
+                <alt>Страница «Обзор»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

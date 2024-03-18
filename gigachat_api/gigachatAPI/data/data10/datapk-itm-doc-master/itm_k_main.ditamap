@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство по эксплуатации DATAPK ITM-K</mainbooktitle>
+    </booktitle>
+    <chapter href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <mapref href="topics/reference_info/reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_K_reference_info/itm_k_reference_info.dita">
+        <topicref href="topics/ITM_K_reference_info/itm_k_reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/introduction/introduction.dita">
+        <mapref href="topics/introduction/introduction.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/requirements.dita">
+        <topicref href="topics/requirements/requirements.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/usage/usage.dita">
+        <mapref href="topics/usage/usage.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/emergency_actions/emergency_actions.dita">
+        <mapref href="topics/emergency_actions/emergency_actions.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/reusable.ditamap" format="ditamap"
+        processing-role="resource-only">      
+    </chapter>
+</bookmap>

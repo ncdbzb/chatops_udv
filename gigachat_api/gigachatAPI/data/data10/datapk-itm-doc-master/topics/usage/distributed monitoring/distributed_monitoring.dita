@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="distributed_monitoring">
+    <title>Распределенный мониторинг</title>
+    <body>
+        <p>DATAPK ITM-K обеспечивает мониторинг распределенной IT инфраструктуры, используя серверы
+            агентов.</p>
+        <p>Сервер агентов можно использовать для сбора данных в локальном масштабе от имени
+            централизованного ПК DATAPK ITM-K сервера, а затем отправлять данные на сервер
+            консолидации.</p>
+        <p>Делая выбор между использованием сервера агентов или нет, во внимание должны быть приняты
+            несколько соображений.</p>
+       
+        <table id="table_pdm_wj1_grb" frame="all" colsep="1" rowsep="1">
+            <title>Параметры для принятия выбора об использовании
+                сервера агентов</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <thead>
+                    <row>
+                        <entry>Параметр</entry>
+                        <entry>Сервер агентов</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Легкость</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Веб-интерфейс</entry>
+                        <entry>Нет</entry>
+                    </row>
+                    <row>
+                        <entry>Независимость работы</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Легкость обслуживания</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Автоматическое создание БД1</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Локальное администрирование</entry>
+                        <entry>Нет</entry>
+                    </row>
+                    <row>
+                        <entry>Готовность к встроенному аппаратному обеспечению</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Однонаправленные TCP соединения</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Централизованная конфигурация</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Генерирование оповещений</entry>
+                        <entry>Нет</entry>
+                    </row>
+                </tbody>
+            </tgroup>  
+        </table>
+        <p>В этом разделе:</p>
+        <ul id="ul_usw_lck_hrb">
+            <li><xref href="agent_server/agent_server.dita">Сервер
+                    агентов</xref><ul id="ul_kcb_mck_hrb">
+                    <li><xref
+                            href="agent_server/agent_server_configuration.dita"
+                            >Настройка сервера агентов</xref></li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_vaultdbpath">
+    <glossterm>ZBX_VAULTDBPATH</glossterm>
+    <glossdef>
+        <p>Путь к хранилищу, откуда будут извлечены учетные данные для базы данных с помощью ключей
+            «пароль» и «имя пользователя».</p>
+        <p> Пример: <codeph>secret/zabbix/database</codeph></p>
+        <p> Этот параметр можно использовать, только если не указаны DBUser и DBPassword.</p>
+    </glossdef>
+</glossentry>

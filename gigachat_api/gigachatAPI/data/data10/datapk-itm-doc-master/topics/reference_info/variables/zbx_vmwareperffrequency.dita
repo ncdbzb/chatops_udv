@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_vmwareperffrequency">
+    <glossterm>ZBX_VMWAREPERFFREQUENCY</glossterm>
+    <glossdef>
+        <p>Задержка в секундах между получением статистики по счётчикам производительности с одной
+            службы VMware. Это значение необходимо установить наименьшим значением интервала
+            обновления у любого элемента данных VMware мониторинга, который использует счётчики
+            производительности VMware.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>60</p>
+        <p><b>Разрешенный диапазон значений:</b>10-86400</p>
+    </glossdef>
+</glossentry>

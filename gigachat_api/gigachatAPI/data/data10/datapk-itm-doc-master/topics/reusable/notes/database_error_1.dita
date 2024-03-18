@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_a3d_wsy_hrb">
+    <title/>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step id="step_b3d_wsy_hrb">
+                        <cmd>Перейдите в режим командной строки операционной системы, на которой
+                            установлен DATAPK ITM-K.</cmd>
+                    </step>
+                    <step id="step_c3d_wsy_hrb">
+                        <cmd>Проверьте статус службы СУБД Jatoba с помощью команды:
+                                <codeph>systemctl status jatoba-*</codeph></cmd>
+                    </step>
+                    <step id="step_d3d_wsy_hrb">
+                        <cmd>СУБД должна иметь статус active (running)</cmd>
+                    </step>
+                    <step id="step_f3d_wsy_hrb">
+                        <cmd>Если служба СУБД имеет статус inactive (dead), то используйте следующую
+                            команду для запуска СУБД: <codeph>systemctl start
+                            jatoba-*</codeph></cmd>
+                    </step>
+                    <step id="step_g3d_wsy_hrb">
+                        <cmd>Если служба СУБД запущена, но ошибка не исчезает, проверьте и, в случае
+                            необходимости, откорректируйте файлы <ph
+                                conref="../filepath/env_db_pgsql.dita#ReusableComponent_znp_hvx_hrb/ph_a4p_hvx_hrb"
+                            />, <ph
+                                conref="../filepath/postgres_password_file.dita#ReusableComponent_yrh_pxx_hrb/ph_zrh_pxx_hrb"
+                            />, <ph
+                                conref="../filepath/postgres_user_file.dita#ReusableComponent_ymm_sxx_hrb/ph_zmm_sxx_hrb"
+                            />, <codeph
+                                conref="../filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                            />, <ph
+                                conref="../filepath/postgresql_conf.dita#ReusableComponent_eqn_f1t_hrb/ph_fqn_f1t_hrb"
+                            />.</cmd>
+                    </step>
+                    <step id="step_j3d_wsy_hrb">
+                        <cmd>Для применения настроек в отредактированных файлах перезапустите службу
+                            СУБД и docker-контейнеров с помощью команд:</cmd>
+                        <itemgroup>
+                            <codeblock>systemctl restart jatoba-*
+cd /opt/datapkitm &amp;&amp; docker-compose down &amp;&amp; docker-compose up -d              </codeblock>
+                        </itemgroup>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

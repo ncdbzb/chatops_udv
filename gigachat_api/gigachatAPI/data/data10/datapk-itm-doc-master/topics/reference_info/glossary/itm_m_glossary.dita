@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
+<glossgroup id="itm_m_glossary">
+    <title>Глоссарий</title>
+    <glossentry id="asm_tp" conkeyref="asm_tp">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="metric" conkeyref="metric">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="monitoring_object" conkeyref="monitoring_object">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="om_problem" conkeyref="om_problem">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="monitoring_server" conkeyref="monitoring_server">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="spas" conkeyref="spas">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="smscr" conkeyref="smscr">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="smci" conkeyref="smci">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="to" conkeyref="to">
+        <glossterm/>
+    </glossentry>
+</glossgroup>

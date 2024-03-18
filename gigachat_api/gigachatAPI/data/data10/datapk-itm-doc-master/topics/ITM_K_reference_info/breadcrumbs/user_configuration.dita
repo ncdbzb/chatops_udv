@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="user_configuration">
+    <glossterm>Настройки пользователя</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Настройки пользователя»</title>
+            <image href="../../../images/Pages/user_configuration.png" id="user_configuration">
+                <alt>Страница «Настройки пользователя»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

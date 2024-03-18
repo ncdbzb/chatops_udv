@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Глоссарий</title>
+    <topicref href="topics_glossary.dita"/>
+    <glossref href="terms/monitoring_object.dita" keys="monitoring_object" print="yes"/>
+    <glossref href="terms/collector.dita" keys="collector" print="yes"/>
+    <glossref href="terms/triggers.dita" keys="triggers" print="yes"/>
+    <glossref href="terms/trapper.dita" keys="trapper" print="yes"/>
+    <glossref href="terms/poller.dita" keys="poller" print="yes"/>
+    <glossref href="terms/pre-fork.dita" keys="pre-fork" print="yes"/>
+    <glossref href="terms/escalation.dita" keys="escalation" print="yes"/>
+    <glossref href="terms/escalator.dita" keys="escalator" print="yes"/>
+    <glossref href="terms/worker.dita" keys="worker" print="yes"/>
+    <glossref href="terms/DB_syncer.dita" keys="DB_syncer" print="yes"/>
+</map>

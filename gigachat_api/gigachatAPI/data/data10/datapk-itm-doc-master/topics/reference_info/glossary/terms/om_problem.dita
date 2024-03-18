@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="om_problem">
+    <glossterm>Проблема объекта мониторинга</glossterm>
+    <glossdef>Состояние контролируемого параметра объекта мониторинга, 
+        при котором его значение выходит за пределы диапазона значений при нормальном функционировании объекта мониторинга.</glossdef>
+</glossentry>

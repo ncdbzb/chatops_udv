@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_a_install">
+    <title>Установка сервера агентов программного комплекса DATAPK ITM</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_djt_3c3_nrb">
+            <li><xref href="itm_a_OS_install.dita">Установка операционной системы</xref>;</li>
+            <li><xref href="itm_a_install_jatoba.dita">Установка СУБД Jatoba</xref>;</li>
+            <li><xref href="itm_a_install_agent_server_jatoba.dita">Установка сервера агентов с СУБД
+                    Jatoba</xref>;</li>
+            <li><xref href="itm_a_agent_install.dita">Установка агента</xref>.</li>
+        </ul>
+    </body>
+</topic>

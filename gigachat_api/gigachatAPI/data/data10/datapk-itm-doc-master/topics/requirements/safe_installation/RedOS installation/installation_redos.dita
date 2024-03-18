@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installation_redos">
+    <title>Порядок установки на ОС RedOS</title>
+    <taskbody
+        conref="../../../reusable/notes/RedOS_installation_steps.dita#ReusableComponent_nhw_ry2_krb/taskbody_ohw_ry2_krb"/>
+    <related-links>
+        <link href="ntp.dita"></link>
+        <link href="extra_pack_installation.dita"></link>
+        <link href="jatoba.dita"></link>
+        <link href="installation_server_datapk_itm_k.dita"></link>
+    </related-links>
+</task>

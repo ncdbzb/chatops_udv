@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>itm_m_reference_info</title>
+    <topicref href="ITM_M_breadcrums/itm_m_breadcrumbs.dita">
+        <topicref href="ITM_M_breadcrums/itm_m_breadcrumbs.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="../reference_info/glossary/itm_m_glossary.dita">
+        <topicref href="../reference_info/glossary/itm_m_glossary.ditamap" format="ditamap"/>
+    </topicref>
+</map>

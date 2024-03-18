@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_dzr_2jf_3rb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><codeph><ph id="ph_ezr_2jf_3rb">/opt/datapkitm/env/</ph></codeph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

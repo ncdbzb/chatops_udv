@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_templates_to_host">
+    <title>Добавление шаблонов к узлу сети</title>
+    <taskbody>
+        <context>
+            <p>Добавьте узлу сети datapkitm server присоединенные ранее шаблоны.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Перейдите в меню <cite keyref="configuration">«Настройка»</cite> → <cite
+                        keyref="hosts_configuration">«Узлы сети»</cite>, выберите узел сети
+                    datapkitm server.</cmd>
+            </step>
+            <step>
+                <cmd>В открывшемся окне перейдите во вкладку «Шаблоны» и соедините узел сети с
+                    шаблонами, нажмите «Обновить».</cmd>
+                <info>
+                    <fig id="fig_add_templates_2_16">
+                        <title> Добавление шаблонов узлу сети </title>
+                        <image href="../../../../images/first_configuration/add_templates_2_16.png"
+                            id="add_templates_2_16"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

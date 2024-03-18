@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_akp_2fs_hrb">
+    <title>docker-compose.release.yaml</title>
+    <body>
+        <ul>
+            <li><codeph id="codeph_bkp_2fs_hrb">docker-compose.release.yaml</codeph></li>
+        </ul>
+    </body>
+</topic>

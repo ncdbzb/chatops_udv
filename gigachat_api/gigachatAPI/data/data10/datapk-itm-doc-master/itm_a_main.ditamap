@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Установка сервера агентов программного комплекса DATAPK ITM</mainbooktitle>
+    </booktitle>
+    <chapter href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <topicref href="topics/reference_info/reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/reusable.ditamap" format="ditamap"
+        processing-role="resource-only">
+    </chapter>
+    <chapter href="topics/ITM_A_install/itm_a_install.dita">
+        <topicref href="topics/ITM_A_install/itm_a_install.ditamap" format="ditamap"/>
+    </chapter>
+</bookmap>

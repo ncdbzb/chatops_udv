@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="user_roles">
+    <glossterm>Роли пользователей</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Роли пользователей»</title>
+            <image href="../../../images/Pages/administration_user_roles.png" id="administration_user_roles">
+                <alt>Страница «Роли пользователей»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

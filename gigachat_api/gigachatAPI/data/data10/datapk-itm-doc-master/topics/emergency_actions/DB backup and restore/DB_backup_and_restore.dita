@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="DB_backup_and_restore">
+    <title>Выполнение резервного копирования баз данных и их восстановление</title>
+    <body>
+        <p>Для выполнения операций восстановления на сервере, отличном от сервера, с которого была
+                        снята резервная копия необходимо убедиться, что на сервере для
+                        восстановления находится файл, полученный в результате работы pg_dump, либо
+                        каталог с файлами, полученный в результате работы pg_basebackup. Наличие
+                        файла или каталога определяется выбранным методом восстановления.</p>
+        <p>В этом разделе: <ul>
+                <li><xref href="unloading_jatoba.dita">Выгрузка
+                        определенной базы данных СУБД &quot;Jatoba&quot;</xref></li>
+                <li><xref href="recovery_jatoba.dita">Восстановление
+                        определенной базы данных СУБД "Jatoba"</xref></li>
+                <li><xref href="files_backup_jatoba.dita">Создание
+                        резервной копии файлов СУБД &quot;Jatoba&quot;</xref></li>
+                <li><xref href="restore_jatoba.dita">Восстановление
+                        резервной копии файлов СУБД &quot;Jatoba&quot;</xref></li>
+            </ul></p>
+    </body>
+</topic>

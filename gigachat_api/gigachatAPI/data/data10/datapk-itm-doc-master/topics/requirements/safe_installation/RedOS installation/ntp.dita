@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ntp">
+    <title>Настройка синхронизации времени (NTP)</title>
+    <taskbody>
+        <prereq> <p>Если файл <codeph
+            conref="../../../reusable/filepath/etc_ntp_conf.dita#ReusableComponent_emg_c2s_hrb/codeph_fmg_c2s_hrb"
+        />, служба <codeph>ntpd</codeph> отсутствует, то необходимо установить ntp с помощью
+            команды <codeph>yum –y install ntp</codeph>. </p></prereq>
+        <context>
+            <p>Для настройки клиента NTP:</p>
+        </context>
+        
+        <steps>
+            <step>
+                <cmd>в файле <codeph
+                        conref="../../../reusable/filepath/etc_ntp_conf.dita#ReusableComponent_emg_c2s_hrb/codeph_fmg_c2s_hrb"
+                    /> добавьте строку: <codeph>server &lt;IP адрес NTP сервера></codeph> и
+                    закомментируйте или удалите неиспользуемые записи (например server
+                    ntp1.vniiftri.ru, …).</cmd>
+            </step>
+            <step>
+                <cmd>Запустите сервис ntp командой <codeph>systemctl start ntpd</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Добавьте в автозагрузку командой <codeph>systemctl enable ntpd</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Для проверки выполните команду <codeph>ntpq -pn</codeph>.</cmd>
+                <info>
+                    <p>В примере корректного вывода на рисунке * перед строкой свидетельствует об
+                        успешной настройке, но она появляется не сразу – минут через 15-20, такая
+                        строка без * сразу после настройки – хорошо.</p>
+                    
+                    <fig id="fig_safe_installation_redOS_2_1">
+                        <title>Просмотр состояния подключения к ntp-серверам</title>
+                        <image href="../../../../images/safe_installation/safe_installation_redOS_2_1.png" id="safe_installation_redOS_2_1"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

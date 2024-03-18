@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="software_requirements">
+    <title>Требования к программному обеспечению</title>
+    <body>
+        <p>DATAPK ITM-K функционирует на серверах под управлением следующих ОС:</p>
+        <ul id="ul_y51_q1k_jrb">
+            <li>РЕД ОС версии 7.2;</li>
+            <li>Astra Linux Special Edition (Смоленск) версии 1.6.</li>
+        </ul>
+        <p>Обязательным условием функционирования DATAPK ITM-K является наличие установленного ПО
+            системы управления базами данных (СУБД) Jatoba DB.</p>
+    </body>
+</topic>

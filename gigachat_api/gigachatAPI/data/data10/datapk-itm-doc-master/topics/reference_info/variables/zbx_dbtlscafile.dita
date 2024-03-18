@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_dbtlscafile">
+    <glossterm>ZBX_DBTLSCAFILE</glossterm>
+    <glossdef>
+        <p>Полный путь к файлу, содержащему сертификаты центра сертификации (ЦС, CA) верхнего уровня
+            для проверки сертификата базы данных.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>/run/secrets/root-ca.pem</p>
+        <p><b>Разрешенный диапазон значений:</b>no, yes</p>
+    </glossdef>
+</glossentry>

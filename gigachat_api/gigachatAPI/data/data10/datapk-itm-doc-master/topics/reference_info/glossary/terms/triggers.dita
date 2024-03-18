@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="triggers">
+    <glossterm>Триггеры</glossterm>
+    <glossdef>Триггеры – логические выражения, которые «оценивают» данные, собранные элементами
+            данных, и отражают текущее состояние системы. Это логическое выражение для одного или
+            нескольких параметров узла сети, в случае достижения которым истинного значения
+            выводится оповещение о произошедшем событии (проблеме).
+    </glossdef>
+</glossentry>

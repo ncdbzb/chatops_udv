@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="safe_environment_config">
+    <title>Требования к настройкам функций безопасности среды функционирования комплекса</title>
+    <taskbody><prereq><p>DATAPK ITM-K функционирует в среде РЕД ОС или ОС Astra Linux.</p></prereq>
+        
+        <context>Для обеспечения безопасного
+            использования комплекса в среде функционирования следует выполнить инструкции,
+            приведенные далее.</context>
+        <steps>
+            <step>
+                <cmd>Так как на загрузку ОС влияет интерфейс BIOS (UEFI), то необходимо установить пароль на
+                    BIOS (UEFI) для предотвращения возможности несанкционированного влияния на ОС до ее
+                    загрузки.</cmd>
+            </step>
+            <step>
+                <cmd>Используя штатные средства РЕД ОС или ОС Astra Linux, следует вести аудит системы.</cmd>
+                <info>
+                    <p>Для
+                    этого проверьте, что служба <codeph>auditd</codeph> запущена и в файле <codeph
+                        conref="../reusable/filepath/etc_audit_auditd_conf.dita#ReusableComponent_hpy_drs_hrb/codeph_ipy_drs_hrb"
+                    /> указаны следующие значения:</p><codeblock>local_events = yes
+write_logs = yes
+log_file = &lt;Путь до файла с событиями аудита></codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Далее проверьте, что МЭ iptables запущен и добавлен в автозагрузку.</cmd>
+            </step>
+            <step>
+                <cmd>Проверьте, что на МЭ
+                    iptables включены следующие правила:</cmd>
+                <info>
+                    <ul id="ul_ec1_xbt_frb">
+                        <li><codeph>iptables -A INPUT -p tcp --dport 10265 -j ACCEPT</codeph> (для работы СУБД
+                            Jatoba)</li>
+                        <li><codeph>iptables -A INPUT -p tcp --dport 10050 -j ACCEPT</codeph> (для выполнения запросов к
+                            пассивным агентам на объектах мониторинга)</li>
+                        <li><codeph>iptables -A INPUT -p tcp --dport 10051 -j ACCEPT</codeph> (для приема севером
+                            сообщений с локального активного агента, и с агентов, установленных на объектах
+                            мониторинга)</li>
+                        <li><codeph>iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT</codeph></li>
+                        <li><codeph>iptables -I INPUT 2 -p icmp </codeph>-j ACCEPT</li>
+                        <li><codeph>iptables -I INPUT 3 -j ACCEPT</codeph></li>
+                        <li><codeph>iptables -A INPUT -p tcp --dport 22 -j ACCEPT</codeph></li>
+                        <li><codeph>iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited</codeph></li>
+                        <li><codeph>iptables -A FORWARD -j REJECT --reject-with icmp-host-prohibited</codeph></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Кроме того, в ОС должны быть установлены актуальные обновления с целью предотвращения
+                    эксплуатации выявленных ранее уязвимостей.</cmd>
+            </step>
+            <step>
+                <cmd>Ограничьте список хостов, которым разрешается удаленное подключение к СУБД и к
+                    отдельным базам данных в СУБД, путем редактирования файла <codeph
+                        conref="../reusable/filepath/var_lib_jatoba_l_data_pg_hba_conf.dita#ReusableComponent_q5h_lrs_hrb/codeph_r5h_lrs_hrb"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>Проверьте наличие учетной записи <codeph>datapkitm</codeph> для возможности
+                    администрирования DATAPK ITM-K под учетной записью с минимально необходимыми
+                    административными правами.</cmd>
+            </step>
+        </steps>
+     
+      </taskbody>
+</task>

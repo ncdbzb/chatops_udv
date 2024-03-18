@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_startjavapollers">
+    <glossterm>ZBX_STARTJAVAPOLLERS</glossterm>
+    <glossdef>
+        <p>Количество экземпляров <term keyref="pre-fork">пре-форков</term> Java <term keyref="poller">поллеров</term>.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>5</p>
+        <p><b>Разрешенный диапазон значений:</b>0-1000</p>
+    </glossdef>
+</glossentry>

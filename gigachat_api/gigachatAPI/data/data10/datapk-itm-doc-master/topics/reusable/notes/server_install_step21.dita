@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_inr_c3f_krb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_jnr_c3f_krb">
+                <cmd>Перейдите в каталог расположения compose-файлов:</cmd>
+                <info><codeblock>cd /opt/datapkitm</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="var_tables">
+    <title>Параметры файлов конфигурации для запуска и работы сервера консолидации DATAPK
+        ITM-K</title>
+    <body>
+        <p>В данном разделе:</p>
+        <ul id="ul_abf_qh4_3rb">
+            <li><xref href="var_env_srv.dita">Переменные в файле .env_srv для настройки работы
+                    контейнера сервера консолидации DATAPK ITM-K</xref></li>
+            <li><xref href="var_env_db_pgsql.dita">Переменные в файле .env_db_pgsql для настройки
+                    взаимодействия сервера консолидации с базой данных DATAPK ITM-K</xref></li>
+            <li><xref href="var_env_web.dita">Переменные в файле .env_web для настройки контейнера
+                    веб-сервера ПК DATAPK ITM-K </xref></li>
+            <li><xref href="var_agent_env.dita">Переменные в файле .agent.env для настройки
+                    контейнера агента ITM-K </xref></li>
+        </ul>
+    </body>
+</topic>

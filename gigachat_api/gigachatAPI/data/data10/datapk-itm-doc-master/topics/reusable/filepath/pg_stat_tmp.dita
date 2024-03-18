@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_blf_pbt_hrb">
+    <title>pg_stat_tmp/</title>
+    <body>
+        <p><codeph><ph id="ph_clf_pbt_hrb">pg_stat_tmp/</ph></codeph></p>
+    </body>
+</topic>

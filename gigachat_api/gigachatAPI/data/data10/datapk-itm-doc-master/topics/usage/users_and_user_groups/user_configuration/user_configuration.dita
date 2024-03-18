@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="user_configuration">
+    <title>Настройка пользователя</title>
+    <taskbody><context><p>Для настройки пользователя необходимо сделать следующее:</p></context><steps id="ol_mrz_qtz_frb">
+        <step>
+                <cmd>Перейдите в раздел боковой панели <cite keyref="administration"
+                        >«Администрирование»</cite> → <cite keyref="users"
+                    >«Пользователи»</cite>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на «Создать пользователя» (или на имя пользователя для редактирования
+                    уже существующего пользователя).</cmd>
+            </step>
+            <step>
+                <cmd>Измените в диалоге атрибуты пользователя.</cmd>
+            </step>
+        </steps>
+    <postreq>
+        <p>В этом разделе:<ul>
+                    <li><xref
+                            href="user_config_general_attributes.dita"
+                            >Общие атрибуты</xref></li>
+                    <li><xref
+                            href="user_notifications.dita"
+                            >Оповещения пользователя</xref></li>
+                </ul></p>
+    </postreq>
+    </taskbody>
+</task>

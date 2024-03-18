@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_redos_installation">
+    <title>Порядок установки на ОС RedOS</title>
+    <taskbody>
+        <context><p>Если установка ОС производится с нуля:</p></context>
+        <steps-unordered
+            conref="../../reusable/notes/RedOS_installation_steps.dita#ReusableComponent_nhw_ry2_krb/ul_szp_cwm_frb"
+            id="steps-unordered_glz_sy2_krb">
+            <step>
+                <cmd/>
+            </step>
+        </steps-unordered>
+    </taskbody>
+    <related-links>
+        <link href="../../requirements/safe_installation/RedOS%20installation/ntp.dita"></link>
+        <link href="itm_m_extra_package_install.dita"></link>
+        <link href="itm_m_server_install.dita"></link>
+    </related-links>
+</task>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="monitoring_objects_list">
+    <title>Список объектов мониторинга</title>
+    <body>
+        <p>Список выводится при нажатии в боковом меню на раздел «<cite keyref="itm_m_page_object_monitoring">Объекты мониторинга</cite>». </p>
+        <p>Над списком выводится строка общего количества <term keyref="monitoring_object">объектов мониторинга</term>:</p>
+        <ul id="ul_x3v_zhl_krb">
+            <li>Всего – всего <term keyref="monitoring_object">объектов мониторинга</term>, подключенных ко всем <term keyref="monitoring_server">серверам мониторинга
+                ITM-K</term>;</li>
+            <li>Без проблем – <term keyref="monitoring_object">объектов мониторинга</term>, не
+                содержащих критических ошибок;</li>
+            <li>С проблемами – <term keyref="monitoring_object">объектов мониторинга</term>, у
+                которых есть проблемы функционирования уровня 3 и выше. </li>
+        </ul>
+        <p>Список <term keyref="monitoring_object">объектов мониторинга</term> сгруппирован по филиалам и <term keyref="to">технологическим объектам (ТО)</term>, а
+            также по агентам серверов (прокси) для каждого филиала.</p>
+        <p>Список филиалов отображается справа от главного меню. Под каждым филиалом указан список
+            его серверов агентов (прокси). По умолчанию открыт список <term keyref="monitoring_object">объектов мониторинга</term> для
+            первого в списке филиала. Если кликнуть на другой филиал, <term keyref="to">ТО</term> или сервер агентов,
+            откроется список <term keyref="monitoring_object">объектов мониторинга</term> для них.</p>
+        <p>При раскрытии филиалов происходит загрузка списка <term keyref="monitoring_object">ОМ</term>, а для просмотра полного списка <term keyref="monitoring_object">ОМ</term>
+            используются вертикальная прокрутка списка справа и переход по страницам списка справа
+            внизу.</p>
+        <p>В списке отображаются следующие свойства <term keyref="monitoring_object">объектов мониторинга</term>: </p>
+        <ul id="ul_plc_n3l_krb">
+            <li>Наименование филиала или <term keyref="to">ТО</term> (заголовок);</li>
+            <li>Наименование (отображаемое имя <term keyref="monitoring_object">ОМ</term>);</li>
+            <li>Мониторинг – выводится в виде пиктограммы, при наведении на пиктограмму выводится
+                подсказка с указанием значения статуса:<ul id="ul_qlc_n3l_krb">
+                    <li>Мониторинг – <term keyref="monitoring_object">объект мониторинга</term> активирован;</li>
+                    <li>Недоступен – <term keyref="monitoring_object">объект мониторинга</term> недоступен;</li>
+                    <li>Деактивирован – <term keyref="monitoring_object">объект мониторинга</term> деактивирован.</li>
+                </ul></li>
+            <li>Проблемы – количество проблем <term keyref="monitoring_object">ОМ</term>;</li>
+            <li>IP-адрес – IP-адрес интерфейса <term keyref="monitoring_object">ОМ</term>, по которому осуществляется мониторинг;</li>
+            <li>ОС – операционная система <term keyref="monitoring_object">ОМ</term>;</li>
+            <li>Обновлен – отображается дата и время последнего обновления информации об <term keyref="monitoring_object">ОМ</term>.</li>
+        </ul>
+        <fig>
+            <title>Список объектов мониторинга</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_monitoring_objects.png"/>
+        </fig>
+        <p>При нажатии на заголовки таблицы осуществляется сортировка по возрастанию/убыванию по
+            соответствующему полю либо отмена примененной сортировки.</p>
+    </body>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_distributive_content">
+    <title>Состав и содержание дистрибутивного носителя данных</title>
+    <body>
+        <p>
+            <div>
+                <p>В состав дистрибутивного носителя данных входят следующие компоненты:</p>
+                <ul id="ul_jbh_qs2_krb">
+                    <li>Электронный документ <codeph
+                            conref="../../reusable/filepath/itm_m_usage_pdf.dita#ReusableComponent_f5j_n5p_lrb/ph_g5j_n5p_lrb"
+                        />;</li>
+                    <li>Каталог env вместе с содержимым;</li>
+                    <li>Конфигурационный файл <codeph
+                            conref="../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                        />;</li>
+                    <li>Конфигурационный файл <codeph
+                            conref="../../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                        />;</li>
+                    <li>Архив с дистрибутивом <codeph
+                            conref="../../reusable/filepath/datapk_itm_m_x_x_x_x_tar_gz.dita#ReusableComponent_ikx_4zf_krb/ph_jkx_4zf_krb"
+                        /> (где x.x.x.x – номер актуальной версии дистрибутива).</li>
+                </ul>
+            </div>
+        </p>
+    </body>
+</topic>

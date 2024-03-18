@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="history_and_dynamics">
+    <title>История и динамика изменений</title>
+    <body>
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref
+                        href="history_and_dynamics_overview.dita"
+                        >Обзор</xref></li>
+                <li><xref
+                        href="history_storage.dita"
+                        >Хранение истории</xref></li>
+                <li><xref
+                        href="dynamics_storage.dita"
+                        >Хранение динамики изменений</xref></li>
+            </ul>
+        </p>
+    </body>
+</topic>

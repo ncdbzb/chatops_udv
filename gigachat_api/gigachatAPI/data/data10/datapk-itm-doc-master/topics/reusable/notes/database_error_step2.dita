@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_hj1_2ty_hrb">
+    <title>database error step 2</title>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step>
+                        <cmd id="cmd_ij1_2ty_hrb">Проверьте статус службы СУБД Jatoba с помощью
+                            команды: <codeph>systemctl status jatoba-*</codeph></cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

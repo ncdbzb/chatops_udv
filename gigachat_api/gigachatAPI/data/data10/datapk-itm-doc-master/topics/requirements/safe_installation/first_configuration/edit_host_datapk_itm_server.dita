@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="edit_host_datapk_itm_server">
+    <title>Редактирование узла сети datapk-itm server</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p> Для редактирования узла сети, собирающего данные о самом себе:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>В боковом меню перейдите в раздел <cite keyref="configuration"
+                        >«Настройка»</cite> → <cite keyref="hosts_configuration">«Узлы
+                    сети»</cite>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на имя узла сети datapkitm server для его настройки.</cmd>
+                <info>
+                    <fig id="fig_hosts_2_12">
+                        <title> Переход в раздел «Узлы сети»</title>
+                        <image href="../../../../images/first_configuration/hosts_2_12.png"
+                            id="hosts_2_12"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>На вкладке «Узел сети» измените следующие параметры:</cmd>
+                <substeps id="substeps_dgl_l5f_3rb">
+                    <substep>
+                        <cmd>В поле «Группы» добавьте группу «Агенты Linux»;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В поле «Интерфейсы агента» проверьте, что установлено значение
+                            DNS-имени «Zabbix-agent» (имя зависит от DNS-имени в контейнере) и
+                            активна иконка на «Подключатся через DNS»;</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Нажмите «Обновить».</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <fig id="fig_host_2_13">
+                        <title> Вкладка «Узел сети»</title>
+                        <image href="../../../../images/first_configuration/host_2_13.png"
+                            id="host_2_13"/>
+                    </fig>
+                    <p>Через некоторое время после применения настроек доступность изменится с
+                        обозначения «Недоступен» <image
+                            conref="../../../reusable/buttons/zbx_unavailable.dita#ReusableComponent_ddc_hxr_hrb/image_f2d_jqs_frb"
+                            id="image_dgc_hxr_hrb"/> на «Доступен» <image
+                            conref="../../../reusable/buttons/zbx_available.dita#ReusableComponent_afv_kxr_hrb/image_rby_jqs_frb"
+                            id="image_vhv_kxr_hrb"/> .</p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

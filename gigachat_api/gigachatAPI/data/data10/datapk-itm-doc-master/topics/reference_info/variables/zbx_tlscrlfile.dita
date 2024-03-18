@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_tlscrlfile">
+    <glossterm>ZBX_TLSCRLFILE</glossterm>
+    <glossdef>
+        <p>Абсолютный путь к файлу, который содержит отозванные сертификаты. Этот параметр
+            используется для зашифрованных соединений между компонентами DATAPK ITM.</p>
+    </glossdef>
+</glossentry>

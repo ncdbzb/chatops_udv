@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_function_description">
+    <title>Описание функций</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_dlj_nkj_lrb">
+                <li><xref href="ITM_M_main_screen_interface/itm_m_main_screen_web_interface.dita"
+                        >Главный экран и элементы веб-интерфейса</xref>;<ul id="ul_ir4_qkj_lrb">
+                        <li><xref href="ITM_M_main_screen_interface/itm_m_main_menu_web.dita"
+                                >Главное меню веб-интерфейса</xref>;</li>
+                        <li><xref href="ITM_M_main_screen_interface/itm_m_web_general_items.dita"
+                                >Общие элементы веб-интерфейса</xref>.</li>
+                    </ul></li>
+                <li><xref href="ITM_M_monitoring_servers/itm_m_monitoring_servers.dita">Серверы
+                        мониторинга</xref>;<ul id="ul_ozz_1lj_lrb">
+                        <li><xref
+                                href="ITM_M_monitoring_servers/itm_m_add_new_monitoring_server.dita"
+                                >Подключение нового сервера мониторинга к ITM-VM</xref>;</li>
+                        <li><xref href="ITM_M_monitoring_servers/itm_m_info_added_server.dita"
+                                >Просмотр информации о подключенном сервере мониторинга</xref>;</li>
+                        <li><xref
+                                href="ITM_M_monitoring_servers/itm_m_change_monitoring_server.dita"
+                                >Изменение свойств подключенного сервера мониторинга</xref>.</li>
+                    </ul></li>
+                <li><xref href="ITM_M_monitoring_objects/itm_m_monitoring_objects.dita">Объекты
+                        мониторинга</xref>;<ul id="ul_d5j_jlj_lrb">
+                        <li><xref href="ITM_M_monitoring_objects/itm_m_monitoring_objects_list.dita"
+                                >Список объектов мониторинга</xref>.</li>
+                    </ul></li>
+                <li><xref href="ITM_M_problems/itm_m_problems.dita">Проблемы объектов
+                        мониторинга</xref>;<ul id="ul_ycm_mlj_lrb">
+                        <li><xref href="ITM_M_problems/itm_m_problem_OM_list.dita">Список проблем
+                                объектов мониторинга</xref>.</li>
+                    </ul></li>
+                <li><xref href="ITM_M_configurations/itm_m_config.dita">Настройки</xref>;<ul
+                        id="ul_rkh_qlj_lrb">
+                        <li><xref href="ITM_M_configurations/itm_m_config_general.dita"
+                                >Основные</xref>;</li>
+                        <li><xref href="ITM_M_configurations/itm_m_config_users.dita"
+                                >Пользователи</xref>;</li>
+                        <li><xref href="ITM_M_configurations/tm_m_config_admin_actions.dita"
+                                >Действия администратора с учетными записями
+                                пользователей</xref>;<ul id="ul_v11_5n3_lrb">
+                                <li><xref href="ITM_M_configurations/itm_m_config_create_user.dita"
+                                        >Создание учетной записи пользователя</xref>;</li>
+                                <li><xref href="ITM_M_configurations/itm_m_config_look_user.dita"
+                                        >Просмотр свойств учетной записи пользователя</xref>;</li>
+                                <li><xref href="ITM_M_configurations/itm_m_config_change_user.dita"
+                                        >Изменение свойств учетной записи пользователя</xref>.</li>
+                            </ul></li>
+                        <li><xref href="ITM_M_configurations/itm_m_config_integrations.dita"
+                                >Интеграции</xref>.</li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

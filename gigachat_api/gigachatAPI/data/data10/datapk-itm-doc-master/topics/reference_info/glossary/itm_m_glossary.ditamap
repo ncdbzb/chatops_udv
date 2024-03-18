@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Глоссарий ITM-M processing-role="resource-only"</title>
+    <topicref href="itm_m_glossary.dita" processing-role="resource-only"/>
+    <glossref href="terms/asm_tp.dita" keys="asm_tp" print="yes"/>
+    <glossref href="terms/metric.dita" keys="metric" print="yes"/>
+    <glossref href="terms/monitoring_object.dita" keys="monitoring_object" print="yes"/>
+    <glossref href="terms/om_problem.dita" keys="om_problem" print="yes"/>
+    <glossref href="terms/monitoring_server.dita" keys="monitoring_server" print="yes"/>
+    <glossref href="terms/spas.dita" keys="spas" print="yes"/>
+    <glossref href="terms/smscr.dita" keys="smscr" print="yes"/>
+    <glossref href="terms/smci.dita" keys="smci" print="yes"/>
+    <glossref href="terms/to.dita" keys="to" print="yes"/>
+</map>

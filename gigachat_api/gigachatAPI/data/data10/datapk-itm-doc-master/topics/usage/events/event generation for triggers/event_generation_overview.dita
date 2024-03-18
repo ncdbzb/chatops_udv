@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="actions_generation_overview">
+    <title>Обзор</title>
+    <body>
+        <p>Изменение состояния <term keyref="triggers">триггера</term> является наиболее частым и наиболее важным источником
+            событий. Каждый раз, когда <term keyref="triggers">триггер</term> меняет свое состояние, генерируется событие. Событие
+                содержит подробную информацию о изменении состояния <term keyref="triggers">триггера</term> – когда это случилось и
+            какое сейчас новое состояние.</p>
+        <p><term keyref="triggers">Триггерами</term> создаются два типа событий: <b>Проблема</b> и <b>ОК</b>.</p>
+    </body>
+</topic>

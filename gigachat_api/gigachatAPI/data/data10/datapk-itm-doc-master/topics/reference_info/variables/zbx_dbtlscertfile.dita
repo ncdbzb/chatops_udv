@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_dbtlscertfile">
+    <glossterm>ZBX_DBTLSCERTFILE</glossterm>
+    <glossdef>
+        <p>Полный путь к файлу, содержащему сертификат Zabbix сервера для аутентификации в базе
+            данных.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>/run/secrets/client-cert.pem</p>
+    </glossdef>
+</glossentry>

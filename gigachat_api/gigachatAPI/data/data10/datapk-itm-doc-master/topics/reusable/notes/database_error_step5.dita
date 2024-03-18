@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_ep5_hty_hrb">
+    <title>database error step 5</title>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step>
+                        <cmd id="cmd_fp5_hty_hrb">Если служба СУБД запущена, но ошибка не исчезает,
+                            проверьте и, в случае необходимости, откорректируйте файлы <ph
+                                conref="../filepath/env_db_pgsql.dita#ReusableComponent_znp_hvx_hrb/ph_a4p_hvx_hrb"
+                            />, <ph
+                                conref="../filepath/postgres_password_file.dita#ReusableComponent_yrh_pxx_hrb/ph_zrh_pxx_hrb"
+                            />, <ph
+                                conref="../filepath/postgres_user_file.dita#ReusableComponent_ymm_sxx_hrb/ph_zmm_sxx_hrb"
+                            />, <codeph
+                                conref="../filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                            />, <ph
+                                conref="../filepath/postgresql_conf.dita#ReusableComponent_eqn_f1t_hrb/ph_fqn_f1t_hrb"
+                            />.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

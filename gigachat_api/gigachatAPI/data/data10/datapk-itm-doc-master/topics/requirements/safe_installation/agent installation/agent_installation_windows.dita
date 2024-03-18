@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agent_installation_windows">
+    <title>Установка агента на ОС Windows</title>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Запустите файл <codeph>itm-agent_v.1.2.0-i386-openssl.msi</codeph> или
+                        <codeph>itm-agent_v.1.2.0-amd64-openssl.msi</codeph>, в зависимости от
+                    разрядности ОС. Для установки агента следуйте этапам установщика.</cmd>
+            </step>
+            <step>
+                <cmd>Во всплывающем окне введите данные:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Hostname текущего компьютера.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>IP-адрес сервера консолидации ПК DATAPK ITM-K.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>IP-адрес сервера агентов ПК DATAPK ITM-A.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>В папке <codeph
+                        conref="../../../reusable/filepath/c_program_files.dita#ReusableComponent_vz4_qjs_hrb/codeph_wz4_qjs_hrb"
+                    /> перейдите в папку агента и с помощью текстового редактора измените настройки
+                    в конфигурационном файле <codeph
+                        conref="../../../reusable/filepath/zabbix_agentd_conf.dita#ReusableComponent_oqn_yjs_hrb/codeph_pqn_yjs_hrb"
+                    />:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>В переменную <cmdname>Server</cmdname> (и
+                                <cmdname>ServerActive</cmdname>, если используется активный режим
+                            агента) введите IP-адрес сервера DATAPK ITM-K, если наблюдение
+                            осуществляется на уровне филиала, или IP-адрес сервера DATAPK ITM-A,
+                            если наблюдение осуществляется на уровне ТО. Если предполагается, что ОМ
+                            может быть подключен к разным серверам мониторинга, то их IP-адреса
+                            должны быть перечислены через запятую, без пробелов.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Раскомментируйте строку с переменной
+                            <cmdname>ListenPort</cmdname>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В переменной <cmdname>Hostname</cmdname> замените значение на имя
+                            текущего АРМ.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Для применения настроек агента перезапустите службу Zabbix Agent:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Нажмите сочетание клавиш Win + R и введите команду:
+                                <codeph>services.msc</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В появившемся окне найдите в списке служб Zabbix Agent, нажмите на
+                            строку правой клавишей мыши, в появившемся меню нажмите
+                            «Перезапустить».</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        <postreq>Подробная настройка <term keyref="monitoring_object">объектов мониторинга</term> в
+            веб-интерфейсе описана в разделе «<xref
+                href="../../../usage/monitoring%20objects%20and%20hosts/monitoring_objects_hosts.dita"
+                >Объекты мониторинга. Узлы сети</xref>». </postreq>
+    </taskbody>
+</task>

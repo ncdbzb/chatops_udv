@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="usage">
+    <title>Использование по назначению</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_kmk_syp_grb">
+            <li><xref href="monitoring%20objects%20and%20hosts/monitoring_objects_hosts.dita"
+                    >Объекты мониторинга. Узлы сети</xref><ul id="ul_g3j_yzp_grb">
+                    <li><xref href="monitoring%20objects%20and%20hosts/hosts_detection.dita"
+                            >Обнаружение узлов сети</xref></li>
+                    <li><xref href="monitoring%20objects%20and%20hosts/hosts_creation.dita">Создание
+                            узлов сети</xref></li>
+                    <li><xref href="monitoring%20objects%20and%20hosts/hosts_delete.dita">Удаление
+                            узлов сети</xref></li>
+                    <li><xref href="monitoring%20objects%20and%20hosts/inventory/inventory.dita"
+                            >Инвентаризация</xref><ul id="ul_pth_b1q_grb">
+                            <li><xref
+                                    href="monitoring%20objects%20and%20hosts/inventory/inventory_overview.dita"
+                                    >Обзор</xref></li>
+                            <li><xref
+                                    href="monitoring%20objects%20and%20hosts/inventory/inventory_manual_mode.dita"
+                                    >Ручной режим</xref></li>
+                            <li><xref
+                                    href="monitoring%20objects%20and%20hosts/inventory/inventory_data_review.dita"
+                                    >Просмотр инвентарных данных</xref></li>
+                            <li><xref
+                                    href="monitoring%20objects%20and%20hosts/inventory/inventory_data_build.dita"
+                                    >Построение инвентарных данных</xref></li>
+                        </ul></li>
+                </ul></li>
+            <li><xref href="data_items/data_items.dita">Элементы данных</xref><ul
+                    id="ul_edt_dbq_grb">
+                    <li><xref href="data_items/data_item_creation/data_item_creation.dita">Создание
+                            элемента данных</xref><ul id="ul_brh_kbq_grb">
+                            <li><xref
+                                    href="data_items/data_item_creation/data_item_configuration.dita"
+                                    >Настройка</xref></li>
+                            <li><xref
+                                    href="data_items/data_item_creation/data_item_preprocessing.dita"
+                                    >Предобработка значений элемента данных</xref></li>
+                            <li><xref
+                                    href="data_items/data_item_creation/data_item_unsupported.dita"
+                                    >Неподдерживаемые элементы данных</xref></li>
+                        </ul></li>
+                    <li><xref href="data_items/SNMP%20agent/snmp_agent.dita">SNMP агент</xref><ul
+                            id="ul_f2w_mbq_grb">
+                            <li><xref href="data_items/SNMP%20agent/snmp_monitoring.dita">Настройка
+                                    мониторинга по SNMP</xref></li>
+                        </ul></li>
+                    <li><xref
+                            href="data_items/History%20and%20dynamics%20of%20changes/history_and_dynamics.dita"
+                            >История и динамика изменений</xref><ul id="ul_g4y_nbq_grb">
+                            <li><xref
+                                    href="data_items/History%20and%20dynamics%20of%20changes/history_and_dynamics_overview.dita"
+                                    >Обзор</xref></li>
+                            <li><xref
+                                    href="data_items/History%20and%20dynamics%20of%20changes/history_storage.dita"
+                                    >Хранение истории</xref></li>
+                            <li><xref
+                                    href="data_items/History%20and%20dynamics%20of%20changes/dynamics_storage.dita"
+                                    >Хранение динамики изменений</xref></li>
+                        </ul></li>
+                </ul></li>
+            <li><xref href="triggers/triggers.dita">Триггеры</xref><ul id="ul_q5b_zbq_grb">
+                    <li><xref href="triggers/trigger_configuration/trigger_configuration.dita"
+                            >Настройка триггера</xref><ul id="ul_kv1_ccq_grb">
+                            <li><xref
+                                    href="triggers/trigger_configuration/trigger_configuration_details.dita"
+                                    >Настройка</xref></li>
+                        </ul></li>
+                    <li><xref href="triggers/trigger_expression/trigger_expression.dita">Выражение
+                            триггера</xref><ul id="ul_hrl_ccq_grb">
+                            <li><xref
+                                    href="triggers/trigger_expression/trigger_function_parametres.dita"
+                                    >Параметры функций</xref></li>
+                            <li><xref href="triggers/trigger_expression/trigger_operators.dita"
+                                    >Операторы</xref></li>
+                            <li><xref href="triggers/trigger_expression/trigger_cashing.dita"
+                                    >Кэширование значений</xref></li>
+                            <li><xref href="triggers/trigger_expression/trigger_cashing.dita"
+                                    >Выражения с неподдерживаевыми элементами</xref></li>
+                        </ul></li>
+                </ul></li>
+            <li><xref href="events/events.dita">События</xref><ul id="ul_evq_mcq_grb">
+                    <li><xref
+                                                  href="events/event%20generation%20for%20triggers/event_generation_for_triggers.dita"
+                                                  >Генерация событий на триггеры</xref><ul
+                                                  id="ul_o3d_scq_grb">
+                                                  <li><xref
+                                                  href="events/event%20generation%20for%20triggers/event_generation_overview.dita"
+                                                  >Обзор</xref></li>
+                                                  <li><xref
+                                                  href="events/event%20generation%20for%20triggers/problem_events.dita"
+                                                  >События проблемы</xref></li>
+                                                  <li><xref
+                                                  href="events/event%20generation%20for%20triggers/problem_events.dita"
+                                                  >События ОК</xref></li>
+                                                  <li><xref
+                                                  href="events/event%20generation%20for%20triggers/problem_close_manual.dita"
+                                                  >Закрытие проблем вручную</xref></li>
+                                                  <li><xref
+                                                  href="events/event%20generation%20for%20triggers/problem_close_configuration.dita"
+                                                  >Настройка параметров закрытия
+                                                  проблемы</xref></li>
+                                                </ul></li>
+                    <li><xref href="events/other%20event%20sources/other_problem_sources.dita"
+                                                  >Другие источники проблемы</xref><ul
+                                                  id="ul_pgx_wcq_grb">
+                                                  <li><xref
+                                                  href="events/other%20event%20sources/detection_events.dita"
+                                                  >События на обнаружения</xref></li>
+                                                  <li><xref
+                                                  href="events/other%20event%20sources/agents_autoregistration_events.dita"
+                                                  >События на авторегистрацию активных
+                                                  агентов</xref></li>
+                                                  <li><xref
+                                                  href="events/other%20event%20sources/internal%20events.dita"
+                                                  >Внутренние события</xref></li>
+                                                </ul></li>
+                    <li><xref href="events/event_object.dita">Объект события</xref></li>
+                    <li><xref href="events/actions_audit_hosts.dita">Аудит действий, выполняемых при
+                                                  обнаружении узлов</xref></li>
+                                        <li><xref href="events/actions_audit_web.dita">Аудит
+                                                  действий, выполненных в веб-интерфейсе</xref></li>
+                                        <li><xref href="events/messages_safety_web.dita">Сообщения о
+                                                  событиях безопасности в веб-интерфейсе</xref></li>
+                </ul></li>
+            <li><xref href="graphs/graphs.dita">Графики</xref><ul id="ul_qsv_zgj_hrb">
+                                        <li><xref href="graphs/simple%20graphs/simple_graphs.dita"
+                                                  >Простые графики</xref><ul id="ul_j2n_dhj_hrb">
+                                                  <li><xref
+                                                  href="graphs/simple%20graphs/time_choice.dita"
+                                                  >Выбор периода времени</xref></li>
+                                                  <li><xref
+                                                  href="graphs/simple%20graphs/recent_data_long_periods.dita"
+                                                  >Недавние данные и длительные периоды</xref></li>
+                                                  <li><xref
+                                                  href="graphs/simple%20graphs/switch_to_raw_data.dita"
+                                                  >Переключение к необработанным данным</xref></li>
+                                                </ul></li>
+                                        <li><xref href="graphs/user%20graphs/user_graphs.dita"
+                                                  >Пользовательские графики</xref><ul
+                                                  id="ul_fbb_chj_hrb">
+                                                  <li><xref
+                                                  href="graphs/user%20graphs/user_graphs_configuration.dita"
+                                                  >Настройка пользовательских графиков</xref></li>
+                                                </ul></li>
+                                </ul></li>
+            <li><xref href="net_maps/net_maps.dita">Карты сетей</xref><ul id="ul_dbg_ghj_hrb">
+                                        <li><xref
+                                                  href="net_maps/net_map_configuration/net_map_configuration.dita"
+                                                  >Настройка карты сети</xref><ul
+                                                  id="ul_sjy_ghj_hrb">
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/public_and_private_maps.dita"
+                                                  >Публичные и приватные карты</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/net_map_creation.dita"
+                                                  >Создание карты сети</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/net_map_general_access.dita"
+                                                  >Общий доступ</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/net_map_add_items.dita"
+                                                  >Добавление элементов</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/net_map_choose_items.dita"
+                                                  >Выбор элементов</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/net_map_item_connections.dita"
+                                                  >Связи элементов</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/move_copy_paste_items.dita"
+                                                  >Перемещение и копирование-вставка
+                                                  элементов</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/add_figures.dita"
+                                                  >Добавление фигур</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/add_lines.dita"
+                                                  >Добавление линий</xref></li>
+                                                  <li><xref
+                                                  href="net_maps/net_map_configuration/figures_lines_priority.dita"
+                                                  >Очередность фигур и линий</xref></li>
+                                                </ul></li>
+                                </ul></li>
+            <li><xref href="complex_screens/complex_screens.dita">Комплексные экраны</xref><ul
+                                        id="ul_qzp_mhj_hrb">
+                                        <li><xref href="complex_screens/create_complex_screen.dita"
+                                                  >Создание комплексного экрана</xref></li>
+                                        <li><xref
+                                                  href="complex_screens/complex_screen_add_items.dita"
+                                                  >Добавление элементов</xref></li>
+                                        <li><xref
+                                                  href="complex_screens/complex_screen_dynamic_items.dita"
+                                                  >Динамические элементы</xref></li>
+                                </ul></li>
+            <li><xref href="templates/templates.dita">Шаблоны</xref><ul id="ul_dc3_phj_hrb">
+                                        <li><xref
+                                                  href="templates/template_configuration/template_configuration.dita"
+                                                  >Настройка шаблона</xref><ul id="ul_ksr_phj_hrb">
+                                                  <li><xref
+                                                  href="templates/template_configuration/create_template.dita"
+                                                  >Создание шаблона</xref></li>
+                                                  <li><xref
+                                                  href="templates/template_configuration/add_items_triggers_graphs.dita"
+                                                  >Добавление элементов данных, триггеров,
+                                                  графиков</xref></li>
+                                                  <li><xref
+                                                  href="templates/template_configuration/add_panels.dita"
+                                                  >Добавление панелей</xref></li>
+                                                  <li><xref
+                                                  href="templates/template_configuration/add_web_scenarios.dita"
+                                                  >Добавление веб-сценариев</xref></li>
+                                                </ul></li>
+                                </ul></li>
+            <li><xref href="users_and_user_groups/users_and_user_groups.dita">Пользователи и группы
+                                        пользователей</xref><ul id="ul_wy4_thj_hrb">
+                                        <li><xref
+                                                  href="users_and_user_groups/user_configuration/user_configuration.dita"
+                                                  >Настройка пользователя</xref><ul
+                                                  id="ul_fq2_vhj_hrb">
+                                                  <li><xref
+                                                  href="users_and_user_groups/user_configuration/user_config_general_attributes.dita"
+                                                  >Общие атрибуты</xref></li>
+                                                  <li><xref
+                                                  href="users_and_user_groups/user_configuration/user_notifications.dita"
+                                                  >Оповещения пользователя</xref></li>
+                                                </ul></li>
+                                        <li><xref
+                                                  href="users_and_user_groups/user_access_rights/user_access_rights.dita"
+                                                  >Права доступа</xref><ul id="ul_irp_whj_hrb">
+                                                  <li><xref
+                                                  href="users_and_user_groups/user_access_rights/user_type.dita"
+                                                  >Тип пользователя</xref></li>
+                                                  <li><xref
+                                                  href="users_and_user_groups/user_access_rights/access_rights_host_groups.dita"
+                                                  >Права доступа к группам узлов сети</xref></li>
+                                                </ul></li>
+                                        <li><xref
+                                                  href="users_and_user_groups/user_groups/user_groups.dita"
+                                                  >Группы пользователей</xref><ul
+                                                  id="ul_pkw_yhj_hrb">
+                                                  <li><xref
+                                                  href="users_and_user_groups/user_groups/user_groups_configuration.dita"
+                                                  >Настройка сети</xref></li>
+                                                  <li><xref
+                                                  href="users_and_user_groups/user_groups/access_host_several_user_groups.dita"
+                                                  >Доступ к узлу сети из нескольких групп
+                                                  пользователей</xref></li>
+                                                  <li><xref
+                                                  href="users_and_user_groups/user_groups/user_groups_other_info.dita"
+                                                  >Другая информация</xref></li>
+                                                </ul></li>
+                                </ul></li>
+            <li><xref href="service%20monitoring/service_monitoring.dita">Мониторинг услуг</xref><ul
+                                        id="ul_cqh_b3j_hrb">
+                                        <li><xref
+                                                  href="service%20monitoring/service_configuration.dita"
+                                                  >Настройка услуги</xref></li>
+                                </ul></li>
+            <li><xref href="hosts_and_triggers_service/hosts_and_triggers_service.dita">Обслуживание
+                                        узлов сети и триггеров</xref><ul id="ul_q5z_b3j_hrb">
+                                        <li><xref
+                                                  href="hosts_and_triggers_service/service_period_configuration.dita"
+                                                  >Настройка периода обслуживания</xref></li>
+                                        <li><xref
+                                                  href="hosts_and_triggers_service/service_status_review.dita"
+                                                  >Просмотр состояния обслуживания</xref></li>
+                                </ul></li>
+            <li><xref href="distributed%20monitoring/distributed_monitoring.dita">Распределенный
+                                        мониторинг</xref><ul id="ul_mtk_h3j_hrb">
+                                        <li><xref
+                                                  href="distributed%20monitoring/agent_server/agent_server.dita"
+                                                  >Сервер агентов</xref><ul id="ul_ot4_23j_hrb">
+                                                  <li><xref
+                                                  href="distributed%20monitoring/agent_server/agent_server_configuration.dita"
+                                                  >Настройка сервера агентов</xref></li>
+                                                </ul></li>
+                                </ul></li>
+        </ul>
+    </body>
+</topic>

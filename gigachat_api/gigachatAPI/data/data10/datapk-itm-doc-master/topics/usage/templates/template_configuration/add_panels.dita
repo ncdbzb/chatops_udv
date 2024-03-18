@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_panels">
+    <title>Добавление панелей</title>
+    <taskbody><prereq><p>Для добавления панелей (комплексных экранов) в шаблон из раздела боковой панели <cite keyref="configuration">«Настройка»</cite> → <cite
+                keyref="templates">«Шаблоны»</cite> необходимо сделать следующее:</p></prereq><steps id="ol_t1t_srz_frb">
+            <step><cmd>Нажать на «Панели» в строке с шаблоном.</cmd></step>
+            <step><cmd>Настроить Панель обычным способом.</cmd></step>
+        </steps><postreq><p>Элементы, которые можно добавить в панель шаблона: простые графики, пользовательские
+            графики, часы, простой текст, URL.</p></postreq></taskbody>
+</task>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_add_new_monitoring_server">
+    <title>Подключение нового сервера мониторинга к ITM-VM</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>Для подключения <term keyref="monitoring_server">сервера мониторинга</term> уровня
+            филиала ITM-K:</context>
+        <steps>
+            <step>
+                <cmd>В разделе «<cite keyref="itm_m_page_server_monitoring">Серверы
+                        мониторинга</cite>» нажмите на кнопку «Добавить сервер» и заполните экранную
+                    форму подключения <term keyref="monitoring_server">сервера мониторинга</term>. </cmd>
+                <info><fig>
+                        <title>Подключение <term keyref="monitoring_server">сервера
+                                мониторинга</term>. Авторизация</title>
+                        <image href="../../../images/ITM_M_screens/ITM_M_add_monitoring_server.png"
+                        />
+                    </fig> Все поля формы подключения нового сервера являются обязательными: <ul
+                        id="ul_qs3_2bg_krb">
+                        <li>IP-адрес – введите IP-адрес IPv4 <term keyref="monitoring_server"
+                                >сервера мониторинга</term>;</li>
+                        <li>Порт – введите номер TCP порта для подключения к серверу, значение по
+                            умолчанию 443;</li>
+                        <li>Логин – введите логин учетной записи <term keyref="monitoring_server"
+                                >сервера ITM-K</term> с правами доступа к API;</li>
+                        <li>Пароль – введите пароль учетной записи <term keyref="monitoring_server"
+                                >сервера ITM-K</term> с правами доступа к API.</li>
+                    </ul></info>
+            </step>
+            <step>
+                <cmd>При нажатии на кнопку «Подключить» (при вводе всех обязательных полей)
+                    осуществляется авторизация на подключаемом сервере и выводится форма для ввода
+                    дополнительной информации о сервере.</cmd>
+                <info>
+                    <fig>
+                        <title>Подключение сервера мониторинга. Свойства</title>
+                        <image href="../../../images/ITM_M_screens/ITM_M_add_server_2.png"/>
+                    </fig>
+                    <note>При обнаружении ошибок подключения или во введенных данных выводятся
+                        соответствующие сообщения: <ul id="ul_vmf_3cg_krb">
+                            <li>сервер уже подключен;</li>
+                            <li>ошибка подключения;</li>
+                            <li>неверный логин или пароль.</li>
+                        </ul></note>
+                    <p>В форме свойств подключаемого сервера необходимо заполнить следующие
+                        поля:</p>
+                    <ul id="ul_g4q_pcg_krb">
+                        <li>Наименование сервера, поле обязательное;</li>
+                        <li>Наименование филиала, поле обязательное;</li>
+                        <li>Описание, поле необязательное.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>При нажатии на кнопку «Сохранить» осуществляется сохранение информации о подключаемом сервере и 
+                    начинается получение данных об <term keyref="monitoring_object">объектах мониторинга</term> с этого сервера.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_template">
+    <title>Создание шаблона</title>
+    <taskbody><prereq><p>Для создания шаблона необходимо выполнить следующее:</p></prereq><steps id="ol_snq_vqz_frb">
+        <step><cmd>Перейти в раздел боковой панели <cite keyref="configuration">«Настройка</cite> → <cite keyref="templates">Шаблоны»</cite>.</cmd></step>
+            <step><cmd>Нажать на «Создать шаблон».</cmd></step>
+            <step><cmd>Изменить атрибуты шаблона.</cmd></step>
+        </steps><postreq><p>Вкладка «Шаблон» содержит общие атрибуты шаблона.</p><p>Все обязательные поля ввода отмечены красной звездочкой.</p>
+            <p>Атрибуты шаблонов приведены в таблице.</p>
+            <table id="table_tnq_vqz_frb" frame="all" colsep="1" rowsep="1">
+                <title>Доступные атрибуты шаблонов</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <thead>
+                    <row>
+                        <entry>Параметр</entry>
+                        <entry>Описание</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Имя шаблона</entry>
+                        <entry>Уникальное имя шаблона.</entry>
+                    </row>
+                    <row>
+                        <entry>Видимое имя</entry>
+                        <entry>Если указать это имя, только оно будет отображаться в списках, картах
+                                и других элементах.</entry>
+                    </row>
+                    <row>
+                        <entry>Группы</entry>
+                        <entry>Группы узлов сети/шаблонов, к которым принадлежит этот
+                                шаблон.</entry>
+                    </row>
+                    <row>
+                        <entry>Описание</entry>
+                        <entry>Поле для ввода описания шаблона.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table><p>Вкладка «Присоединенные шаблоны» позволяет присоединить один и более «вложенных» шаблонов
+            к этому шаблону. Все объекты (элементы данных, <term keyref="triggers">триггеры</term>, графики и прочее) будут
+            унаследованы из присоединенных шаблонов.</p><p>Для присоединения нового шаблона, необходимо начать печатать в поле «Присоединение новых
+            шаблонов» до появления списка шаблонов, соответствующих введенной букве (буквам).
+            Прокрутив список, можно выбрать необходимый шаблон. Когда все шаблоны будут
+            присоединены, следует нажать на «Добавить».</p><p>Для отсоединения шаблона необходимо воспользоваться одной из двух опций в блоке
+            «Присоединенные шаблоны»:</p><ul id="ul_unq_vqz_frb">
+                <li><b>Отсоединить</b> – отсоединить шаблон, но оставить его элементы данных, <term
+                        keyref="triggers">триггеры</term> и графики;</li>
+            <li><b>Отсоединить и очистить</b> – отсоединить шаблон и удалить все его элементы
+                    данных, <term keyref="triggers">триггеры</term> и графики.</li>
+        </ul><p>Вкладка «Макросы» позволяет определить пользовательские макросы уровня шаблона. Также
+            можно просмотреть здесь макросы из присоединенных шаблонов и глобальные макросы, если
+            выбрать опцию «Унаследованные и макросы из шаблонов». Это место, где отображаются все
+            определенные пользовательские макросы для этого шаблона со своими раскрытыми значениями,
+            а также информация о том откуда эти макросы.</p><p>Для удобства имеются ссылки на настройку соответствующих шаблонов и глобальных макросов.
+            Также имеется возможность изменить макрос уровня шаблона/глобальный на уровне этого
+            шаблона, фактически создав копию этого макроса у шаблона.</p><p>Вкладка «Теги» позволяет добавлять, изменять и удалять теги к шаблону в формате «Имя тега» =
+                «Значение тега».</p><p>Описания кнопок на странице «Шаблоны» для работы с шаблонами приведены в таблице.</p>
+            
+            <table id="table_vnq_vqz_frb" frame="all" rowsep="1" colsep="1">
+                <title>Описание кнопок на странице «Шаблоны»</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <tbody>
+                    <row>
+                        <entry>Кнопка</entry>
+                        <entry>Описание</entry>
+                    </row>
+                    <row>
+                        <entry>
+                                <image
+                                    conref="../../../reusable/buttons/add_button.dita#ReusableComponent_p5l_xxr_hrb/image_i3k_v5t_frb"
+                                    id="image_usx_kzr_hrb"/></entry>
+                        <entry>Добавление шаблона. Добавленный шаблон должен появиться в
+                            списке.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                                <image
+                                    conref="../../../reusable/buttons/update_button.dita#ReusableComponent_e21_zxr_hrb/image_s4h_w5t_frb"
+                                    id="image_b35_lzr_hrb"/></entry>
+                        <entry>Обновление свойств существующего шаблона.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                                <image
+                                    conref="../../../reusable/buttons/clone_button.dita#ReusableComponent_ppc_vzr_hrb/image_qq4_tzr_hrb"
+                                    id="image_nxx_vzr_hrb"/></entry>
+                        <entry>Создание другого шаблона основанного на свойствах текущего шаблона,
+                            включая все объекты (элементы данных, <term keyref="triggers">триггеры</term> и прочее) унаследованные
+                            от присоединенных шаблонов.</entry>
+                    </row>
+                    <row>
+                        <entry><image
+                                    conref="../../../reusable/buttons/full_clone_button.dita#ReusableComponent_phb_yzr_hrb/image_wcv_krz_frb"
+                                    id="image_gmb_yzr_hrb"/>
+                            </entry>
+                        <entry>Создание другого шаблона основанного на свойствах текущего шаблона,
+                            включая все объекты (элементы данных, <term keyref="triggers">триггеры</term> и прочее) как
+                            унаследованные от присоединенных шаблонов, так и напрямую присоединенные
+                            к текущему шаблону.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                                <image
+                                    conref="../../../reusable/buttons/delete_button.dita#ReusableComponent_yzr_4yr_hrb/image_yw5_pvt_frb"
+                                    id="image_rmd_zzr_hrb"/></entry>
+                        <entry>Удаление шаблона; объекты из шаблона (элементы данных, <term keyref="triggers">триггеры</term> и
+                            прочее) останутся присоединенными к узлам сети.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                                <image
+                                    conref="../../../reusable/buttons/delete_and_clear_button.dita#ReusableComponent_czr_b1s_hrb/image_ekl_nrz_frb"
+                                    id="image_zcs_b1s_hrb"/></entry>
+                        <entry>Удаление шаблона и всех его объектов из присоединенных узлов
+                            сети.</entry>
+                    </row>
+                    <row>
+                        <entry>
+                                <image
+                                    conref="../../../reusable/buttons/undo_button.dita#ReusableComponent_e4k_qyr_hrb/image_jz3_qvt_frb"
+                                    id="image_p1x_21s_hrb"/></entry>
+                        <entry>Отмена изменения свойств шаблона.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+            </table><p>Когда шаблон создан, необходимо добавить в него объекты.</p><p>Элементы данных должны быть добавлены первыми в шаблон. <term keyref="triggers">Триггеры</term> и графики нельзя
+            добавить без наличия соответствующих элементов данных.</p></postreq></taskbody>
+</task>

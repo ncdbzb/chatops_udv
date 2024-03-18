@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_abv_csn_nrb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_bbv_csn_nrb">
+                <cmd>В конце конфигурационного файла, в разделе «LICENSER OPTION AND PARAMETRS»
+                    раскомментируйте строки:</cmd>
+                <info><codeblock>lic_product_name = 'Jatoba'
+lic_file_path = 'jatoba.cer'
+lic_server_addr = 'https://license.gaz-is.ru'</codeblock><fig
+                        id="fig_safe_installation_redOS_2_5">
+                        <title>Раздел LICENSER OPTION AND PARAMETRS файла postgresql.confх</title>
+                        <image
+                            href="../../../images/safe_installation/safe_installation_redOS_2_5.png"
+                            id="safe_installation_redOS_2_5"/>
+                    </fig></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

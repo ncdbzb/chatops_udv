@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_exportfilesize">
+    <glossterm>ZBX_EXPORTFILESIZE</glossterm>
+    <glossdef><p>Максимальный размер файла экспорта в байтах. Используется только для чередования,
+            ротации, если установлен ExportDir.</p><b>Разрешенный диапазон
+        значений:</b>1M-1G</glossdef>
+</glossentry>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_u2v_2ls_hrb">
+    <title>/etc/zabbix/zabbix_agentd.conf</title>
+    <body>
+        <p><codeph id="codeph_v2v_2ls_hrb">/etc/zabbix/zabbix_agentd.conf</codeph></p>
+    </body>
+</topic>

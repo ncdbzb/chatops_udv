@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="_100_most_active_triggers">
+    <glossterm>100 наиболее активных триггеров</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «100 наиболее активных триггеров»</title>
+            <image href="../../../images/Pages/reports_100_most_active_triggers.png" id="reports_100_most_active_triggers">
+                <alt>Страница «100 наиболее активных триггеров»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

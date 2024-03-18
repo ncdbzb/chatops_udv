@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="auto_mode">
+    <title>Автоматический режим</title>
+    <body>
+        <p>При выборе построения инвентарных данных автоматически, инвентарные данные узлов сети
+            могут заполняться автоматически.</p>
+        <p>Для этого необходимо настроить элементы данных узла сети, которые будут заполнять любые
+            поля инвентарных данных своими значениями, указав поле назначения с соответствующим
+            атрибутом («Заполнять поле инвентарных данных») при настройке элемента данных (см.
+            раздел 3.2.1.1). </p>
+        <p>Элементы данных, которые особенно полезны для автоматического сбора инвентарных
+            данных:</p>
+        <ul id="ul_ekp_dht_frb">
+            <li><codeph>system.hw.chassis[&lt;full|type|vendor|model|serial>]</codeph> – по
+                умолчанию [&lt;info>], требуются права root;</li>
+            <li><codeph>system.hw.cpu[&lt;all|cpunum,full|maxfreq|vendor|model|curfreq>]</codeph> – по
+                умолчанию <codeph>[[&lt;cpu>,&lt;info>]</codeph></li>
+            <li><codeph>system.hw.devices[&lt;pci|usb>]</codeph> – по умолчанию <codeph>[&lt;type>]</codeph></li>
+            <li><codeph>system.hw.macaddr[интерфейс,short|full]</codeph> – по умолчанию
+                    <codeph>[&lt;interface>,&lt;format>]</codeph>, интерфейс является регулярным
+                выражением;</li>
+            <li><codeph>system.sw.arch</codeph></li>
+            <li><codeph>system.sw.os[name|short|full]</codeph> – по умолчанию <codeph>[&lt;info>]</codeph></li>
+            <li><codeph>system.sw.packages[пакет,менеджер,short|full]</codeph> – по умолчанию
+                    <codeph>[&lt;package>,&lt;manager>,&lt;format>]</codeph>, пакет является регулярным
+                выражением.</li>
+        </ul>
+    </body>
+</topic>

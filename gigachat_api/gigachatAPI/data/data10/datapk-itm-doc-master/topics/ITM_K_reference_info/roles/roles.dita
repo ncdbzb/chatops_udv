@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="roles">
+    <title>Роли пользователей и интерфейсы, доступные каждой роли</title>
+    <body>
+        <table id="table_tvd_nln_grb" frame="all" colsep="1" rowsep="1">
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="3.6*"/>
+                <thead>
+                    <row>
+                        <entry>Роль</entry>
+                        <entry>Список доступных для роли интерфейсов</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Пользователь</entry>
+                        <entry>
+                            <p>Интерфейс авторизации</p>
+                            <p>Интерфейс управления, страница <cite keyref="panel">«Мониторинг ->
+                                    Панель»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="problems">«Мониторинг ->
+                                    Проблемы»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="overview">«Мониторинг ->
+                                    Обзор»</cite></p>
+                            <p>Интерфейс управления, страница <cite>«Мониторинг -> Веб»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="latest_data">«Мониторинг
+                                    -> Последние данные»</cite></p>
+                            <p>Интерфейс управления, страница <cite>«Мониторинг ->
+                                Графики»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="complex_screens"
+                                    >«Мониторинг -> Комплексные экраны»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="net_maps">«Мониторинг ->
+                                    Карты сетей»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="detection">«Мониторинг
+                                    -> Обнаружение»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="services">«Мониторинг ->
+                                    Услуги»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="overview_inventory"
+                                    >«Инвентаризация -> Обзор»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="hosts_inventory"
+                                >«Инвентаризация -> Узлы сети»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="system_info">«Отчеты ->
+                                    Информация о системе»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="availability_report"
+                                    >«Отчеты -> Отчет о доступности»</cite></p>
+                            <p>Интерфейс управления, страница <cite
+                                    keyref="100_most_active_triggers">«Отчеты -> 100 наиболее
+                                    активных триггеров»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="audit">«Отчеты ->
+                                    Аудит»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="action_log">«Отчеты ->
+                                    Журнал действий»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="notifications">«Отчеты
+                                    -> Оповещения»</cite></p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Администратор</entry>
+                        <entry>
+                            <p><i>Все интерфейсы, доступные роли «Пользователь»</i></p>
+                            <p>Интерфейс управления, страница <cite keyref="host_groups">«Настройка
+                                    -> Группы узлов сети»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="templates">«Настройка ->
+                                    Шаблоны»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="hosts_configuration"
+                                    >«Настройка -> Узлы сети»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="service">«Настройка ->
+                                    Обслуживание»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="actions">«Настройка ->
+                                    Действия»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="event_correlation"
+                                    >«Настройка -> Корреляция событий»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="detection_configuration"
+                                    >«Настройка -> Обнаружение»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="services_configuration"
+                                    >«Настройка -> Услуги»</cite></p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Супер Администратор</entry>
+                        <entry>
+                            <p><i>Все интерфейсы, доступные роли «Администратор»</i></p>
+                            <p>Интерфейс управления, страница <cite keyref="general"
+                                    >«Администрирование -> Общие»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="proxy"
+                                    >«Администрирование -> Прокси»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="autentification"
+                                    >«Администрирование -> Аутентификация»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="user_groups"
+                                    >«Администрирование -> Группы пользователей»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="users"
+                                    >«Администрирование -> Пользователи»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="ways_of_notification"
+                                    >«Администрирование -> Способы оповещений»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="scripts"
+                                    >«Администрирование -> Скрипты»</cite></p>
+                            <p>Интерфейс управления, страница <cite keyref="queue"
+                                    >«Администрирование -> Очередь»</cite></p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

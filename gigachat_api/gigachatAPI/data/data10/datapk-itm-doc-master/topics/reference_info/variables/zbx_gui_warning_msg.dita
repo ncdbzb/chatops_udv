@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_gui_warning_msg">
+    <glossterm>ZBX_GUI_WARNING_MSG</glossterm>
+    <glossdef><p>Информационное сообщение о периоде обслуживания веб-интерфейса
+            Zabbix.</p><b>Значение в конфигурации ITM-K при поставке:</b>Zabbix is under
+        maintenance.</glossdef>
+</glossentry>

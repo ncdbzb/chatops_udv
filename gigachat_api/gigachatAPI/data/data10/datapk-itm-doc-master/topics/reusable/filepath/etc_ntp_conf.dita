@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_emg_c2s_hrb">
+    <title>etc_ntp_conf</title>
+    <body>
+        <p><codeph id="codeph_fmg_c2s_hrb">/etc/ntp.conf</codeph></p>
+    </body>
+</topic>

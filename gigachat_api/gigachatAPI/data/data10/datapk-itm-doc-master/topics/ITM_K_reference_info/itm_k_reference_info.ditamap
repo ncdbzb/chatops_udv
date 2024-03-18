@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-K Справочная информация</title>
+    <topicref href="breadcrumbs/breadcrumbs.dita">
+        <topicref href="breadcrumbs/breadcrumbs.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="../reference_info/glossary/topics_glossary.dita">
+        <topicref href="../reference_info/glossary/glossary.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="challenges/challenges.dita"/>
+    <topicref href="roles/roles.dita"/>
+    <topicref href="var_tables/var_tables.dita">
+        <topicref href="var_tables/var_tables.ditamap" format="ditamap"/>
+    </topicref>
+</map>

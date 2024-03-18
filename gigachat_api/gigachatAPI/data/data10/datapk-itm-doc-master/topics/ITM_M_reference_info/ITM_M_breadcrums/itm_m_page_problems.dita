@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_m_page_problems">
+    <glossterm>Проблемы</glossterm>
+    <glossdef>Пункт главного меню, содержащий информацию обо всех <term keyref="om_problem"
+            >проблемах объектов мониторинга</term>. <fig>
+            <title>Проблемы</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_OM_problems.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

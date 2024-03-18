@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="net_maps">
+    <title>Карты сетей</title>
+    <body>
+        <p>Если есть сеть, за которой ведется наблюдение, то, возможно,появится желание сделать
+            визуальное представление инфраструктуры. Для этого можно создать в DATAPK ITM-K карты
+            сетей или других структур.</p>
+        <p>Все пользователи могут создавать карты сетей. Карты могут быть публичными (доступными
+            всем пользователям) или приватными (доступными выбранным пользователям).</p>
+        <p>Перейдем к настройке карты сетей.</p>
+        <p>В этом разделе:</p>
+        <ul id="ul_ams_ydk_hrb">
+            <li><xref href="net_map_configuration/net_map_configuration.dita">Настройка карты
+                    сети</xref><ul id="ul_z31_c2k_hrb">
+                    <li><xref href="net_map_configuration/public_and_private_maps.dita">Публичные и
+                            приватные карты</xref></li>
+                    <li><xref href="net_map_configuration/net_map_creation.dita">Создание карты
+                            сети</xref></li>
+                    <li><xref href="net_map_configuration/net_map_general_access.dita">Общий
+                            доступ</xref></li>
+                    <li><xref href="net_map_configuration/net_map_add_items.dita">Добавление
+                            элементов</xref></li>
+                    <li><xref href="net_map_configuration/net_map_choose_items.dita">Выбор
+                            элементов</xref></li>
+                    <li><xref href="net_map_configuration/net_map_item_connections.dita">Связи
+                            элементов</xref></li>
+                    <li><xref href="net_map_configuration/move_copy_paste_items.dita">Перемещение и
+                            копирование-вставка элементов</xref></li>
+                    <li><xref href="net_map_configuration/add_figures.dita">Добавление
+                        фигур</xref></li>
+                    <li><xref href="net_map_configuration/add_lines.dita">Добавление
+                        линий</xref></li>
+                    <li><xref href="net_map_configuration/figures_lines_priority.dita">Очередность
+                            фигур и линий</xref></li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

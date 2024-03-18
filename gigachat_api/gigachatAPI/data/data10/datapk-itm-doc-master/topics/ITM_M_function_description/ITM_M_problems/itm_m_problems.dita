@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_problems">
+    <title>Проблемы (объектов мониторинга)</title>
+    <body>
+        <p>Раздел «<cite keyref="itm_m_page_problems">Проблемы</cite>» отображает информацию обо всех проблемах <term keyref="monitoring_object">объектов мониторинга</term> со всех <term keyref="monitoring_server">серверов уровней филиалов ITM-K</term> и серверов уровня технологических комплексов ITM-A.
+            Модуль ITM-VM получает от <term keyref="monitoring_server">серверов консолидации ITM-K</term> данные обо всех <term keyref="om_problem">проблемах объектов мониторинга (ОМ)</term> периодически по расписанию.
+        </p>
+        <p>В этом разделе:<ul id="ul_hfh_ph3_lrb">
+                <li><xref href="itm_m_problem_OM_list.dita">Список проблем объектов
+                        мониторинга</xref>.</li>
+            </ul></p>
+    </body>
+</topic>

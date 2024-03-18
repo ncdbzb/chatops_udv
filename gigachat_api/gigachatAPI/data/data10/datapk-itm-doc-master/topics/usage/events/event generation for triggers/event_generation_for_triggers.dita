@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="event_generation_for_triggers">
+    <title>Генерация событий на триггеры</title>
+    <body>
+        <p>В этом разделе:<ul>
+                <li><xref
+                        href="event_generation_overview.dita"
+                        >Обзор</xref></li>
+                <li><xref href="problem_events.dita"
+                        >События проблемы</xref></li>
+                <li><xref href="problem_events.dita"
+                        >События ОК</xref></li>
+                <li><xref
+                        href="problem_close_manual.dita"
+                        >Закрытие проблем вручную</xref></li>
+                <li><xref
+                        href="problem_close_configuration.dita"
+                        >Настройка параметров закрытия проблемы</xref></li>
+            </ul></p>
+    </body>
+</topic>

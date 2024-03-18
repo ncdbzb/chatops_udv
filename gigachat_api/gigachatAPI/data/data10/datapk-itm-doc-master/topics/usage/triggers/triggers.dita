@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="triggers">
+    <title>Триггеры</title>
+    <body>
+        <p><div><p>Триггеры – это логические выражения, которые «оценивают» данные, собранные
+                                        элементами данных, и отражают текущее состояние
+                                        системы.</p><p>Для сбора системных данных используются
+                                        элементы данных. Но наблюдать за этими данными все время в
+                                        ожидании выполнения условия, которое приведет к оповещению
+                                        или которое заслуживает внимания, непрактично. Работа по
+                                        «оценке» данных может быть оставлена на выражения
+                                        триггеров.</p><p>Выражения триггеров позволяют задать порог,
+                                        при котором состояние данных «приемлемое». Таким образом,
+                                        если входящие данные превышают приемлемое состояние, триггер
+                                        активизируется – или, другими словами, меняет состояние на
+                                                <i>ПРОБЛЕМА</i>.</p><p>Триггер может принимать
+                                        следующие состояния, приведенные в таблице:</p><table
+                                        id="table_lt2_ynq_lrb" frame="all" colsep="1" rowsep="1">
+                                        <title>Возможные состояния триггеров</title>
+                                        <tgroup cols="2">
+                                                <colspec colnum="1" colname="col1"/>
+                                                <colspec colnum="2" colname="col2"/>
+                                                <thead>
+                                                  <row>
+                                                  <entry>Значение</entry>
+                                                  <entry>Описание</entry>
+                                                  </row>
+                                                </thead>
+                                                <tbody>
+                                                  <row>
+                                                  <entry>ОК</entry>
+                                                  <entry>Нормальное состояние триггера.</entry>
+                                                  </row>
+                                                  <row>
+                                                  <entry>ПРОБЛЕМА</entry>
+                                                  <entry>Обычно означает, что значение каких-либо
+                                                  данных пересекло пороговое значение. Например,
+                                                  загрузка процессора слишком высокая.</entry>
+                                                  </row>
+                                                </tbody>
+                                        </tgroup>
+                                </table><p>Состояние триггера (выражение) пересчитывается каждый
+                                        раз, когда сервер DATAPK ITM-K получает новое значение,
+                                        которое является частью выражения.</p><p>Если в выражении
+                                        триггера используются функции, связанные со временем
+                                                (<codeph>nodata()</codeph>, <codeph>date()</codeph>,
+                                                <codeph>dayofmonth()</codeph>,
+                                                <codeph>dayofweek()</codeph>,
+                                                <codeph>time()</codeph>, <codeph>now()</codeph>), то
+                                        тогда триггер будет пересчитываться каждые 30 секунд
+                                        процессом синхронизации истории ПК DATAPK ITM. Если в одном
+                                        выражении используются оба типа функций (связанные со
+                                        временем и не связанные со временем), то пересчет
+                                        выполняется при поступлении нового значения или каждые 30
+                                        секунд.</p> Можно создавать выражения триггеров с различной
+                                степенью сложности.</div>В этом разделе:<ul>
+                                <li><xref href="trigger_configuration/trigger_configuration.dita"
+                                                >Настройка триггера</xref><ul id="ul_kv1_ccq_grb">
+                                                <li><xref
+                                                  href="trigger_configuration/trigger_configuration_details.dita"
+                                                  >Настройка</xref></li>
+                                        </ul></li>
+                                <li><xref href="trigger_expression/trigger_expression.dita"
+                                                >Выражение триггера</xref><ul id="ul_hrl_ccq_grb">
+                                                <li><xref
+                                                  href="trigger_expression/trigger_function_parametres.dita"
+                                                  >Параметры функций</xref></li>
+                                                <li><xref
+                                                  href="trigger_expression/trigger_operators.dita"
+                                                  >Операторы</xref></li>
+                                                <li><xref
+                                                  href="trigger_expression/trigger_cashing.dita"
+                                                  >Кэширование значений</xref></li>
+                                                <li><xref
+                                                  href="trigger_expression/trigger_cashing.dita"
+                                                  >Выражения с неподдерживаевыми
+                                                  элементами</xref></li>
+                                        </ul></li>
+                        </ul></p>
+    </body>
+</topic>

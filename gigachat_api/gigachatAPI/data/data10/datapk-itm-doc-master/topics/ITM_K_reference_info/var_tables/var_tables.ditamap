@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>var_tables</title>
+    <topicref href="var_env_srv.dita"/>
+    <topicref href="var_env_db_pgsql.dita"/>
+    <topicref href="var_env_web.dita"/>
+    <topicref href="var_agent_env.dita"/>
+</map>

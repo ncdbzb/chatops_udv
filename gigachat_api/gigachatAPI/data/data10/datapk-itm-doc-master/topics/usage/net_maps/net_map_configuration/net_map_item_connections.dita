@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="net_map_item_connections">
+    <title>Связи элементов</title>
+    <body>
+        <p>После того, как элементы расставятся на карте, необходимо соединить их. Для соединения
+            двух элементов необходимо сначала выбрать их. Когда элементы будут выбраны, требуется
+            нажать на «Добавить» справа от подписи «Связь».</p>
+        <p>При наличии созданной связи диалог одного элемента теперь содержит дополнительный раздел
+            «Связи». При нажатии на «Изменить» откроются атрибуты связей для редактирования.
+            Атрибуты связей приведены в таблице.</p>
+        <table id="table_kgl_jnz_frb" frame="all" colsep="1" rowsep="1">
+            <title>Атрибуты связей элементов</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="2.47*"/>
+                <thead>
+                    <row>
+                        <entry>Параметр</entry>
+                        <entry>Описание</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Подпись</entry>
+                        <entry>
+                            <p>Подпись, которая отображается поверх связи.</p>
+                            <p> В этом поле поддерживается макрос <xref
+                                    href="https://www.zabbix.com/documentation/4.0/ru/manual/appendix/macros/supported_by_location"
+                                    format="html" scope="external"
+                                    >{узел_сети:ключ.функ(парам)}</xref>, но только функции <term
+                                    keyref="triggers">триггеров</term>
+                                <codeph>avg</codeph>, <codeph>last</codeph>, <codeph>min</codeph> и
+                                    <codeph>max</codeph> с параметром в виде секунд.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Подключаться через</entry>
+                        <entry>Элемент, к которому присоединяется связь.</entry>
+                    </row>
+                    <row>
+                        <entry>Тип (ОК)</entry>
+                        <entry>
+                            <p>Стиль связи по умолчанию:</p>
+                            <ul id="ul_lgl_jnz_frb">
+                                <li><b>Линия</b> - одиночная линия;</li>
+                                <li><b>Жирная линия</b> - жирная линия;</li>
+                                <li><b>Точечная линия</b> – точки;</li>
+                                <li><b>Пунктирная линия</b> - пунктирная линия.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Цвет (ОК)</entry>
+                        <entry>Цвет связи по умолчанию.</entry>
+                    </row>
+                    <row>
+                        <entry><xref
+                                href="https://www.zabbix.com/documentation/4.0/ru/manual/config/visualisation/maps/links"
+                                format="html" scope="external">Индикаторы связи</xref></entry>
+                        <entry>Список <term keyref="triggers">триггеров</term>, соединенных со
+                            связью. В случае, если <term keyref="triggers">триггер</term> в
+                            состоянии ПРОБЛЕМА, его стиль применяется к связи.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

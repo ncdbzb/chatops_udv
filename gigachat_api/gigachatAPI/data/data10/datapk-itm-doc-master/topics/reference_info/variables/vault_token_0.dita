@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="vault_token_0">
+    <glossterm>VAULT_TOKEN</glossterm>
+    <glossdef>
+        <p>Токен аутентификации Vault, который должен был быть сгенерирован исключительно для Zabbix
+            сервера с разрешением только на чтение для путей, указанных в макросах Vault, и
+            разрешением только на чтение для пути, указанного в необязательном параметре
+            конфигурации VaultDBPath.</p>
+        <p> Если VaultToken и переменная среды VAULT_TOKEN определены одновременно возникает ошибка
+            в конфигурации.</p>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_startpollers_unreachable">
+    <glossterm>ZBX_STARTPOLLERS UNREACHABLE</glossterm>
+    <glossdef>
+        <p>Количество экземпляров <term keyref="pre-fork">пре-форков</term> <term keyref="poller">поллеров</term> для недоступных узлов сети (включая IPMI и
+            Java)1.</p>
+        <p>По крайне один <term keyref="poller">поллер</term> для недоступных хостов должен быть запущен, если запускаются
+            обычные <term keyref="poller">поллеры</term>, IPMI или Java.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>5</p>
+        <p><b>Разрешенный диапазон значений:</b>0-1000</p>
+    </glossdef>
+</glossentry>

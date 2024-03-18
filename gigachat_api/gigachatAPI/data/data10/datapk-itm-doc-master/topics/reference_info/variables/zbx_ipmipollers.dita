@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_ipmipollers">
+    <glossterm>ZBX_IPMIPOLLERS</glossterm>
+    <glossdef>
+        <p>Количество экземпляров <term keyref="pre-fork">пре-форков</term>IPMI <term keyref="poller">поллеров</term>.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>0</p>
+        <p><b>Разрешенный диапазон значений:</b>0-1000</p>
+    </glossdef>
+</glossentry>

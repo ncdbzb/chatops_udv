@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="agents_installation">
+    <title>Установка агентов</title>
+    <body>
+        <p>Для установки агентов необходимо использовать подходящий установочный файл, в зависимости
+            от типа ОС. </p>
+        <p>В данном разделе:</p>
+        <ul id="ul_kfl_prg_3rb">
+            <li><xref href="agent_installation_windows.dita">Установка агента на ОС
+                Windows</xref></li>
+            <li><xref href="agent_installation_centos_7.dita">Установка агента на ОС Centos
+                7</xref></li>
+            <li><xref href="agent_installation_debian.dita">Установка агента на ОС
+                Debian</xref></li>
+            <li><xref href="agentless_consolidation.dita">Настройка безагентного сбора на сервере
+                    консолидации</xref></li>
+            <li><xref href="agentless_windows_wmi.dita">Настройка безагентного сбора на ОС Windows с
+                    помощью протокола WMI</xref></li>
+            <li><xref href="agentless_snmp.dita">Настройка безагентного сбора на АСО с помощью
+                    протокола SNMP</xref></li>
+        </ul>
+    </body>
+</topic>

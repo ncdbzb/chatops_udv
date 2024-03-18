@@ -1,0 +1,229 @@
+/*Главная страница*/
+
+.wh_header {
+    text-align: left;
+}
+.wh_main_page_toc a {
+    font-size: 1em;
+}
+.d-sm-block img {border: none;}
+.mainbooktitle {color:black;}
+
+
+
+/*основные элементы*/
+
+
+
+body {text-align:justify;}
+li {text-align:justify;}
+p{text-align:justify;}
+
+figure > img
+{
+    padding: 0.9em;
+    border: 1px solid #b1b3b1;
+    background: #fff;
+	margin:auto;
+    text-align: center;
+}
+figure {
+    text-align: center;}
+
+tr {
+	    vertical-align: middle;
+}
+td {
+	    vertical-align: middle;
+}
+
+/*Отдельные страницы*/
+
+#whatsnew figure {
+	max-width:200px;
+	padding: 1px;
+}
+
+#whatsnew img {
+	padding: 1px;
+}
+
+
+/*примечания: цвета, скругление, отступы*/
+
+
+.note_tip
+{
+   background-color: rgba(00, 80, 00, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_warning
+{
+   background-color: rgba(255, 225, 0, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_caution
+{
+   background-color: rgba(255, 0, 0, 0.07);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_attention
+{
+   background-color: rgba(255, 225, 0, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_note
+{
+   background-color: rgba(255, 85, 0, 0.025);
+   border-radius: 7px;
+   padding:10px;
+}
+.note_fastpath
+{
+   background-color: rgba(0, 50, 255, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+
+.stepresult {background-color: rgba(00, 80, 00, 0.05);
+   border-radius: 7px;
+   padding:10px;}
+.stepresult:before{
+	content:"Результат шага: ";
+}
+/*Шрифт для блока кода*/
+
+.codeblock
+{
+	font-size: medium;
+}
+.pre
+{
+	font-size: medium;	
+}
+pre
+{
+	font-size: medium;
+}
+
+/*Глоссарий*/
+.glossAlt > .glossAbbreviation {font-weight: normal;}
+.glossAlt > .glossAbbreviation:before {
+	content:"Аббревиатура: ";
+}
+
+.glossAlt > .glossSynonym {font-weight: normal;}
+.glossAlt > .glossSynonym:before {
+	content:"Синоним: ";
+}
+.glossSurfaceForm {display:none;}
+.glossdef {}
+
+
+
+/* Подписи к рисункам и таблицам 
+
+.figcap:before {
+
+    content: "Рис. — ";
+}
+
+.table--title:before {
+    content: "Табл. — ";
+}
+
+.table--title-label, .figtitleprefix {
+    display:none;
+
+}
+
+
+
+	.fig--title-label-number,
+ 	.fig--title-label-punctuation {
+ 		display:none;
+ 	}
+ 	
+ 	.fig--title-label:after {
+ 		content:": ";
+ 	}
+	*/
+	/*Подвал*/
+	
+	@page :right{
+    @bottom-center {
+        content: "© 2020 - ООО «СайберЛимфа»\A Все права защищены";
+        font-size: 0.5em;
+        color: silver;
+    }    
+}
+
+.wh_footer > .mx-auto
+{
+	display:none;
+}
+.footer-container
+{
+	display:none;
+}
+.footer-container .mx-auto
+{display:none;}
+
+.copyright_info {
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+
+#modal
+{
+	z-index:2000;
+}
+
+
+.abbreviated-form {
+	font: normal;
+	color:black;
+    font-style: normal;
+	font-weight: normal;
+	
+}
+dfn {
+   
+	font-weight: normal;
+    color: black;
+    font-style: normal;
+
+}
+.cmdname {				
+	word-wrap: break-word;
+	direction: ltr;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+	font-size: 85%;
+}
+
+#go2top{
+	background-color:#142d46;
+}
+
+cite {
+	
+	 all: inherit;
+	 color: #04293d;
+	 font-style: bold;
+}
+
+.onlypdf {
+	
+	display:none;
+}

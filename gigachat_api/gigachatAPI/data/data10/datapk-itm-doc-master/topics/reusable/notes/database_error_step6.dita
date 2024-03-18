@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_fbk_jty_hrb">
+    <title>database error step 6</title>
+    <troublebody>
+        <troubleSolution>
+            <remedy>
+                <steps>
+                    <step id="step_gbk_jty_hrb">
+                        <cmd>Для применения настроек в отредактированных файлах перезапустите службу
+                            СУБД и docker-контейнеров с помощью команд:</cmd>
+                        <itemgroup>
+                            <codeblock>systemctl restart jatoba-*
+cd /opt/datapkitm &amp;&amp; docker-compose down &amp;&amp; docker-compose up -d              </codeblock>
+                        </itemgroup>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

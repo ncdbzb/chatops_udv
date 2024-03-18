@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_a1n_mrn_nrb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_b1n_mrn_nrb">
+                <cmd>Полученный в результате активации файл лицензии необходимо разместить в
+                    директории данных, которой по умолчанию является <codeph
+                        conref="../filepath/var_lib_jatoba_l_data.dita#ReusableComponent_nqt_m2s_hrb/codeph_oqt_m2s_hrb"
+                    />.</cmd>
+                <info><p>Установите лицензию в каталог данных при помощи
+                        команд:</p><codeblock>cp jatoba.cer/var/lib/jatoba/1/data/
+chown postgres.postgres /var/lib/jatoba/1/data/jatoba.cer
+ls -la /var/lib/jatoba/1/data/jatoba.cer</codeblock><fig id="_Ref47529938">
+                        <title>Перемещение файла-лицензии в каталог данных</title>
+                        <image
+                            href="../../../images/safe_installation/safe_installation_redOS_2_4.png"
+                            id="safe_installation_redOS_2_4"/>
+                    </fig></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

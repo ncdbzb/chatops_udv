@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_ymm_sxx_hrb">
+    <title>POSTGRES_USER</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><ph id="ph_zmm_sxx_hrb">.POSTGRES_USER</ph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

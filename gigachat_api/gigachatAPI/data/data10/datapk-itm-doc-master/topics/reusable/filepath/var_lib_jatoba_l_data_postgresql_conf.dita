@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_omb_ygs_hrb">
+    <title>/var/lib/jatoba/1/data/postgresql.conf</title>
+    <body>
+        <p><codeph id="codeph_pmb_ygs_hrb">/var/lib/jatoba/1/data/postgresql.conf</codeph></p>
+    </body>
+</topic>

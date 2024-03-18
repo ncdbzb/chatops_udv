@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rq2_dv3_lrb">
+    <title>Введение</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_ahn_phj_lrb">
+                <li><xref href="itm_m_application_area.dita">Область применения</xref>;</li>
+                <li><xref href="itm_m_appointment_application.dita">Назначение и условия
+                        применения</xref>;</li>
+                <li><xref href="itm_m_v_1_2_0.dita">Новое в версии 1.2.0</xref>.</li>
+            </ul></p>
+    </body>
+</topic>

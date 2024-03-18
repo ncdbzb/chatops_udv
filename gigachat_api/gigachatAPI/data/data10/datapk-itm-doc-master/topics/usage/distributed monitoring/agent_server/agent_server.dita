@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="agent_server">
+    <title>Сервер агентов</title>
+    <body>
+        <p>Сервер агентов DATAPK ITM-A может собирать данные о производительности и доступности от
+            имени DATAPK ITM-K сервера. Таким образом, прокси может взять на себя некоторую часть
+            нагрузки по сбору данных и разгрузить сервер DATAPK ITM-K.</p>
+        <p>Кроме того, использование сервера агентов – это самый простой способ осуществления
+            централизованного и распределенного мониторинга, когда все агенты и серверы агентов
+            отчитываются перед одним сервером DATAPK ITM-K и все данные собираются в
+            централизованном порядке.</p>
+        <p>DATAPK ITM-A сервер агентов можно использовать для:</p>
+        <ul id="ul_zg5_ck1_grb">
+            <li>мониторинга удаленных мест;</li>
+            <li>мониторинга в местах с ненадежной связью;</li>
+            <li>снижения нагрузки на DATAPK ITM-K сервер при мониторинге тысяч устройств;</li>
+            <li>упрощения обслуживания распределенного мониторинга.</li>
+        </ul>
+        <p>Сервер агентов требует только одно TCP соединение к серверу DATAPK ITM-K. Таким образом,
+            будет проще настроить обход брандмауэра –потребуется настроить только одно правило в
+            брандмауэре.</p>
+        <note type="attention">Сервер агентов ПК DATAPK ITM-A должен использовать отдельную базу данных. Если указать
+                базу данных сервера ПК DATAPK ITM-K, то конфигурация будет испорчена.</note>
+        <p>Все данные, собранные сервером агентов, перед отправкой их серверу консолидации хранятся
+            локально. Таким образом данные не теряются из-за временных проблем со связью с сервером.
+            Параметры <b>ProxyLocalBuffer </b>и <b>ProxyOfflineBuffer</b> в файле конфигурации
+            сервера агентов управляют тем, как долго данные будут храниться локально.</p>
+        <p>Может случиться, что сервер агентов, получающий изменения конфигурации из базы сервера
+            DATAPK ITM-A, будет иметь более свежую конфигурацию, чем сам сервер DATAPK ITM-K, чья
+            конфигурация может обновляться реже согласно значению параметра
+                <b>CacheUpdateFrequency</b>. В результате сервер агентов начнет сбор данных и будет
+            отправлять эти данные DATAPK ITM-K серверу, который будет их игнорировать.</p>
+        <p>Сервер агентов DATAPK ITM-A – <term keyref="collector">коллектор</term> данных. Он не
+            вычисляет <term keyref="triggers">триггеры</term>, не обрабатывает события и не
+            отправляет оповещения. Для обзора возможностей сервера агентов просмотрите следующую
+            таблицу.</p>
+        
+        <table id="table_ah5_ck1_grb" frame="all" colsep="1" rowsep="1">
+            <title>Возможности сервера агентов</title>
+            <tgroup cols="3">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="13.47*"/>
+                <colspec colnum="3" colname="col3" colwidth="7.21*"/>
+                <thead>
+                    <row>
+                        <entry namest="col1" nameend="col2">Функция</entry>
+                        <entry>Поддержка сервера агентов</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry namest="col1" nameend="col2">Элементы данных</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry morerows="13"/>
+                        <entry>Проверки через DATAPK ITM-K агент</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Проверки через DATAPK ITM-K агент (активный)</entry>
+                        <entry><b>Да</b>
+                            <sup>1</sup></entry>
+                    </row>
+                    <row>
+                        <entry>Простые проверки</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Элементы данных <term keyref="trapper">траппера</term></entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>SNMP проверки</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>SNMP трапы</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>IPMI проверки</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>JMX проверки</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Мониторинг файлов журналов</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Внутренние проверки</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Проверки через SSH</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Проверки через Telnet</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Внешние проверки</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry>Зависимые элементы данных</entry>
+                        <entry><b>Да</b>
+                            <sup>2</sup></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Встроенный веб-мониторинг</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Обнаружение сети</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Низкоуровневое обнаружение</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Удаленные команды</entry>
+                        <entry><b>Да</b></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Вычисление <term keyref="triggers"
+                                >триггеров</term></entry>
+                        <entry><i>Нет</i></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Обработка событий</entry>
+                        <entry><i>Нет</i></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Корреляция событий</entry>
+                        <entry><i>Нет</i></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Отправка оповещений</entry>
+                        <entry><i>Нет</i></entry>
+                    </row>
+                    <row>
+                        <entry namest="col1" nameend="col2">Предобработка значений элементов
+                            данных</entry>
+                        <entry><i>Нет</i></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>[1] Чтобы убедиться, что агент запрашивает активные проверки у сервера агентов (а не у
+            сервера), IP адрес прокси должен быть указан в параметре <b>ServerActive</b> файла
+            конфигурации агента.</p>
+        <p>[2] Предобработка значений элементов данных на стороне DATAPK ITM-K сервера необходима
+            для извлечения требуемого значения с данных мастер элемента данных.</p>
+        <p>В этом разделе:<ul>
+                <li><xref href="agent_server_configuration.dita">Настройка сервера
+                        агентов</xref></li>
+            </ul></p>
+    </body>
+</topic>

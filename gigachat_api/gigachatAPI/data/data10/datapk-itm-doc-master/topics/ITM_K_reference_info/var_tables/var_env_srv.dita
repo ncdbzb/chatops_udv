@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="var_env_srv">
+    <title>Переменные в файле .env_srv для настройки работы контейнера сервера консолидации DATAPK
+        ITM-K</title>
+    <body>
+        <p>
+            <table id="table_mm5_w24_3rb" frame="all" colsep="1" rowsep="1">
+                <title>Переменные в файле .env_srv для настройки работы контейнера сервера консолидации DATAPK ITM-K</title>
+                <tgroup cols="4">
+                    <colspec colnum="1" colname="col1"/>
+                    <colspec colnum="2" colname="col2"/>
+                    <colspec colnum="3" colname="col3"/>
+                    <colspec colnum="4" colname="col4"/>
+                    <thead>
+                        <row>
+                            <entry><b>Название</b></entry>
+                            <entry><b>Описание</b></entry>
+                            <entry>Значение в конфигурации ITM-K при поставке</entry>
+                            <entry><b>Разрешенный диапазон значений</b></entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>#ZBX_LISTENIP</entry>
+                            <entry>
+                                <p>Список IP адресов, разделенных запятыми, которые должен слушать
+                                    траппер.</p>
+                                <p>Траппер будет слушать все сетевые интерфейсы, если этот параметр
+                                    не указан.</p>
+                            </entry>
+                            <entry> </entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_HISTORYSTORAGEURL</entry>
+                            <entry>
+                                <p>HTTP[S] URL хранилища истории.</p>
+                                <p>Этот параметр используется для установки Elasticsearch.</p>
+                            </entry>
+                            <entry
+                                conref="../../reusable/filepath/http_elasticsearch_9200.dita#ReusableComponent_ntg_fj3_jrb/entry_otg_fj3_jrb"/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>#ZBX_HISTORYSTORAGETYPES</entry>
+                            <entry>
+                                <p>Список, разделенный запятыми, типов значений для отправки в
+                                    хранилище истории.</p>
+                                <p>Этот параметр используется для установки Elasticsearch.</p>
+                            </entry>
+                            <entry>uint, dbl, str, log, text</entry>
+                            <entry>uint, dbl, str, log, text</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_DBTLSCONNECT</entry>
+                            <entry>
+                                <p>Установка этого параметра приводит к принудительному
+                                    использованию TLS-соединения с базой данных:</p>
+                                <p><codeph>required</codeph> - подключиться с помощью TLS</p>
+                                <p><codeph>verify_ca</codeph> - подключиться по TLS и проверить
+                                    сертификат</p>
+                                <p><codeph>verify_full</codeph> - подключиться с помощью TLS,
+                                    проверить сертификат и убедиться, что идентификатор базы данных,
+                                    указанный DBHost, соответствует его сертификату</p>
+                                <p>В MySQL начиная с 5.7.11 и PostgreSQL поддерживаются следующие
+                                    значения: «required», «verify_ca», «verify_full». В MariaDB,
+                                    начиная с версии 10.2.6, поддерживаются значения «required» и
+                                    «verify_full».</p>
+                                <p>По умолчанию не установлено ни одной опции, и поведение зависит
+                                    от конфигурации базы данных.</p>
+                            </entry>
+                            <entry>required</entry>
+                            <entry>required, verify_ca, verify_full</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_DBTLSCAFILE</entry>
+                            <entry>Полный путь к файлу, содержащему сертификаты центра сертификации
+                                (ЦС, CA) верхнего уровня для проверки сертификата базы
+                                данных.</entry>
+                            <entry
+                                conref="../../reusable/filepath/run_secrets_root-ca_pem.dita#ReusableComponent_uyx_233_jrb/entry_vyx_233_jrb"/>
+                            <entry>no, yes</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_DBTLSCERTFILE</entry>
+                            <entry>Полный путь к файлу, содержащему сертификат Zabbix сервера для
+                                аутентификации в базе данных.</entry>
+                            <entry
+                                conref="../../reusable/filepath/run_secrets_client-cert_pem.dita#ReusableComponent_sqk_333_jrb/entry_tqk_333_jrb"/>
+                            <entry> </entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_DBTLSKEYFILE</entry>
+                            <entry>Полный путь к файлу, содержащему закрытый ключ для аутентификации
+                                в базе данных.</entry>
+                            <entry
+                                conref="../../reusable/filepath/run_secrets_client-key_pem.dita#ReusableComponent_xnq_k33_jrb/entry_ynq_k33_jrb"/>
+                            <entry> </entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_DBTLSCIPHER</entry>
+                            <entry>
+                                <p>Список шифров, которые Zabbix сервер разрешает для протоколов TLS
+                                    вплоть до TLSv1.2.</p>
+                                <p> Поддерживается только для MySQL.</p>
+                            </entry>
+                            <entry> </entry>
+                            <entry> </entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_DBTLSCIPHER13</entry>
+                            <entry>
+                                <p>Список наборов шифров, которые Zabbix сервер разрешает для
+                                    протокола TLSv1.3.</p>
+                                <p> Поддерживается только для MySQL, начиная с версии 8.0.16.</p>
+                            </entry>
+                            <entry> </entry>
+                            <entry> </entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_DEBUGLEVEL</entry>
+                            <entry>
+                                <p>Задает уровень журналирования:</p>
+                                <ul id="ul_m5x_kg3_jrb">
+                                    <li>0 - основная информация о запуске и остановке процессов
+                                        DATAPK ITM</li>
+                                    <li>1 - критичная информация;</li>
+                                    <li>2 - информация об ошибках;</li>
+                                    <li>3 - предупреждения;</li>
+                                    <li>4 - для отладки (записывается очень много информации);</li>
+                                    <li>5 - расширенная отладка (записывается еще больше
+                                        информации).</li>
+                                </ul>
+                            </entry>
+                            <entry>3</entry>
+                            <entry>0-5</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTPOLLERS</entry>
+                            <entry>
+                                <p>Количество экземпляров пре-форков поллеров.</p>
+                                <note type="attention">Ненулевое значение требуется для работы
+                                    внутренних, агрегированных и вычисляемых элементов
+                                    данных.</note>
+                                <p>Основное правило - использовать как можно меньшее значение.
+                                    Каждый лишний процесс добавляет DATAPK ITM определенную
+                                    нагрузку, В то же время, распараллеливание процессов
+                                    увеличивается. Оптимальное количество процессов достигается,
+                                    когда очередь, в среднем, содержит минимальное количество
+                                    параметров.</p>
+                            </entry>
+                            <entry>5</entry>
+                            <entry>0-1000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_IPMIPOLLERS</entry>
+                            <entry>Количество экземпляров пре-форков IPMI поллеров.</entry>
+                            <entry>0</entry>
+                            <entry>0-1000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTPREPROCESSORS</entry>
+                            <entry>
+                                <p>Количество экземпляров пре-форков «worker» предварительной
+                                    обработки.</p>
+                                <p>Менеджер предобработки запускается автоматически, когда
+                                    запускается «worker» предварительной обработки.</p>
+                            </entry>
+                            <entry>3</entry>
+                            <entry>1-1000</entry>
+                        </row>
+                        <row>
+                            <entry><b>ZBX_STARTPOLLERS</b><b>UNREACHABLE</b></entry>
+                            <entry>
+                                <p>Количество экземпляров пре-форков поллеров для недоступных узлов
+                                    сети (включая IPMI и Java)1.</p>
+                                <p>По крайне один поллер для недоступных хостов должен быть запущен,
+                                    если запускаются обычные поллеры, IPMI или Java.</p>
+                            </entry>
+                            <entry><b>5</b></entry>
+                            <entry>0-1000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTTRAPPERS</entry>
+                            <entry>
+                                <p>Количество экземпляров пре-форков трапперов.</p>
+                                <p>Трапперы принимают входящие подключения от активных агентов,
+                                    активных серверов агентов (прокси) и дочерних узлов.</p>
+                                <p>По крайней мере один процесс траппера должен быть запущен для
+                                    отображения доступности сервера и просмотра очереди в
+                                    веб-интерфейсе.</p>
+                            </entry>
+                            <entry>5</entry>
+                            <entry>0-1000</entry>
+                        </row>
+                        <row>
+                            <entry><b>ZBX_STARTPINGERS</b></entry>
+                            <entry>Количество экземпляров пре-форков ICMP pingers.</entry>
+                            <entry><b>5</b></entry>
+                            <entry>0-1000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTDISCOVERERS</entry>
+                            <entry>Количество экземпляров пре-форков автообнаружения.</entry>
+                            <entry>1</entry>
+                            <entry>0-250</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTHTTPPOLLERS</entry>
+                            <entry>Количество экземпляров пре-форков HTTP поллеров.</entry>
+                            <entry>1</entry>
+                            <entry>0-1000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTTIMERS</entry>
+                            <entry>
+                                <p>Количество экземпляров пре-форков таймера.</p>
+                                <p>Таймеры обрабатывают периоды обслуживания.</p>
+                            </entry>
+                            <entry>1</entry>
+                            <entry>1-1000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTESCALATORS</entry>
+                            <entry>Количество экземпляров пре-форков эскалаторов.</entry>
+                            <entry>1</entry>
+                            <entry>1-100</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTALERTERS</entry>
+                            <entry>Количество экземпляров пре-форков процессов оповещений.</entry>
+                            <entry>3</entry>
+                            <entry>1-100</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_JAVAGATEWAY_ENABLE</entry>
+                            <entry>Включение взаимодействия с Java gateway для сбора проверок,
+                                связанных с Java.</entry>
+                            <entry>true</entry>
+                            <entry>true или false</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_JAVAGATEWAY</entry>
+                            <entry>
+                                <p>IP адрес (или имя хоста) Java gateway.</p>
+                                <p>Требуется только, если запущены Java поллеры.</p>
+                            </entry>
+                            <entry> </entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_JAVAGATEWAYPORT</entry>
+                            <entry>Порт, который слушает Java gateway.</entry>
+                            <entry>10052</entry>
+                            <entry>1024-32767</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTJAVAPOLLERS</entry>
+                            <entry>Количество экземпляров пре-форков Java поллеров.</entry>
+                            <entry>5</entry>
+                            <entry>0-1000</entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <p>#ZBX_STARTVMWARE</p>
+                                <p> COLLECTORS</p>
+                            </entry>
+                            <entry>Количество экземпляров пре-форков VMware коллекторов.</entry>
+                            <entry>0</entry>
+                            <entry>0-250</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_VMWAREFREQUENCY</entry>
+                            <entry>
+                                <p>Задержка в секундах между сбором данных с одной службы
+                                    VMware.</p>
+                                <p>Это значение необходимо установить наименьшим значением интервала
+                                    обновления у любого элемента данных VMware мониторинга.</p>
+                            </entry>
+                            <entry>60</entry>
+                            <entry>10-86400</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_VMWAREPERFFREQUENCY</entry>
+                            <entry>
+                                <p>Задержка в секундах между получением статистики по счетчикам
+                                    производительности с одной службы VMware.</p>
+                                <p>Это значение необходимо установить наименьшим значением интервала
+                                    обновления у любого элемента данных VMware мониторинга, который
+                                    использует счетчики производительности VMware.</p>
+                            </entry>
+                            <entry>60</entry>
+                            <entry>10-86400</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_VMWARECACHESIZE</entry>
+                            <entry>
+                                <p>Разделяемая память для хранения данных VMware.</p>
+                                <p>Можно использовать внутренние проверки VMware для мониторинга
+                                    использования кэша VMware.</p>
+                                <note>Разделяемая память не выделяется, если экземпляры VMware
+                                    коллекторов не настроены на запуск.</note>
+                            </entry>
+                            <entry>8M</entry>
+                            <entry>0,128К - 64G</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_VMWARETIMEOUT</entry>
+                            <entry>Максимальное количество секунд, которое коллектор VMware потратит
+                                на ожидание ответа со службы VMware (vCenter или ESX
+                                гипервизора).</entry>
+                            <entry>10</entry>
+                            <entry>1-300</entry>
+                        </row>
+                        <row>
+                            <entry><b>ZBX_ENABLE_SNMP_TRAPS</b></entry>
+                            <entry>Включение функции SNMP трапов. Эта переменная требует snmptraps
+                                экземпляр и разделяемый том <ph
+                                    conref="../../reusable/filepath/var_lib_zabbix_snmptraps.dita#ReusableComponent_ukw_sh3_jrb/ph_vkw_sh3_jrb"
+                                /> с сервером или прокси.</entry>
+                            <entry><b>true</b></entry>
+                            <entry>true или false</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_SOURCEIP</entry>
+                            <entry>Локальный IP адрес для исходящих подключений.</entry>
+                            <entry>-</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <p>#ZBX_HOUSEKEEPING</p>
+                                <p> FREQUENCY</p>
+                            </entry>
+                            <entry>
+                                <p>Как часто DATAPK ITM будет выполнять процедуру очистки базы (в
+                                    часах).</p>
+                                <p>Автоматическая очистка базы данных удаляет устаревшую информацию
+                                    из базы данных.</p>
+                                <note type="attention">Для предотвращения перегрузки функции очистки
+                                    (к примеру, когда периоды хранения данных истории и динамики
+                                    изменения сильно занижены), не более чем 4 периода, кратных
+                                    HousekeepingFrequency часов, устаревшей истории будет удалено за
+                                    один цикл очистки по каждому элементу данных. Таким образом,
+                                    если HousekeepingFrequency равен 1 часу, то за один цикл будет
+                                    удалено не более чем 4 часа устаревшей истории (начиная с самой
+                                    старой записи).</note>
+                                <note>Для снижения нагрузки на сервер запуск процесса очистки
+                                    отложен на 30 минут после запуска сервера. Таким образом, если
+                                    HousekeepingFrequency равен 1 часу, самая первая процедура
+                                    очистки запустится через 30 минут после запуска сервера и затем
+                                    повторится с задержкой в один час. <p>Также имеется возможность
+                                        отключить автоматическую очистку истории, указав
+                                        HousekeepingFrequency равным 0. В этом случае процедуру
+                                        очистки истории можно запустить только с помощью опции
+                                        контроля управления housekeeper_execute, и периодом удаления
+                                        устаревшей информации является 4-кратный период, начиная с
+                                        последнего цикла удаления истории, но не менее чем 4 часа и
+                                        не более 4 дней.</p></note>
+                            </entry>
+                            <entry>1</entry>
+                            <entry>0-24</entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <p>#ZBX_MAXHOUSEKEEPER</p>
+                                <p> DELETE</p>
+                            </entry>
+                            <entry>
+                                <p>Удалять не более 'MaxHousekeeperDelete' строк (в соответствии с
+                                    [имя_таблицы], [поле], [значение]) за одну задачу за один цикл
+                                    автоматической очистки базы данных.</p>
+                                <p>Если значение равно 0, то тогда ограничение не используется
+                                    вовсе.</p>
+                                <p>Этот параметр применяется только для удаления данных истории и
+                                    динамики изменений уже удаленных элементов данных.</p>
+                            </entry>
+                            <entry>5000</entry>
+                            <entry>0-1000000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_SENDERFREQUENCY</entry>
+                            <entry>Частота в секундах, с которой сервер будет пытаться отправить
+                                ожидающие предупреждения.</entry>
+                            <entry>30</entry>
+                            <entry>5-3600</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_CACHESIZE</entry>
+                            <entry>
+                                <p>Размер кэша конфигурации, в байтах.</p>
+                                <p>Размер распределенной памяти для хранения данных узлов сети,
+                                    элементов данных и триггеров.</p>
+                            </entry>
+                            <entry>8M</entry>
+                            <entry>128K-8G</entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <p>#ZBX_CACHEUPDATE</p>
+                                <p> FREQUENCY</p>
+                            </entry>
+                            <entry>Как часто DATAPK ITM будет выполнять процедуру обновления кэша
+                                конфигурации, в секундах.</entry>
+                            <entry>60</entry>
+                            <entry>1-3600</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_STARTDBSYNCERS</entry>
+                            <entry>
+                                <p>Количество экземпляров пре-форков DB Syncers.</p>
+                                <p>Если время от времени эти процессы используют большое количество
+                                    ресурсов ОС, это означает, что на DATAPK ITM отправляется
+                                    большой объем данных. Чаще всего подобное происходит, когда
+                                    сервер консолидации теряет связь с сервером агентов (прокси) и
+                                    при повторном подключении один или несколько прокси отправляют
+                                    все собранные данные на сервер.8M</p>
+                            </entry>
+                            <entry>4</entry>
+                            <entry>1-100</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_HISTORYCACHESIZE</entry>
+                            <entry>
+                                <p>Размер кэша истории, в байтах.</p>
+                                <p>Размер разделяемой памяти для хранения данных истории.</p>
+                            </entry>
+                            <entry>16M</entry>
+                            <entry>128K-2G</entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <p>#ZBX_HISTORYINDEXCACHE</p>
+                                <p> SIZE</p>
+                            </entry>
+                            <entry>
+                                <p>Размер кэша индекса истории, в байтах.</p>
+                                <p>Размер разделяемой памяти для индексации данных записываемой
+                                    истории в кэш истории.</p>
+                                <p>Кэшу индекса необходимо около 100 байт на кэширование одного
+                                    элемента данных.</p>
+                            </entry>
+                            <entry>4M</entry>
+                            <entry>128K-2G</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_TRENDCACHESIZE</entry>
+                            <entry>
+                                <p>Размер кэша динамики изменений, в байтах.</p>
+                                <p>Размер разделяемой памяти для хранения данных динамики
+                                    изменений.</p>
+                            </entry>
+                            <entry>4M</entry>
+                            <entry>128K-2G</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_VALUECACHESIZE</entry>
+                            <entry>
+                                <p>Размер кэша для хранения истории значений в байтах.</p>
+                                <p>Разделяемая память для кэширования запросов к данным истории
+                                    элементов данных.</p>
+                                <p>Значение 0 отключит кэш значений (не рекомендуется).</p>
+                                <p>В случае, если кэш значений исчерпает разделяемую память,
+                                    предупреждающее сообщение будет записано в журнал сервера каждые
+                                    5 минут.</p>
+                            </entry>
+                            <entry>8M</entry>
+                            <entry>0,128К - 64G</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_TIMEOUT</entry>
+                            <entry>Указывает на максимальное время ожидания ответа от агента, SNMP
+                                устройства или внешней проверки (в секундах).</entry>
+                            <entry>4</entry>
+                            <entry>1-30</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_TRAPPERIMEOUT</entry>
+                            <entry>Указывает, как много секунд траппер может потратить на обработку
+                                новых данных.</entry>
+                            <entry>300</entry>
+                            <entry>1-300</entry>
+                        </row>
+                        <row>
+                            <entry>ZBX_UNREACHABLEPERIOD</entry>
+                            <entry>Через сколько секунд недостижимости узел сети считается
+                                недоступным.</entry>
+                            <entry>45</entry>
+                            <entry>1-3600</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_UNAVAILABLEDELAY</entry>
+                            <entry>Как часто узел сети будет проверяться на доступность в период его
+                                недоступности, в секундах.</entry>
+                            <entry>60</entry>
+                            <entry>1-3600</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_UNREACHABLEDELAY</entry>
+                            <entry>Как часто узел сети будет проверяться на доступность в период его
+                                недостижимости, в секундах.</entry>
+                            <entry>15</entry>
+                            <entry>1-3600</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_LOGSLOWQUERIES</entry>
+                            <entry>
+                                <p>Как долго могут выполняться запросы в базу данных до того как они
+                                    запишутся в журнал (в миллисекундах).</p>
+                                <p>0 - не журналировать медленные запросы.</p>
+                                <p>Эта опция активируется, начиная с DebugLevel=3.</p>
+                            </entry>
+                            <entry>3000</entry>
+                            <entry>0-3600000</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_EXPORTFILESIZE</entry>
+                            <entry>Максимальный размер файла экспорта в байтах. Используется только
+                                для чередования, ротации, если установлен ExportDir.</entry>
+                            <entry> </entry>
+                            <entry>1M-1G</entry>
+                        </row>
+                        <row>
+                            <entry><b>ZBX_STARTPROXYPOLLERS</b></entry>
+                            <entry>Количество экземпляров пре-форков поллеров для работы с
+                                пассивными серверами агентов (прокси).</entry>
+                            <entry><b>5</b></entry>
+                            <entry>0-250</entry>
+                        </row>
+                        <row>
+                            <entry><b>ZBX_PROXYCONFIG FREQUENCY</b></entry>
+                            <entry>Как часто сервер консолидации DATAPK ITM будет отправлять данные
+                                конфигурации на сервер агентов DATAPK ITM в секундах. Используется
+                                только с сервер агентов, который работает в пассивном
+                                режиме.</entry>
+                            <entry><b>3600</b></entry>
+                            <entry>1-604800</entry>
+                        </row>
+                        <row>
+                            <entry><b>ZBX_PROXYDATA FREQUENCY</b></entry>
+                            <entry>Как часто сервер DATAPK ITM будет запрашивать данные истории с
+                                сервера агентов DATAPK ITM, в секундах. Используется только с
+                                сервером агентов (прокси), который работает в пассивном
+                                режиме.</entry>
+                            <entry><b>60</b></entry>
+                            <entry>1-3600</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_LOADMODULE</entry>
+                            <entry>
+                                <p>Модули, которые загружаются во время старта. Модули используются
+                                    для расширения возможностей сервера.</p>
+                                <p>Форматы: Loadmodule=&lt;module.so></p>
+                                <p>LoadModule=&lt;path/module.so></p>
+                                <p>LoadModule=&lt;/abs_path/module.so></p>
+                                <p>Модули должны находиться в папке указанной в параметре
+                                    LoadModulePath или (начиная с 4.0.9) путь должен быть указан до
+                                    имени модуля. Если путь до модуля абсолютный (начинается с '/'),
+                                    тогда LoadModulePath игнорируется.</p>
+                                <p>Допускается добавлять несколько параметров LoadModule.</p>
+                            </entry>
+                            <entry>"dummy1.so, dummy2.so, dummy10.so"</entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_TLSCAFILE</entry>
+                            <entry>Абсолютный путь к файлу, который содержит сертификаты верхнего
+                                уровня CA(и) для верификации сертификата узла, используется для
+                                зашифрованных соединений между компонентами DATAPK ITM.</entry>
+                            <entry> </entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_TLSCRLFILE</entry>
+                            <entry>Абсолютный путь к файлу, который содержит отозванные сертификаты.
+                                Этот параметр используется для зашифрованных соединений между
+                                компонентами DATAPK ITM.</entry>
+                            <entry> </entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_TLSCERTFILE</entry>
+                            <entry>Абсолютный путь к файлу, который содержит сертификат или цепочку
+                                сертификатов, используется для зашифрованных соединений между
+                                компонентами DATAPK ITM.</entry>
+                            <entry> </entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_TLSKEYFILE</entry>
+                            <entry>Абсолютный путь к файлу, который содержит приватный ключ сервера,
+                                используется для зашифрованных соединений между компонентами DATAPK
+                                ITM.</entry>
+                            <entry> </entry>
+                            <entry>-</entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_VAULTDBPATH</entry>
+                            <entry>
+                                <p>Путь к хранилищу, откуда будут извлечены учетные данные для базы
+                                    данных с помощью ключей «пароль» и «имя пользователя».</p>
+                                <p
+                                    conref="../../reusable/filepath/secret_zabbix_database.dita#ReusableComponent_f1h_3h3_jrb/p_h1h_3h3_jrb"/>
+                                <p> Этот параметр можно использовать, только если не указаны DBUser
+                                    и DBPassword.</p>
+                            </entry>
+                            <entry> </entry>
+                            <entry> </entry>
+                        </row>
+                        <row>
+                            <entry>#ZBX_VAULTURL</entry>
+                            <entry>URL-адрес HTTP [S] сервера хранилища. Если SSLCALocation не
+                                указан, будет использоваться общесистемный каталог сертификатов
+                                CA.</entry>
+                            <entry
+                                conref="../../reusable/filepath/http_127_0_0_1_8200.dita#ReusableComponent_lyb_cj3_jrb/entry_myb_cj3_jrb"/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>#VAULT_TOKEN</entry>
+                            <entry>
+                                <p>Токен аутентификации Vault, который должен был быть сгенерирован
+                                    исключительно для Zabbix сервера с разрешением только на чтение
+                                    для путей, указанных в макросах Vault, и разрешением только на
+                                    чтение для пути, указанного в необязательном параметре
+                                    конфигурации VaultDBPath.</p>
+                                <p> Если VaultToken и переменная среды VAULT_TOKEN определены
+                                    одновременно возникает ошибка в конфигурации.</p>
+                            </entry>
+                            <entry> </entry>
+                            <entry> </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

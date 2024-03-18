@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_config_integrations">
+    <title>Интеграции</title>
+    <body>
+        <p>При нажатии на пункт <cite keyref="itm_m_page_configuration">Настройки</cite>→<cite
+                keyref="itm_m_page_config_integration">Интеграции</cite> в основном меню выводится
+            список параметров для настройки периодичности получения данных от подключенных <term
+                keyref="monitoring_server">серверов мониторинга</term>.</p>
+        <fig>
+            <title>Настройка периодов сбора данных от <term keyref="monitoring_server">серверов мониторинга</term></title>
+            <image href="../../../images/ITM_M_screens/ITM_M_integration.png"/>
+        </fig>
+        <p>Периодичность получения данных от <term keyref="monitoring_server">серверов мониторинга</term>:</p>
+        <ul id="ul_w14_cph_lrb">
+            <li>Полных данных об <term keyref="monitoring_object">объектах мониторинга</term> – период получения полных данных, в том числе
+                инвентарных данных об <term keyref="monitoring_object">объектах мониторинга</term>, подключенных к <term keyref="monitoring_server">серверам мониторинга</term>, в
+                минутах. Допустимый диапазон значений 1 – 1440 минут, значение по умолчанию – 480
+                минут;</li>
+            <li>Данных о состоянии <term keyref="monitoring_object">объектов мониторинга</term> – период получения информации о состоянии
+                (статусах) <term keyref="monitoring_object">объектов мониторинга</term>, подключенных к <term keyref="monitoring_server">серверам мониторинга</term>. Диапазон
+                допустимых значений: 1 - 60 минут, значение по умолчанию – 3 минуты;</li>
+            <li>Данных о <term keyref="om_problem">проблемах</term> – период получения данных о <term keyref="om_problem">проблемах объектов мониторинга</term>,
+                подключенных к <term keyref="monitoring_server">серверам мониторинга</term>. Диапазон допустимых значений: 1 - 60 минут,
+                значение по умолчанию – 1 минута.</li>
+        </ul>
+    </body>
+</topic>

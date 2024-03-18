@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_jgs_h3f_krb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_kgs_h3f_krb">
+                <cmd>Для генерации сертификата для входа в веб-интерфейс выполните команду:</cmd>
+                <info><codeblock>domain=127.0.0.1; mkdir -p env/nginx/certs; openssl req -x509 -nodes -days 365 -newkey
+rsa:2048 -keyout env/nginx/certs/nginx.key -out env/nginx/certs/nginx.crt -subj
+"/C=RU/CN=$domain/O=USSC"</codeblock><p>где в значении переменной
+                            <codeph>domain</codeph> нужно указать IP-адрес машины вместо значения
+                            <codeph>127.0.0.1</codeph>.</p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

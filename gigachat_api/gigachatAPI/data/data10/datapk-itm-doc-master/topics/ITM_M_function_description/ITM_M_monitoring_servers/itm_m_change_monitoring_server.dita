@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_change_monitoring_server">
+    <title><ph id="_Toc81594715">Изменение свойств подключенного сервера мониторинга</ph></title>
+    <taskbody>
+        <context>
+            <p>Изменение свойств подключенного <term keyref="monitoring_server">сервера ITM-K</term>
+                может быть выполнено в форме редактирования информации о подключенном сервере.</p>
+            <fig>
+                <title>Форма редактирования информации о подключенном сервере</title>
+                <image href="../../../images/ITM_M_screens/ITM_M_change_server_info.png"/>
+            </fig>
+        </context>
+        <steps>
+            <step>
+                <cmd>Для появления формы редактирования нажмите на пиктограмму «Настройка» <image
+                        href="../../../images/ITM_M_icons/ITM_M_icon_config.png"
+                        id="image_i1c_hxp_lrb"/>в списке серверов или на кнопку «Изменить» в форме
+                    просмотра информации о подключенном сервере.</cmd>
+            </step>
+            <step>
+                <cmd>Форма редактирования информации о подключенном сервере является аналогичной форме просмотра свойств и позволяет внести изменение в следующие свойства:</cmd>
+                <info>
+                    <ul id="ul_izp_yhg_krb">
+                        <li>Наименование сервера;</li>
+                        <li>Наименование филиала;</li>
+                        <li>Описание.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите «Сохранить» для сохранения измененных значений. </cmd>
+                <info>Если поля в карточке не менялись, то кнопка недоступна для нажатия.</info>
+            </step>
+            <step>
+                <cmd>Кнопка «Удалить» выводит модальное окно «Удаление сервера».</cmd>
+                <info>После подтверждения действия произойдет удаление <term keyref="monitoring_server">сервера мониторинга</term>.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

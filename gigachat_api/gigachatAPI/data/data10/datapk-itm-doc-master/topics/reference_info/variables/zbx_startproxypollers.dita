@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_startproxypollers">
+    <glossterm>ZBX_STARTPROXYPOLLERS</glossterm>
+    <glossdef>
+        <p>Количество экземпляров <term keyref="pre-fork">пре-форков</term> <term keyref="poller">поллеров</term> для работы с пассивными серверами агентов
+            (прокси).</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>5</p>
+        <p><b>Разрешенный диапазон значений:</b>0-250</p>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="server_unavailable">
+    <title>DATAPK ITM-K сервер недоступен</title>
+    <troublebody><condition>
+            <p>DATAPK ITM-K сервер недоступен.</p>
+        </condition><troubleSolution>
+            <cause><p>Страница в веб-интерфейсе была активна, когда произошло отключение контейнера zabbix-server.</p></cause>
+            <remedy>
+                <title>Способ устранения:</title>
+            <steps>
+                    <step>
+                        <cmd
+                            conref="../../reusable/notes/database_error_step1.dita#ReusableComponent_fzz_cty_hrb/cmd_gzz_cty_hrb"
+                        />
+                    </step>
+            <step>
+                        <cmd>Перейдите в рабочий каталог DATAPK ITM-K и просмотрете состояние
+                            docker-контейнеров (по умолчанию путь к рабочей директории DATAPK ITM-K:
+                                <codeph
+                                conref="../../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                            />).</cmd>
+                        <itemgroup>Для этого выполните команды:
+                            <codeblock>cd /&lt;путь к рабочей директории DATAPK ITM-K > docker ps</codeblock>Все
+                            контейнеры в полученном списке должны быть в состоянии «up» (колонка
+                            «Status»). Среди контейнеров в списке должен присутствовать
+                            zabbix-server. </itemgroup>
+                    </step>
+            <step>
+                        <cmd>Если какие-либо контейнеры не запущены или имеют статус «Restarting»,
+                            то остановите работу контейнеров без удаления данных следующей командой:
+                                <codeph>docker-compose down</codeph></cmd>
+                    </step>
+            <step>
+                        <cmd>Дождитесь остановки работы всех контейнеров.</cmd>
+                    </step>
+            <step>
+                        <cmd>Проверьте и, в случае необходимости, откорректируйте файлы
+                            .env_&lt;имя_модуля>, docker-compose.yaml.</cmd>
+                    </step>
+            <step>
+                        <cmd>Запустите работу контейнеров командой: <codeph>docker-compose up
+                                -d</codeph></cmd>
+                    </step>
+            <step>
+                        <cmd>Проверьте состояние docker-контейнеров с помощью команды:
+                                <codeph>docker ps</codeph></cmd>
+                    </step>
+            <step>
+                <cmd>Если среди docker-контейнеров не появился zabbix-server, то его следует запустить с
+                    помощью команды: <codeph>docker-compose up -d zabbix-server</codeph></cmd>
+                <itemgroup>Все контейнеры должны быть в состоянии «up».</itemgroup>
+            </step>
+        </steps></remedy></troubleSolution></troublebody>
+</troubleshooting>

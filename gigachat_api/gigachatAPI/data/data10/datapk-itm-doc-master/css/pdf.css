@@ -1,0 +1,354 @@
+/*Стили PDF*/
+
+
+/*Формат страницы*/
+@page {
+    size: A4;
+    margin: 2cm;
+}
+/*Верхний колонтитул*/
+    @page :left {
+        @top-left {
+            content: string(maptitle) string(parttitle) string(chaptertitle) string(sectiontitle) " | " counter(page);
+            font-size:8pt;
+			color:#808080;
+        }
+    }
+
+    @page :right{
+        @top-right {
+            content: string(maptitle) string(parttitle) string(chaptertitle) string(sectiontitle) " | " counter(page);
+            font-size:8pt;
+			color:#808080;
+        }
+    }
+
+/*-------------------------------
+ * The page layout for large tables.
+ *-------------------------------*/	
+    
+	@page landscape-page:right {
+	    size: landscape;
+	
+	
+	    @right-bottom {
+	        font-size:8pt;
+			color:#808080;
+	    }
+	}
+	
+	@page landscape-page:left {
+	   
+	    @right-top {
+	        font-size:8pt;
+			color:#808080;
+	    }
+	}
+
+	/*Номера страниц*/
+    @page :left {
+        @bottom-center {
+            content: counter(page);
+            font-size:12pt;
+			color:#808080;
+        }
+    }
+
+    @page :right{
+        @bottom-center {
+            content: counter(page);
+            font-size:12pt;
+			color:#808080;
+        }
+    }
+	
+	
+
+@page table-of-contents:left {
+    @top-left {
+        content: "Руководство по эксплуатации DATAPK: содержание | " counter(page, decimal);
+        
+    }
+}
+@page table-of-contents:right {
+     @top-right {
+        content: "Руководство по эксплуатации DATAPK: содержание | " counter(page, decimal);
+       
+     }
+}
+
+/*Главная страница*/
+
+
+
+*[class ~= "front-page/front-page-title"]:after(1) 
+{
+    content: " ";
+	font-size:large;
+}
+
+/*Версия!*/
+*[class ~= "front-page/front-page-title"]:after(2) 
+{
+    display:block;
+    content: "Версия: 1.17";
+	color:grey;
+	font-size:large;
+    text-align:center;
+}
+*[class ~= "front-page/front-page-title"]{
+	
+ padding-top:100px;
+  font-size:x-large;
+}
+
+@page front-page {
+	
+	white-space: pre-line;
+}
+
+/*Стили элементов*/
+
+
+/*Номера разделов в ссылках*/
+*[class ~= "topic/xref"]:before {
+	content: target-counters(attr(href), chapter-and-sections, ".")" " !important;	
+}
+
+/*текст по ширине*/
+body {text-align:justify;}
+p{text-align:justify;}
+li {text-align:justify;}
+
+/*таблицы*/
+table {
+border-collapse: collapse;
+border: 1px solid light-grey;
+text-align:justify;
+}
+th, td {border: 1px solid light-grey;}
+
+table > li {
+	margin:0.1px;
+	padding:0.1px;
+}
+
+table > ul {
+    
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 2px;
+}
+
+/*Таблицы больше 5 колонок разворачиваются в широкую ориентацию*/
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='5'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='6'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='7'],
+*[class~="topic/table"] > *[class~="topic/tgroup"][cols='8'] {
+    max-width: 100%;
+    table-layout:auto;
+}
+
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='5']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='6']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='7']),
+*[class~="topic/topic"]:has(*:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *:not([class~="topic/topic"]) > *[class~="topic/table"] > *[class~="topic/tgroup"][cols='8']){
+      page: landscape-page;
+} 
+
+*[class ~= "topic/table"] {
+  overflow-wrap: break-word;
+}
+
+*[class ~= "topic/table"] {
+    margin-left:auto;
+    margin-right:auto;
+}
+*[class ~= "topic/table"] *[class ~= "topic/title"]{
+    text-align:center;
+}
+
+td {
+	vertical-align:middle;	
+}
+
+/*Рисунки*/
+
+figure {
+	page-break-inside: avoid;
+	text-align: center;
+}
+
+figure > title {
+	page-break-before: avoid;
+}
+
+figure > img
+{
+page-break-after: avoid;
+margin:auto;
+text-align: center;
+
+}
+
+
+/*Глоссарий*/
+.glossAlt > .glossAbbreviation {font-weight: normal;}
+.glossAlt > .glossAbbreviation:before {
+	content:"Аббревиатура: ";
+}
+
+.glossAlt > .glossSynonym {font-weight: normal;}
+.glossAlt > .glossSynonym:before {
+	content:"Синоним: ";
+}
+.glossSurfaceForm {display:none;}
+.glossdef {}
+
+.abbreviated-form {
+	font: normal;
+	color:inherit;
+    font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+dfn {
+    font-style: normal;
+	text-decoration: none;
+}
+
+a {
+	font-style: normal;
+	text-decoration: none;
+	color:inherit;
+}
+
+/*Стили отдельных страниц*/
+
+
+
+#whatsnew figure {
+	max-width:200px;
+	padding: 1px;
+}
+
+#whatsnew img {
+	padding: 1px;
+}
+/*Страница «»*/
+#datapk_sensor table {
+	white-space: pre-line;
+}
+/* страница «Цветовая индикация и виды уведомлений»*/
+#big_pic figure {
+	max-width:200px;
+	padding: 1px;
+}
+
+#big_pic img {
+	padding: 1px;
+}
+
+/*примечания: цвета, скругление, отступы*/
+
+.note_tip
+{
+   background-color: rgba(00, 80, 00, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_warning
+{
+   background-color: rgba(255, 225, 0, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_caution
+{
+   background-color: rgba(255, 0, 0, 0.07);
+   border-radius: 7px;
+   padding:10px;
+}
+
+.note_attention
+{
+   background-color: rgba(255, 0, 0, 0.07);
+   border-radius: 7px;
+   padding:10px;
+}
+.note_note
+{
+   background-color: rgba(255, 85, 0, 0.025);
+   border-radius: 7px;
+   padding:10px;
+}
+.note_fastpath
+{
+   background-color: rgba(0, 50, 255, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+
+
+.stepresult 
+{
+   background-color: rgba(0, 50, 255, 0.05);
+   border-radius: 7px;
+   padding:10px;
+}
+.stepresult:before{
+	content:"Результат шага: ";
+}
+
+.codeblock
+{
+	
+	word-wrap: break-word;
+	direction: ltr;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+	font-size: 85%;
+}
+.pre
+{
+	font-size: medium;	
+}
+pre
+{
+	font-size: medium;
+}
+
+/*титульник*/
+.d-sm-block img {border: none;}
+.mainbooktitle {color:black;}
+
+/*Не показывать в pdf*/
+
+#whatsnew .note {
+	
+display: none;
+}
+
+.nopdf {
+	display: none;
+}
+
+.forimgs .figpic img {
+  width: 200px;
+  }
+
+.cite {
+	
+	 all: inherit;
+}

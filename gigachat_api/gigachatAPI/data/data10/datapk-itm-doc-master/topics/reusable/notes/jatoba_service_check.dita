@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_pkq_ssn_nrb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_qkq_ssn_nrb">
+                <cmd>Проверить состояние службы можно с помощью команды:</cmd>
+                <info><codeblock>systemctl status jatoba-1</codeblock><fig id="_Ref47530144">
+                        <title>Состояние службы jatoba-1.service</title>
+                        <image
+                            href="../../../images/safe_installation/safe_installation_redOS_2_6.png"
+                            id="safe_installation_redOS_2_6"/>
+                    </fig></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

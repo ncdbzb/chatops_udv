@@ -14,10 +14,10 @@ services:
 
   fastapi:
     build:
-      context: .
+      context: ./fast_api
       dockerfile: Dockerfile.api
     env_file:
-      - .env
+      - ./fast_api/.env
     container_name: fastapi_app
     command: ["/chatops_udv/docker/app.sh"]
     restart: always
@@ -25,3 +25,21 @@ services:
       - "8000:8000"
     depends_on:
       - db
+
+  gigachat_api:
+    build:
+      context: ./gigachat_api
+      dockerfile: Dockerfile.gigachat_api
+    env_file:
+      - ./gigachat_api/.env
+    container_name: gigachat_api
+    ports:
+      - "8001:8001"
+
+  react:
+    build:
+      context: ./react
+      dockerfile: Dockerfile.react
+    container_name: react
+    ports:
+      - "3000:3000"

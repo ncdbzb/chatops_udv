@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_gui_access_ip_range">
+    <glossterm>ZBX_GUI_ACCESS_IP_RANGE</glossterm>
+    <glossdef><p>Диапазон IP-адресов, которым разрешен доступ к веб-интерфейсу Zabbix в период
+            обслуживания.</p><b>Значение в конфигурации ITM-K при
+        поставке:</b>['127.0.0.1']</glossdef>
+</glossentry>

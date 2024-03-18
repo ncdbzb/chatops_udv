@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="other_problem_sources">
+    <title>Другие источники проблемы</title>
+    <body>
+        <p>В этом разделе:<ul>
+                <li><xref href="detection_events.dita">События на
+                        обнаружения</xref></li>
+                <li><xref href="agents_autoregistration_events.dita"
+                        >События на авторегистрацию активных агентов</xref></li>
+                <li><xref href="internal%20events.dita">Внутренние
+                        события</xref></li>
+            </ul></p>
+    </body>
+</topic>

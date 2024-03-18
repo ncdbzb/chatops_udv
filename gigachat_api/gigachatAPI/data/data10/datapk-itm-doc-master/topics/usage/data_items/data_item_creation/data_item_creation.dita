@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="data_item_creation">
+    <title>Создание элемента данных</title>
+    <taskbody><prereq><p>Для создания элемента данных в веб-интерфейсе DATAPK ITM-K необходимо выполнить
+            следующее:</p></prereq><steps id="ul_yfs_hkt_frb">
+                <step>
+                <cmd>Перейдите в раздел боковой панели <cite keyref="configuration"
+                        >«Настройка»</cite> → <cite keyref="hosts_configuration">«Узлы
+                    сети».</cite></cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на «Элементы данных» в строке с узлом сети.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на «Создать элемент данных» в правом верхнем углу экрана.</cmd>
+            </step>
+            <step><cmd>В окне введите параметры элемента данных.</cmd></step>
+        </steps><postreq><p>Также можно создать элемент данных, открыв уже существующий элемент данных, после чего
+            нажать на кнопку «Клонировать» и затем сохранить под другим именем.</p>
+        <p>В этом разделе:</p>
+            <p>
+                <ul>
+                    <li><xref href="data_item_configuration.dita"
+                            >Настройка</xref></li>
+                    <li><xref href="data_item_preprocessing.dita"
+                            >Предобработка значений элемента данных</xref></li>
+                    <li><xref href="data_item_unsupported.dita"
+                            >Неподдерживаемые элементы данных</xref></li>
+                </ul>
+            </p>
+        </postreq></taskbody>
+</task>

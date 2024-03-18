@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="smscr">
+    <glossterm>Система мониторинга безопасности и контроля ресурсов</glossterm>
+    <glossdef>Комплексная система мониторинга ИТ-ресурсов и компонентов АСУ ТП для реализации требований по защите 
+        информации в соответствии с приказом ФСТЭК №239 от 25.12.2017.</glossdef>
+    <glossBody>
+        <glossSurfaceForm>СМБКР</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>СМБКР</glossAbbreviation>
+        </glossAlt>        
+    </glossBody> 
+</glossentry>

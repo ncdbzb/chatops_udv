@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Страницы интерфейса</title>
+    <topicref href="monitoring.dita" keys="monitoring">
+        <topicref href="panel.dita" keys="panel"/>
+        <topicref href="problems.dita" keys="problems"/>
+        <topicref href="hosts.dita" keys="hosts"/>
+        <topicref href="overview.dita" keys="overview"/>
+        <topicref href="latest_data.dita" keys="latest_data"/>
+        <topicref href="complex_screens.dita" keys="complex_screens"/>
+        <topicref href="net_maps.dita" keys="net_maps"/>
+        <topicref href="detection.dita" keys="detection"/>
+        <topicref href="services.dita" keys="services"/>
+    </topicref>
+    <topicref href="inventory.dita" keys="inventory">
+        <topicref href="overview_inventory.dita" keys="overview_inventory"/>
+        <topicref href="hosts_inventory.dita" keys="hosts_inventory"/>
+    </topicref>
+    <topicref href="reports.dita" keys="reports">
+        <topicref href="system_info.dita" keys="system_info"/>
+        <topicref href="availability_report.dita" keys="availability_report"/>
+        <topicref href="100_most_active_triggers.dita" keys="100_most_active_triggers"/>
+        <topicref href="audit.dita" keys="audit"/>
+        <topicref href="action_log.dita" keys="action_log"/>
+        <topicref href="notifications.dita" keys="notifications"/>
+    </topicref>
+    <topicref href="configuration.dita" keys="configuration">
+        <topicref href="host_groups.dita" keys="host_groups"/>
+        <topicref href="templates.dita" keys="templates"/>
+        <topicref href="hosts_configuration.dita" keys="hosts_configuration"/>
+        <topicref href="service.dita" keys="service"/>
+        <topicref href="actions.dita" keys="actions"/>
+        <topicref href="event_correlation.dita" keys="event_correlation"/>
+        <topicref href="detection_configuration.dita" keys="detection_configuration"/>
+        <topicref href="services_configuration.dita" keys="services_configuration"/>
+    </topicref>
+    <topicref href="administration.dita" keys="administration">
+        <topicref href="general.dita" keys="general"/>
+        <topicref href="proxy.dita" keys="proxy"/>
+        <topicref href="autentification.dita" keys="autentification"/>
+        <topicref href="user_groups.dita" keys="user_groups"/>
+        <topicref href="user_roles.dita" keys="user_roles"/>
+        <topicref href="users.dita" keys="users"/>
+        <topicref href="ways_of_notification.dita" keys="ways_of_notification"/>
+        <topicref href="scripts.dita" keys="scripts"/>
+        <topicref href="queue.dita" keys="queue"/>
+    </topicref>
+    <topicref href="support.dita" keys="support"/>
+    <topicref href="user_configuration.dita" keys="user_configuration"/>
+    <topicref href="exit.dita" keys="exit"/>
+</map>

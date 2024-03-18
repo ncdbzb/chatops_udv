@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_enableremote_commands">
+    <glossterm>ZBX_ENABLEREMOTE COMMANDS </glossterm>
+    <glossdef>
+        <p>Разрешены ли удаленные команды с сервера.</p>
+        <p>
+            <ul id="ul_mmn_433_grb">
+                <li>0 - не разрешены</li>
+                <li>1 - разрешены</li>
+            </ul>
+        </p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>1</p>
+        <p><b>Разрешенный диапазон значений:</b>0, 1</p>
+    </glossdef>
+</glossentry>

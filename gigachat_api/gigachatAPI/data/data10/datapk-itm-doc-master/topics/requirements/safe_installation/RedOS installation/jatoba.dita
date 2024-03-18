@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="jatoba">
+    <title>Установка СУБД Jatoba</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <prereq>Перед установкой СУБД Jatoba необходимо заказать пакет установки и лицензионный ключ у поставщика ПО Jatoba.</prereq>
+        <context>Информация настоящего раздела подготовлена на основе документации СУБД Jatoba
+            версии 1.5, в случае использования СУБД другой версии, необходимо уточнить порядок
+            установки в документации разработчика СУБД Jatoba.</context>
+        <steps>
+            <step>
+                <cmd>Создайте каталог для файлов установки СУБД Jatoba командой:</cmd>
+                <info>
+                    <codeblock id="codeblock_v41_xhz_hrb">mkdir/opt/jatoba</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте наличие пакетов из списка ниже с помощью приведенных команд (и в
+                    случае отсутствия какого-либо пакета установите его оффлайн, скачав установочный
+                    файл в локальную ОС и передав его на ОС, в которой будет выполняться установка
+                    ПК DATAPK
+                    ITM-K):</cmd>
+                <info><codeblock id="codeblock_omc_whz_hrb">rpm -qa | grep gdal-libs
+rpm -qa | grep geos
+rpm -qa | grep hdf5
+rpm -qa | grep libicu-devel
+rpm -qa | grep proj
+rpm -qa | grep perl
+rpm -qa | grep libxslt
+rpm -qa | grep xerces-c
+rpm -qa | grep openssl-libs
+rpm -qa | grep libcurl 
+rpm -qa | grep python2-libs
+rpm -qa | grep python3-libs
+rpm -qa | grepjson-c</codeblock></info>
+            </step>
+            <step>
+                <cmd>Установить все пакеты можно с помощью следующей команды:</cmd>
+                <info><codeblock id="codeblock_xbq_13z_hrb">yum install libicu-devel openssl-libs libcurl perl python2-libs python3-libs gdal-libs
+geos proj hdf5 json-c xerces-c libxslt</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для установки Jatoba передайте в ОС DATAPK ITM-K следующие пакеты и
+                    пакеты-зависимости для установки СУБД Jatoba в папку <codeph
+                        conref="../../../reusable/filepath/opt_jatoba.dita#ReusableComponent_it1_32s_hrb/codeph_jt1_32s_hrb"
+                    />:</cmd>
+                <info>
+                    <codeblock>jatoba1-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-contrib-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-devel-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-docs-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-libs-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-oracle_fdw-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-orafce-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-pgaudit-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-pgsql_http-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-pg_variables-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-plperl-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-plpython-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-plpython3-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-postgis-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-securityprofile-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-server-1.5.2-7.36b55480.x86_64.rpm
+jatoba1-timescaledb-1.5.2-7.36b55480.x86_64.rpm
+gis-activator11-1.1.0-0.x86_64.rpm</codeblock>
+                    <note>Если также был передан пакет -
+                        jatoba1-plspgsql-1.5.2-7.36b55480.x86_64.rpm, необходимо его удалить. Данный
+                        пакет используется для расширения возможностей СУБД в части сокрытия
+                        (обфускации/шифрования) кода хранимых процедур и при необходимости может
+                        быть доставлен и развернут отдельно.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Для установки СУБД введите команду:</cmd>
+                <info><codeblock>cd /opt/jatoba
+rpm -i jatoba1*</codeblock></info>
+            </step>
+            <step>
+                <cmd>Установите пакет-активатор от производителя с помощью команды:</cmd>
+                <info><codeblock>rpm -i gis-activator11-1.1.0-0.x86_64.rpm</codeblock></info>
+            </step>
+            <step>
+                <cmd>Проинициализируйте установленную версию. Перейдите в директорию расположения исполняемых файлов СУБД, выполнив команду:</cmd>
+                <info><codeblock>cd /usr/jatoba-1/bin</codeblock></info>
+            </step>
+            <step
+                conref="../../../reusable/notes/jatoba_init.dita#ReusableComponent_hw4_gnn_nrb/step_iw4_gnn_nrb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Для установки СУБД необходимо запросить лицензионный ключ у поставщика ПО Jatoba.</cmd>
+                <info><note>Лицензионный ключ также можно запросить через контактные данные технической поддержки СУБД
+                        Jatoba – заполнив форму на веб-сайте (<xref
+                            href="https://www.gaz-is.ru/poddergka/zajavka.html#produkty"
+                            format="html" scope="external"/>), отправив письмо на электронную почту
+                        support@gaz-is.ru или по телефону 8 (800) 700-09-87. </note></info>
+            </step>
+            <step>
+                <cmd>Запустите активатор СУБД с помощью команды ниже и следуйте его дальнейшим
+                    инструкциям:</cmd>
+                <info>
+                    <codeblock>./jactivator</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>В меню активатора выберите и выполните оффлайн или онлайн-активацию СУБД Jatoba.</cmd>
+                <info>
+                    <note>Онлайн активация подразумевает наличие интернета на компьютере c
+                        устанавливаемой СУБД. В качестве директории может быть указана текущая
+                        директория, которая обозначается символом «точка».</note>
+                    <fig id="fig_safe_installation_redOS_2_3">
+                        <title>Меню активатора СУБД Jatob</title>
+                        <image href="../../../../images/safe_installation/safe_installation_redOS_2_3.png" id="safe_installation_redOS_2_3">
+                        </image>
+                    </fig>
+                </info>
+            </step>
+            <step
+                conref="../../../reusable/notes/jatoba_lisence_move.dita#ReusableComponent_a1n_mrn_nrb/step_b1n_mrn_nrb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Для обозначения настроек лицензии Jatoba откройте файл <ph
+                        conref="../../../reusable/filepath/postgresql_conf.dita#ReusableComponent_eqn_f1t_hrb/ph_fqn_f1t_hrb"
+                    /> с помощью команды ниже и уберите символы комментария:</cmd>
+                <info>
+                    <codeblock>vi /var/lib/jatoba/1/data/postgresql.conf</codeblock>
+                </info>
+            </step>
+            <step
+                conref="../../../reusable/notes/jatoba_licenser_option_parametrs.dita#ReusableComponent_abv_csn_nrb/step_bbv_csn_nrb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Для запуска СУБД и ее добавления в автозагрузку выполните команду:</cmd>
+                <info><codeblock>systemctl enable jatoba-1 &amp;&amp; systemctl start jatoba-1</codeblock></info>
+            </step>
+            <step
+                conref="../../../reusable/notes/jatoba_service_check.dita#ReusableComponent_pkq_ssn_nrb/step_qkq_ssn_nrb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

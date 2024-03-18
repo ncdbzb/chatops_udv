@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_items_triggers_graphs">
+    <title>Добавление элементов данных, триггеров, графиков</title>
+    <taskbody><context><p>Для добавления элементов данных в шаблон необходимо сделать следующее:</p></context><steps id="ol_kht_rrz_frb">
+        <step><cmd>Перейти в раздел боковой панели <cite keyref="configuration">«Настройка»</cite> → <cite keyref="hosts_configuration">«Узлы сети»</cite> (или <cite keyref="templates">«Шаблоны»</cite>).</cmd></step>
+            <step><cmd>Нажать на «Элементы данных» в строке с требуемым узлом сети/шаблоном.</cmd></step>
+            <step><cmd>Отметить элементы данных, которые есть желание добавить в шаблон.</cmd></step>
+            <step><cmd>Выбрать «Копировать» внизу списка.</cmd></step>
+            <step><cmd>Выбрать шаблон (или группу шаблонов), в который необходимо скопировать элементы
+                данных, и нажмите кнопку «Копировать».</cmd></step>
+    </steps><result>Все выбранные элементы данных должны будут скопироваться в шаблон.</result>
+        <postreq><p>Добавление <term keyref="triggers">триггеров</term> и графиков осуществляется похожим образом (из списка <term keyref="triggers">триггеров</term> и
+            графиков соответственно). Имейте в виду, что они могут быть добавлены только после того,
+            как сначала будут добавлены требуемые элементы данных.</p></postreq></taskbody>
+</task>

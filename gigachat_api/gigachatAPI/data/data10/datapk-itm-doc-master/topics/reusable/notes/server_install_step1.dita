@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_cc5_zgf_krb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_dc5_zgf_krb">
+                <cmd>Создайте на сервере консолидации папку с помощью команды:</cmd>
+                <info><codeblock>mkdir /opt/datapkitm</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

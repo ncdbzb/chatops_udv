@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="enable_web_access_log">
+    <glossterm>ENABLE_WEB_ACCESS_LOG</glossterm>
+    <glossdef><p>Переменная устанавливает директиву журнала доступа для веб-сервера. По умолчанию
+            значение соответствует стандартному выходу.</p><b>Значение в конфигурации ITM-K при
+            поставке:</b>true</glossdef>
+</glossentry>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_m_page_config_users">
+    <glossterm>Пользователи</glossterm>
+    <glossdef>Подраздел меню "<cite keyref="itm_m_page_configuration">Настройки</cite>", содержащий список пользователей сервера ITM-VM. В этом подразделе
+        администратор может создать, просмотреть или изменить учетную запись пользователя. <fig>
+            <title>Пользователи</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_users.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

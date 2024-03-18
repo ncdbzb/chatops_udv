@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="monitoring_objects_hosts">
+    <title>Объекты мониторинга. Узлы сети</title>
+    <body>
+        <p>В этом разделе:<ul>
+                <li><xref href="hosts_detection.dita">Обнаружение
+                        узлов сети</xref></li>
+                <li><xref href="hosts_creation.dita">Создание
+                        узлов сети</xref></li>
+                <li><xref href="hosts_delete.dita">Удаление узлов
+                        сети</xref></li>
+                <li><xref href="inventory/inventory.dita"
+                        >Инвентаризация</xref><ul id="ul_pth_b1q_grb">
+                        <li><xref
+                                href="inventory/inventory_overview.dita"
+                                >Обзор</xref></li>
+                        <li><xref
+                                href="inventory/inventory_manual_mode.dita"
+                                >Ручной режим</xref></li>
+                        <li><xref
+                                href="inventory/inventory_data_review.dita"
+                                >Просмотр инвентарных данных</xref></li>
+                        <li><xref
+                                href="inventory/inventory_data_build.dita"
+                                >Построение инвентарных данных</xref></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

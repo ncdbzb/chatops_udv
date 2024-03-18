@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="listenport">
+    <glossterm>ListenPort</glossterm>
+    <glossdef>Порт</glossdef>
+</glossentry>

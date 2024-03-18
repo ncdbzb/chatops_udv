@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="event_object">
+    <title>Объект события</title>
+    <body>
+        <p>Объект события DATAPK ITM-K содержит свойства, приведенные в таблице.</p>
+        <table id="table_jdj_cgz_frb" frame="all" colsep="1" rowsep="1">
+            <title>Свойства объекта события</title>
+            <tgroup cols="3">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="1.08*"/>
+                <colspec colnum="3" colname="col3" colwidth="2.93*"/>
+                <thead>
+                    <row>
+                        <entry>Свойство</entry>
+                        <entry>Тип</entry>
+                        <entry>Описание</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>eventid</entry>
+                        <entry>строка</entry>
+                        <entry>ID события.</entry>
+                    </row>
+                    <row>
+                        <entry>source</entry>
+                        <entry>целое число</entry>
+                        <entry>
+                            <p>Тип события.</p>
+                            <p>Возможные значения:</p>
+                            <ul id="ul_rvg_m54_3rb">
+                                <li>0 – событие создано <term keyref="triggers"
+                                    >триггером</term>;</li>
+                                <li>1 – событие создано правилом обнаружения;</li>
+                                <li>2 – событие создано авторегистрацией активного агента;</li>
+                                <li>3 – внутреннее событие.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>object</entry>
+                        <entry>целое число</entry>
+                        <entry>
+                            <p>Тип объекта, к которому относится событие.</p>
+                            <p>Возможные значения для событий на <term keyref="triggers"
+                                    >триггер</term>:</p>
+                            <p>
+                                <ul id="ul_hwk_r54_3rb">
+                                    <li>0 – <term keyref="triggers">триггер</term>.</li>
+                                </ul>
+                            </p>
+                            <p>Возможные значения для событий на обнаружения:</p>
+                            <ul id="ul_kgw_n54_3rb">
+                                <li>1 – обнаруженный узел сети;</li>
+                                <li>2 – обнаруженный сервис.</li>
+                            </ul>
+                            <p>Возможные значения для событий на авторегистрацию:</p>
+                            <ul id="ul_ult_r54_3rb">
+                                <li>3 – автоматически зарегистрированный узел сети.</li>
+                            </ul>
+                            <p>Возможные значения для внутренних событий:</p>
+                            <ul id="ul_c3t_q54_3rb">
+                                <li>0 – <term keyref="triggers">триггер</term>;</li>
+                                <li>4 – элемент данных;</li>
+                                <li>5 – правило LLD.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>objectid</entry>
+                        <entry>строка</entry>
+                        <entry>ID связанного объекта.</entry>
+                    </row>
+                    <row>
+                        <entry>acknowledged</entry>
+                        <entry>целое число</entry>
+                        <entry>Подтверждено ли событие.</entry>
+                    </row>
+                    <row>
+                        <entry>clock</entry>
+                        <entry>штамп времени</entry>
+                        <entry>Время, когда событие было создано.</entry>
+                    </row>
+                    <row>
+                        <entry>ns</entry>
+                        <entry>целое число</entry>
+                        <entry>Наносекунды, когда событие было создано.</entry>
+                    </row>
+                    <row>
+                        <entry>name</entry>
+                        <entry>строка</entry>
+                        <entry>Имя решенного события.</entry>
+                    </row>
+                    <row>
+                        <entry>value</entry>
+                        <entry>целое число</entry>
+                        <entry>
+                            <p>Состояние связанного объекта.</p>
+                            <p>Возможные значения для событий на <term keyref="triggers"
+                                    >триггер</term>:</p>
+                            <ul id="ul_ql1_s54_3rb">
+                                <li> 0 – ОК;</li>
+                                <li>1 – проблема.</li>
+                            </ul>
+                            <p>Возможные значения для событий на обнаружения:</p>
+                            <ul id="ul_xx3_s54_3rb">
+                                <li>0 – узел сети или сервис доступны;</li>
+                                <li>1 – узел сети или сервис недоступны;</li>
+                                <li>2 – узел сети или сервис обнаружены;</li>
+                                <li>3 – узел сети или сервис потеряны.</li>
+                            </ul>
+                            <p>Возможные значения для событий на авторегистрацию:</p>
+                            <ul id="ul_aw1_t54_3rb">
+                                <li>0 – «нормальное» состояние;</li>
+                                <li>1 – «неизвестное» или “неподдерживаемое” состояние.</li>
+                            </ul>
+                            <p>Этот параметр не используется для событий на авторегистрацию активных
+                                агентов.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>severity</entry>
+                        <entry>целое число</entry>
+                        <entry>
+                            <p>Текущая важность события.</p>
+                            <p>Возможные значения:</p>
+                            <ul id="ul_jpk_t54_3rb">
+                                <li>0 – не классифицировано;</li>
+                                <li>1 – информационная;</li>
+                                <li>2 – предупреждение;</li>
+                                <li>3 – средняя;</li>
+                                <li>4 – высокая;</li>
+                                <li>5 – чрезвычайная.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>r_eventid</entry>
+                        <entry>строка</entry>
+                        <entry>ID события восстановлении</entry>
+                    </row>
+                    <row>
+                        <entry>c_eventid</entry>
+                        <entry>строка</entry>
+                        <entry>ID события о проблеме, которое сгенерировало OK событие</entry>
+                    </row>
+                    <row>
+                        <entry>correlationid</entry>
+                        <entry>строка</entry>
+                        <entry>ID корреляции</entry>
+                    </row>
+                    <row>
+                        <entry>userid</entry>
+                        <entry>строка</entry>
+                        <entry>ID пользователя, который закрыл событие вручную.</entry>
+                    </row>
+                    <row>
+                        <entry>suppressed</entry>
+                        <entry>целое число</entry>
+                        <entry>
+                            <p>Подавлено ли событие или нет.</p>
+                            <p>Возможные значения:</p>
+                            <ul id="ul_qzq_554_3rb">
+                                <li>0 – событие в нормальном режиме;</li>
+                                <li>1 – событие подавлено.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

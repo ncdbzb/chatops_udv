@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_a_OS_install">
+    <title>Установка операционной системы</title>
+    <taskbody>
+        <context>В качестве операционной системы (ОС) на виртуальную машину устанавливается
+            redos-MUROM-7.2-x86_64-DVD1.iso. Получить образ ОС можно на <xref
+                href="https://redos.red-soft.ru/downloads/" format="html" scope="external"
+                >официальном сайте РЕДОС</xref>.</context>
+        <steps>
+            <step>
+                <cmd>Подключите к ВМ ISO-образ операционной системы.</cmd>
+                <info>Окно установки откроется автоматически или по нажатию любой клавиши. <fig>
+                        <title>Окно установки ОС</title>
+                        <image href="../../images/ITM_A_screens/itm_a_OS_install.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Для начала установки выберите пункт меню «Установить RED OS» и нажмите клавишу «Enter». </cmd>
+                <info>В приведенных ниже пунктах для подтверждения выбора параметров установки РЕД ОС используется графический режим.</info>
+            </step>
+            <step>
+                <cmd>В появившемся окне «Выберите язык» выберите строку меню «Русский - Russian» и нажмите клавишу «Продолжить».</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Выберите язык»</title>
+                        <image href="../../images/ITM_A_screens/itm_a_choose_language.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В появившемся меню выберем пункт «Дата и Время».</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Обзор установки»</title>
+                        <image href="../../images/ITM_A_screens/itm_a_installation_overview.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Выбираем город и регион в выпадающем меню, либо щелчком на карте «Азия/Екатеринбург». 
+                    Выставляем текущее, местное время, нажимаем «Готово».</cmd>
+                <info>
+                    <fig>
+                        <title>Окно настройки «Дата и Время»</title>
+                        <image href="../../images/ITM_A_screens/itm_a_date_time_config.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Настройте параметры работы с клавиатурой в окне «Клавиатура». 
+                    Выберите английскую раскладку клавиатуры и нажмите клавишу «вверх», после нажмите «Готово».</cmd>
+                <info>
+                    <fig>
+                        <title>Настройка раскладки клавиатуры</title>
+                        <image href="../../images/ITM_A_screens/itm_a_keyboard_config.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В основном меню перейдите в раздел «Выбор программ». </cmd>
+                <info>В новом окне (рисунок 6), в пункте отметьте для установки следующие пакеты:
+                        <ul id="ul_cd3_s43_nrb">
+                        <li>Perl для веб-разработки;</li>
+                        <li>Python;</li>
+                        <li>
+                            <p>Библиотеки совместимости.</p>
+                        </li>
+                    </ul><fig>
+                        <title>Выбор пакетов для установки</title>
+                        <image href="../../images/ITM_A_screens/itm_a_choose_package.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В основном меню перейдите в раздел «Расположение установки».</cmd>
+                <info>В новом окне, в пункте «Другие параметры хранения данных» выбрать галочку «Я
+                    настрою разделы», затем нажать «Готово». <fig>
+                        <title>Настройка места установки</title>
+                        <image href="../../images/ITM_A_screens/itm_a_installation_place_config.png"
+                        />
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В окне «Разметка вручную» нажимаем на пункт «Создать их автоматически».</cmd>
+                <info>
+                    <fig>
+                        <title>Раздел «Разметка вручную»</title>
+                        <image href="../../images/ITM_A_screens/itm_a_manual_markup.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>При автоматической разметке дисков с размером более 50 ГБ автоматически создаётся раздел /home/. Для его удаления необходимо нажать на кнопку «-», затем выбрать корневой раздел «/» и в поле «Требуемый размер» ввести «100%» для расширения дискового пространства. 
+                    После щелчка мыши в списке разделов – значения разделов обновляются. Нажать «Готово» для применения настроек.</cmd>
+                <info>
+                    <fig>
+                        <title>Автоматически созданные разделы</title>
+                        <image href="../../images/ITM_A_screens/itm_a_auto_chapters.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В появившемся окне проверяем настройки ещё раз и нажимаем на кнопку «Принять изменения».</cmd>
+                <info>
+                    <fig>
+                        <title>Применение настроек разметки диска</title>
+                        <image href="../../images/ITM_A_screens/itm_a_apply_disk_config.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в раздел «Сеть и имя узла». В окне «Имя узла» введите имя для компьютера. 
+                    Нажмите клавишу «Применить». Включите сетевой адаптер и нажмите на кнопку «Настроить» для ввода сетевых реквизитов.</cmd>
+                <info>
+                    <fig>
+                        <title>Настройка имени узла</title>
+                        <image href="../../images/ITM_A_screens/itm_a_host_name_config.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Выберите раздел «Параметры IPv4». В пункте «Метод», в выпадающем меню выберете «Вручную». Нажмите на кнопку «Добавить» для добавления статического IP-адреса.
+                    Укажите адреса DNS в поле «Серверы DNS». Для подтверждения выбора нажмите клавишу «Сохранить».</cmd>
+            <info>
+                <fig>
+                    <title>Ввод сетевых реквизитов</title>
+                    <image href="../../images/ITM_A_screens/itm_a_net_input.png"/>
+                </fig>
+            </info>
+            </step>
+            <step>
+                <cmd>Проверьте, что интерфейс имеет статус «Подключен». Включите его, нажав на кнопку справа. Нажмите «Готово».</cmd>
+                <info>
+                    <fig>
+                        <title>Просмотр сетевых настроек</title>
+                        <image href="../../images/ITM_A_screens/itm_a_net_config_review.png"/>
+                    </fig>
+                </info>            
+            </step>
+            <step>
+                <cmd>После окончания настройки ОС нажмите на кнопку «Начать установку».</cmd>
+                <info>
+                    <fig>
+                        <title>Подтверждение начала установки</title>
+                        <image href="../../images/ITM_A_screens/itm_a_installation_approve.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Для настройки пароля супер-пользователя нажмите на соответствующий пункт в меню.</cmd>
+                <info>
+                    <fig>
+                        <title>Окно настройки учетных записей</title>
+                        <image href="../../images/ITM_A_screens/itm_a_account_config.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Укажите пароль для учетной записи «root» администратора системы (суперпользователя), нажмите клавишу «Готово».</cmd>
+                <info>
+                    <fig>
+                        <title>Ввод пароля суперпользователя</title>
+                        <image href="../../images/ITM_A_screens/itm_a_password_input.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Для настройки нового пользователя – нажмите на пункт «Создание пользователя» в меню. 
+                    Укажите полное имя и имя для учетной записи пользователя – «datapkitm». Введите пароль и нажмите клавишу «Готово».</cmd>
+                <info>
+                    <fig>
+                        <title>Ввод имени учетной записи нового пользователя</title>
+                        <image href="../../images/ITM_A_screens/itm_a_new_account_name.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>По окончании установки ОС необходимо нажать кнопку «Перезагрузить» для последующего автоматического запуска системы.</cmd>
+                <info>
+                    <fig>
+                        <title>Перезагрузка перед запуском ОС</title>
+                        <image href="../../images/ITM_A_screens/itm_a_reboot.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>После перезагрузки появляется окно для ознакомления с лицензионным соглашением.</cmd>
+                <info>
+                    <fig>
+                        <title>Окно «Первая настройка»</title>
+                        <image href="../../images/ITM_A_screens/itm_a_first_config.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>После изучения текста лицензионного соглашения поставить галочку «Я принимаю лицензионное соглашение» и нажать на кнопку «Готово».</cmd>
+                <info>
+                    <fig>
+                        <title>Текст лицензионного соглашения</title>
+                        <image href="../../images/ITM_A_screens/itm_a_license_agreement.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Нажмите на кнопку «Завершить» для запуска ОС.</cmd>
+                <info>
+                    <fig>
+                        <title>Завершение установки</title>
+                        <image href="../../images/ITM_A_screens/itm_a_finish_installation.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>В окне входа в систему выберите пользователя, введите пароль для учётной записи.</cmd>
+                <info>
+                    <fig>
+                        <title>Вход в систему</title>
+                        <image href="../../images/ITM_A_screens/itm_a_OS_login.png"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

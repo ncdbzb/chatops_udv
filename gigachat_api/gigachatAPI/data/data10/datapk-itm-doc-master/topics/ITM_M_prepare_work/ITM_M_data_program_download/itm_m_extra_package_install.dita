@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_extra_package_install">
+    <title>Установка дополнительных пакетов в установленной ОС</title>
+    <taskbody>
+        <steps>
+            <step
+                conref="../../reusable/notes/extra_package_step1.dita#ReusableComponent_iy2_5x2_krb/step_ky2_5x2_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/notes/extra_package_step2.dita#ReusableComponent_w3q_wx2_krb/step_x3q_wx2_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/notes/extra_package_step3.dita#ReusableComponent_ryt_xx2_krb/step_syt_xx2_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/notes/extra_package_step4.dita#ReusableComponent_dfv_yx2_krb/step_efv_yx2_krb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<bookmap  xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство по эксплуатации DATAPK ITM-M</mainbooktitle>
+    </booktitle>
+    
+    <frontmatter>
+        <booklists>
+            <toc/>
+            <!-- <tablelist/> -->
+        </booklists>
+    </frontmatter>
+    
+    <chapter href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <topicref href="topics/reference_info/reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reference_info/glossary/itm_m_glossary.dita">
+        <topicref href="topics/reference_info/glossary/itm_m_glossary.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_M_intoduction/itm_m_introduction.dita">
+        <topicref href="topics/ITM_M_intoduction/itm_m_introduction.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_M_prepare_work/itm_m_prepare_work.dita">
+        <topicref href="topics/ITM_M_prepare_work/itm_m_prepare_work.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_M_function_description/itm_m_function_description.dita">
+        <topicref href="topics/ITM_M_function_description/itm_m_function_description.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/ITM_M_reference_info/itm_m_reference_info.dita">
+        <topicref href="topics/ITM_M_reference_info/ITM_M_breadcrums/itm_m_breadcrumbs.ditamap"
+            format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reusable/reusable.ditamap" format="ditamap" processing-role="resource-only"/>
+</bookmap>

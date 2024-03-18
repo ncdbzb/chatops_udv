@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Требования к комплексу и его среде функционирования</title>
+    <topicref href="software_requirements.dita"/>
+    <topicref href="hardware_requirements.dita"/>
+    <topicref href="label_pack_requirements.dita"/>
+    <topicref href="actions_accept.dita"/>
+    <topicref href="safe_installation/safe_installation_actions.dita">
+        <topicref href="safe_installation/RedOS%20installation/installation_redos.dita">
+            <topicref href="safe_installation/RedOS%20installation/ntp.dita"/>
+            <topicref href="safe_installation/RedOS%20installation/extra_pack_installation.dita"/>
+            <topicref href="safe_installation/RedOS%20installation/jatoba.dita"/>
+            <topicref
+                href="safe_installation/RedOS%20installation/installation_server_datapk_itm_k.dita"
+            />
+        </topicref>
+        <topicref href="safe_installation/datapk_synchro.dita"/>
+        <topicref href="safe_installation/first_configuration/first_configuration.dita">
+            <topicref href="safe_installation/first_configuration/user_configurations_safe.dita"/>
+            <topicref href="safe_installation/first_configuration/edit_host_datapk_itm_server.dita"/>
+            <topicref href="safe_installation/first_configuration/import_templates.dita"/>
+            <topicref href="safe_installation/first_configuration/add_templates_to_host.dita"/>
+            <topicref href="safe_installation/first_configuration/create_regexp.dita"/>
+            <topicref href="safe_installation/first_configuration/synchro_configuration_web.dita"/>
+        </topicref>
+        <topicref href="safe_installation/agent%20installation/agents_installation.dita">
+            <topicref href="safe_installation/agent%20installation/agent_installation_windows.dita"/>
+            <topicref href="safe_installation/agent%20installation/agent_installation_centos_7.dita"/>
+            <topicref href="safe_installation/agent%20installation/agent_installation_debian.dita"/>
+            <topicref href="safe_installation/agent%20installation/agentless_consolidation.dita"/>
+            <topicref href="safe_installation/agent%20installation/agentless_windows_wmi.dita"/>
+            <topicref href="safe_installation/agent%20installation/agentless_snmp.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="safe_complex_usage.dita"/>
+    <topicref href="safe_environment_config.dita"/>
+</map>

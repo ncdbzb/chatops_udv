@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="worker">
+    <glossterm>Worker</glossterm>
+    <glossdef>Worker – препроцессор, который выполняет шаги предобработки значений элементов
+            данных (для возможности задавать и выполнять правила преобразований для полученных
+            значений элементов данных).
+    </glossdef>
+</glossentry>

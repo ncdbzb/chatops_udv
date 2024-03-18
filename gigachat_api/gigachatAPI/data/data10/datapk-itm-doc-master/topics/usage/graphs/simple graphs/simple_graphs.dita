@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="simple_graphs">
+    <title>Простые графики</title>
+    <body>
+        <p>Простые графики служат для визуализации данных, собранных элементами данных.</p>
+        <p>Со стороны пользователя не требуются никакие настройки простых графиков для их
+            просмотра.</p>
+        <p>Для отображения графика требуется перейти в раздел боковой панели <cite
+                keyref="monitoring">«Мониторинг»</cite> →<cite keyref="latest_data"> «Последние
+                данные»</cite> и нажать на ссылку графика напротив соответствующего элемента
+            данных.</p>
+        <p>В этом разделе:</p>
+        <ul id="ul_ors_j1k_hrb">
+            <li><xref href="time_choice.dita">Выбор периода
+                времени</xref></li>
+            <li><xref href="recent_data_long_periods.dita">Недавние данные и
+                    длительные периоды</xref></li>
+            <li><xref href="switch_to_raw_data.dita">Переключение к
+                    необработанным данным</xref></li>
+        </ul>
+    </body>
+</topic>

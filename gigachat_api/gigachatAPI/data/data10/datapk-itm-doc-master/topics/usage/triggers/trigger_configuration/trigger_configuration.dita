@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="trigger_configuration">
+    <title>Настройка триггера</title>
+    <taskbody><prereq><p>Для настройки <term keyref="triggers">триггера</term> необходимо выполнить следующее:</p></prereq><steps id="ol_o31_5d5_frb">
+        <step>
+                <cmd>Перейдите в раздел боковой панели <cite keyref="configuration"
+                        >«Настройка»</cite> → <cite keyref="hosts_configuration">«Узлы
+                    сети»</cite>.</cmd>
+            </step>
+            <step>
+                <cmd>Нажмите на «Триггеры» в строке с узлом сети.</cmd>
+            </step>
+        <step>
+                <cmd>Нажмите на «Создать триггер» в правом верхнем углу экрана (или на имя <term
+                        keyref="triggers">триггера</term> для изменения уже существующего <term
+                        keyref="triggers">триггера</term>).</cmd>
+            </step>
+        <step>
+                <cmd>Введите в диалоге параметры <term keyref="triggers">триггера</term>.</cmd>
+            </step>
+        </steps>
+    <postreq>
+        <p>В этом разделе:</p>
+            <ul id="ul_mpz_nzj_hrb">
+                <li><xref href="trigger_configuration_details.dita"
+                        >Настройка</xref></li>
+            </ul>
+    </postreq>
+    </taskbody>
+</task>

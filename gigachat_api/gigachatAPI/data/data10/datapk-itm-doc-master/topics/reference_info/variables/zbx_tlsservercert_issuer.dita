@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_tlsservercert_issuer">
+    <glossterm>ZBX_TLSSERVERCERT ISSUER </glossterm>
+    <glossdef>
+        <p>Разрешенный атрибут issuer сертификата сервера.</p>
+    </glossdef>
+</glossentry>

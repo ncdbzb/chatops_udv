@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_allowkey">
+    <glossterm>ZBX_ALLOWKEY</glossterm>
+    <glossdef>
+        <p>Разрешить выполнение тех ключей элемента, которые соответствуют шаблону. Шаблон ключа -
+            это выражение с подстановочным знаком, которое поддерживает символ «*» для соответствия
+            любому количеству любых символов.</p>
+        <p> В сочетании с DenyKey можно определить несколько правил сопоставления ключей. Параметры
+            обрабатываются один за другим в соответствии с порядком их появления.</p>
+    </glossdef>
+</glossentry>

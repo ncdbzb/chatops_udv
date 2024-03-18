@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="first_configuration">
+    <title>Первичная настройка</title>
+    <body>
+    <p>В этом разделе:</p>
+        <ul id="ul_tc2_cyf_3rb">
+            <li><xref href="user_configurations_safe.dita">Настройки пользователей и их безопасные
+                    значения</xref></li>
+            <li><xref href="edit_host_datapk_itm_server.dita">Редактирование узла сети datapk-itm
+                    server</xref></li>
+            <li><xref href="import_templates.dita">Импорт шаблонов</xref></li>
+            <li><xref href="add_templates_to_host.dita">Добавление шаблонов к узлу сети</xref></li>
+            <li><xref href="create_regexp.dita">Создание регулярного выражения</xref></li>
+            <li><xref href="synchro_configuration_web.dita">Настройка синхронизатора в
+                    веб-интерфейсе</xref></li>
+        </ul>
+    </body>
+</topic>

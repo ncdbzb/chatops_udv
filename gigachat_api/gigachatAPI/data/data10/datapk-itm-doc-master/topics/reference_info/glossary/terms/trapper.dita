@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="trapper">
+    <glossterm>Траппер</glossterm>
+    <glossdef>Траппер – процесс, принимающий входящие подключения от активных агентов, активных
+            прокси и дочерних коммуникаций. 
+    </glossdef>
+</glossentry>

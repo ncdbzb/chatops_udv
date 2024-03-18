@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_historystorageurl_0">
+    <glossterm>ZBX_HISTORYSTORAGEURL</glossterm>
+    <glossdef><p>HTTP[S] URL хранилища истории. Этот параметр используется для установки
+            Elasticsearch.</p><b>Значение в конфигурации ITM-K при
+        поставке:</b>http://elasticsearch:9200/</glossdef>
+</glossentry>

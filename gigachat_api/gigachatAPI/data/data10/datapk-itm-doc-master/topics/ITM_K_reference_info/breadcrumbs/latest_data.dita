@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="latest_data">
+    <glossterm>Последние данные</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Последние данные»</title>
+            <image href="../../../images/Pages/monitoring_latest_data.png" id="monitoring_latest_data">
+                <alt>Страница «Последние данные»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

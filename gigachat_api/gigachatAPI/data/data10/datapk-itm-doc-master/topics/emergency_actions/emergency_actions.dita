@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="emergency_actions">
+    <title>Действия по предупреждению и устранению внештатных ситуаций</title>
+    <body>
+        <ul>
+            <li>
+                <xref href="DB%20backup%20and%20restore/DB_backup_and_restore.dita">Выполнение
+                    резервного копирования баз данных и их восстановление</xref><ul
+                    id="ul_dgh_3kj_hrb">
+                    <li><xref href="DB%20backup%20and%20restore/unloading_jatoba.dita">Выгрузка
+                            определенной базы данных СУБД &quot;Jatoba&quot;</xref></li>
+                    <li><xref href="DB%20backup%20and%20restore/recovery_jatoba.dita">Восстановление
+                            определенной базы данных СУБД "Jatoba"</xref></li>
+                    <li><xref href="DB%20backup%20and%20restore/files_backup_jatoba.dita">Создание
+                            резервной копии файлов СУБД &quot;Jatoba&quot;</xref></li>
+                    <li><xref href="DB%20backup%20and%20restore/restore_jatoba.dita">Восстановление
+                            резервной копии файлов СУБД &quot;Jatoba&quot;</xref></li>
+                </ul></li>
+            <li><xref href="actions_after_problems/actions_after_problems.dita">Действия после сбоев
+                    и ошибок эксплуатации средства</xref><ul id="ul_inb_lkj_hrb">
+                    <li><xref href="actions_after_problems/web-interface_loading_problem.dita"
+                            >Веб-интерфейс DATAPK ITM_K не загружается</xref></li>
+                    <li><xref
+                            href="actions_after_problems/http_request_took_too_long_to_complete.dita"
+                            >Ошибка «An HTTP request took too long to complete» при запуске работы
+                            контейнеров DATAPK ITM-K</xref></li>
+                    <li><xref href="actions_after_problems/cannot_start_service.dita">Ошибки вида
+                            «&lt;...>Cannot start service &lt;...>. Bind for
+                            &lt;ip_address>:&lt;TCP/UDP_port> is ready allocated» при попытке
+                            запуска контейнеров DATAPK ITM-K </xref></li>
+                    <li><xref href="actions_after_problems/database_errors.dita">Ошибки при работе с
+                            базой данных</xref></li>
+                    <li><xref href="actions_after_problems/database_connection_interrupted.dita"
+                            >Подключение к базе данных прервано</xref></li>
+                    <li><xref href="actions_after_problems/server_unavailable.dita">DATAPK ITM-K
+                            сервер недоступен</xref></li>
+                    <li><xref href="actions_after_problems/sql_error.dita">Ошибка SQL</xref></li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

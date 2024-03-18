@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_m_page_object_monitoring">
+    <glossterm>Объекты мониторинга</glossterm>
+    <glossdef>Пункт главного меню, содержащий список <term keyref="monitoring_object">объектов мониторинга</term> и информацию о них. <fig>
+            <title>Объекты мониторинга</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_monitoring_objects.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

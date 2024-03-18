@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="ReusableComponent_vwn_g5y_hrb">
+    <title>database error connection</title>
+    <troublebody>
+        <troubleSolution id="troubleSolution_wwn_g5y_hrb">
+            <cause>
+                <p>Описание ошибки - Database error: Error connecting to database.</p>
+            </cause>
+            <remedy>
+                <title>Способы устранения:</title>
+                <steps>
+                    <step>
+                        <cmd
+                            conref="database_error_step1.dita#ReusableComponent_fzz_cty_hrb/cmd_gzz_cty_hrb"
+                        />
+                    </step>
+                    <step>
+                        <cmd
+                            conref="database_error_step2.dita#ReusableComponent_hj1_2ty_hrb/cmd_ij1_2ty_hrb"
+                        />
+                    </step>
+                    <step>
+                        <cmd
+                            conref="database_error_step3.dita#ReusableComponent_yjk_fty_hrb/cmd_zjk_fty_hrb"
+                        />
+                    </step>
+                    <step>
+                        <cmd
+                            conref="database_error_step4.dita#ReusableComponent_h45_gty_hrb/cmd_i45_gty_hrb"
+                        />
+                    </step>
+                    <step>
+                        <cmd
+                            conref="database_error_step5.dita#ReusableComponent_ep5_hty_hrb/cmd_fp5_hty_hrb"
+                        />
+                    </step>
+                    <step
+                        conref="database_error_step6.dita#ReusableComponent_fbk_jty_hrb/step_gbk_jty_hrb">
+                        <cmd/>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

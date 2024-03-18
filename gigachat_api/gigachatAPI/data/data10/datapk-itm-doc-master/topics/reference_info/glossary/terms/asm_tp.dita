@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="asm_tp">
+    <glossterm>Автоматизированная система управления технологическим процессом</glossterm>
+    <glossdef>Комплекс программных и программно-аппаратных средств, предназначенных для контроля за технологическим и (или) производственным оборудованием 
+        (исполнительными устройствами) и производимыми ими процессами, а также для управления такими оборудованием и процессами.</glossdef>
+    <glossBody>
+        <glossSurfaceForm>АСУ/АСУ ТП</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>АСУ/АСУ ТП</glossAbbreviation>
+        </glossAlt>        
+    </glossBody> 
+
+</glossentry>

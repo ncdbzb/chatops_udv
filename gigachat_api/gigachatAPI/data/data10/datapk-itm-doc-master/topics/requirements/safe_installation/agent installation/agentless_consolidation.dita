@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agentless_consolidation">
+    <title>Настройка безагентного сбора на сервере консолидации</title>
+    <shortdesc>Безагентный сбор с ОМ ОС Windows реализован с помощью протокола WMI, 
+        c ОС Linux – с помощью протоколов SSH или SNMP, 
+        с активного сетевого оборудования (АСО) – с помощью протокола SNMP.
+        Для корректного сбора данных с помощью протокола WMI необходимо настроить сбор данных на
+        сервере консолидации.</shortdesc>
+    <taskbody>
+        <context>
+            <p>Для сбора данных с ОМ введите в файл <codeph
+                    conref="../../../reusable/filepath/opt_datakitm_env_wmi_cred_wmi_pw.dita#ReusableComponent_vdn_fms_hrb/codeph_wdn_fms_hrb"
+                /> учетные данные ОМ по следующему шаблону:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>В квадратные скобки «[]» введите имя ОМ (hostname).</cmd>
+            </step>
+            <step>
+                <cmd>В переменную username введите логин ОМ.</cmd>
+            </step>
+            <step>
+                <cmd>В переменную password введите пароль ОМ.</cmd>
+            </step>
+            <step>
+                <cmd>В переменную domain введите домен, под которой происходит подключение к ОМ.
+                    Если это локальная учетная запись – то в качестве домена введите имя ОМ.</cmd>
+            </step>
+            <step>
+                <cmd>Блок [DEFAULT] с параметрами можно использовать при совпадении учетных записей в
+                    одном домене.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

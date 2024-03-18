@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="agent_installation_centos_7">
+    <title>Установка агента на ОС Centos 7</title>
+    <taskbody>
+        <context>
+            <p>Ниже указана последовательность команд для установки агента на ОС Centos 7. Аналогичным образом настраивается агент для ОС Centos 8, для его установки рекомендуется использовать пакет из поставки с корректным указанием разрядности.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Установите агента с помощью команды:</cmd>
+                <info>
+                    <codeblock>rpm -i itm-agent_v.1.2.0.el7.x86_64.rpm</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Установите сервис в автозагрузку с помощью команды:</cmd>
+                <info>
+                    <codeblock>systemctl enable zabbix-agent</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Для запуска и просмотра состояния используйте команды <codeph>systemctl start
+                        zabbix-agent </codeph> и <codeph>systemctl status
+                    zabbix-agent</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>С помощью текстового редактора отредактируйте переменные в файле <codeph
+                        conref="../../../reusable/filepath/etc_zabbix_zabbix_agentd_conf.dita#ReusableComponent_u2v_2ls_hrb/codeph_v2v_2ls_hrb"
+                    />:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>В переменную <cmdname>Server</cmdname> (и
+                                <cmdname>ServerActive</cmdname>, если используется активный режим
+                            агента) введите IP-адрес сервера DATAPK ITM-K, если наблюдение
+                            осуществляется на уровне филиала, или IP-адрес сервера DATAPK ITM-A,
+                            если наблюдение осуществляется на уровне ТО. Если предполагается, что ОМ
+                            может быть подключен к разным серверам мониторинга, то их IP-адреса
+                            должны быть перечислены через запятую, без пробелов.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Раскомментируйте строку с переменной
+                            <cmdname>ListenPort</cmdname>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>В переменной <cmdname>Hostname</cmdname> замените значение на имя
+                            текущего АРМ.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Добавьте правило в межсетевой экран для открытия порта агента.</cmd>
+                <info>В зависимости от используемого типа межсетевого экрана в операционной системе,
+                    введите команду, подходящую к нему. Если никакой межсетевой экран в системе не
+                    используется – пропустите данные пункты настройки.
+                        <codeblock>firewall-cmd --permanent --zone=public --add-port=10050/tcp</codeblock><p>или</p><codeblock>iptables -I INPUT 1 -p tcp --dport 10050 -j ACCEPT</codeblock></info>
+            </step>
+            <step>
+                <cmd>Примените правила МЭ:</cmd>
+                <info>
+                    <codeblock>firewall-cmd --reload</codeblock>
+                    <p>или</p>
+                    <codeblock>service iptables save</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверьте правила МЭ:</cmd>
+                <info>
+                    <codeblock>firewall-cmd --permanent --list-all</codeblock>
+                    <p>или</p>
+                    <codeblock>iptables -nL</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Для применения настроек агента перезапустите службу с помощью команды:</cmd>
+                <info>
+                    <codeblock>systemctl restart zabbix-agent</codeblock>
+                </info>
+            </step>
+        </steps>
+        <postreq>Подробная настройка объектов мониторинга в веб-интерфейсе описана в разделе «<xref
+                href="../../../usage/monitoring%20objects%20and%20hosts/monitoring_objects_hosts.dita"
+                >Объекты мониторинга. Узлы сети</xref>».</postreq>
+    </taskbody>
+</task>

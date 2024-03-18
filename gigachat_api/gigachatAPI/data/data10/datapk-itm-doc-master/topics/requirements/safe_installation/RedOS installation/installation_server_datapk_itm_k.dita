@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="installation_server_datapk_itm_k">
+    <title>Установка сервера консолидации ПК DATAPK ITM-K</title>
+    <taskbody>
+        
+        <steps>
+            <step
+                conref="../../../reusable/notes/server_install_step1.dita#ReusableComponent_cc5_zgf_krb/step_dc5_zgf_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Скопируйте следующие файлы в папку <codeph
+                    conref="../../../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                /> с помощью WinSCP или аналогичной программы:</cmd>
+                <info>
+                    <ul id="ul_uzp_cwm_frb">
+                        <li>каталог <codeph>env</codeph> вместе с содержимым</li>
+                        <li><codeph
+                            conref="../../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                        /></li>
+                        <li><codeph
+                            conref="../../../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                        /></li>
+                        <li><codeph
+                            conref="../../../reusable/filepath/datapk_itm_k_vl_2_0_0_tar_gzl.dita#ReusableComponent_aqs_gfs_hrb/codeph_bqs_gfs_hrb"
+                        /></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в папку и загрузите в операционную систему образы командами:</cmd>
+                <info><codeblock>cd /opt/datapkitm
+docker load -i datapk_itm_k_v1.2.0.0.tar.gz</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для создания базы данных, пользователя базы данных и пароля пользователя
+                    зайдите под пользователем <codeph>postgres</codeph>.</cmd>
+                <info>При создании пароля к учетной записи рекомендуется следовать требованиям из
+                    парольной политики: <ul id="ul_vzp_cwm_frb">
+                        <li>длина – не менее 16 символов;</li>
+                        <li>символы – буквы в нижнем и верхнем регистрах, цифры и специальные
+                            символы;</li>
+                        <li>минимальное количество цифр – 2.</li>
+                    </ul></info>
+            </step>
+            <step>
+                <cmd>Для выполнения настроек используйте следующий перечень команд (в поле PASSWORD
+                    необходимо ввести свой пароль, в команде пароль ‘123’ указан для примера):</cmd>
+                <info>
+                    <codeblock>passwd postgres
+*введите пароль для пользователя дважды*
+su postgres
+psql
+CREATE USER datapkitm WITH PASSWORD '123';
+CREATE DATABASE datapkitm OWNER datapkitm;
+\du
+\l
+\q</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Для выхода из пользователя <i>postgres</i> введите <codeph>exit</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Выполните команду <codeph>vi /var/lib/jatoba/1/data/postgresql.conf</codeph> для редактирования файла
+                    настроек базы данных.</cmd>
+                <info> В файле <ph
+                        conref="../../../reusable/filepath/postgresql_conf.dita#ReusableComponent_eqn_f1t_hrb/ph_fqn_f1t_hrb"
+                    /> исправьте следующие переменные: <codeblock>listen_addresses = '*'
+port = 10265 </codeblock></info>
+            </step>
+            <step>
+                <cmd>Проверьте переменные <codeph>log_timezone</codeph>, <codeph>timezone</codeph> на соответствие значению текущего
+                    часового пояса.</cmd>
+                <info>
+                    Например, <codeph>Asia/Yekaterinburg</codeph>. Сохраните файл конфигураций.
+                </info>
+            </step>
+            <step>
+                <cmd>Для применения настроек в файлах конфигурации перезапустите СУБД с помощью команды:</cmd>
+                <info><codeblock>systemctl restart jatoba-1*</codeblock></info>
+            </step>
+            <step>
+                <cmd>Перед запуском контейнеров DATAPK ITM-K администратор может настроить
+                    пользовательские значения переменных в конфигурационных файлах <codeph
+                        conref="../../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                    />, расположенных в папке <codeph><ph
+                            conref="../../../reusable/filepath/opt_datapkitm_env.dita#ReusableComponent_dzr_2jf_3rb/ph_ezr_2jf_3rb"
+                        />.</codeph></cmd>
+                <info> В разделе <xref href="../../../ITM_K_reference_info/var_tables/var_tables.dita"
+                        >"Параметры файлов конфигурации для запуска и работы сервера консолидации
+                        DATAPK ITM-K"</xref> приведены возможные диапазоны значений и рекомендуемые
+                    безопасные значения (либо значения по умолчанию) для параметров в следующих
+                    конфигурационных файлах, используемых при запуске DATAPK ITM-K: <ul
+                        id="ul_wzp_cwm_frb">
+                        <li><codeph
+                                conref="../../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                            /> – основной файл, в отличие от остальных файлов конфигурации находится
+                            в папке <codeph
+                                conref="../../../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                            />. Отвечает за настройку синхронизации с DATAPK и отправкой данных по
+                            SYSLOG;</li>
+                        <li><ph
+                                conref="../../../reusable/filepath/srv_env.dita#ReusableComponent_srg_4fs_hrb/ph_trg_4fs_hrb"
+                            />– файл с параметрами для запуска и работы контейнера сервера
+                            консолидации;</li>
+                        <li><ph
+                                conref="../../../reusable/filepath/db_env.dita#ReusableComponent_b34_qfs_hrb/ph_c34_qfs_hrb"
+                            />– файл с параметрами для связи контейнера сервера консолидации с базой
+                            данных DATAPK ITM-K;</li>
+                        <li><ph
+                                conref="../../../reusable/filepath/web_env.dita#ReusableComponent_llr_sfs_hrb/ph_mlr_sfs_hrb"
+                            />– файл с параметрами для запуска и работы контейнера веб-сервера;</li>
+                        <li><ph
+                                conref="../../../reusable/filepath/agent_env.dita#ReusableComponent_f4j_5fs_hrb/ph_g4j_5fs_hrb"
+                            /> – файл с параметрами для запуска и работы контейнера агента.</li>
+                    </ul></info>
+            </step>
+            <step>
+                <cmd>Отредактируйте файл <ph
+                        conref="../../../reusable/filepath/db_env.dita#ReusableComponent_b34_qfs_hrb/ph_c34_qfs_hrb"
+                    /> для корректного обращения DATAPK ITM-K к базе данных с помощью команды:</cmd>
+                <info>
+                    <codeblock>vi /opt/datapkitm/env/.db.env </codeblock>
+                    <p>Необходимо отредактировать следующие параметры:</p>
+                    <ul id="ul_xzp_cwm_frb">
+                        <li><cmdname>DB_SERVER_HOST</cmdname> – IP-адрес текущей машины (при
+                            использовании адреса 127.0.0.1, подключение контейнера к БД не
+                            произойдет, используйте адрес частной локальной сети). По умолчанию
+                            значение 172.17.0.1 – адрес сети контейнеров.</li>
+                        <li><cmdname>DB_SERVER_PORT</cmdname> – порт СУБД, должен совпадать с
+                            значением переменной port= в файле <codeph
+                                conref="../../../reusable/filepath/var_lib_jatoba_l_data_postgresql_conf.dita#ReusableComponent_omb_ygs_hrb/codeph_pmb_ygs_hrb"
+                            />. По умолчанию значение 5432.</li>
+                        <li><cmdname>POSTGRES_USER</cmdname> – имя созданного пользователя.</li>
+                        <li><cmdname>POSTGRES_PASSWORD</cmdname> – пароль пользователя.</li>
+                        <li><cmdname>POSTGRES_DB</cmdname> – имя базы данных, созданной несколько
+                            шагов назад.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Если во время первичной инициализации ITM-K пользователю известен IP-адрес
+                    syslog-сервера, то рекомендуется отредактировать параметры в конфигурационном
+                    файле <codeph
+                        conref="../../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                    /> с помощью команды:</cmd>
+                <info>
+                    <codeblock>vi /opt/datapkitm/.env</codeblock>
+                    <p>Необходимо отредактировать следующие параметры:</p>
+                    <ul id="ul_yzp_cwm_frb">
+                        <li><cmdname>SIEM_SYSLOG_HOST</cmdname>=127.0.0.1 – IP-адрес сервера,
+                            получающего syslog сообщения.</li>
+                        <li><cmdname>SIEM_SYSLOG_PORT</cmdname>=514 – порт сервера, получающего
+                            syslog сообщения.</li>
+                        <li><cmdname>SIEM_SYSLOG_PROTOCOL</cmdname>=tcp – протокол сервера,
+                            получающего syslog сообщения.</li>
+                    </ul>
+                    <note>Если при запуске контейнеров ITM-K указать корректный IP-адрес
+                        syslog-сервера спустя некоторое время, то все предыдущие события не будут
+                        отправлены на корректный IP-адрес, будут отправлены события, которые
+                        возникнут после установки нового значения переменной
+                            <cmdname>SIEM_SYSLOG_HOST</cmdname>.</note>
+                    <note>Чтобы изменить значение переменной уже во время эксплуатации ITM-K,
+                        выключите контейнеры с помощью команды <codeph>docker-compose down</codeph>,
+                        внесите изменения в файл <codeph
+                            conref="../../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                        /> и запустите контейнеры с помощью команды <codeph>docker-compose up
+                            -d</codeph>. </note>
+                </info>
+            </step>
+            <step>
+                <cmd>Для настройки ограничения подключений к базе данных необходимо отредактировать файл
+                    <codeph
+                        conref="../../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                    /> с помощью команды:</cmd>
+                <info><codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                <note>
+                    <p>В данном файле рекомендуется указывать ограниченный список хостов и учетных записей, с
+                        помощью которых можно подключаться к базам данных к СУБД Jatoba.</p>
+                    <p>Общий формат записи в разделе <codeph>#IPv4 local connections</codeph> для подключения конкретных пользователей ОС (как локальной,
+                        так и удаленной), на которой установлен сервер DATAPK ITM-K, к конкретным базам данных
+                        СУБД Jatoba:</p>
+                    <codeblock>host &lt;имя_БД1>,&lt;имя_БД2>,… &lt;пользователь1>,&lt;пользователь2>,… 
+&lt;диапазон IP-адресов разрешенных серверов в формате «IP/маска»> md5</codeblock>
+                    <p>Отступ между колонками в одной строке выполняется кнопкой «Tab».</p>
+                </note>
+                </info>
+            </step>
+            <step>
+                <cmd>Для разрешения подключения docker-контейнера сервера консолидации к БД
+                        «<i>datapkitm</i>» по docker-сети в раздел «<i>IPv4 local connections:»</i>
+                    добавьте строку:</cmd>
+                <info>
+                    <codeblock>host datapkitm datapkitm 172.16.238.1/23 md5</codeblock>
+                    <p>где <codeph>datapkitm</codeph> – это пользователь и имя БД, которые были
+                        созданы несколько шагов ранее; <codeph>md5</codeph> – это метод
+                        аутентификации, который проверяет пароль пользователя, производя
+                        аутентификацию SCRAM-SHA-256 или MD5; <codeph>172.16.238.1/23</codeph> – по
+                        умолчанию IP-адрес контейнера сервера консолидации в docker-подсети.</p>
+                    <note> при изменении сетей docker необходимо исправить строки в файле <codeph
+                            conref="../../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                        />. <p>Закомментируйте строки во всех разделах, кроме <codeph># IPv4 local
+                                connections:</codeph> и измените <codeph>ident</codeph> на
+                                <codeph>md5</codeph> в строке <codeph>host all all 127.0.0.1/32
+                                ident</codeph>.</p><fig id="fig_safe_installation_redOS_2_7">
+                            <title>Содержимое файла pg_hba.conf</title>
+                            <image
+                                href="../../../../images/safe_installation/safe_installation_redOS_2_7.png"
+                                id="safe_installation_redOS_2_7"/>
+                        </fig><p>Для применения настроек в файлах конфигурации перезапустите СУБД с
+                            помощью
+                        команды:</p><codeblock>systemctl restart jatoba-1*</codeblock></note>
+                    <note> после применения настроек о нестандартном порте и локальном подключении к
+                        базе данных, команда для входа в консольном режиме будет выглядеть следующим
+                        образом: <codeblock>su postgres
+psql -p 10265 -h 127.0.0.1 -U &lt;имя пользователя> &lt;имя базы></codeblock>
+                        где <codeph>-p 10265 </codeph>– указание порта, через который будет
+                        произведено подключение к базе данных; <codeph>-h 127.0.0.1 </codeph>–
+                        подключение к хосту 127.0.0.1; <codeph>-U &lt;имя пользователя> </codeph>-
+                        подключение от имени указанного пользователя. </note>
+                </info>
+            </step>
+            <step>
+                <cmd>Для корректной работы СУБД необходимо в межсетевом экране открыть порт, который был
+                    указан в файле <codeph
+                        conref="../../../reusable/filepath/var_lib_jatoba_l_data_postgresql_conf.dita#ReusableComponent_omb_ygs_hrb/codeph_pmb_ygs_hrb"
+                    />, с помощью команды:</cmd>
+                <info>
+                    <codeblock>iptables -A INPUT -p tcp --dport 10265 -j ACCEPT</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Для корректного приема данных с агентов откройте порты на межсетевом экране с помощью
+                    команд:</cmd>
+                <info><codeblock>iptables -A INPUT -p tcp --dport 10050 -j ACCEPT
+iptables -A INPUT -p tcp --dport 10051 -j ACCEPT</codeblock></info>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step17.dita#ReusableComponent_qmy_thf_krb/step_rmy_thf_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step18.dita#ReusableComponent_pvm_vhf_krb/step_qvm_vhf_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Посмотрите вывод правил межсетевого экрана с помощью команды:</cmd>
+                <info><codeblock>iptables -nL</codeblock>
+                    <p>На рисунке отображаются настроенные правила межсетевого экрана в цепочке
+                        INPUT.</p>
+                    
+                    <fig id="fig_safe_installation_redOS_2_8">
+                        <title>Настроенная цепочка INPUT в межсетевом экране</title>
+                        <image href="../../../../images/safe_installation/safe_installation_redOS_2_8.png" id="safe_installation_redOS_2_8">
+                        </image>
+                    </fig>
+                </info>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step20.dita#ReusableComponent_grs_13f_krb/step_hrs_13f_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step21.dita#ReusableComponent_inr_c3f_krb/step_jnr_c3f_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Отредактируйте файл <codeph
+                        conref="../../../reusable/filepath/web_env.dita#ReusableComponent_llr_sfs_hrb/ph_mlr_sfs_hrb"
+                    /> для изменения часового пояса с помощью команды <codeph>vi
+                        /opt/datapkitm/env/.web.env</codeph>. По умолчанию используется параметр
+                        <codeph>PHP_TZ=Asia/Yekaterinburg</codeph>.</cmd>
+                
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step22.dita#ReusableComponent_jgs_h3f_krb/step_kgs_h3f_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../../reusable/notes/server_install_step23.dita#ReusableComponent_mwj_j3f_krb/step_nwj_j3f_krb">
+                <cmd/>
+            </step>
+        </steps>
+    </taskbody>
+</task>

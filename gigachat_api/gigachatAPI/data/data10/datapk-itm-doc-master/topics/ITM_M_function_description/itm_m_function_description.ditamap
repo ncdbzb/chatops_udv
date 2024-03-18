@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-M Описание функций </title>
+    <topicref href="ITM_M_main_screen_interface/itm_m_main_screen_web_interface.dita">
+        <topicref href="ITM_M_main_screen_interface/itm_m_main_menu_web.dita"/>
+        <topicref href="ITM_M_main_screen_interface/itm_m_web_general_items.dita"/>
+    </topicref>
+    <topicref href="ITM_M_monitoring_servers/itm_m_monitoring_servers.dita">
+        <topicref href="ITM_M_monitoring_servers/itm_m_add_new_monitoring_server.dita"/>
+        <topicref href="ITM_M_monitoring_servers/itm_m_info_added_server.dita"/>
+        <topicref href="ITM_M_monitoring_servers/itm_m_change_monitoring_server.dita"/>
+    </topicref>
+    <topicref href="ITM_M_monitoring_objects/itm_m_monitoring_objects.dita">
+        <topicref href="ITM_M_monitoring_objects/itm_m_monitoring_objects_list.dita"/>
+    </topicref>
+    <topicref href="ITM_M_problems/itm_m_problems.dita">
+        <topicref href="ITM_M_problems/itm_m_problem_OM_list.dita"/>
+    </topicref>
+    <topicref href="ITM_M_configurations/itm_m_config.dita">
+        <topicref href="ITM_M_configurations/itm_m_config_general.dita"/>
+        <topicref href="ITM_M_configurations/itm_m_config_users.dita"/>
+        <topicref href="ITM_M_configurations/tm_m_config_admin_actions.dita">
+            <topicref href="ITM_M_configurations/itm_m_config_create_user.dita"/>
+            <topicref href="ITM_M_configurations/itm_m_config_look_user.dita"/>
+            <topicref href="ITM_M_configurations/itm_m_config_change_user.dita"/>
+        </topicref>
+        <topicref href="ITM_M_configurations/itm_m_config_integrations.dita"/>
+    </topicref>
+</map>

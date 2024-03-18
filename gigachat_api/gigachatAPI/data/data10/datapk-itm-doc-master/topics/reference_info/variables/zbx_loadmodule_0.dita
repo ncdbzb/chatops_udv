@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_loadmodule_0">
+    <glossterm>ZBX_LOADMODULE</glossterm>
+    <glossdef><p>Переменная представляет собой список загружаемых модулей, разделенных запятыми.
+            Работает с томами /var/lib/zabbix/modules.</p><b>Значение в конфигурации ITM-K при
+            поставке:</b>"dummy1.so, dummy2.so, dummy10.so"</glossdef>
+</glossentry>

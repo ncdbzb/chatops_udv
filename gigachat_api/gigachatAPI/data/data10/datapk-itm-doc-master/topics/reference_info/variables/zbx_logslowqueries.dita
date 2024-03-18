@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_logslowqueries">
+    <glossterm>ZBX_LOGSLOWQUERIES</glossterm>
+    <glossdef>
+        <p>Как долго могут выполняться запросы в базу данных до того как они запишутся в журнал (в
+            миллисекундах). 0 - не журналировать медленные запросы. Эта опция активируется, начиная
+            с DebugLevel=3.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>3000</p>
+        <p><b>Разрешенный диапазон значений:</b>0-3600000</p>
+    </glossdef>
+</glossentry>

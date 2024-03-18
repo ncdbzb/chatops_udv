@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="synchro_configuration_web">
+    <title>Настройка синхронизатора в веб-интерфейсе</title>
+    <body>
+        <p>При первой синхронизации в веб-интерфейсе DATAPK ITM-K отобразятся все ОЗ, которые
+            присутствуют на DATAPK и имеют IP-адрес. <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            автоматически добавляются в группу узлов сети «DATAPK». Нельзя удалять эту группу узлов
+            сети и отсоединять от нее <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>, так
+            как при отсоединении <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref> от
+            группы «DATAPK» при последующей синхронизации появится дубликат <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>. При
+            необходимости, к <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref> можно
+            добавить неограниченное количество групп узлов сети, возможность логических объединений
+            остается. К группе узлов сети «DATAPK» нельзя добавлять самостоятельно созданные <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>.</p>
+        <p>В зависимости от типа ОЗ, в DATAPK ITM передаются сетевые интерфейсы с типом «SNMP» для
+            коммутаторов и маршрутизаторов, и с типом «Агент» для всех остальных типов ОЗ, с
+            сохранением всех интерфейсов, добавленных в карточке ОЗ DATAPK. Интерфейс для сбора
+            данных в DATAPK будет передан в DATAPK ITM как интерфейс по умолчанию. MAC-адрес
+            принадлежащий интерфейсу по умолчанию будет записан в инвентаризационное поле «MAC адрес
+            A». Для <xref href="../../../reference_info/glossary/terms/monitoring_object.dita"
+                >ОМ</xref> с типом сбора SNMP c DATAPK также передается имя community.</p>
+        <p>В DATAPK, в карточке ОЗ может быть выставлено значение поля АСУ ТП из справочников. При
+            синхронизации, в веб-интерфейсе DATAPK ITM у <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            появится:</p>
+        <ul id="ul_hwq_4xs_frb">
+            <li>Тег asu_tp со значением имени группы АСУ ТП в DATAPK;</li>
+            <li>Инвентаризационное поле «Этикетка» принимающее значение «host_id»;</li>
+            <li>Инвентаризационное поле «Этикетка владельца» принимающее значение «box_id».</li>
+        </ul>
+        <p>Данный тег и поля нельзя удалять и редактировать, так как они являются меткой для
+            синхронизации с средством автоматизации процессов обеспечения безопасности (далее по
+            тексту САОБ). При необходимости, к <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref> можно
+            добавить неограниченное количество тегов и их значений.</p>
+        <p>Во время синхронизации имя ОЗ, написанное на кириллице, сохранится в DATAPK ITM в
+            латинском написании. Имя <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            должно быть уникальным. Если происходит конфликт имен – к имени <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            прибавляется имя datapk, с которого <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref> был
+            синхронизирован, либо его box_id. Название <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            принимает следующий вид – <codeph>&lt;имя_ОМ_в_DATAPK> &lt;box_id или
+                имя_DATAPK></codeph>. Если <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            по-прежнему не является уникальным к вышеописанному имени добавляется host_id. Название
+                <xref href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            принимает следующий вид – <codeph>&lt;имя_ОМ_в_DATAPK> &lt;box_id_или имя_DATAPK>
+                &lt;host_id></codeph>. После первичного изменения имени <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref>
+            пользователем, оно сохранится в системе и не будет изменено при последующих
+            обновлениях.</p>
+        <p>Сбор данных с синхронизированных <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref> будет
+            осуществлен после присоединения к ним шаблонов и настройки на <xref
+                href="../../../reference_info/glossary/terms/monitoring_object.dita">ОМ</xref> в
+            зависимости от типа сбора данных – установки агентов, настройки SNMP или WMI. </p>
+    </body>
+</topic>

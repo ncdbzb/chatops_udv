@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="server">
+    <glossterm>Server</glossterm>
+    <glossdef>
+        <p>IP-адрес сервера DATAPK ITM-K, если наблюдение осуществляется на уровне филиала, или
+            IP-адрес сервера DATAPK ITM-A, если наблюдение осуществляется на уровне ТО.</p>
+    </glossdef>
+</glossentry>

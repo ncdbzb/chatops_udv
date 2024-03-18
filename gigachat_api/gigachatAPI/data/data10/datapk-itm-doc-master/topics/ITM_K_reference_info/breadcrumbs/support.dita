@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="support">
+    <glossterm>Поддержка</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Поддержка»</title>
+            <image href="../../../images/Pages/support.png" id="support">
+                <alt>Страница «Поддержка»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

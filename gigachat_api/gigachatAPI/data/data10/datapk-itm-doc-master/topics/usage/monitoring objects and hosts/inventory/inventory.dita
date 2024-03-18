@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="inventory">
+    <title>Инвентаризация</title>
+    <body>
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref
+                        href="inventory_overview.dita"
+                        >Обзор</xref></li>
+                <li><xref
+                        href="inventory_manual_mode.dita"
+                        >Ручной режим</xref></li>
+                <li><xref
+                        href="inventory_data_review.dita"
+                        >Просмотр инвентарных данных</xref></li>
+                <li><xref
+                        href="inventory_data_build.dita"
+                        >Построение инвентарных данных</xref></li>
+            </ul>
+        </p>
+    </body>
+</topic>

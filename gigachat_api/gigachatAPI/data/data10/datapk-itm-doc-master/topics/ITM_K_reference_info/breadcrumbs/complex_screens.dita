@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="complex_screens">
+    <glossterm>Комплексные экраны</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Комплексные экраны»</title>
+            <image href="../../../images/Pages/monitoring_complex_screens.png" id="monitoring_complex_screens">
+                <alt>Страница «Комплексные экраны»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

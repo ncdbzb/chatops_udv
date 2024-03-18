@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_hostname">
+    <glossterm>ZBX_HOSTNAME</glossterm>
+    <glossdef><p>Уникальное, регистрозависимое имя хоста. Требуется для активных проверок и должно
+            совпадать с именем узла сети указанном на сервере. Допустимые символы:
+            буквенно-цифровые, '.', ' ', '_' и '-'. Максимальная длина: 64</p><b>Значение в
+            конфигурации ITM-K при поставке:</b>"Zabbix server"</glossdef>
+</glossentry>

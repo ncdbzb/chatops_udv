@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_hw4_gnn_nrb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_iw4_gnn_nrb">
+                <cmd>Выполните команду инициализации СУБД .</cmd>
+                <info><codeblock>./jatoba-setup initdb jatoba-1</codeblock><fig
+                        id="fig_safe_installation_redOS_2_2">
+                        <title>Инициализация СУБД</title>
+                        <image
+                            href="../../../images/safe_installation/safe_installation_redOS_2_2.png"
+                            id="safe_installation_redOS_2_2"/>
+                    </fig></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

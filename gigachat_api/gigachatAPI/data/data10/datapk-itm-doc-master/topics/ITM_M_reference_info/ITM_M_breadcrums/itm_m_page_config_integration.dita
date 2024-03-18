@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_m_page_config_integration">
+    <glossterm>Интеграции</glossterm>
+    <glossdef>Подраздел меню "<cite keyref="itm_m_page_configuration">Настройки</cite>", содержащий
+        список параметров для настройки периодичности получения данных от подключенных <term
+            keyref="monitoring_server">серверов мониторинга</term>.<fig>
+            <title>Интеграции</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_integration.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

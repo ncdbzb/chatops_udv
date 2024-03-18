@@ -1,0 +1,10 @@
+FROM node:16
+
+WORKDIR /chatops_udv/react
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]

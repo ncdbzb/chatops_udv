@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="audit">
+    <glossterm>Аудит</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Аудит»</title>
+            <image href="../../../images/Pages/reports_audit.png" id="reports_audit">
+                <alt>Страница «Аудит»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

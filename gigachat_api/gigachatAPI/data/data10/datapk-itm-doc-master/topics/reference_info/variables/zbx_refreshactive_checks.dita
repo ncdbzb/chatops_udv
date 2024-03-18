@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_refreshactive_checks">
+    <glossterm>ZBX_REFRESHACTIVE CHECKS </glossterm>
+    <glossdef><p>Как часто обновлять список активных проверок, в секундах. Обратите внимание, что
+            после неуспешного обновления активных проверок, следующая попытка будет предпринята
+            через 60 секунд.</p><b>Значение в конфигурации ITM-K при
+                поставке:</b>120<p><b>Разрешенный диапазон значений:</b>60-3600</p></glossdef>
+</glossentry>

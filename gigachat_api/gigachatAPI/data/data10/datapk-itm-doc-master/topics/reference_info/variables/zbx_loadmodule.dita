@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_loadmodule">
+    <glossterm>ZBX_LOADMODULE</glossterm>
+    <glossdef><p>Модули, которые загружаются во время старта. Модули используются для расширения
+            возможностей сервера.</p><p>Форматы: </p><ul id="ul_jpt_qzh_grb">
+            <li>Loadmodule=&lt;module.so></li>
+            <li>LoadModule=&lt;path/module.so></li>
+            <li>LoadModule=&lt;/abs_path/module.so></li>
+        </ul><p>Модули должны находиться в папке указанной в параметре LoadModulePath или (начиная с
+            4.0.9), путь должен быть указан до имени модуля. Если путь до модуля абсолютный
+            (начинается с '/'), тогда LoadModulePath игнорируется. Допускается добавлять несколько
+            параметров LoadModule.</p><b>Значение в конфигурации ITM-K при поставке:</b>"dummy1.so,
+        dummy2.so, dummy10.so"</glossdef>
+</glossentry>

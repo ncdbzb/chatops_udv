@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="monitoring_objects">
+    <title>Объекты мониторинга</title>
+    <body>
+        <p>Раздел «<cite keyref="itm_m_page_object_monitoring">Объекты мониторинга</cite>» отображает информацию обо всех <term keyref="monitoring_object">объектах мониторинга</term> на уровне предприятия
+            с группировкой по <term keyref="monitoring_server">серверам уровней филиалов ITM-K</term> и серверам уровня технологических комплексов (серверы ITM-A).</p>
+        <p>В этом разделе:<ul id="ul_rzv_lh3_lrb">
+                <li><xref href="itm_m_monitoring_objects_list.dita">Список объектов
+                        мониторинга</xref>.</li>
+            </ul></p>
+    </body>
+</topic>

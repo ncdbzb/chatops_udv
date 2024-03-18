@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Справочная информация</title>
+    <mapref href="variables/variables.ditamap" processing-role="resource-only"></mapref>
+    <topicref href="glossary/itm_m_glossary.dita">
+        <topicref href="glossary/itm_m_glossary.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="glossary/topics_glossary.dita">
+        <topicref href="glossary/glossary.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="../ITM_K_reference_info/breadcrumbs/breadcrumbs.dita">
+        <topicref href="../ITM_K_reference_info/breadcrumbs/breadcrumbs.ditamap" format="ditamap"/>
+    </topicref>
+    <topicref href="../ITM_M_reference_info/ITM_M_breadcrums/itm_m_breadcrumbs.dita">
+        <topicref href="../ITM_M_reference_info/ITM_M_breadcrums/itm_m_breadcrumbs.ditamap"
+            format="ditamap"/>
+    </topicref>
+</map>

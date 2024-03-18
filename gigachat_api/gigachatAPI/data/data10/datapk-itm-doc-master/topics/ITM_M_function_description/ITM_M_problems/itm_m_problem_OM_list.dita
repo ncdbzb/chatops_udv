@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_problem_OM_list">
+    <title>Список проблем объектов мониторинга</title>
+    <body>
+        <p>Список проблем выводится при нажатии в боковом меню на раздел «<cite
+                keyref="itm_m_page_problems">Проблемы</cite>».</p>
+        <fig>
+            <title>Список проблем объектов мониторинга</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_OM_problems.png"/>
+        </fig>
+        <p>Над списком выводится строка общей информации и строка поиска.</p>
+        <p>Строка общей информации содержит:</p>
+        <ul id="ul_z4x_crl_krb">
+            <li>кнопку «Обновить» – при нажатии на кнопку происходит обновление информации о
+                <term keyref="om_problem">проблемах</term>;</li>
+            <li>дату и время последнего обновления информации о <term keyref="om_problem">проблемах</term>;</li>
+            <li>фильтр «Выберите важность» – можно выбрать один или несколько типов <term keyref="om_problem">проблем</term>, которые
+                вы хотите отобразить. Чтобы убрать проблему из фильтра, нажите "крестик" на названии
+                <term keyref="om_problem">проблемы</term> в фильтре. При выключенном фильтре отображаются все <term keyref="om_problem">проблемы</term>;</li>
+            <li>кнопка "Сбросить" – при нажатии на кнопку происходит сброс фильтра;</li>
+            <li>количество отфильтрованных <term keyref="om_problem">проблем</term>. Если фильтр
+                выключен, отображается общее количество проблем.</li>
+        </ul>
+        <p>В строке поиска имеется поле для ввода текста поискового запроса. При нажатии на кнопку
+                <image href="../../../images/ITM_M_icons/ITM_M_icon_search.png"
+                    id="image_arq_ftl_krb"/>выполняется поиск текста во всех свойствах всех <term keyref="om_problem">проблем</term> и
+            найденные записи выводятся в списке.</p>
+        <p>Для просмотра полного списка <term keyref="om_problem">проблем</term> используются вертикальная прокрутка списка справа и
+            переход по страницам списка справа внизу.</p>
+        <p><term keyref="om_problem">Проблемы</term> в списке по умолчанию отсортированы по времени (сверху самые новые).</p>
+        <p>В списке отображаются следующие свойства <term keyref="om_problem">проблем ОМ</term>:</p>
+        <ul id="ul_zsb_ptl_krb">
+            <li>Время – дата и время фиксации <term keyref="om_problem">проблемы</term> <term keyref="monitoring_server">сервером ITM-K</term>;</li>
+            <li>Важность – уровень критичности <term keyref="om_problem">проблемы</term>, обозначается цветом иконки:<table
+                    id="table_e2w_5tl_krb">
+                    <tgroup cols="3">
+                        <colspec colnum="1" colname="col1"/>
+                        <colspec colnum="2" colname="col2"/>
+                        <colspec colnum="3" colname="col3"/>
+                        <tbody>
+                            <row>
+                                <entry><image
+                                        href="../../../images/ITM_M_icons/ITM_M_icon_critical.png"
+                                        id="image_gn4_vtl_krb"/></entry>
+                                <entry>5</entry>
+                                <entry>критический</entry>
+                            </row>
+                            <row>
+                                <entry><image href="../../../images/ITM_M_icons/ITM_M_icon_high.png"
+                                        id="image_zq1_wtl_krb"/></entry>
+                                <entry>4</entry>
+                                <entry>высокий</entry>
+                            </row>
+                            <row>
+                                <entry><image
+                                        href="../../../images/ITM_M_icons/ITM_M_icon_middle.png"
+                                        id="image_fbk_wtl_krb"/></entry>
+                                <entry>3</entry>
+                                <entry>средний</entry>
+                            </row>
+                            <row>
+                                <entry><image
+                                        href="../../../images/ITM_M_icons/ITM_M_icon_warning.png"
+                                        id="image_ygt_wtl_krb"/></entry>
+                                <entry>2</entry>
+                                <entry>предупреждение</entry>
+                            </row>
+                            <row>
+                                <entry><image
+                                        href="../../../images/ITM_M_icons/ITM_M_icon_information.png"
+                                        id="image_mxg_xtl_krb"/></entry>
+                                <entry>1</entry>
+                                <entry>информационный</entry>
+                            </row>
+                            <row>
+                                <entry><image
+                                        href="../../../images/ITM_M_icons/ITM_M_icon_undefined.png"
+                                        id="image_msr_xtl_krb"/></entry>
+                                <entry>0</entry>
+                                <entry>неопределенный</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table></li>
+            <li>Состояние:<table id="table_j3z_ztl_krb">
+                    <tgroup cols="2">
+                        <colspec colnum="1" colname="col1"/>
+                        <colspec colnum="2" colname="col2"/>
+                        <tbody>
+                            <row>
+                                <entry><image
+                                        href="../../../images/ITM_M_icons/ITM_M_icon_problems.png"
+                                        id="image_ajn_d5l_krb"/></entry>
+                                <entry>требует решения </entry>
+                            </row>
+                            <row>
+                                <entry><image href="../../../images/ITM_M_icons/ITM_M_icon_ok.png"
+                                        id="image_vbb_25l_krb"/></entry>
+                                <entry>решенная проблема</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table></li>
+            <li>Филиал, <term keyref="to">ТО</term> – наименование филиала или <term keyref="to">ТО</term>;</li>
+            <li>Узел сети – имя узла сети;</li>
+            <li><term keyref="om_problem">Проблема</term> – наименование <term keyref="om_problem">проблемы</term>;</li>
+            <li>Длительность – время с момента обнаружения <term keyref="om_problem">проблемы</term>;</li>
+            <li>Подтверждена – признак подтверждения <term keyref="om_problem">проблемы</term> пользователем <term keyref="monitoring_server">сервера
+                мониторинга</term>.</li>
+        </ul>
+        <p>По клику левой кнопкой мыши по заголовку любого столбца осуществляется сортировка
+            значений таблицы по возрастанию значений данного столбца, по следующему клику на
+            название осуществляется сортировка по убыванию значений этого столбца, по третьему клику
+            сортировка отменяется.</p>
+    </body>
+</topic>

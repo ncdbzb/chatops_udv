@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_prepare_work">
+    <title>Подготовка к работе</title>
+    <body>
+        <p>В этом разделе:<ul id="ul_v3t_13j_lrb">
+                <li><xref href="ITM_M_distributive_content/itm_m_distributive_content.dita">Состав и
+                        содержание дистрибутивного носителя данных</xref>;</li>
+                <li><xref href="ITM_M_data_program_download/itm_m_redos_installation.dita">Порядок
+                        установки на ОС RedOS</xref>;<ul id="ul_qlw_g3j_lrb">
+                        <li><xref
+                                href="../requirements/safe_installation/RedOS%20installation/ntp.dita"
+                                >Настройка синхронизации времени (NTP)</xref>;</li>
+                        <li><xref
+                                href="ITM_M_data_program_download/itm_m_extra_package_install.dita"
+                                >Установка дополнительных пакетов в установленной ОС</xref>;</li>
+                        <li><xref href="ITM_M_data_program_download/itm_m_server_install.dita"
+                                >Установка сервера визуализации и управления ПК DATAPK
+                            ITM</xref>.</li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

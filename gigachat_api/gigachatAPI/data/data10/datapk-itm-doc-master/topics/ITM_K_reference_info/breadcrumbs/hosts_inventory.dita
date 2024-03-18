@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="hosts_inventory">
+    <glossterm>Узлы сети</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Узлы сети»</title>
+            <image href="../../../images/Pages/inventory_hosts.png" id="inventory_hosts">
+                <alt>Страница «Узлы сети»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

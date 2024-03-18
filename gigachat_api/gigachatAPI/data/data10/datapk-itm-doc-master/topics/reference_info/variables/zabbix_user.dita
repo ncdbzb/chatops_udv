@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zabbix_user">
+    <glossterm>ZABBIX_USER</glossterm>
+    <glossdef>
+        <p>Имя пользователя в веб-интерфейсе DATAPK ITM-K.</p>
+    </glossdef>
+</glossentry>

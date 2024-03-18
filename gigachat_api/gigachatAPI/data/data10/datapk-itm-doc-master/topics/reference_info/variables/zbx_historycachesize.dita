@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_historycachesize">
+    <glossterm>ZBX_HISTORYCACHESIZE</glossterm>
+    <glossdef>
+        <p>Размер кэша истории, в байтах. Размер разделяемой памяти для хранения данных истории.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>16M</p>
+        <p><b>Разрешенный диапазон значений:</b>128K-2G</p>
+    </glossdef>
+</glossentry>

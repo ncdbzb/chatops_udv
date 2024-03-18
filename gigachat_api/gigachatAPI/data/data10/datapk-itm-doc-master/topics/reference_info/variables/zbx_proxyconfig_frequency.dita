@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_proxyconfig_frequency">
+    <glossterm>ZBX_PROXYCONFIG FREQUENCY </glossterm>
+    <glossdef>
+        <p>Как часто сервер консолидации DATAPK ITM будет отправлять данные конфигурации на сервер
+            агентов DATAPK ITM в секундах. Используется только с сервер агентов, который работает в
+            пассивном режиме.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>3600</p>
+        <p><b>Разрешенный диапазон значений:</b>1-604800</p>
+    </glossdef>
+</glossentry>

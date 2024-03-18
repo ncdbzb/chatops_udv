@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_v_1_2_0">
+    <title><ph id="_Toc81594703">Новое в версии 1.2.0</ph></title>
+    <body>
+        <p>В версии 1.2.0 добавлены новые функции:</p>
+        <ul id="ul_ryp_y12_krb">
+            <li>При подключении <term keyref="monitoring_server">сервера мониторинга</term> добавлена возможность указания сетевого
+                порта подключения;</li>
+            <li>Реализован интерфейс API для интеграции с <term keyref="spas">системами автоматизации обеспечения
+                безопасности (САОБ)</term>;</li>
+            <li>Реализована передача информации о событиях безопасности в смежные системы <term keyref="smci">SIEM</term>;</li>
+            <li>В разделе <cite keyref="itm_m_page_configuration">Настройки</cite>, реализована возможность настройки периодов получения данных об
+                <term keyref="monitoring_object">объектах мониторинга</term> из <term keyref="monitoring_server">серверов мониторинга</term>.</li>
+        </ul>
+    </body>
+</topic>

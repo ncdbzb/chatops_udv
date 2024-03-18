@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="graphs">
+    <title>Графики</title>
+    <body>
+        <p>При наличии большого потока данных, поступающего в DATAPK ITM-K, намного проще для
+            пользователей, если они смогут видеть визуальное представление о происходящем, а не
+            только числа.</p>
+        <p>Именно в этом случае используются графики. Графики позволяют понять поток данных, просто
+            взглянув на него, соотнести проблемы, обнаружить начальный этап проблемы, или выступить
+            с докладом о том, что какие-либо дальнейшие процессы или действия могут стать
+            проблемой.</p>
+        <p>DATAPK ITM-K предоставляет пользователям:</p>
+        <ul id="ul_ttn_53z_frb">
+            <li>встроенные простые графики по данным одного элемента данных;</li>
+            <li>возможность создавать более сложные пользовательские графики;</li>
+            <li>доступ к быстрому сравнению нескольких элементов данных, используя ситуационные
+                графики.</li>
+        </ul>
+        <p>В этом разделе:<ul>
+                <li><xref href="simple%20graphs/simple_graphs.dita">Простые графики</xref><ul
+                        id="ul_j2n_dhj_hrb">
+                        <li><xref href="simple%20graphs/time_choice.dita">Выбор периода
+                                времени</xref></li>
+                        <li><xref href="simple%20graphs/recent_data_long_periods.dita"
+                                >Недавние данные и длительные периоды</xref></li>
+                        <li><xref href="simple%20graphs/switch_to_raw_data.dita">Переключение
+                                к необработанным данным</xref></li>
+                    </ul></li>
+                <li><xref href="user%20graphs/user_graphs.dita">Пользовательские
+                        графики</xref><ul id="ul_fbb_chj_hrb">
+                        <li><xref href="user%20graphs/user_graphs_configuration.dita"
+                                >Настройка пользовательских графиков</xref></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

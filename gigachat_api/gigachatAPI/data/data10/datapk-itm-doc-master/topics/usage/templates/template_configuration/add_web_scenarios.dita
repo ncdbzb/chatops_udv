@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_web_scenarios">
+    <title>Добавление веб-сценариев</title>
+    <taskbody><context><p>Чтобы добавить веб-сценарии в шаблон,необходимо сделатьследующее вразделе боковой панели
+            <cite keyref="configuration">«Настройка»</cite> → <cite keyref="templates">«Шаблоны»</cite>:</p></context><steps id="ol_oxt_trz_frb">
+            <step><cmd>Нажмите на «Веб» в строке с шаблоном.</cmd></step>
+            <step><cmd>Настройте веб-сценарии обычным способом.</cmd></step>
+        </steps></taskbody>
+</task>

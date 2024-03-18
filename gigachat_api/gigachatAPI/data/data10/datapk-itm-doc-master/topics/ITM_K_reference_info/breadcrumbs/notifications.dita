@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="notifications">
+    <glossterm>Оповещения</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Оповещения»</title>
+            <image href="../../../images/Pages/reports_notifications.png" id="reports_notifications">
+                <alt>Страница «Оповещения»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

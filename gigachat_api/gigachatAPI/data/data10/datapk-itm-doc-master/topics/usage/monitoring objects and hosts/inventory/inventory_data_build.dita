@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="inventory_data_build">
+    <title>Построение инвентарных данных</title>
+    <taskbody><context>
+        <p>Режим построения инвентарных данных по умолчанию для новых узлов сети выбирается на
+            основе настройки «Режим инвентаризации узлов сети по умолчанию» в разделе боковой панели
+            <cite keyref="administration">«Администрирование»</cite> → <cite keyref="general">«Общие»</cite> во вкладке «Прочие» в левом верхнем углу окна. 
+            </p><p>Для построения инвентарных данных:</p>
+    </context>
+    <steps>
+        <step>
+                <cmd>Зайдите в раздел бокового меню <cite keyref="hosts_configuration"
+                        >«Настройка»</cite> → <cite keyref="general">«Узлы сети»</cite>.</cmd>
+            </step>
+        <step>
+                <cmd>Выберите необходимый узел сети, нажав на его имя.</cmd>
+            </step>
+        <step>
+                <cmd>Далее перейдите во вкладку «Инвентаризация».</cmd>
+            </step>
+    </steps>
+    </taskbody>
+</task>

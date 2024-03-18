@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_phb_yzr_hrb">
+    <title>full_clone_button</title>
+    <taskbody>
+        <postreq><table>
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry><image href="../../../images/buttons/full_clone_button.png"
+                                    id="image_wcv_krz_frb"/></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></postreq>
+    </taskbody>
+</task>

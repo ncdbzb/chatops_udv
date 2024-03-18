@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="data_elements">
+    <title>Элементы данных</title>
+    <body>
+        <p>Элементы данных являются сущностями, которые собирают данные с узлов сети.</p>
+        <p>После настройки узлов сети, необходимо добавить элементы данных мониторинга для начала
+            фактического сбора данных.</p>
+        <p>Каждый элемент данных является отдельной метрикой. Один из способов быстро добавить
+            большое количество элементов данных – это присоединить один из предопределенных шаблонов
+            к узлу сети. Для оптимизации производительности системы, возможно, потребуется выполнить
+            тонкую настройку шаблонов, чтобы было необходимое количество элементов данных, и
+            настройку необходимой частоты сбора данных этими элементами данных.</p>
+        <p>В каждом элементе данных указывается, какого рода данные будут собираться с узла
+            сети.</p>
+        <p>Для этой цели применяется ключ элемента данных. Таким образом элемент данных с именем
+            ключа <codeph>system.cpu.load</codeph> будет собирать данные о загрузке процессора, тогда как
+            элемент данных с именем ключа <codeph>net.if.in</codeph> будет собирать информацию о входящем
+            трафике.</p>
+        <p>Для того, чтобы указать дополнительные параметры для ключа, необходимо включить их в
+            квадратные скобки после имени ключа. Таким образом, <codeph>system.cpu.load[avg5]</codeph> будет
+            возвращать загрузку процессора за последние 5 минут, а <codeph>net.if.in[eth0]</codeph> вернет
+            входящий трафик на интерфейсе eth0.</p>
+        <p>Для просмотра всех поддерживаемых типов элементов данных и ключей элементов данных
+            смотрите отдельные разделы по типам элементов данных.</p>
+        <p>Перейдите к созданию и настройке элемента данных.</p>
+        <p>В этом разделе:<ul>
+                <li><xref href="data_item_creation/data_item_creation.dita">Создание
+                        элемента данных</xref><ul id="ul_brh_kbq_grb">
+                        <li><xref href="data_item_creation/data_item_configuration.dita"
+                                >Настройка</xref></li>
+                        <li><xref href="data_item_creation/data_item_preprocessing.dita"
+                                >Предобработка значений элемента данных</xref></li>
+                        <li><xref href="data_item_creation/data_item_unsupported.dita"
+                                >Неподдерживаемые элементы данных</xref></li>
+                    </ul></li>
+                <li><xref href="SNMP%20agent/snmp_agent.dita">SNMP агент</xref><ul
+                        id="ul_f2w_mbq_grb">
+                        <li><xref href="SNMP%20agent/snmp_monitoring.dita">Настройка
+                                мониторинга по SNMP</xref></li>
+                    </ul></li>
+                <li><xref
+                        href="History%20and%20dynamics%20of%20changes/history_and_dynamics.dita"
+                        >История и динамика изменений</xref><ul id="ul_g4y_nbq_grb">
+                        <li><xref
+                                href="History%20and%20dynamics%20of%20changes/history_and_dynamics_overview.dita"
+                                >Обзор</xref></li>
+                        <li><xref
+                                href="History%20and%20dynamics%20of%20changes/history_storage.dita"
+                                >Хранение истории</xref></li>
+                        <li><xref
+                                href="History%20and%20dynamics%20of%20changes/dynamics_storage.dita"
+                                >Хранение динамики изменений</xref></li>
+                    </ul></li>
+            </ul></p>
+    </body>
+</topic>

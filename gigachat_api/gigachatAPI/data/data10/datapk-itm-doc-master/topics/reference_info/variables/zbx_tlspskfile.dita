@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_tlspskfile">
+    <glossterm>ZBX_TLSPSKFILE</glossterm>
+    <glossdef>
+        <p>Абсолютный путь к файлу, который содержит pre-shared ключ агента, используется для
+            зашифрованных соединений с сервером.</p>
+    </glossdef>
+</glossentry>

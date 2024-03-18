@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_vmwaretimeout">
+    <glossterm>ZBX_VMWARETIMEOUT</glossterm>
+    <glossdef>
+        <p>Максимальное количество секунд, которое <term keyref="collector">коллектор</term> VMware потратит на ожидание ответа со
+            службы VMware (vCenter или ESX гипервизора).</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>10</p>
+        <p><b>Разрешенный диапазон значений:</b>1-300</p>
+    </glossdef>
+</glossentry>

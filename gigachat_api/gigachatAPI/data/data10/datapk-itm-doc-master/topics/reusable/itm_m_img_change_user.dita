@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_mps_y13_lrb">
+    <title>Изменение свойств учетной записи пользователя</title>
+    <body>
+        <fig id="fig_nps_y13_lrb">
+            <title>Изменение свойств учетной записи пользователя</title>
+            <image href="../../images/ITM_M_screens/ITM_M_change_user.png"/>
+        </fig>
+    </body>
+</topic>

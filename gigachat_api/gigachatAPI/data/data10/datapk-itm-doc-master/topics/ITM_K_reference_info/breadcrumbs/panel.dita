@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="panel">
+    <glossterm>Панель</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Панель»</title>
+            <image href="../../../images/Pages/monitoring_panel.png" id="monitoring_pages">
+                <alt>Страница «Панель»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

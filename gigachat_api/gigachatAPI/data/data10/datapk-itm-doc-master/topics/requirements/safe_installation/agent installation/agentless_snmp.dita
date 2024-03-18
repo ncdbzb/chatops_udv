@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="agentless_snmp">
+    <title>Настройка безагентного сбора на АСО с помощью протокола SNMP</title>
+    <body>
+        <p>Настройте права доступа на чтение для группы (community) public SNMPv1, SNMPv2 или SNMPv3
+            в зависимости от версии, поддерживаемой оборудованием. В качестве имени community,
+            вместо public можно использовать другое значение, в зависимости от настроек
+            оборудования.</p>
+        <p>Если данное устройство подключено к DATAPK, то синхронизатор будет брать уже заведенное в
+            DATAPK имя community и передавать его для сбора данных в DATAPK ITM-K. Во избежание
+            расхождений в настройках рекомендуется использовать имя community, которое было заведено
+            в DATAPK для сбора данных по SNMP. Если для данного устройства в DATAPK сбор данных
+            осуществлялся по SSH, то в DATAPK ITM-K можно использовать любое имя community.</p>
+        <p>Подробная настройка <term keyref="monitoring_object">объектов мониторинга</term> в веб-интерфейсе описана в разделе <xref
+            href="../../../usage/monitoring%20objects%20and%20hosts/monitoring_objects_hosts.dita"
+            >«Объекты мониторинга. Узлы сети»</xref>.</p>
+    </body>
+</topic>

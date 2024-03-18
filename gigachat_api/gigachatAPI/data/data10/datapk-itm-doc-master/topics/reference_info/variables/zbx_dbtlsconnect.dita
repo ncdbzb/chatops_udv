@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_dbtlsconnect">
+    <glossterm>ZBX_DBTLSCONNECT</glossterm>
+    <glossdef>
+        <p>Установка этого параметра приводит к принудительному использованию TLS-соединения с базой
+            данных:</p>
+        <ul id="ul_otj_4nh_grb">
+            <li><b>required</b> - подключиться с помощью TLS</li>
+            <li><b>verify_ca</b> - подключиться по TLS и проверить сертификат</li>
+            <li><b>verify_full</b> - подключиться с помощью TLS, проверить сертификат и убедиться, что
+                идентификатор базы данных, указанный DBHost, соответствует его сертификату</li>
+        </ul>
+        <p>В MySQL начиная с 5.7.11 и PostgreSQL поддерживаются следующие значения: «required»,
+            «verify_ca», «verify_full». В MariaDB, начиная с версии 10.2.6, поддерживаются значения
+            «required» и «verify_full».</p>
+        <p>По умолчанию не установлено ни одной опции, и поведение зависит от конфигурации базы
+            данных.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>required</p>
+        <p><b>Разрешенный диапазон значений:</b>required, verify_ca, verify_full</p>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_m_page_configuration">
+    <glossterm>Настройки</glossterm>
+    <glossdef>
+        Пункт главного меню, содержащий подразделы "<cite keyref="itm_m_page_config_general">Основные</cite>", "<cite keyref="itm_m_page_config_users">Пользователи</cite>" и "<cite keyref="itm_m_page_config_integration">Интеграции</cite>".       
+    </glossdef>
+</glossentry>

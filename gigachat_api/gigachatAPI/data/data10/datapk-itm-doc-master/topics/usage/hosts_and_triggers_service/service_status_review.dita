@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="service_status_review">
+    <title>Просмотр состояния обслуживания</title>
+    <body>
+        <p><b>Отображение узлов сети в обслуживании</b></p>
+        <p>Иконка с оранжевым ключом вблизи имени узла сети в разделах боковой панели <cite keyref="monitoring">«Мониторинг»</cite> →
+            <cite keyref="panel">«Панель»</cite>, <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="problems">«Проблемы»</cite> и <cite keyref="inventory">«Инвентаризация»</cite> → <cite keyref="hosts_inventory">«Узлы сети»</cite> вкладка
+            «Инвентарные данные узла сети» означает, что этот узел сети находится в
+            обслуживании.</p>
+        <p>Детали обслуживания отображаются при наведении курсора мыши на иконку.</p>
+        <p>Кроме этого, у узлов сети появляется оранжевый фон в разделе боковой панели <cite keyref="monitoring">«Мониторинг»</cite>
+            → <cite keyref="net_maps">«Карты сети»</cite> и в разделе <cite keyref="configuration">«Настройка»</cite> → <cite keyref="hosts_configuration">«Узлы сети»</cite> их состояние отображается, как «В
+            обслуживании».</p>
+        <p><b>Отображение подавленных проблем</b></p>
+        <p>Обычно проблемы с узлов сети в обслуживании подавляются, то есть не отображаются в
+            веб-интерфейсе. Однако также имеется возможность выполнить настройку для отображения
+            подавленных проблем, выбрав опцию «Отображение подавленных проблем» в следующих
+            местах:</p>
+        <ul id="ul_bxy_531_grb">
+            <li>раздел боковой панели <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="panel">«Панель»</cite> (при настройке виджетов «Узлы сети» с
+                проблемами, «Проблемы», «Проблемы по важности», «Обзор <term keyref="triggers">триггеров</term>»);</li>
+            <li>раздел боковой панели <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="problems">«Проблемы»</cite> (в фильтре);</li>
+            <li>раздел боковой панели <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="overview">«Обзор»;</cite></li>
+            <li>раздел боковой панели <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="net_maps">«Карты сети»</cite> (при настройке карты);</li>
+            <li>«Глобальные оповещения» (при настройке профиля пользователя).</li>
+        </ul>
+        <p>При отображении подавленных проблем отображается следующая иконка:<image
+                href="../../../images/buttons/icon_suppressed.png" id="image_ny2_fs4_3rb"/>. При
+            наведении курсора мыши отобразятся более детальные сведения.</p>
+        <fig id="fig_about_problem_3_7">
+            <title>Детальные сведения о подавленной проблеме </title>
+            <image href="../../../images/hosts_triggers_service/about_problem_3_7.png" id="about_problem_3_7">
+            </image>
+        </fig>
+    </body>
+</topic>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="work_modes">
+    <title>Режимы работы</title>
+    <body>
+        <p>DATAPK ITM-K обеспечивает возможность управления <term keyref="monitoring_object">объектами мониторинга</term> в части добавления
+            и регистрации <term keyref="monitoring_object">объектов мониторинга</term> в базу данных (БД) DATAPK ITM-K. </p>
+        <p>DATAPK ITM-K обеспечивает возможность добавления и регистрации <term keyref="monitoring_object">объектов мониторинга</term> в
+            следующих режимах:</p>
+        <ul id="ul_sth_wtm_frb">
+            <li>Ручное добавление и регистрация путем ввода данных об <term keyref="monitoring_object">объекте мониторинга</term> в
+                соответствующие поля ввода информации.</li>
+            <li>Ручное добавление и регистрация путем импорта данных об <term keyref="monitoring_object">объекте мониторинга</term> из
+                файла.</li>
+            <li>Автоматическое добавление и регистрация <term keyref="monitoring_object">объектов мониторинга</term>.</li>
+        </ul>
+        <p>Для автоматического режима регистрации <term keyref="monitoring_object">объектов мониторинга</term> применяется активное
+            сканирование заданных IP-адресов, либо диапазонов IP адресов, с определенной
+            периодичностью. </p>
+        <p>Обнаружение <term keyref="monitoring_object">объектов мониторинга</term> осуществляется путем обнаружения сетевых сервисов, с
+            возможностью указания произвольного порта или диапазона портов для обнаружения.</p>
+        <p>Активное сканирование настраивается в виде правил обнаружения о<term keyref="monitoring_object">бъектов мониторинга</term> с
+            возможностью установки статуса правила:</p>
+        <ul id="ul_tth_wtm_frb">
+            <li>правило обнаружения включено;</li>
+            <li>правило обнаружения выключено.</li>
+        </ul>
+        <p>При добавлении или модификации <term keyref="monitoring_object">объекта мониторинга</term> предусмотрена возможность заполнения
+            следующих полей:</p>
+        <ol id="ol_uth_wtm_frb">
+            <li>Наименование <term keyref="monitoring_object">объекта мониторинга</term>.</li>
+            <li>Принадлежность <term keyref="monitoring_object">объекта мониторинга</term> к группе.</li>
+            <li>Сетевой интерфейс <term keyref="monitoring_object">объекта мониторинга</term> с указанием: <ul id="ul_hfg_ytm_frb">
+                    <li>IP адреса или DNS имени;</li>
+                    <li>использования прокси;</li>
+                <li>других параметров сетевого доступа к <term keyref="monitoring_object">объекту мониторинга</term>.</li>
+                </ul></li>
+            <li>Описание <term keyref="monitoring_object">объекта мониторинга</term>.</li>
+            <li>Состояние <term keyref="monitoring_object">объекта мониторинга</term>: <ul id="ul_a5p_ytm_frb">
+                <li><term keyref="monitoring_object">объект мониторинга</term> включен;</li>
+                <li><term keyref="monitoring_object">объект мониторинга</term> выключен.</li>
+                </ul></li>
+            <li>Другие поля.</li>
+        </ol>
+    </body>
+</topic>

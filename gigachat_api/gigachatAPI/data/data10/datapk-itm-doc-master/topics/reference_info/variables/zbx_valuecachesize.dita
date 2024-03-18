@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_valuecachesize">
+    <glossterm>ZBX_VALUECACHESIZE</glossterm>
+    <glossdef>
+        <p>Размер кэша для хранения истории значений в байтах. Разделяемая память для кэширования
+            запросов к данным истории элементов данных. Значение 0 отключит кэш значений (не
+            рекомендуется). В случае, если кэш значений исчерпает разделяемую память,
+            предупреждающее сообщение будет записано в журнал сервера каждые 5 минут.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>8M</p>
+        <p><b>Разрешенный диапазон значений:</b>0,128К - 64G</p>
+    </glossdef>
+</glossentry>

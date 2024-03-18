@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_f4j_5fs_hrb">
+    <title>agent_env</title>
+    <body>
+        <ul>
+            <li><codeph id="ph_g4j_5fs_hrb">.agent.env</codeph></li>
+        </ul>
+    </body>
+</topic>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_startagents">
+    <glossterm>ZBX_STARTAGENTS</glossterm>
+    <glossdef>
+        <p>Количество <term keyref="pre-fork">пре-форков</term> экземпляров zabbix_agentd, которые обрабатывают пассивные
+            проверки.</p>
+        <p> Если указано значение равное 0, то пассивные проверки будут отключены и агент не будет
+            слушать какой-либо TCP порт.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>3</p>
+        <p><b>Разрешенный диапазон значений:</b>0-100</p>
+    </glossdef>
+</glossentry>

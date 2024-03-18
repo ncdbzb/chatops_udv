@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="challenges">
+    <title>Перечень испытаний для приемки комплекса</title>
+    <body>
+        <table id="table_ozv_ysj_hrb" frame="all" colsep="1" rowsep="1">
+            <tgroup cols="4">
+                <colspec colnum="1" colname="col1" colwidth="1*"/>
+                <colspec colnum="2" colname="col2" colwidth="5.02*"/>
+                <colspec colnum="3" colname="col3" colwidth="5.34*"/>
+                <colspec colnum="4" colname="col4" colwidth="4.94*"/>
+                <thead>
+                    <row>
+                        <entry>№</entry>
+                        <entry>Содержание проверки</entry>
+                        <entry>Выполняемые действия</entry>
+                        <entry>Критерии выполнения требований</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row valign="top">
+                        <entry morerows="2"> 1</entry>
+                        <entry>Проверка возможности добавления и регистрации <term
+                                keyref="monitoring_object">объектов мониторинга</term> в базу данных
+                            (БД) ПК DATAPK ITM-K :<ul id="ul_qzv_ysj_hrb">
+                                <li>Ручное добавление и регистрация путем ввода данных об объекте
+                                    мониторинга в соответствующие поля ввода информации.</li>
+                            </ul></entry>
+                        <entry>
+                            <p>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                                Перейти на вкладку <cite keyref="configuration">«Настройка»</cite> →
+                                    <cite keyref="hosts_configuration">«Узлы сети»</cite>. Нажать на
+                                кнопку «Создать узел сети». Ввести данные:</p>
+                            <ul id="ul_rzv_ysj_hrb">
+                                <li>Имя узла сети;</li>
+                                <li>Видимое имя;</li>
+                                <li>Группу;</li>
+                                <li>Реквизиты доступа к узлу сети;</li>
+                                <li>Статус активности узла сети.</li>
+                            </ul>
+                            <p>Нажать на кнопку «Добавить».</p>
+                        </entry>
+                        <entry>
+                            <p>DATAPK ITM-K позволяет добавлять и регистрировать <term
+                                    keyref="monitoring_object">объекты мониторинга</term> со
+                                следующими атрибутами:</p>
+                            <ul id="ul_szv_ysj_hrb">
+                                <li>Наименование <term keyref="monitoring_object">объекта
+                                        мониторинга</term>;</li>
+                                <li>Принадлежность <term keyref="monitoring_object">объекта
+                                        мониторинга</term> к группе;</li>
+                                <li>Сетевой интерфейс <term keyref="monitoring_object">объекта
+                                        мониторинга</term>;</li>
+                                <li>Описание <term keyref="monitoring_object">объекта
+                                        мониторинга</term>;</li>
+                                <li>Состояние <term keyref="monitoring_object">объекта
+                                        мониторинга</term>.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Ручное добавление и регистрация путем импорта данных об <term
+                                keyref="monitoring_object">объекте мониторинга</term> из
+                            файла.</entry>
+                        <entry>
+                            <p>Перейти на вкладку <cite keyref="configuration">«Настройка»</cite> →
+                                    <cite keyref="hosts_configuration">«Узлы сети»</cite>. Выбрать
+                                произвольный узел и нажать кнопку «Экспорт». Открыть
+                                экспортированный файл и внести в него изменения:</p>
+                            <ul id="ul_tzv_ysj_hrb">
+                                <li>Поле Host;</li>
+                                <li>Поле Name;</li>
+                                <li>Поле IP.</li>
+                            </ul>
+                            <p>Импортировать файл.</p>
+                        </entry>
+                        <entry>Файл со сведениями об <term keyref="monitoring_object">объекте
+                                мониторинга</term> импортирован в DATAPK ITM-K.</entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Автоматическое добавление и регистрация <term
+                                keyref="monitoring_object">объектов мониторинга</term>, активное
+                            сканирование заданных IP-адресов, либо диапазонов IP адресов.</entry>
+                        <entry>Перейти на вкладку <cite keyref="configuration">«Настройка»</cite> →
+                                <cite keyref="detection_configuration">«Обнаружение»</cite>. Нажать
+                            на кнопку «Создать правило обнаружения» и определить диапазон IP адресов
+                            для обнаружения агентов, а также периодичность опроса сети.</entry>
+                        <entry>DATAPK ITM-K реализует автоматическое добавление и регистрацию
+                            объектов мониторинга активное сканирование заданных IP-адресов, либо
+                            диапазонов IP адресов.</entry>
+                    </row>
+                    <row valign="top">
+                        <entry> 2</entry>
+                        <entry>Проверка возможности описания сервисов.</entry>
+                        <entry>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                            Перейти на вкладку <cite keyref="configuration">«Настройка»</cite> →
+                                <cite keyref="services_configuration">«Услуги»</cite>. Раскрыть
+                            описание сервиса.</entry>
+                        <entry>
+                            <p>В описании сервиса отображается:</p>
+                            <ul id="ul_vzv_ysj_hrb">
+                                <li>Название ИТ-сервиса;</li>
+                                <li>Алгоритм вычисления статуса;</li>
+                                <li>Показатель SLA;</li>
+                                <li>Условия (<term keyref="triggers">триггера</term>),
+                                    сигнализирующего о состоянии сервиса.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row valign="top">
+                        <entry> 3</entry>
+                        <entry>Проверка сбора данных о производительности с АРМ и серверов под
+                            управлением операционных систем (ОС) семейства Microsoft Windows, ОС
+                            семейства Linux, ОС UNIX.</entry>
+                        <entry>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                            Перейти на вкладку <cite keyref="monitoring">«Мониторинг»</cite> → <cite
+                                keyref="latest_data">«Последние данные»</cite>. Убедиться в наличии
+                            собираемых показателей производительности.</entry>
+                        <entry>
+                            <p>Отображение показателей производительности:</p>
+                            <ul id="ul_xzv_ysj_hrb">
+                                <li>нагрузка на центральный процессор (Central Processor Unit,
+                                    CPU);</li>
+                                <li>объем занятой оперативной памяти;</li>
+                                <li>свободное место на дисках;</li>
+                                <li>скорость работы дисков (Input-Output Operations Per Second,
+                                    IOPS); </li>
+                                <li>нагрузка на сетевые интерфейсы;</li>
+                                <li>идентификационная информация об <term keyref="monitoring_object"
+                                        >объекте мониторинга</term>;</li>
+                                <li>статус служб <term keyref="monitoring_object">объекта
+                                        мониторинга</term>;</li>
+                                <li>состояние доступности <term keyref="monitoring_object">объекта
+                                        мониторинга</term>.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row valign="top">
+                        <entry> 4</entry>
+                        <entry>Проверка сбора данных о производительности с активного сетевого
+                            оборудования по протоколу SNMP.</entry>
+                        <entry>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                            Перейти на вкладку <cite keyref="monitoring">«Мониторинг»</cite> → <cite
+                                keyref="latest_data">«Последние данные»</cite>. Убедиться в наличии
+                            собираемых показателей производительности.</entry>
+                        <entry>
+                            <p>Отображение показателей производительности:</p>
+                            <ul id="ul_zzv_ysj_hrb">
+                                <li>показатели исходящего и входящего трафика;</li>
+                                <li>состояние сетевых интерфейсов;</li>
+                                <li>информация о возникающих ошибках;</li>
+                                <li>состояние доступности <term keyref="monitoring_object">объекта
+                                        мониторинга</term>.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row valign="top">
+                        <entry> 5</entry>
+                        <entry>
+                            <p>Проверка возможности создания и настройки <term keyref="triggers"
+                                    >триггеров</term> (условий) для контролируемых данных,
+                                получаемых с <term keyref="monitoring_object">объектов
+                                    мониторинга</term>.</p>
+                            <p>Проверка возможности указания допустимых значений в <term
+                                    keyref="triggers">триггерах</term> (условиях), собираемых данных
+                                с <term keyref="monitoring_object">объектов мониторинга</term>.</p>
+                            <p>Проверка реализации действий при выполнении условий <term
+                                    keyref="triggers">триггеров</term>.</p>
+                        </entry>
+                        <entry>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                            Перейти на вкладку <cite keyref="configuration">«Настройки»</cite> →
+                                <cite keyref="hosts_configuration">«Узлы сети»</cite>. Выбрать
+                            произвольный <term keyref="monitoring_object">объект мониторинга</term>
+                            и нажать на кнопку «Триггеры». Выбрать произвольный <term
+                                keyref="triggers">триггер</term>.</entry>
+                        <entry>
+                            <p>Наличие у <term keyref="triggers">триггера</term> допустимого
+                                значения параметра в виде логического выражения.</p>
+                            <p>Наличие у <term keyref="triggers">триггера</term> режима генерации
+                                событий «Проблема».</p>
+                        </entry>
+                    </row>
+                    <row valign="top">
+                        <entry morerows="1"> 6</entry>
+                        <entry morerows="1">
+                            <p>Проверка визуализации данных:</p>
+                            <ul id="ul_c1w_ysj_hrb">
+                                <li>визуализация данных с использованием встроенных и настраиваемых
+                                    графиков;</li>
+                                <li>создание отчетов.</li>
+                            </ul>
+                        </entry>
+                        <entry>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                            Перейти на вкладку <cite>«Мониторинг» →«Графики»</cite>, выбрать
+                            произвольный график.</entry>
+                        <entry>Осуществляется визуализация данных с использованием встроенных и
+                            настраиваемых графиков.</entry>
+                    </row>
+                    <row valign="top">
+                        <entry>Перейти на вкладку «Отчеты».</entry>
+                        <entry>На вкладке «Отчеты» присутствуют отчеты о доступности объектов
+                            мониторинга, о наиболее активных <term keyref="triggers"
+                                >триггерах</term> и другие отчеты.</entry>
+                    </row>
+                    <row valign="top">
+                        <entry> 7</entry>
+                        <entry>Проверка отображения карты сети с указанием на ней объектов
+                            мониторинга.</entry>
+                        <entry>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                            Перейти на вкладку <cite keyref="monitoring">«Мониторинг»</cite>,
+                            выбрать карту сети.</entry>
+                        <entry>На карте сети отображаются объекты мониторинга, а также выявленные
+                            проблемы функционирования.</entry>
+                    </row>
+                    <row valign="top">
+                        <entry> 8</entry>
+                        <entry>Проверка отображения перечня проблем в табличном виде.</entry>
+                        <entry>Войти в интерфейс DATAPK ITM-K с помощью интернет-обозревателя.
+                            Перейти на вкладку <cite keyref="monitoring">«Мониторинг»</cite>,
+                            выбрать таблицу с отображением проблем.</entry>
+                        <entry>
+                            <p>Отображение перечня проблем в табличном виде с возможностью
+                                фильтрации по:</p>
+                            <ul id="ul_f1w_ysj_hrb">
+                                <li><term keyref="monitoring_object">объекту мониторинга</term> или
+                                    группе <term keyref="monitoring_object">объектов
+                                        мониторинга</term>;</li>
+                                <li>условиям (<term keyref="triggers">триггерам</term>) и
+                                    проблемам.</li>
+                            </ul>
+                        </entry>
+                    </row>
+                    <row valign="top">
+                        <entry> 9</entry>
+                        <entry>
+                            <p>Выполнить проверку функций каждой АСУ ТП, в состав которых входят
+                                    <term keyref="monitoring_object">объекты мониторинга</term>:</p>
+                            <ul id="ul_h1w_ysj_hrb">
+                                <li>АРМ №1.</li>
+                                <li>АРМ №2</li>
+                                <li>...</li>
+                            </ul>
+                        </entry>
+                        <entry>
+                            <p>Проверить функций каждой АСУ ТП, в состав которых входят <term
+                                    keyref="monitoring_object">объекты мониторинга</term>:</p>
+                            <ul id="ul_i1w_ysj_hrb">
+                                <li>АРМ №1.</li>
+                                <li>АРМ №2</li>
+                                <li>...</li>
+                            </ul>
+                        </entry>
+                        <entry>АСУ ТП функционирует в штатном режиме, функции АСУ ТП
+                            выполняются.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

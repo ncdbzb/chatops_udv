@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="action_log">
+    <glossterm>Журнал действий</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Журнал действий»</title>
+            <image href="../../../images/Pages/reports_action_log.png" id="reports_action_log">
+                <alt>Страница «Журнал действий»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

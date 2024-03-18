@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_m_server_install">
+    <title>Установка сервера визуализации и управления ПК DATAPK ITM</title>
+    <taskbody>
+        <steps>
+            <step
+                conref="../../reusable/notes/server_install_step1.dita#ReusableComponent_cc5_zgf_krb/step_dc5_zgf_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Скопируйте следующие файлы в папку<codeph
+                        conref="../../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                    /> с помощью WinSCP или аналогичной программы:</cmd>
+                <info>
+                    <ul id="ul_sjv_1jf_krb">
+                        <li><codeph
+                                conref="../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                            /></li>
+                        <li><codeph
+                                conref="../../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                            /></li>
+                        <li><codeph
+                                conref="../../reusable/filepath/datapk_itm_m_x_x_x_x_tar_gz.dita#ReusableComponent_ikx_4zf_krb/ph_jkx_4zf_krb"
+                            /></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Перейдите в папку и загрузите в операционную систему образы командами:</cmd>
+                <info>
+                    <codeblock>cd /opt/datapkitm
+docker load -i datapk_itm_m_x.x.x.x.tar.gz              </codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Отредактируйте файл <codeph
+                        conref="../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                    /> для корректного подключения к веб-интерфейсу DATAPK ITM с помощью
+                    команды:</cmd>
+                <info><codeblock>vi /opt/datapkitm/.env</codeblock></info>
+            </step>
+            <step>
+                <cmd>Конфигурационный файл содержит следующие переменные:</cmd>
+                <info>
+                    <ul id="ul_u41_slf_krb">
+                        <li><cmdname>COMPOSE_FILE</cmdname>=<codeph
+                                conref="../../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                            />– имя файла с описанием настроек для контейнеров;</li>
+                        <li><cmdname>ITMM_LOG_LEVEL=INFO</cmdname> – выбор уровня детализированности
+                            логов, может принимать одно из перечисленных значений: ERROR, WARNING,
+                            INFO, DEBUG, TRACE;</li>
+                        <li><cmdname>ITMM_POSTGRES_SERVICE_PORT</cmdname>=5444– служебная
+                            переменная, порт для взаимодействия с базой данных;</li>
+                        <li><cmdname>SIEM_SYSLOG_HOST</cmdname>=127.0.0.1– IP-адрес сервера,
+                            получающего syslog-сообщения;</li>
+                        <li><cmdname>SIEM_SYSLOG_PORT</cmdname>=514 – порт сервера, получающего
+                            syslog-сообщения;</li>
+                        <li><cmdname>SIEM_SYSLOG_PROTOCOL</cmdname>=tcp – протокол сервера,
+                            получающего syslog-сообщения.</li>
+                    </ul>
+                    <note>Если при запуске контейнеров ITM-M указать корректный IP-адрес syslog-сервера спустя некоторое время, 
+                        то все предыдущие события не будут отправлены на корректный IP-адрес, будут отправлены события, 
+                        которые возникнут после установки нового значения переменной <cmdname>SIEM_SYSLOG_HOST</cmdname>.</note>
+                    <note>Если требуется изменить значение переменной уже во время эксплуатации
+                        ITM-M, то необходимо выключить контейнеры с помощью команды
+                            <codeph>docker-compose down</codeph>, внести изменения в файл <codeph
+                            conref="../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                        /> и запустить контейнеры с помощью команды <codeph>docker-compose up
+                            -d</codeph>. </note>
+                </info>
+            </step>
+            <step
+                conref="../../reusable/notes/server_install_step17.dita#ReusableComponent_qmy_thf_krb/step_rmy_thf_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/notes/server_install_step18.dita#ReusableComponent_pvm_vhf_krb/step_qvm_vhf_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Посмотрите вывод правил межсетевого экрана с помощью команды:</cmd>
+                <info><codeblock>iptables -nL</codeblock>
+                    <p>На рисунке отображаются настроенные правила межсетевого экрана в цепочке INPUT.</p>
+                    <fig>
+                        <title>Настроенная цепочка INPUT в межсетевом экране</title>
+                        <image href="../../../images/ITM_M_prepare_work/itm_m_server_install_input.png"/>
+                    </fig>
+                </info>
+            </step>
+            <step
+                conref="../../reusable/notes/server_install_step20.dita#ReusableComponent_grs_13f_krb/step_hrs_13f_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/notes/server_install_step22.dita#ReusableComponent_jgs_h3f_krb/step_kgs_h3f_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/notes/server_install_step21.dita#ReusableComponent_inr_c3f_krb/step_jnr_c3f_krb">
+                <cmd/>
+            </step>
+            <step
+                conref="../../reusable/notes/server_install_step23.dita#ReusableComponent_mwj_j3f_krb/step_nwj_j3f_krb">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Для входа в веб-интерфейс в адресной строке введите IP-адрес ITM-VM.</cmd>
+                <info> В качестве учетных данных для входа используется логин <b>itm</b> и пароль
+                        <b>P@ssw0rd1234</b>. <fig>
+                        <title>Окно авторизации ITM-VM</title>
+                        <image href="../../../images/ITM_M_prepare_work/itm_m_autorization.png"/>
+                    </fig>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

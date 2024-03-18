@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_buffersize">
+    <glossterm>ZBX_BUFFERSIZE</glossterm>
+    <glossdef><p>Максимальное количество значений в буфере памяти. Агент будет отправлять все
+            собранные данные серверу при заполнении буфера.</p><b>Значение в конфигурации ITM-K при
+            поставке:</b>100<p><b>Разрешенный диапазон значений:</b>2-65535</p></glossdef>
+</glossentry>

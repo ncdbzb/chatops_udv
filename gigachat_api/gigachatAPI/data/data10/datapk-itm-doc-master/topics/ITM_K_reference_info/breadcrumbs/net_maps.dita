@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="net_maps">
+    <glossterm>Карты сетей</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Карты сетей»</title>
+            <image href="../../../images/Pages/monitoring_net_maps.png" id="monitoring_net_maps">
+                <alt>Страница «Карты сетей»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

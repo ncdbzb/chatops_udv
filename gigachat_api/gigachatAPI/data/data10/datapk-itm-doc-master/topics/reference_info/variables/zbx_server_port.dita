@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_server_port">
+    <glossterm>ZBX_SERVER_PORT</glossterm>
+    <glossdef><p>IP-адрес сервера консолидации DATAPK ITM. Данная переменная используется в случае,
+            если контейнеры сервера консолидации и веб-сервера расположены на разных
+            хостах.</p><b>Значение в конфигурации ITM-K при поставке:</b>10051</glossdef>
+</glossentry>

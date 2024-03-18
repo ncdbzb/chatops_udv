@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Установка сервера агентов программного комплекса DATAPK ITM</title>
+    <topicref href="itm_a_OS_install.dita"/>
+    <topicref href="itm_a_install_jatoba.dita"/>
+    <topicref href="itm_a_install_agent_server_jatoba.dita"/>
+    <topicref href="itm_a_agent_install.dita"/>
+</map>

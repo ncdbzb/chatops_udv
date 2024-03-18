@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Введение</title>
+    <topicref href="general_info.dita"/>
+    <topicref href="functional_opportunities.dita"/>
+    <topicref href="work_modes.dita"/>
+    <topicref href="safe_collection_measures.dita"/>
+</map>

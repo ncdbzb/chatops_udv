@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="db_server_port">
+    <glossterm>DB_SERVER_PORT</glossterm>
+    <glossdef><p>TCP-порт для подключения к СУБД с базой данных DATAPK ITM.</p><b>Значение в
+            конфигурации ITM-K при поставке:</b>10265</glossdef>
+</glossentry>

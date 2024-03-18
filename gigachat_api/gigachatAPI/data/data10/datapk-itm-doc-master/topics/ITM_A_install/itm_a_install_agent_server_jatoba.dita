@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_a_install_agent_server_jatoba">
+    <title>Установка сервера агентов с СУБД Jatoba</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Создать на сервере агентов папку с помощью команды:</cmd>
+                <info><codeblock>mkdir /opt/datapkitm</codeblock></info>
+            </step>
+            <step>
+                <cmd>При установке DATAPK ITM с СУБД Jatoba скопировать следующие файлы в папку
+                        <codeph
+                        conref="../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                    /> с помощью WinSCP или аналогичной программы:</cmd>
+                <substeps id="substeps_xld_mtn_nrb">
+                    <substep>
+                        <cmd>DATAPK-ITM-A-v.0.1.el7.x86_64.rpm</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>net-snmp-libs-5.7.2-49.el7.x86_64.rpm</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>net-snmp-utils-5.7.2-49.el7.x86_64.rpm</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>my-zabbixproxy.pp</cmd>
+                    </substep>
+                </substeps>
+                
+            </step>
+            <step>
+                <cmd>Проверить наличие пакетов из списка ниже с помощью приведённых команд:</cmd>
+                <info><codeblock>rpm -qa | grep fping
+rpm -qa | grep OpenIPMI
+rpm -qa | grep libevent.x86_64
+rpm -qa | grep snmp
+rpm -qa | grep unixODBC    </codeblock></info>
+            </step>
+            <step>
+                <cmd>Установить все пакеты с помощью команды:</cmd>
+                <info><codeblock>yum install fping OpenIPMI-libs libevent.x86_64 unixODBC
+rpm -i net-snmp-*                </codeblock></info>
+            </step>
+            <step>
+                <cmd>Перейти в папку и установить на компьютере сервер агентов командами:</cmd>
+                <info><codeblock>cd /opt/datapkitm
+rpm -i DATAPK-ITM-A-v.0.1.el7.x86_64.rpm             </codeblock></info>
+            </step>
+            <step>
+                <cmd>Для создания базы данных, пользователя базы данных и пароля пользователя необходимо зайти под пользователем postgres. </cmd>
+                <info><note>При создании пароля к учётной записи рекомендуется следовать требованиям из парольной
+                        политики: <ul id="ul_trw_b5n_nrb">
+                            <li>длина – не менее 16 символов; </li>
+                            <li>символы – буквы в нижнем и верхнем регистрах, цифры и специальные
+                                символы; </li>
+                            <li>минимальное количество цифр – 2. </li>
+                        </ul></note></info>
+            </step>
+            <step>
+                <cmd>Для выполнения настроек ввести следующий перечень команд (в поле PASSWORD необходимо ввести свой пароль, в команде пароль ‘123’ указан для примера):</cmd>
+                <info><codeblock>su postgres
+psql
+ALTER USER postgres WITH PASSWORD '123';
+CREATE USER datapkitm WITH PASSWORD '123';
+CREATE DATABASE datapkitm WITH OWNER 'datapkitm' ENCODING 'UTF8' LC_COLLATE = 'ru_RU.UTF-8' LC_CTYPE = 'ru_RU.UTF-8' TEMPLATE template0;
+\du
+\l
+\q        </codeblock></info>
+            </step>
+            <step>
+                <cmd>Для выхода из пользователя postgres ввести <codeph>exit</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Выполнить команду <codeph>vi /var/lib/jatoba/1/data/postgresql.conf</codeph> для редактирования файла настроек базы данных. </cmd>
+            </step>
+            <step>
+                <cmd>В файле <ph
+                        conref="../reusable/filepath/postgresql_conf.dita#ReusableComponent_eqn_f1t_hrb/ph_fqn_f1t_hrb"
+                    /> расскоментировать и исправить значения следующих переменных:</cmd>
+                <info>
+                    <codeblock>listen_addresses = '*'
+port = 10265                </codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Проверить переменные<codeph>log_timezone</codeph>, <codeph>timezone</codeph> на соответствие
+                    значению текущего часового пояса. Например,<codeph>
+                    Asia/Yekaterinburg</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Для настройки ограничения подключений к базе данных необходимо отредактировать
+                    файл <codeph
+                        conref="../reusable/filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                    /> с помощью команды:</cmd>
+                <info>
+                    <codeblock>vi /var/lib/jatoba/1/data/pg_hba.conf</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Закомментировать строки во всех разделах, кроме <codeph>«# IPv4 local
+                        connections:»</codeph> и<codeph> «# IPv6 local connections:».
+                    </codeph>Изменить <codeph>ident</codeph> на <codeph>md5</codeph> в строках
+                        <codeph>«host all all 127.0.0.1/32 ident»</codeph> и <codeph>«host all all
+                        ::1/128 ident»</codeph> по примеру рисунка.</cmd>
+                <info><fig>
+                    <title>Содержимое файла pg_hba.conf</title>
+                    <image href="../../images/ITM_A_jatoba/itm_a_pg_hba_conf.png"/>
+                </fig></info>
+            </step>
+            <step>
+                <cmd>Для применения настроек в файле перезапустить СУБД с помощью команды:</cmd>
+                <info><codeblock>systemctl restart jatoba-1*</codeblock></info>
+            </step>
+            <step>
+                <cmd>Открыть конфигурационный файл сервера агентов с помощью команды:</cmd>
+                <info><codeblock>vi /etc/zabbix/zabbix_proxy.conf</codeblock></info>
+            </step>
+            <step>
+                <cmd>Внутри файла отредактировать и раскомментировать следующие переменные:</cmd>
+                <substeps id="substeps_ywb_ryn_nrb">
+                    <substep>
+                        <cmd><codeph>ProxyMode=1</codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>Server=&lt;ip-адрес сервера консолидации></codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd>
+                            <codeph id="codeblock_zwb_ryn_nrb">Hostname=&lt;имя текущего
+        сервера></codeph>
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>ListenPort=10051</codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>EnableRemoteCommands=1</codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>LogRemoteCommands=1</codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>DBHost=127.0.0.1</codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>DBName=datapkitm</codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>DBUser=datapkitm</codeph></cmd>
+                    </substep>
+                    <substep>
+                        <cmd>
+                            <codeph id="codeblock_axb_ryn_nrb">DBPassword=&lt;пароль пользователя
+        datapkitm, созданный шагом
+        ранее></codeph>
+                        </cmd>
+                    </substep>
+                    <substep>
+                        <cmd><codeph>DBPort=10265</codeph></cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Для корректной работы СУБД необходимо открыть порт, который был указан в файле
+                        <codeph
+                        conref="../reusable/filepath/var_lib_jatoba_l_data_postgresql_conf.dita#ReusableComponent_omb_ygs_hrb/codeph_pmb_ygs_hrb"
+                    />, в межсетевом экране с помощью команды:</cmd>
+                <info><codeblock>iptables -A INPUT -p tcp --dport 10265 -j ACCEPT</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для корректного приёма данных с агентов открыть порт на межсетевом экране с помощью команды: </cmd>
+                <info><codeblock>iptables -A INPUT -p tcp --dport 10051 -j ACCEPT</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для корректной работы межсетевого экрана добавьте следующие команды:</cmd>
+                <info><codeblock>iptables -I INPUT 1 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -I INPUT 2 -p icmp -j ACCEPT
+iptables -I INPUT 3 -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
+iptables -A FORWARD -j REJECT --reject-with icmp-host-prohibited           </codeblock></info>
+            </step>
+            <step>
+                <cmd>Сохранить настройки межсетевого экрана командой:</cmd>
+                <info><codeblock>service iptables save</codeblock></info>
+            </step>
+            <step>
+                <cmd>Посмотреть вывод правил межсетевого экрана с помощью команды:</cmd>
+                <info><codeblock>iptables -nL</codeblock>
+                    На рисунке отображаются настроенные правила межсетевого экрана в цепочке INPUT.
+                <fig>
+                    <title>Настроенная цепочка INPUT в межсетевом экране</title>
+                    <image href="../../images/ITM_A_jatoba/itm_a_INPUT.png"/>
+                </fig>
+                </info>
+            </step>
+            <step>
+                <cmd>Если во время настройки межсетевого экрана была допущена ошибка – необходимо удалить правило с помощью команды:</cmd>
+                <info><codeblock>iptables -D INPUT 5</codeblock> где INPUT – это имя цепочки,
+                    содержащей команды, 5 - номер правила в цепочке. </info>
+            </step>
+            <step>
+                <cmd>Включить межсетевой экран и добавить его в автозагрузку можно с помощью команды:</cmd>
+                <info><codeblock>systemctl start iptables &amp;&amp; systemctl enable iptables</codeblock></info>
+            </step>
+            <step>
+                <cmd>Добавим разрешающие правила в selinux с помощью команды: </cmd>
+                <info><codeblock>setsebool -P zabbix_can_network on</codeblock></info>
+            </step>
+            <step>
+                <cmd>Если команда выполнилась корректно - выбранная политика должна быть в состоянии «on» - включена. Проверим политики в selinux командой:</cmd>
+                <info><codeblock>getsebool -a | grep zabbix_can_network</codeblock></info>
+            </step>
+            <step>
+                <cmd>В конфигурационном файле <codeph>/etc/selinux/config</codeph> проверить, что
+                    значение <codeph>SELINUX=enforcing </codeph>установлено по умолчанию. В
+                    противном случае – установить это значение и сохранить файл. Просмотреть
+                    содержимое файла можно с помощью команды:</cmd>
+                <info><codeblock>cat /etc/selinux/config</codeblock></info>
+            </step>
+            <step>
+                <cmd>Просмотреть статус selinux можно с помощью команды:</cmd>
+                <info><codeblock>sestatus</codeblock></info>
+            </step>
+            <step>
+                <cmd>Применить разрешающие правила для selinux:</cmd>
+                <info><codeblock>semodule -i /opt/datapkitm/my-zabbixproxy.pp</codeblock></info>
+            </step>
+            <step>
+                <cmd>Импортируем изначальную схему с помощью команды:</cmd>
+                <info><codeblock>zcat /usr/share/doc/zabbix-proxy-pgsql-5.2.6/schema.sql.gz | sudo -u postgres psql -p 10265 -h 127.0.0.1 -U datapkitm -d datapkitm</codeblock></info>
+            </step>
+            <step>
+                <cmd>После ввода пароля пользователя datapkitm произойдёт импорт базы данных.</cmd>
+            </step>
+            <step>
+                <cmd>Выполнить команду для запуска сервера агентов:</cmd>
+                <info><codeblock>systemctl start zabbix-proxy &amp;&amp; systemctl enable zabbix-proxy</codeblock></info>
+            </step>
+            <step>
+                <cmd>Посмотреть состояние службы сервера агентов можно с помощью команды: </cmd>
+                <info><codeblock>systemctl status zabbix-proxy</codeblock></info>
+            </step>
+            <step>
+                <cmd>Посмотреть журнал событий службы можно с помощью команды:</cmd>
+                <info><codeblock>tail -f /var/log/zabbix/zabbix_proxy.log</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для настройки подключения сервера агентов к серверу консолидации необходимо
+                    открыть веб-интерфейс сервера консолидации и перейти в меню «Администрирование»
+                    → «Прокси». </cmd>
+                <info>
+                    <p>В правом верхнем углу нажать на кнопку «Создать прокси». В появившемся окне
+                        заполнить поля:</p>
+                    <ul id="ul_ry1_dd4_nrb">
+                        <li>Имя прокси – ввести имя сервера агентов.</li>
+                        <li>Режим прокси – выбрать «Пассивный».</li>
+                        <li>Интерфейс – указать IP адрес, оставить значения «Подключаться через IP»
+                            и «Порт 10051».</li>
+                    </ul>
+                    <p>Нажать на кнопку «Добавить».</p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

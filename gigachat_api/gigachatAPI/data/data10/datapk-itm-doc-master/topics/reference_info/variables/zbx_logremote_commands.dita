@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_logremote_commands">
+    <glossterm>ZBX_LOGREMOTE COMMANDS </glossterm>
+    <glossdef><p>Включение журналирования выполняемых shell команд как предупреждений.</p><p>
+            <ul id="ul_aj2_s33_grb">
+                <li>0 - отключено</li>
+                <li>1 - включено</li>
+            </ul>
+        </p><b>Разрешенный диапазон значений:</b>0, 1</glossdef>
+</glossentry>

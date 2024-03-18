@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="web-interface_loading_problem">
+    <title>Веб-интерфейс DATAPK ITM-K не загружается</title>
+    <troublebody>
+        <condition>
+            <p>Веб-интерфейс DATAPK ITM-K не загружается. </p>
+            
+        </condition>
+        <troubleSolution>
+            <cause>
+                <p>Некорректная инициализация контейнеров:</p>
+            </cause>
+            <remedy><title>Способы устранения:</title>
+                <steps>
+                    <step>
+                        <cmd>Перейдите в режим командной строки операционной системы, на которой
+                            установлен DATAPK ITM-K.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Перейдите в рабочий каталог DATAPK ITM-K и просмотрите состояние
+                            docker-контейнеров (по умолчанию путь к рабочей директории DATAPK ITM-K:
+                                <codeph
+                                conref="../../reusable/filepath/opt_datapkitm.dita#ReusableComponent_d2j_p2s_hrb/codeph_e2j_p2s_hrb"
+                            />).</cmd>
+                        <itemgroup> Для этого выполните команды:
+                            <codeblock id="codeblock_vjj_1jy_hrb">cd &lt;путь к рабочей директории DATAPK ITM-K >
+docker ps                     </codeblock>Все контейнеры в полученном
+                            списке должны быть в состоянии «up» (колонка «Status»).</itemgroup>
+                    </step>
+                    <step>
+                        <cmd>Если какие-либо контейнеры не запущены или имеют статус «Restarting»,
+                            то остановите работу контейнеров без удаления данных следующей
+                            командой:</cmd>
+                        <itemgroup>
+                            <codeblock id="codeblock_plp_bjy_hrb">docker-compose down</codeblock>
+                        </itemgroup>
+                    </step>
+                    <step>
+                        <cmd>Дождитесь остановки работы всех контейнеров.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Проверьте и, в случае необходимости, откорректируйте файлы<codeph
+                                conref="../../reusable/filepath/env.dita#ReusableComponent_osh_smr_hrb/codeph_rsh_smr_hrb"
+                            />, <codeph
+                                conref="../../reusable/filepath/docker-compose_release_yaml.dita#ReusableComponent_akp_2fs_hrb/codeph_bkp_2fs_hrb"
+                            />.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Запустите работу контейнеров командой:</cmd>
+                        <itemgroup>
+                            <codeblock id="codeblock_qlp_bjy_hrb">docker-compose up -d</codeblock>
+                            <p>Дождитесь запуска работы всех контейнеров (5-7 минут). При запуске
+                                ошибок/предупреждений быть не должно.</p>
+                        </itemgroup>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause>
+                <p>DATAPK ITM-K не до конца инициализировался после запуска работы контейнеров:</p>
+            </cause>
+            <remedy><title>Способы устранения:</title>
+                <steps>
+                    <step>
+                        <cmd>Подождите 3-5 минут после запуска контейнеров.</cmd>
+                    </step>
+                    <step>
+                        <cmd>При повторяющихся ошибках перейдите в рабочий каталог и выполните
+                            команду:</cmd>
+                        <itemgroup>
+                            <codeblock>docker ps</codeblock>
+                        </itemgroup>
+                    </step>
+                    <step>
+                        <cmd>Все контейнеры должны быть в состоянии «up».</cmd>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+        <troubleSolution>
+            <cause>
+                <p>Ошибка в логах «**** PostgreSQL server is not available. Waiting 5
+                    seconds...»</p>
+            </cause>
+            <remedy><title>Способы устранения:</title>
+                <steps>
+                    <step>
+                        <cmd>посмотрите логи сервера/фронта</cmd>
+                    </step>
+                    <step>
+                        <cmd>выключите контейнеры</cmd>
+                    </step>
+                    <step>
+                        <cmd>измените в <codeph
+                                conref="../../reusable/filepath/env_db_env.dita#ReusableComponent_njk_mdt_hrb/codeph_ojk_mdt_hrb"
+                            /> знач DB_SERVER_HOST с 127 на умолч. или на норм</cmd>
+                    </step>
+                    <step>
+                        <cmd>Запустите работу контейнеров командой:</cmd>
+                        <itemgroup>
+                            <codeblock>docker-compose up -d</codeblock>
+                            <p>Дождитесь запуска работы всех контейнеров (5-7 минут). При запуске
+                                ошибок/предупреждений быть не должно.</p>
+                        </itemgroup>
+                    </step>
+                </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+</troubleshooting>

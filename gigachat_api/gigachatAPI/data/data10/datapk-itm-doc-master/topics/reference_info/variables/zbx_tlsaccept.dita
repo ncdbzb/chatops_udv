@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_tlsaccept">
+    <glossterm>ZBX_TLSACCEPT</glossterm>
+    <glossdef><p>Какие принимаются входящие подключения. Используется пассивными проверками. Можно
+            указывать несколько значений, разделенных запятой:</p><p><codeph>unencrypted</codeph> - принимать
+            подключения без шифрования (по умолчанию)</p><p><codeph>psk</codeph> - принимать подключения с TLS
+            и pre-shared ключом (PSK)</p><p><codeph>cert</codeph> - принимать подключения с TLS и
+            сертификатом</p><b>Значение в конфигурации ITM-K при поставке:</b>unencrypted</glossdef>
+</glossentry>

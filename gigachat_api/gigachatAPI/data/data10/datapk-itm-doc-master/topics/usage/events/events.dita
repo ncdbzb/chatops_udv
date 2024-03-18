@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="events">
+    <title>События</title>
+    <body>
+        <p>В этом разделе:<ul>
+                <li><xref
+                        href="event%20generation%20for%20triggers/event_generation_for_triggers.dita"
+                        >Генерация событий на триггеры</xref><ul id="ul_o3d_scq_grb">
+                        <li><xref
+                                href="event%20generation%20for%20triggers/event_generation_overview.dita"
+                                >Обзор</xref></li>
+                        <li><xref
+                                href="event%20generation%20for%20triggers/problem_events.dita"
+                                >События проблемы</xref></li>
+                        <li><xref
+                                href="event%20generation%20for%20triggers/problem_events.dita"
+                                >События ОК</xref></li>
+                        <li><xref
+                                href="event%20generation%20for%20triggers/problem_close_manual.dita"
+                                >Закрытие проблем вручную</xref></li>
+                        <li><xref
+                                href="event%20generation%20for%20triggers/problem_close_configuration.dita"
+                                >Настройка параметров закрытия проблемы</xref></li>
+                    </ul></li>
+                <li><xref href="other%20event%20sources/other_problem_sources.dita">Другие
+                        источники проблемы</xref><ul id="ul_pgx_wcq_grb">
+                        <li><xref href="other%20event%20sources/detection_events.dita"
+                                >События на обнаружения</xref></li>
+                        <li><xref
+                                href="other%20event%20sources/agents_autoregistration_events.dita"
+                                >События на авторегистрацию активных агентов</xref></li>
+                        <li><xref href="other%20event%20sources/internal%20events.dita"
+                                >Внутренние события</xref></li>
+                    </ul></li>
+                <li><xref href="event_object.dita">Объект события</xref></li>
+                <li><xref href="actions_audit_hosts.dita">Аудит действий, выполняемых при
+                        обнаружении узлов</xref></li>
+                <li><xref href="actions_audit_web.dita">Аудит действий, выполненных в
+                        веб-интерфейсе</xref></li>
+                <li><xref href="messages_safety_web.dita">Сообщения о событиях безопасности в
+                        веб-интерфейсе</xref></li>
+            </ul></p>
+                <p>DATAPK ITM-K осуществляет логирование и отображение событий в зависимости от
+                        источника и их типа:</p>
+                <ul id="ul_edj_f4q_hrb">
+                        <li>события на <term keyref="triggers">триггеры</term> – всякий раз, когда <term keyref="triggers">триггер</term> меняет свое состояние
+                                (ОК→ПРОБЛЕМА→ОК);</li>
+                        <li>события на обнаружение – при обнаружении узлов сети или сервисов;</li>
+                        <li>события на авторегистрацию – когда активные агенты автоматически
+                                регистрируются сервером;</li>
+                        <li>внутренние события – когда элементы данных/правила низкоуровневого
+                                обнаружения становятся не поддерживаемыми или <term keyref="triggers">триггер</term> переходит в
+                                состояние <i>неизвестно</i>;</li>
+                        <li>аудит действий, которые были выполнены автоматически при возникновении
+                                события обнаружения узла сети (подробности о данных действиях
+                                приведены в разделе "Обнаружение узлов сети");</li>
+                        <li>аудит событий безопасности.</li>
+                </ul>
+                <p>События имеют штамп времени и могут быть основой для действий, таких как отправка
+                        оповещений по почте и т.п.</p>
+                <p>Для просмотра деталей событий в веб-интерфейсе перейдите в раздел боковой панели
+                        <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="problems">«Проблемы»</cite>. Здесь можно нажать на дату и время события и
+                        просмотреть его детали.</p>
+                <p>Просмотр событий аудита действий при обнаружении выполняется в разделе боковой
+                        панели <cite keyref="reports">«Отчеты»</cite> → <cite keyref="action_log">«Журнал действий»</cite>.</p>
+            <p>Просмотр событий безопасности осуществляется в разделе боковой панели <cite keyref="reports">«Отчеты»</cite> →
+                    <cite keyref="audit">«Аудит»</cite>.</p>
+                <p>Просмотр событий узлов сети доступен для пользователей с правами «Пользователь» и
+                        выше, при условии наличия доступа к соответствующим группам узлов.</p>
+            <p>Список событий в разделе боковой панели <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="problems">«Проблемы»</cite> ограничивается
+                        назначенными на группу пользователей (в которых состоит определенный
+                        пользователь) группами узлов сети: пользователь видит проблемы (события)
+                        только для тех узлов, которые относятся к назначенным ему группам узлов.</p>
+                <p>Просмотр событий безопасности и отчетов доступен пользователям с правами
+                        «Администратор».</p>
+    </body>
+</topic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_javagateway">
+    <glossterm>ZBX_JAVAGATEWAY</glossterm>
+    <glossdef>
+        <p>IP адрес (или имя хоста) Java gateway. Требуется только, если запущены Java <term keyref="poller">поллеры</term>.</p>
+    </glossdef>
+</glossentry>

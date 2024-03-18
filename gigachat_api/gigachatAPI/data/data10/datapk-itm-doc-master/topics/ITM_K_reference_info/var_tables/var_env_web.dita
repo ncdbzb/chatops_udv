@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="var_env_web">
+    <title>Переменные в файле .env_web для настройки контейнера веб-сервера ПК DATAPK ITM-K </title>
+    <body>
+        <table id="table_vjp_n24_3rb" frame="all" colsep="1" rowsep="1">
+            <title>Переменные в файле .env_web для настройки контейнера веб-сервера ПК DATAPK ITM-K </title>
+            <tgroup cols="4">
+                <colspec colnum="1" colname="col1"/>
+                <colspec colnum="2" colname="col2"/>
+                <colspec colnum="3" colname="col3"/>
+                <colspec colnum="4" colname="col4"/>
+                <thead>
+                    <row>
+                        <entry><b>Название</b></entry>
+                        <entry><b>Описание</b></entry>
+                        <entry>Значение в конфигурации ITM-K при поставке</entry>
+                        <entry><b>Разрешенный диапазон значений</b></entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>#ZBX_SERVER_HOST</entry>
+                        <entry>
+                            <p>Сетевое имя ОС, на которой развернут сервер консолидации DATAPK
+                                ITM.</p>
+                            <p>Данная переменная используется в случае, если контейнеры сервера
+                                консолидации и веб-сервера расположены на разных хостах.</p>
+                        </entry>
+                        <entry>zabbix-server</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_SERVER_PORT</entry>
+                        <entry>
+                            <p>IP-адрес сервера консолидации DATAPK ITM.</p>
+                            <p>Данная переменная используется в случае, если контейнеры сервера
+                                консолидации и веб-сервера расположены на разных хостах.</p>
+                        </entry>
+                        <entry>10051</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_DB_ENCRYPTION</entry>
+                        <entry>Активация шифрования для подключений к базе данных. Даже если другие
+                            переменные среды не указаны, соединения будут зашифрованы TLS, если
+                            данный параметр включен.</entry>
+                        <entry>true</entry>
+                        <entry>true, false</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_DB_KEY_FILE</entry>
+                        <entry>Полный путь к файлу, содержащему закрытый ключ для аутентификации в
+                            базе данных.</entry>
+                        <entry
+                            conref="../../reusable/filepath/run_secrets_client-key_pem.dita#ReusableComponent_xnq_k33_jrb/entry_ynq_k33_jrb"/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>#ZBX_DB_CERT_FILE</entry>
+                        <entry>Полный путь к файлу, содержащему сертификат сервера для
+                            аутентификации в базе данных.</entry>
+                        <entry
+                            conref="../../reusable/filepath/run_secrets_client-cert_pem.dita#ReusableComponent_sqk_333_jrb/entry_tqk_333_jrb"/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>#ZBX_DB_CA_FILE</entry>
+                        <entry>Полный путь к файлу, содержащему сертификаты центра сертификации (ЦС,
+                            CA) верхнего уровня для проверки сертификата базы данных.</entry>
+                        <entry
+                            conref="../../reusable/filepath/run_secrets_root-ca_pem.dita#ReusableComponent_uyx_233_jrb/entry_vyx_233_jrb"/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>#ZBX_DB_VERIFY_HOST</entry>
+                        <entry>Активация или деактивация сравнения узла сети с именем хоста,
+                            указанного в сертификате.</entry>
+                        <entry>false</entry>
+                        <entry>true, false</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_DB_CIPHER_LIST</entry>
+                        <entry>Список TLS шифров. Формат списка шифров должен соответствовать
+                            стандарту OpenSSL.</entry>
+                        <entry> </entry>
+                        <entry> </entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_VAULTDBPATH</entry>
+                        <entry>
+                            <p>Путь к хранилищу Vault (HashiCorp), откуда будут извлечены учетные
+                                данные для базы данных с помощью ключей «пароль» и «имя
+                                пользователя».</p>
+                            <p> Пример: secret/zabbix/database</p>
+                            <p>Этот параметр можно использовать, только если не указаны DBUser и
+                                DBPassword.</p>
+                        </entry>
+                        <entry> </entry>
+                        <entry> </entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_VAULTURL</entry>
+                        <entry>URL-адрес HTTP [S] сервера хранилища. Если SSLCALocation не указан,
+                            будет использоваться общесистемный каталог сертификатов CA.</entry>
+                        <entry
+                            conref="../../reusable/filepath/http_127_0_0_1_8200.dita#ReusableComponent_lyb_cj3_jrb/entry_myb_cj3_jrb"/>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>#VAULT_TOKEN</entry>
+                        <entry>
+                            <p>Токен аутентификации Vault, который должен был быть сгенерирован
+                                исключительно для Zabbix сервера с разрешением только на чтение для
+                                путей, указанных в макросах Vault, и разрешением только на чтение
+                                для пути, указанного в необязательном параметре конфигурации
+                                VaultDBPath.</p>
+                            <note>Если VaultToken и переменная среды VAULT_TOKEN определены
+                                одновременно, возникает ошибка в конфигурации.</note>
+                        </entry>
+                        <entry> </entry>
+                        <entry> </entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_HISTORYSTORAGEURL</entry>
+                        <entry>HTTP[S] URL хранилища истории. Этот параметр используется для
+                            установки Elasticsearch.</entry>
+                        <entry
+                            conref="../../reusable/filepath/http_elasticsearch_9200.dita#ReusableComponent_ntg_fj3_jrb/entry_otg_fj3_jrb"/>
+                        <entry/>
+                        
+                    </row>
+                    <row>
+                        <entry>#ZBX_HISTORYSTORAGETYPES</entry>
+                        <entry>Список, разделенный запятыми, типов значений для отправки в хранилище
+                            истории. Этот параметр используется для установки Elasticsearch.</entry>
+                        <entry>['uint', 'dbl', 'str', 'text', 'log']</entry>
+                        <entry>uint,dbl,str,log,text</entry>
+                    </row>
+                    <row>
+                        <entry>#ENABLE_WEB_ACCESS_LOG</entry>
+                        <entry>Переменная устанавливает директиву журнала доступа для веб-сервера.
+                            По умолчанию значение соответствует стандартному выходу.</entry>
+                        <entry>true</entry>
+                        <entry> </entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_MAXEXECUTIONTIME</entry>
+                        <entry>Максимальное время выполнения скрипта PHP.</entry>
+                        <entry>600</entry>
+                        <entry><i>-</i></entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_MEMORYLIMIT</entry>
+                        <entry>Максимальный объем памяти в байтах, который разрешается использовать
+                            скрипту PHP.</entry>
+                        <entry>128M</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_POSTMAXSIZE</entry>
+                        <entry>Максимально допустимый размер данных, отправляемых методом
+                            POST.</entry>
+                        <entry>16M</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_UPLOADMAXFILESIZE</entry>
+                        <entry>Максимальный размер закачиваемых файлов.</entry>
+                        <entry>2M</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_MAXINPUTTIME</entry>
+                        <entry>Максимальное количество времени, которое каждый сценарий может
+                            потратить на анализ данных запроса. Рекомендуется ограничивать это
+                            время, чтобы исключить слишком долгое выполнение скриптов.</entry>
+                        <entry>300</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_SESSION_NAME</entry>
+                        <entry>Имя текущей сессии.</entry>
+                        <entry>zbx_sessionid</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>PHP_TZ</entry>
+                        <entry>Временная зона, в которой работает веб-сервер DATAPK ITM.</entry>
+                        <entry>Asia/Yekaterinburg</entry>
+                        <entry>-</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_DENY_GUI_ACCESS</entry>
+                        <entry>Включить или выключить режим обслуживания для веб-интерфейса
+                            Zabbix.</entry>
+                        <entry>false</entry>
+                        <entry>true, false</entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_GUI_ACCESS_IP_RANGE</entry>
+                        <entry>Диапазон IP-адресов, которым разрешен доступ к веб-интерфейсу Zabbix
+                            в период обслуживания.</entry>
+                        <entry>['127.0.0.1']</entry>
+                        <entry> </entry>
+                    </row>
+                    <row>
+                        <entry>#ZBX_GUI_WARNING_MSG</entry>
+                        <entry>Информационное сообщение о периоде обслуживания веб-интерфейса
+                            Zabbix.</entry>
+                        <entry>Zabbix is under maintenance.</entry>
+                        <entry> </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </body>
+</topic>

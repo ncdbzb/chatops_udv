@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="template_configuration">
+    <title>Настройка шаблона</title>
+    <body>
+        <p>Для настройки шаблона необходимо сначала создать новый шаблон, указав общие параметры, и
+            только затем добавлять объекты (элементы данных, <term keyref="triggers">триггеры</term>, графики и прочее) к этому
+            шаблону.</p>
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref href="create_template.dita">Создание
+                        шаблона</xref></li>
+                <li><xref href="add_items_triggers_graphs.dita"
+                        >Добавление элементов данных, триггеров, графиков</xref></li>
+                <li><xref href="add_panels.dita">Добавление
+                        панелей</xref></li>
+                <li><xref href="add_web_scenarios.dita">Добавление
+                        веб-сценариев</xref></li>
+            </ul>
+        </p>
+    </body>
+</topic>

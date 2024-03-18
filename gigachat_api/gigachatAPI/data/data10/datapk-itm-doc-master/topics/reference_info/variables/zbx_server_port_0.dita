@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_server_port_0">
+    <glossterm>ZBX_SERVER_PORT</glossterm>
+    <glossdef>
+        <p>Номер порта сервера.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>10051</p>
+    </glossdef>
+</glossentry>

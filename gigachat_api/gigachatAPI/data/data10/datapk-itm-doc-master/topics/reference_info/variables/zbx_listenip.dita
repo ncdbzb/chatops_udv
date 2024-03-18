@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_listenip">
+    <glossterm>ZBX_LISTENIP</glossterm>
+    <glossdef>
+        <p>Cписок IP адресов, разделенных запятыми, которые должен слушать <xref
+                href="../glossary/terms/trapper.dita">траппер</xref>. <xref
+                href="../glossary/terms/trapper.dita">Траппер</xref> будет слушать все сетевые
+            интерфейсы, если этот параметр не указан.</p>
+    </glossdef>
+</glossentry>

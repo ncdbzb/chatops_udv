@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="database_connection_interrupted">
+    <title>Подключение к базе данных прервано</title>
+    <troublebody><condition>
+            <p>Подключение к базе данных прервано.</p>
+        </condition>
+        <troubleSolution
+            conref="../../reusable/notes/database_error_connection.dita#ReusableComponent_vwn_g5y_hrb/troubleSolution_wwn_g5y_hrb"/>
+        <troubleSolution
+            conref="../../reusable/notes/database_error_connection_refused.dita#ReusableComponent_b2k_25y_hrb/troubleSolution_c2k_25y_hrb"/>
+    </troublebody>
+</troubleshooting>

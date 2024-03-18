@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="monitoring_object">
+    <glossterm>Объект мониторинга</glossterm>
+    <glossdef>Объект мониторинга – узел сети, канал связи, IT-ресурс или сервис, которые
+            подключаются к системе мониторинга для контроля качества их функционирования и
+            предоставляемых услуг.</glossdef>
+    <glossBody>
+        <glossSurfaceForm>ОМ</glossSurfaceForm>
+        <glossAlt>
+            <glossAbbreviation>ОМ</glossAbbreviation>
+        </glossAlt>        
+    </glossBody> 
+</glossentry>

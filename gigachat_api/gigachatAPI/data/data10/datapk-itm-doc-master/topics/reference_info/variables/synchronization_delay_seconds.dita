@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="synchronization_delay_seconds">
+    <glossterm>SYNCHRONIZATION_DELAY_SECONDS</glossterm>
+    <glossdef>
+        <p>Периодичность в секундах, с которой будет проводиться синхронизация. Значение по
+            умолчанию - 60 (секунд). По окончанию первичной настройки рекомендуется изменить
+            значение на 3600 (= 1 час). Комментирование этой строки не приводит к выключению
+            синхронизатора, а устанавливает значение по умолчанию в 60 секунд.</p>
+    </glossdef>
+</glossentry>

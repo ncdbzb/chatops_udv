@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_czr_b1s_hrb">
+    <title>delete_and_clear_button</title>
+    <taskbody>
+        <postreq><table>
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry><image href="../../../images/buttons/delete_and_clear_button.png"
+                                    id="image_ekl_nrz_frb"/></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></postreq>
+    </taskbody>
+</task>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="cannot_start_service">
+    <title>Ошибки вида «&lt;...>Cannot start service &lt;...>. Bind for &lt;ip_address>:&lt;TCP/UDP_port> is ready allocated» при попытке запуска контейнеров DATAPK ITM-K. </title>
+    <troublebody><condition>
+            <p>Ошибки вида «&lt;...>Cannot start service &lt;...>. Bind for &lt;ip_address>:&lt;TCP/UDP_port> is ready allocated» при попытке запуска контейнеров DATAPK ITM-K. </p>
+            <p><b>Способ устранения:</b></p>
+        </condition>
+        
+        <troubleSolution>
+            <cause>
+                <p>Указанный в тексте ошибки TCP или UDP-порт требуется для запуска
+                    сервиса DATAPK ITM-K, но занят сторонним сервисом или утилитой.</p>
+            </cause>
+            <remedy>
+                <title>Способ устранения</title>
+            <steps>
+            <step>
+                        <cmd>Измените номер используемого порта для стороннего сервиса в
+                            соответствующих настройках сервиса.</cmd>
+                        <itemgroup>При невозможности изменить номер порта отключите сторонний
+                            сервис, который занимает необходимый порт:</itemgroup>
+                        <substeps>
+                            <substep>
+                                <cmd>Узнайте наименование сервиса, которым занят порт, с помощью
+                                    команды:</cmd>
+                                <itemgroup>
+                                    <codeblock>netstat -tulpn | grep &lt;номер_порта></codeblock>
+                                </itemgroup>
+                            </substep>
+                            <substep>
+                                <cmd>Узнайте номер процесса, к которому относится сервис:</cmd>
+                                <itemgroup>
+                                    <codeblock>pidof &lt;имя-сервиса></codeblock>
+                                </itemgroup>
+                            </substep>
+                            <substep>
+                                <cmd>Остановите процесс с полученным номером:</cmd>
+                                <itemgroup>
+                                    <codeblock>kill -9 &lt;номер_процесса></codeblock>
+                                    <p>или (при необходимости остановки процесса и его дочерних
+                                        процессов):</p>
+                                    <codeblock>killall &lt;номер_процесса> </codeblock>
+                                </itemgroup>
+                            </substep>
+                            <substep>
+                                <cmd>Повторите запуск работы контейнеров DATAPK ITM-K.</cmd>
+                            </substep>
+                        </substeps>
+                    </step>            
+            </steps>
+            </remedy>
+        </troubleSolution>
+    </troublebody>
+    
+</troubleshooting>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="introduction">
+    <title>Введение</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_krm_svp_grb">
+            <li><xref href="general_info.dita">Общее описание</xref></li>
+            <li><xref href="functional_opportunities.dita">Функциональные возможности</xref></li>
+            <li><xref href="work_modes.dita">Режимы работы</xref></li>
+            <li><xref href="safe_collection_measures.dita">Меры по выполнению безопасного
+                    безагентного сбора данных</xref></li>
+        </ul>
+    </body>
+</topic>

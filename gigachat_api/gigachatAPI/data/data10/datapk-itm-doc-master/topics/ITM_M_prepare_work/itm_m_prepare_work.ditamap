@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-M Подготовка к работе</title>
+    <topicref href="ITM_M_distributive_content/itm_m_distributive_content.dita"/>
+    <topicref href="ITM_M_data_program_download/itm_m_redos_installation.dita">
+        <topicref href="../requirements/safe_installation/RedOS%20installation/ntp.dita"/>
+        <topicref href="ITM_M_data_program_download/itm_m_extra_package_install.dita"/>
+        <topicref href="ITM_M_data_program_download/itm_m_server_install.dita"/>
+    </topicref>
+</map>

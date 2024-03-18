@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_mwj_j3f_krb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_nwj_j3f_krb">
+                <cmd>Для запуска контейнеров выполните команду:</cmd>
+                <info><codeblock>docker-compose up -d</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

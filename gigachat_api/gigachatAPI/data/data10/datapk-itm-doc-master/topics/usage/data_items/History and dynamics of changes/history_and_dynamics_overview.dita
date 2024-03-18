@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="history_and_dynamics_overview">
+    <title>Обзор</title>
+    <body>
+        <p>История и динамика изменения – два пути хранения в DATAPK ITM-K собранных данных.</p>
+        <p>В то время как история хранит каждое собранное значение, динамика изменений хранит
+            усредненную информацию за каждый час, что менее ресурсоемко.</p>
+    </body>
+</topic>

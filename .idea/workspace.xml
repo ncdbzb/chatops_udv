@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d8be7e29-59d8-4dc3-9ea1-6186c638de62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/gigachat_api/Dockerfile.gigachat_api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/Dockerfile.react" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile.api" beforeDir="false" afterPath="$PROJECT_DIR$/fast_api/Dockerfile.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0f5c1f414b85_initial2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/43698e996303_update_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/54fba6e16803_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/6d8203b30d76_add_doc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/8481e6b97962_add_doc2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/routers/forgot_pass_router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/routers/verify_router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/schemas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/send_email.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/llm_service/router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/llm_service/utils.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2cquApSbvbsdQow99rOh1YHS7Br" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.manager.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/PycharmProjects/frontend&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\chatops_udv\fast_api" />
+      <recent name="C:\Users\User\PycharmProjects\chatops_udv\src\auth\routers" />
+      <recent name="C:\Users\User\PycharmProjects\chatops_udv\src" />
+      <recent name="C:\Users\User\PycharmProjects\chatops_udv" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8be7e29-59d8-4dc3-9ea1-6186c638de62" name="Changes" comment="" />
+      <created>1708851288838</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708851288838</updated>
+    </task>
+    <servers />
+  </component>
+</project>

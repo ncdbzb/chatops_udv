@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="requirements">
+    <title>Требования к комплексу и его среде функционирования</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_nbc_gxp_grb">
+            <li><xref href="software_requirements.dita">Требования к программному
+                обеспечению</xref></li>
+            <li><xref href="hardware_requirements.dita">Требования к аппаратному
+                обеспечению</xref></li>
+            <li><xref href="label_pack_requirements.dita">Требования к маркировке и
+                упаковке</xref></li>
+            <li><xref href="actions_accept.dita">Действия по приемке комплекса</xref></li>
+            <li><xref href="safe_installation/safe_installation_actions.dita">Действия по безопасной
+                    установке комплекса</xref><ul id="ul_tdk_1yp_grb">
+                    <li><xref href="safe_installation/RedOS%20installation/installation_redos.dita"
+                            >Порядок установки на ОС RedOS</xref></li>
+                    <li><xref href="safe_installation/datapk_synchro.dita">Настройка синхронизации с
+                            DATAPK</xref></li>
+                    <li><xref href="safe_installation/first_configuration/first_configuration.dita"
+                            >Первичная настройка</xref></li>
+                    <li><xref href="safe_installation/agent%20installation/agents_installation.dita"
+                            >Установка агентов</xref></li>
+                </ul></li>
+            <li><xref href="safe_complex_usage.dita">Принципы безопасного использования
+                    комплекса</xref></li>
+            <li><xref href="safe_environment_config.dita">Требования к настройкам функций
+                    безопасности среды функционирования комплекса</xref></li>
+        </ul>
+    </body>
+</topic>

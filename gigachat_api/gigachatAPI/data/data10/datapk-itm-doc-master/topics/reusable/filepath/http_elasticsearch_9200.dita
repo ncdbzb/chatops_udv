@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ntg_fj3_jrb">
+    <title/>
+    <body>
+        <p><table>
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry id="entry_otg_fj3_jrb">http://elasticsearch:9200/</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></p>
+    </body>
+</topic>

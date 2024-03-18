@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_w3q_wx2_krb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_x3q_wx2_krb">
+                <cmd>Назначьте права на выполнение с помощью команды:</cmd>
+                <info><codeblock>chmod +x /usr/local/bin/docker-compose</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

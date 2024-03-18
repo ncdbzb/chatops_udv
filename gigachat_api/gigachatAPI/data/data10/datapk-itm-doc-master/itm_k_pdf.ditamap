@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<bookmap xml:lang="ru">
+    <booktitle>
+        <mainbooktitle>Руководство по эксплуатации DATAPK ITM-K</mainbooktitle>
+    </booktitle>
+    
+    <frontmatter>
+        <booklists>
+            <toc/>
+            <!-- <tablelist/> -->
+        </booklists>
+        
+    </frontmatter>
+    <chapter href="topics/reference_info/reference_info.dita" processing-role="resource-only">
+        <topicref href="topics/reference_info/reference_info.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reference_info/glossary/topics_glossary.dita">
+        <topicref href="topics/reference_info/glossary/glossary.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/introduction/introduction.dita">
+        <topicref href="topics/introduction/introduction.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/requirements/requirements.dita">
+        <topicref href="topics/requirements/requirements.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/usage/usage.dita">
+        <topicref href="topics/usage/usage.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/emergency_actions/emergency_actions.dita">
+        <topicref href="topics/emergency_actions/emergency_actions.ditamap" format="ditamap"/>
+    </chapter>
+    <chapter href="topics/reference_info/reference_info.dita">
+        <topicref href="topics/ITM_K_reference_info/breadcrumbs/breadcrumbs.ditamap"
+            format="ditamap"/>
+        <topicref href="topics/ITM_K_reference_info/roles/roles.dita"/>
+        <topicref href="topics/ITM_K_reference_info/challenges/challenges.dita"/>
+        <topicref href="topics/ITM_K_reference_info/var_tables/var_tables.ditamap" format="ditamap"
+        />
+    </chapter>
+    <chapter href="topics/reusable/reusable.ditamap" format="ditamap" processing-role="resource-only"/>
+    
+</bookmap>

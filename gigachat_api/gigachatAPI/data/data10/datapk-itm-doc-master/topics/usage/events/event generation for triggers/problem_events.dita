@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="problem_actions">
+    <title>События проблемы</title>
+    <body>
+        <p>Событие проблемы создается:</p>
+        <ul id="ul_xdf_ffz_frb">
+            <li>когда выражение <term keyref="triggers">триггера</term> вычисляется как <b>ПРАВДА</b>, если <term keyref="triggers">триггер</term> в состоянии
+                    <b>ОК</b>;</li>
+            <li>каждый раз выражение <term keyref="triggers">триггера</term> вычисляется как <b>ПРАВДА</b>, если у <term keyref="triggers">триггера</term>
+                активировано множественная генерация событий проблема.</li>
+        </ul>
+    </body>
+</topic>

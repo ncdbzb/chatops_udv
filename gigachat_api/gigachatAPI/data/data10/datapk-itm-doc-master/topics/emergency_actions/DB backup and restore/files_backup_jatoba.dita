@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="files_backup_jatoba">
+    <title>Создание резервной копии файлов СУБД &quot;Jatoba&quot;</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Перед созданием резервной копии проверьте настройки в основном файле конфигурации с
+                    помощью команды:</cmd>
+                <info><codeblock>nano /var/lib/jatoba/1/data/postgresql.conf</codeblock></info>
+            </step>
+            <step>
+                <cmd>Убедитесь, что в разделе # WRITE-AHEAD LOG переменные имеют следующие значения, в ином
+                    случае - измените их:</cmd>
+                <info>
+                    <codeblock>wal_level = replica
+max_wal_size = 1GB
+min_wal_size = 80MB
+archive_mode = on
+archive_command = 'test ! -f /var/lib/jatoba/1/backups/%f &amp;&amp; cp %p/var/lib/jatoba/1/backups/%f '</codeblock>
+                    <ul id="ul_ucr_hnh_3rb">
+                        <li><p>Параметр <codeph>wal_level</codeph> со значением <codeph>replica</codeph>
+                            определяет, что в журнал записываются данные, необходимые для поддержки
+                            архивирования WAL (Write ahead log - журнал предзаписи) и репликации.</p></li>
+                        <li><p> Параметры <codeph>min</codeph> и <codeph>max_wal_size</codeph> регулируют размер
+                            wal-файла. </p></li>
+                        <li><p>Включенный параметр <codeph>archive_mode</codeph> передает полные сегменты WAL в
+                            хранилище архива командой <codeph>archive_command</codeph>. </p></li>
+                        <li><p>Параметр <codeph>archive_command</codeph> содержит команду для архивации
+                            завершенного сегмента WAL. В команде указываются пути для создания резервной копии
+                            WAL-файлов, необходимо проверить существование путей - они могут отличаться в
+                            зависимости от версии СУБД. Данная команда кроме копирования осуществляет контроль
+                            наличия файла – если файл находится в папке для хранения резервных копий, то команда
+                            копирования не будет выполнена и существующий файл не будет перезаписан.</p></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Для применения настроек, сделанных в файле конфигурации <ph
+                        conref="../../reusable/filepath/postgresql_conf.dita#ReusableComponent_eqn_f1t_hrb/ph_fqn_f1t_hrb"
+                    />, перезапустите службу с помощью команды:</cmd>
+                <info><codeblock>systemctl restart jatoba-1</codeblock></info>
+            </step>
+            <step>
+                <cmd>Создайте резервную копию файлов СУБД «Jatoba» от имени пользователя баз данных
+                    с правами супер-пользователя при помощи команды:</cmd>
+                <info>
+                    <codeblock>pg_basebackup -p &lt;порт подключения> -h &lt;имя или IP-адрес компьютера, на котором
+работает сервер> -U &lt;имя пользователя> -D &lt;каталог, где будет хранится копия
+файлов из каталога «data» СУБД «Jatoba»></codeblock>
+                </info>
+            </step>
+            
+        </steps>
+  
+        <example>
+            <p>Например, если настроить ограничения в файле <codeph
+                    conref="../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                /> и поменять порт на нестандартный, потребуется изменить параметры подключения к
+                базе данных. Команда для создания резервной копии будет выглядеть следующим
+                образом:</p>
+            <codeblock id="codeblock_cbb_hph_3rb">pg_basebackup -p 10265 -h 127.0.0.1 -U postgres -D /opt/backupdb -P -Xf</codeblock>
+            <p>Ключи, используемые в команде, означают:</p>
+            <ul id="ul_gtm_rp1_grb">
+                <li>p - порт для подключения;</li>
+                <li>h - имя или IP-адрес компьютера, на котором работает сервер;</li>
+                <li>U – пользователь, под которым осуществляется подключение к базе данных;</li>
+                <li>D - целевой каталог для записи данных;</li>
+                <li>P - отчет о прогрессе;</li>
+                <li>Xf - включает все необходимые файлы журналов предзаписи (файлы WAL) в резервную
+                    копию. Файлы журнала предзаписи собираются в конце процесса копирования.</li>
+            </ul>
+            <p>Данная команда потребует ввода пароля пользователя <b>postgres</b>. Каталог для
+                резервных копий будет создан автоматически, заранее создавать не нужно. </p>  
+        </example>
+       
+        <postreq>
+            <p>Если после выполнения команды появляется ошибка <b>«pg_basebackup: не удалось
+                    подключиться к серверу: ВАЖНО: в pg_hba.conf нет записи, разрешающей подключение
+                    для репликации с компьютера "127.0.0.1" для пользователя "postgres", SSL
+                    выкл.»</b>, требуется проверить в файле <codeph
+                    conref="../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                /> наличие строки с правами replication для всех баз данных. При отсутствии такой
+                строки - раскомментировать строку (если ранее была закомментирована) и изменить
+                метод аутентификации с <codeph>ident</codeph> на <codeph>md5</codeph>:</p>
+            <codeblock>host replication all 127.0.0.1/32 md5</codeblock>
+            <p>После изменения файла <codeph
+                    conref="../../reusable/filepath/pg_hba_conf.dita#ReusableComponent_zz1_ggs_hrb/codeph_a1b_ggs_hrb"
+                /> для применения настроек необходимо перезагрузить службу jatoba командой
+                    <codeph>systemctl restart jatoba-1</codeph>
+            </p>
+            <p>Более подробную информацию о параметрах <codeph>pg_basebackup</codeph> можно узнать с
+                помощью команды: </p>
+            <codeblock>pg_basebackup --help</codeblock>
+        </postreq>
+       
+      </taskbody>
+</task>

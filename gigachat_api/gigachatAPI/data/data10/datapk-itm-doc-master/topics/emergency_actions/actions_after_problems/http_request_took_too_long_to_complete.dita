@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="http_request_took_too_long_to_complete">
+    <title>Ошибка «An HTTP request took too long to complete» при запуске работы контейнеров DATAPK ITM-K</title>
+    <troublebody><condition>
+            <p>Ошибка «An HTTP request took too long to complete» при запуске работы контейнеров
+                DATAPK ITM-K. </p>
+            <p><b>Причины и способы устранения:</b></p>
+        </condition>
+        
+        <troubleSolution>
+            <cause>
+                <p>Загрузка контейнера обрывается по тайм-ауту:</p>
+            </cause>
+            
+            <remedy>
+                <title>Способ устранения:</title>
+                <steps>
+                    <step>
+                        <cmd>Добавьте в конфигурационный файл <ph
+                                conref="../../reusable/filepath/env_db_pgsql.dita#ReusableComponent_znp_hvx_hrb/ph_a4p_hvx_hrb"
+                            /> переменную <cmdname>COMPOSE_HTTP_TIMEOUT</cmdname> и присвойте ей
+                            значение больше 60.</cmd>
+                    </step>
+                    <step>
+                        <cmd>Повторно выполните запуск работы контейнеров.</cmd>
+                    </step>
+                </steps>
+            </remedy>
+            
+        </troubleSolution>
+        <troubleSolution>
+            <cause>
+                <p>Недостаточный размер оперативной памяти аппаратного комплекса или виртуальной машины, на которой развернут DATAPK ITM-K.</p>
+            </cause>
+        </troubleSolution>
+        
+    </troublebody>
+</troubleshooting>

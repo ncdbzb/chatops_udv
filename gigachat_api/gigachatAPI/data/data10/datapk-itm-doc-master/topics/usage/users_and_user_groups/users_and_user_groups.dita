@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="users_and_user_groups">
+    <title>Пользователи и группы пользователей</title>
+    <body>
+        <p>Все пользователи в DATAPK ITM-K работают с системой DATAPK ITM-K через веб-интерфейс.
+            Каждому пользователю в DATAPK ITM-K присвоены уникальные имя пользователя и пароль.</p>
+        <p>Все пароли пользователей зашифрованы и хранятся в базе данных DATAPK ITM-K. Пользователи
+            DATAPK ITM-K не могут использовать свои имя пользователя и пароль для авторизации
+            непосредственно на сервере UNIX, за исключением ситуации, когда они были заведены
+            соответственно также и в UNIX. Соединение между веб-сервером и браузером пользователя
+            может быть защищено с помощью SSL.</p>
+        <p>При наличии гибкой схемы прав доступа пользователя можно ограничить и разграничить права
+            доступа к:</p>
+        <ul id="ul_qkt_4tz_frb">
+            <li>административным функциям веб-интерфейса DATAPK ITM-K;</li>
+            <li>наблюдаемым узлам сети в группах узлов сети.</li>
+        </ul>
+        <p>Начальная установка DATAPK ITM-K содержит двух предустановленных пользователей -
+            'datapkitm' и 'guest'. На DATAPK ITM-K сертифицированной версии пользователь 'guest' по
+            умолчанию отключен.</p>
+        <p>В случае пяти последовательных неудачных попыток входа c одной учетной записью в
+            веб-интерфейс DATAPK ITM-K (кроме учетной записи «guest», которая не требует ввода
+            пароля) данная учетная запись блокируется на 30 секунд для предотвращения компьютерных
+            атак методом перебора пароля. Сообщение с IP-адресом, с которого были осуществлены
+            неудачные попытки входа, будет отображено на стартовой странице в разделе боковой панели
+            <cite keyref="monitoring">«Мониторинг»</cite> → <cite keyref="panel">«Панель»</cite> (при первом входе) или последней открытой странице (если вход
+            ранее выполнялся) после успешного входа в систему. Событие неудачного входа также
+            фиксируется в журнале аудита с указанием пользователя, IP-адреса, с которого
+            осуществлялось подключение, действие и примечание.</p>
+        <p>В этом разделе:</p>
+        <p>
+            <ul>
+                <li><xref href="user_configuration/user_configuration.dita"
+                        >Настройка пользователя</xref><ul id="ul_fq2_vhj_hrb">
+                        <li><xref
+                                href="user_configuration/user_config_general_attributes.dita"
+                                >Общие атрибуты</xref></li>
+                        <li><xref
+                                href="user_configuration/user_notifications.dita"
+                                >Оповещения пользователя</xref></li>
+                    </ul></li>
+                <li><xref href="user_access_rights/user_access_rights.dita"
+                        >Права доступа</xref><ul id="ul_irp_whj_hrb">
+                        <li><xref href="user_access_rights/user_type.dita">Тип
+                                пользователя</xref></li>
+                        <li><xref
+                                href="user_access_rights/access_rights_host_groups.dita"
+                                >Права доступа к группам узлов сети</xref></li>
+                    </ul></li>
+                <li><xref href="user_groups/user_groups.dita">Группы
+                        пользователей</xref><ul id="ul_pkw_yhj_hrb">
+                        <li><xref
+                                href="user_groups/user_groups_configuration.dita"
+                                >Настройка сети</xref></li>
+                        <li><xref
+                                href="user_groups/access_host_several_user_groups.dita"
+                                >Доступ к узлу сети из нескольких групп пользователей</xref></li>
+                        <li><xref
+                                href="user_groups/user_groups_other_info.dita"
+                                >Другая информация</xref></li>
+                    </ul></li>
+            </ul>
+        </p>
+    </body>
+</topic>

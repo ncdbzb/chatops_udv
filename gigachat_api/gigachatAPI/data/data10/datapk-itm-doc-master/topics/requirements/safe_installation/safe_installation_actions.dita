@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="safe_installation_actions">
+    <title>Действия по безопасной установке комплекса</title>
+    <body>
+        <p>В этом подразделе:</p>
+        <p>
+            <ul>
+                <li><xref href="RedOS%20installation/installation_redos.dita">Порядок установки на
+                        ОС RedOS</xref></li>
+                <li><xref href="datapk_synchro.dita">Настройка синхронизации с DATAPK</xref></li>
+                <li><xref href="first_configuration/first_configuration.dita">Первичная
+                        настройка</xref></li>
+                <li><xref href="agent%20installation/agents_installation.dita">Установка
+                        агентов</xref></li>
+            </ul>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="inventory_data_review">
+    <title>Просмотр инвентарных данных</title>
+    <body>
+        <p>Детали всех указанных инвентарных данных доступны в разделе боковой панели
+            «Инвентаризация».</p>
+        <p>В разделе боковой панели <cite keyref="inventory">«Инвентаризация»</cite> → <cite keyref="overview_inventory">«Обзор»</cite> можно сгруппировать и просмотреть
+            доступные данные по различным полям инвентарных данных.</p>
+        <p>В разделе боковой панели <cite keyref="inventory">«Инвентаризация»</cite> → <cite keyref="overview_inventory">«Узлы сети»</cite> можно увидеть все узлы сети,
+            содержащие инвентарные данные. При нажатии на имя узла сети в диалоге будут раскрыты все
+            детали.</p>
+    </body>
+</topic>

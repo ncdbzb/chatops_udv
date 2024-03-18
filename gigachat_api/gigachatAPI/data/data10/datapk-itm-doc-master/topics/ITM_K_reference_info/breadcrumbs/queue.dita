@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="queue">
+    <glossterm>Очередь</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Очередь»</title>
+            <image href="../../../images/Pages/administration_queue.png" id="administration_queue">
+                <alt>Страница «Очередь»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_znp_hvx_hrb">
+    <title>env_db_pgsql</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd><ph id="ph_a4p_hvx_hrb">.env_db_pgsql</ph></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

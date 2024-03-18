@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_deny_gui_access">
+    <glossterm>ZBX_DENY_GUI_ACCESS</glossterm>
+    <glossdef><p>Включить или выключить режим обслуживания для веб-интерфейса Zabbix.</p><b>Значение
+            в конфигурации ITM-K при поставке:</b>false <p><b>Разрешенный диапазон
+            значений:</b>true, false</p></glossdef>
+</glossentry>

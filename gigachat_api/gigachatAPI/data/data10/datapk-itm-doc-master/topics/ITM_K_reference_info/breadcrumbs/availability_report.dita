@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="availability_report">
+    <glossterm>Отчет о доступности</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Отчет о доступности»</title>
+            <image href="../../../images/Pages/reports_availability_report.png" id="reports_availability_report">
+                <alt>Страница «Отчет о доступности»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

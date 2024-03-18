@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_buffersend">
+    <glossterm>ZBX_BUFFERSEND</glossterm>
+    <glossdef><p>Не хранить данные в буфере дольше N секунд.</p><b>Значение в конфигурации ITM-K при
+            поставке:</b>5<p><b>Разрешенный диапазон значений:</b>1-3600</p></glossdef>
+</glossentry>

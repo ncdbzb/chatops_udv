@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
+<glossgroup id="topics_glossary">
+    <title>Глоссарий</title>
+    <glossentry id="monitoring_object" conkeyref="monitoring_object">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="collector" conkeyref="collector">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="triggers" conkeyref="triggers">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="trapper" conkeyref="trapper">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="poller" conkeyref="poller">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="pre-fork" conkeyref="pre-fork">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="escalation" conkeyref="escalation">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="escalator" conkeyref="escalator">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="worker" conkeyref="worker">
+        <glossterm/>
+    </glossentry>
+    <glossentry id="DB_syncer" conkeyref="DB_syncer">
+        <glossterm/>
+    </glossentry>
+</glossgroup>

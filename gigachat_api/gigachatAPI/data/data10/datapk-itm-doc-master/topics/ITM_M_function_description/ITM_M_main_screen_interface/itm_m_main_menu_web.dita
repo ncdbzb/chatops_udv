@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_main_menu_web">
+    <title>Главное меню веб-интерфейса</title>
+    <body>
+        <p>
+            <div><p>Главное (боковое) меню веб-интерфейса содержит следующие разделы:</p><ol
+                    id="ol_w32_3sf_krb">
+                    <li><cite keyref="itm_m_page_server_monitoring">Серверы мониторинга</cite>.
+                        Содержит функции подключения <term keyref="monitoring_server">серверов
+                            мониторинга ITM-K</term> уровня филиалов и управления ими (подключение,
+                        отключение и т.п.) (см. Раздел "<xref
+                            href="../ITM_M_monitoring_servers/itm_m_monitoring_servers.dita">Серверы
+                            мониторинга</xref>");</li>
+                    <li><cite keyref="itm_m_page_object_monitoring">Объекты мониторинга</cite>.
+                        Содержит функции просмотра списков <term keyref="monitoring_object"
+                            >объектов мониторинга</term>, подключенных к <term keyref="monitoring_server">серверам мониторинга ITM-K</term> (см.
+                        Раздел "<xref
+                            href="../ITM_M_monitoring_objects/itm_m_monitoring_objects.dita">Объекты
+                            мониторинга</xref>");</li>
+                    <li><cite keyref="itm_m_page_problems">Проблемы</cite>. Содержит функции
+                        просмотра списков проблем объектов защиты (<term keyref="monitoring_object"
+                            >объектов мониторинга</term>, (см. Раздел "<xref
+                            href="../ITM_M_problems/itm_m_problems.dita">Проблемы</xref>");</li>
+                    <li><cite keyref="itm_m_page_configuration">Настройки</cite>. Содержит функции
+                        по настройке сервера ITM-VM (см. Раздел "<xref
+                            href="../ITM_M_configurations/itm_m_config.dita"
+                        >Настройки</xref>").</li>
+                </ol>Боковое меню имеет две формы – полную и свернутую. Для переключения необходимо
+                нажать на кнопку <image href="../../../images/ITM_M_icons/ITM_M_icon_hide_menu.png"
+                    id="image_hhj_nsf_krb"/>внизу боковой панели для сворачивания и <image
+                    href="../../../images/ITM_M_icons/ITM_M_icon_open_menu.png"
+                    id="image_vck_4sf_krb"/>для возвращения к полной форме боковой панели. </div>
+        </p>
+        
+    </body>
+</topic>

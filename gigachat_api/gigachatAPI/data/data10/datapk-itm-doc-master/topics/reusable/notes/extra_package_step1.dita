@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="ReusableComponent_iy2_5x2_krb">
+    <title/>
+    <taskbody>
+        <steps>
+            <step id="step_ky2_5x2_krb">
+                <cmd>Установите docker-ce:</cmd>
+                <info><codeblock>yum install docker-ce
+curl -L https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` > 
+/usr/local/bin/docker-compose</codeblock></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

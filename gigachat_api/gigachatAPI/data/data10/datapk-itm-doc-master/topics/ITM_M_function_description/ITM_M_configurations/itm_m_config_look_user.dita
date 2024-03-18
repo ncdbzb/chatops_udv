@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_config_look_user">
+    <title>Просмотр свойств учетной записи пользователя</title>
+    <body>
+        <p>Свойства учетной записи пользователя можно просмотреть в форме просмотра, которая
+            открывается при клике на учетную запись в списке пользователей. В форме выводятся все
+            свойства учетной записи пользователя в режиме «на чтение».</p>
+        <fig>
+            <title>Свойства учетной записи</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_user_info.png"/>
+        </fig>
+        <p>При нажатии на кнопку «Изменить» выполнится переход к форме изменения пользователя.</p>
+        <fig>
+            <p>
+                <fig
+                    conref="../../reusable/itm_m_img_change_user.dita#ReusableComponent_mps_y13_lrb/fig_nps_y13_lrb"
+                    id="fig_t5d_db3_lrb"/>
+            </p>
+        </fig>
+    </body>
+</topic>

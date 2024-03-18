@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="restore_jatoba">
+    <title>Восстановление резервной копии файлов СУБД &quot;Jatoba&quot;</title>
+    <taskbody>
+        <prereq> <p>Для выполнения операций восстановления на сервере, отличном от сервера, с которого была снята
+                резервная копия необходимо убедиться, что на сервере для восстановления находится
+                каталог с файлами, полученный в результате работы
+                <codeph>pg_basebackup</codeph>.</p></prereq>
+       
+        <context>Пример ниже описан для восстановления из резервной копии одного сервера. Восстановление
+            работы на другом сервере выполняется аналогично. Перенос файлов будет осуществляться
+            между серверами, в остальном действия совпадают.</context>
+        
+        <steps>
+            <step>
+                <cmd>Чтобы исключить запись в базу данных во время восстановления из копии,
+                    отключите DATAPK ITM-K командой:</cmd>
+                <info>
+                    <codeblock>docker-compose down &amp;&amp; docker-compose -f docker-compose.sync.yaml down</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Исключите из резервной копии файлы в подкаталоге <codeph
+                        conref="../../reusable/filepath/opt_backupdb_pg_wal.dita#ReusableComponent_ffr_q1t_hrb/codeph_gfr_q1t_hrb"
+                    />.</cmd>
+                <info>Эту небольшую корректировку стоит внести для снижения риска ошибок при
+                    восстановлении. Во избежание потери данных перенесите их в другую папку с
+                    помощью команд: <p>
+                        <codeblock id="codeblock_hnd_wq1_grb">mkdir /opt/tmp_wal_arch
+mv /opt/backupdb/pg_wal/archive_status/*/opt/tmp_wal_arch/</codeblock>
+                    </p></info>
+            </step>
+            <step>
+                <cmd>Содержимое каталогов <codeph><ph
+                            conref="../../reusable/filepath/pg_dynshmem.dita#ReusableComponent_h4w_v1t_hrb/ph_i4w_v1t_hrb"
+                        />, <ph
+                            conref="../../reusable/filepath/pg_notify.dita#ReusableComponent_msn_z1t_hrb/ph_osn_z1t_hrb"
+                        />, <ph
+                            conref="../../reusable/filepath/pg_serial.dita#ReusableComponent_lqt_jbt_hrb/ph_mqt_jbt_hrb"
+                        />, <ph
+                            conref="../../reusable/filepath/pg_snapshots.dita#ReusableComponent_mv3_mbt_hrb/ph_nv3_mbt_hrb"
+                        />, <ph
+                            conref="../../reusable/filepath/pg_stat_tmp.dita#ReusableComponent_blf_pbt_hrb/ph_clf_pbt_hrb"
+                        /> и <ph
+                            conref="../../reusable/filepath/pg_subtrans.dita#ReusableComponent_a41_vbt_hrb/ph_b41_vbt_hrb"
+                        /></codeph>(но не сами эти каталоги) можно исключить из резервной копии
+                        (<codeph
+                        conref="../../reusable/filepath/opt_backupdb.dita#ReusableComponent_v1l_zbt_hrb/codeph_w1l_zbt_hrb"
+                    />), так как оно будет инициализировано при запуске главного процесса.</cmd>
+            </step>
+            <step>
+                <cmd>Для начала операции резервного копирования остановите службу с помощью
+                    команды:</cmd>
+                <info>
+                    <codeblock id="codeblock_adg_jkh_3rb">systemctl stop jatoba-1</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте весь текущий каталог кластера баз данных и все табличные
+                    пространства во временный каталог на случай, если они могут понадобиться. </cmd>
+                <info><p>Если свободного места на сервере достаточно – то выполните команды ниже для копирования: </p>
+                    <codeblock>mkdir /var/lib/jatoba/1/old_data/
+cp -r /var/lib/jatoba/1/data/* /var/lib/jatoba/1/old_data/     </codeblock></info>
+            </step>
+            <step>
+                <cmd>Удалите все существующие файлы и подкаталоги из каталога кластера
+                    (<codeph>/var/lib/jatoba/1/data</codeph>) и из корневых каталогов используемых табличных пространств с
+                    помощью команды:</cmd>
+                <info>
+                    <codeblock>rm -rf /var/lib/jatoba/1/data/*</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Восстановите файлы базы данных из резервной копии файлов с помощью команды:</cmd>
+                <info><codeblock>cp -r /opt/backupdb/* /var/lib/jatoba/1/data/</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для корректного запуска службы задайте права доступа к файлам для пользователя,
+                    запускающего сервер, с помощью двух команд ниже:</cmd>
+                <info>
+                    <codeblock>chown -R postgres:postgres /var/lib/jatoba/1/data
+chmod 750 /var/lib/jatoba/1/data     </codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Скопируйте незаархивированные файлы с сегментами WAL из каталога с кластером баз данных
+                    до восстановления в новый каталог с помощью команды:</cmd>
+                <info><codeblock>cp -r /var/lib/jatoba/1/old_data/pg_wal/0* /var/lib/jatoba/1/data/pg_wal/</codeblock></info>
+            </step>
+            <step>
+                <cmd>Назначьте права доступа к скопированному файлу для пользователя, запускающего сервер, с
+                    помощью команды ниже:</cmd>
+                <info><codeblock>chown -R postgres:postgres /var/lib/jatoba/1/data/pg_wal/</codeblock></info>
+            </step>
+            <step>
+                <cmd>Запустите службу сервера баз данных с помощью команды:</cmd>
+                <info><codeblock>systemctl start jatoba-1</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для просмотра логов перейдите в папку <codeph
+                        conref="../../reusable/filepath/var_lib_jatoba_l_data_log.dita#ReusableComponent_dfx_2ct_hrb/codeph_efx_2ct_hrb"
+                    /> и просмотрите логи текущего дня – Jatoba хранит файлы логов с именем файла
+                    равному дню недели.</cmd>
+                <info>
+                    <p> Просмотреть файлы в каталоге логов можно с помощью команды:</p>
+                    <codeblock>ls -la var/lib/jatoba/1/data/log</codeblock>
+                    <p>В файле логов после перезапуска должно быть сообщение об успешном старте
+                        «система БД готова принимать подключения».</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Включите DATAPK ITM-K с помощью команд:</cmd>
+                <info>
+                    <codeblock>cd /opt/datapkitm
+docker-compose up -d &amp;&amp; docker-compose docker-compose.sync.yaml up -d </codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>После проверки работоспособности сервисов удалите папки <codeph
+                        conref="../../reusable/filepath/var_lib_jatoba_l_data_old_data.dita#ReusableComponent_dyw_jct_hrb/codeph_eyw_jct_hrb"
+                    />.</cmd>
+            </step>
+            <step>
+                <cmd>Папку <codeph
+                        conref="../../reusable/filepath/opt_tmp_wal_arch.dita#ReusableComponent_gmf_4ct_hrb/codeph_hmf_4ct_hrb"
+                    /> переместите обратно в каталог с резервной копией либо удалите.</cmd>
+            </step>
+        </steps>
+
+    </taskbody>
+</task>

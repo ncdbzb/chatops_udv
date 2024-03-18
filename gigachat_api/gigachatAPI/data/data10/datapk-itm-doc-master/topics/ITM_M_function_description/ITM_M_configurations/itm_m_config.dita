@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="itm_m_config">
+    <title>Настройки</title>
+    <body>
+        <p>В этом разделе:</p>
+        <ul id="ul_vvw_qn3_lrb">
+            <li><xref href="itm_m_config_general.dita">Основные</xref>;</li>
+            <li><xref href="itm_m_config_users.dita">Пользователи</xref>;</li>
+            <li><xref href="tm_m_config_admin_actions.dita">Действия администратора с учетными
+                    записями пользователей</xref>;<ul id="ul_v11_5n3_lrb">
+                    <li><xref href="itm_m_config_create_user.dita">Создание учетной записи
+                            пользователя</xref>;</li>
+                    <li><xref href="itm_m_config_look_user.dita">Просмотр свойств учетной записи
+                            пользователя</xref>;</li>
+                    <li><xref href="itm_m_config_change_user.dita">Изменение свойств учетной записи
+                            пользователя</xref>.</li>
+                </ul></li>
+            <li><xref href="itm_m_config_integrations.dita">Интеграции</xref>.</li>
+        </ul>
+    </body>
+</topic>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="datapk_version">
+    <glossterm>DATAPK_VERSION</glossterm>
+    <glossdef>
+        <p>Версия API DATAPK. Совпадает с версией DATAPK. Уточнить значение можно в веб-интерфейсе
+            DATAPK в разделе "Настройка и мониторинг" - "Основные", в поле "Информация об
+            изготовителе". Примечание - синхронизация работает начиная с 16 версии API DATAPK.</p>
+    </glossdef>
+</glossentry>

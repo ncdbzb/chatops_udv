@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="itm_a_agent_install">
+    <title>Установка агента</title>
+    <taskbody>
+        <context>Для мониторинга состояния аппаратной платформы, на которой установлен сервер
+            агентов, необходимо установить агент DATAPK ITM.</context>
+        <steps>
+            <step>
+                <cmd>Установить агента с помощью команды:</cmd>
+                <info><codeblock>rpm -i itm-agent_v.1.2.0.el7.x86_64.rpm</codeblock></info>
+            </step>
+            <step>
+                <cmd>Установить сервис в автозагрузку с помощью команды: </cmd>
+                <info><codeblock>systemctl enable zabbix-agent</codeblock></info>
+            </step>
+            <step>
+                <cmd>С помощью текстового редактора отредактировать переменные в файле <codeph
+                        conref="../reusable/filepath/etc_zabbix_zabbix_agentd_conf.dita#ReusableComponent_u2v_2ls_hrb/codeph_v2v_2ls_hrb"
+                    />:</cmd>
+                <info>
+                    <ul id="ul_hpm_vd4_nrb">
+                        <li><codeph id="codeblock_ipm_vd4_nrb">Server=&lt;IP-адрес сервера
+                                консолидации></codeph></li>
+                        <li><codeph>ListenPort=10050</codeph></li>
+                        <li><codeph>ServerActive=&lt;IP-адрес сервера консолидации></codeph></li>
+                        <li><codeph id="codeblock_jpm_vd4_nrb">Hostname=&lt;имя текущего сервера></codeph></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Добавить правило в межсетевой экран для открытия порта агента:</cmd>
+                <info><codeblock>iptables -I INPUT 4 -p tcp --dport 10050 -j ACCEPT</codeblock></info>
+            </step>
+            <step>
+                <cmd>Применить правила межсетевого экрана:</cmd>
+                <info><codeblock>service iptables save</codeblock></info>
+            </step>
+            <step>
+                <cmd>Проверить правила межсетевого экрана:</cmd>
+                <info><codeblock>iptables -nL</codeblock></info>
+            </step>
+            <step>
+                <cmd>Для запуска и просмотра состояния используются команды <codeph>systemctl start zabbix-agent</codeph> и <codeph>systemctl status zabbix-agent</codeph>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

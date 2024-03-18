@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ReusableComponent_ukw_sh3_jrb">
+    <title/>
+    <body>
+        <p><table>
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry><ph id="ph_vkw_sh3_jrb">/var/lib/zabbix/snmptraps</ph></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></p>
+    </body>
+</topic>

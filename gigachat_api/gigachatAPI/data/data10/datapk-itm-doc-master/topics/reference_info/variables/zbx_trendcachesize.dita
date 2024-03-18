@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_trendcachesize">
+    <glossterm>ZBX_TRENDCACHESIZE</glossterm>
+    <glossdef>
+        <p>Размер кэша динамики изменений, в байтах. Размер разделяемой памяти для хранения данных
+            динамики изменений.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>4M</p>
+        <p><b>Разрешенный диапазон значений:</b>128K-2G</p>
+    </glossdef>
+</glossentry>

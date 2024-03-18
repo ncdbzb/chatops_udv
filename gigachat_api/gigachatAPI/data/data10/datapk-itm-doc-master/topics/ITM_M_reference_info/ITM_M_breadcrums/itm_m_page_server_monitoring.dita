@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="itm_m_page_server_monitoring">
+    <glossterm>Серверы мониторинга</glossterm>
+    <glossdef>Пункт главного меню, содержащий список подключенных <term keyref="monitoring_server"
+            >серверов мониторинга</term> и информацию о них. На странице можно добавить новый сервер
+        или настроить уже добавленный. <fig>
+            <title>Серверы мониторинга</title>
+            <image href="../../../images/ITM_M_screens/ITM_M_monitoring_server.png"/>
+        </fig>
+    </glossdef>
+</glossentry>

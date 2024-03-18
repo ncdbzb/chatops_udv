@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Действия по предупреждению и устранению нештатных ситуаций</title>
+    <topicref href="DB%20backup%20and%20restore/DB_backup_and_restore.dita">
+        <topicref href="DB%20backup%20and%20restore/unloading_jatoba.dita"/>
+        <topicref href="DB%20backup%20and%20restore/recovery_jatoba.dita"/>
+        <topicref href="DB%20backup%20and%20restore/files_backup_jatoba.dita"/>
+        <topicref href="DB%20backup%20and%20restore/restore_jatoba.dita"/>
+    </topicref>
+    <topicref href="actions_after_problems/actions_after_problems.dita">
+        <topicref href="actions_after_problems/web-interface_loading_problem.dita"/>
+        <topicref href="actions_after_problems/http_request_took_too_long_to_complete.dita"/>
+        <topicref href="actions_after_problems/cannot_start_service.dita"/>
+        <topicref href="actions_after_problems/database_errors.dita"/>
+        <topicref href="actions_after_problems/database_connection_interrupted.dita"/>
+        <topicref href="actions_after_problems/server_unavailable.dita"/>
+        <topicref href="actions_after_problems/sql_error.dita"/>
+    </topicref>
+</map>

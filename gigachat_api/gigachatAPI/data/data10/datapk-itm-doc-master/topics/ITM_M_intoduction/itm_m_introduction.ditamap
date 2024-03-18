@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-M введение</title>
+    <topicref href="itm_m_application_area.dita"/>
+    <topicref href="itm_m_appointment_application.dita"/>
+    <topicref href="itm_m_v_1_2_0.dita"/>
+</map>

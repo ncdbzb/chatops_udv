@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="scripts">
+    <glossterm>Скрипты</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Скрипты»</title>
+            <image href="../../../images/Pages/administration_scripts.png" id="administration_scripts">
+                <alt>Страница «Скрипты»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

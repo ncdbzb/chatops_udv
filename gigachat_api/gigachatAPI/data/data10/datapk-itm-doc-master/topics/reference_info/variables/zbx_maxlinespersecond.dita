@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_maxlinespersecond">
+    <glossterm>ZBX_MAXLINESPERSECOND</glossterm>
+    <glossdef><p>Максимальное количество новых строк в секунду, которые агент будет отправлять
+            серверу при обработке активных проверок 'log' и 'eventlog'. Указанное значение будет
+            перезаписано параметром 'maxlines', указанное в ключах элементов данных 'log' и
+            'eventlog'. Обратите внимание: сервер будет обрабатывать в 10 раз больше новых строк,
+            чем указано в MaxLinesPerSecond при поиске требуемой строки в элементах данных
+            журналов.</p><b>Значение в конфигурации ITM-K при поставке:</b>20<p><b>Разрешенный
+                диапазон значений:</b>1-1000</p></glossdef>
+</glossentry>

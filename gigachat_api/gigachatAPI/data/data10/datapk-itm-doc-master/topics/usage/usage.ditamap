@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Использование по назначению</title>
+    <topicref href="monitoring%20objects%20and%20hosts/monitoring_objects_hosts.dita">
+        <topicref href="monitoring%20objects%20and%20hosts/hosts_detection.dita"/>
+        <topicref href="monitoring%20objects%20and%20hosts/hosts_creation.dita"/>
+        <topicref href="monitoring%20objects%20and%20hosts/hosts_delete.dita"/>
+        <topicref href="monitoring%20objects%20and%20hosts/inventory/inventory.dita">
+            <topicref href="monitoring%20objects%20and%20hosts/inventory/inventory_overview.dita"/>
+            <topicref href="monitoring%20objects%20and%20hosts/inventory/inventory_manual_mode.dita"/>
+            <topicref href="monitoring%20objects%20and%20hosts/inventory/inventory_data_review.dita"/>
+            <topicref href="monitoring%20objects%20and%20hosts/inventory/inventory_data_build.dita"
+            />
+        </topicref>
+    </topicref>
+    <topicref href="data_items/data_items.dita">
+        <topicref href="data_items/data_item_creation/data_item_creation.dita">
+            <topicref href="data_items/data_item_creation/data_item_configuration.dita"/>
+            <topicref href="data_items/data_item_creation/data_item_preprocessing.dita"/>
+            <topicref href="data_items/data_item_creation/data_item_unsupported.dita"/>
+        </topicref>
+        <topicref href="data_items/SNMP%20agent/snmp_agent.dita">
+            <topicref href="data_items/SNMP%20agent/snmp_monitoring.dita"/>
+        </topicref>
+        <topicref
+            href="data_items/History%20and%20dynamics%20of%20changes/history_and_dynamics.dita">
+            <topicref
+                href="data_items/History%20and%20dynamics%20of%20changes/history_and_dynamics_overview.dita"/>
+            <topicref href="data_items/History%20and%20dynamics%20of%20changes/history_storage.dita"/>
+            <topicref
+                href="data_items/History%20and%20dynamics%20of%20changes/dynamics_storage.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="triggers/triggers.dita">
+        <topicref href="triggers/trigger_configuration/trigger_configuration.dita">
+            <topicref href="triggers/trigger_configuration/trigger_configuration_details.dita"/>
+        </topicref>
+        <topicref href="triggers/trigger_expression/trigger_expression.dita">
+            <topicref href="triggers/trigger_expression/trigger_function_parametres.dita"/>
+            <topicref href="triggers/trigger_expression/trigger_operators.dita"/>
+            <topicref href="triggers/trigger_expression/trigger_cashing.dita"/>
+            <topicref href="triggers/trigger_expression/triggers_unsupported_items.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="events/events.dita">
+        <topicref
+            href="events/event%20generation%20for%20triggers/event_generation_for_triggers.dita">
+            <topicref
+                href="events/event%20generation%20for%20triggers/event_generation_overview.dita"/>
+            <topicref href="events/event%20generation%20for%20triggers/problem_events.dita"/>
+            <topicref href="events/event%20generation%20for%20triggers/OK_events.dita"/>
+            <topicref href="events/event%20generation%20for%20triggers/problem_close_manual.dita"/>
+            <topicref
+                href="events/event%20generation%20for%20triggers/problem_close_configuration.dita"/>
+        </topicref>
+        <topicref href="events/other%20event%20sources/other_problem_sources.dita">
+            <topicref href="events/other%20event%20sources/detection_events.dita"/>
+            <topicref href="events/other%20event%20sources/agents_autoregistration_events.dita"/>
+            <topicref href="events/other%20event%20sources/internal%20events.dita"/>
+        </topicref>
+        <topicref href="events/event_object.dita"/>
+        <topicref href="events/actions_audit_hosts.dita"/>
+        <topicref href="events/actions_audit_web.dita"/>
+        <topicref href="events/messages_safety_web.dita"/>
+    </topicref>
+    <topicref href="graphs/graphs.dita">
+        <topicref href="graphs/simple%20graphs/simple_graphs.dita">
+            <topicref href="graphs/simple%20graphs/time_choice.dita"/>
+            <topicref href="graphs/simple%20graphs/recent_data_long_periods.dita"/>
+            <topicref href="graphs/simple%20graphs/switch_to_raw_data.dita"/>
+        </topicref>
+        <topicref href="graphs/user%20graphs/user_graphs.dita">
+            <topicref href="graphs/user%20graphs/user_graphs_configuration.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="net_maps/net_maps.dita">
+        <topicref href="net_maps/net_map_configuration/net_map_configuration.dita">
+            <topicref href="net_maps/net_map_configuration/public_and_private_maps.dita"/>
+            <topicref href="net_maps/net_map_configuration/net_map_creation.dita"/>
+            <topicref href="net_maps/net_map_configuration/net_map_general_access.dita"/>
+            <topicref href="net_maps/net_map_configuration/net_map_add_items.dita"/>
+            <topicref href="net_maps/net_map_configuration/net_map_choose_items.dita"/>
+            <topicref href="net_maps/net_map_configuration/net_map_item_connections.dita"/>
+            <topicref href="net_maps/net_map_configuration/move_copy_paste_items.dita"/>
+            <topicref href="net_maps/net_map_configuration/add_figures.dita"/>
+            <topicref href="net_maps/net_map_configuration/add_lines.dita"/>
+            <topicref href="net_maps/net_map_configuration/figures_lines_priority.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="complex_screens/complex_screens.dita">
+        <topicref href="complex_screens/create_complex_screen.dita"/>
+        <topicref href="complex_screens/complex_screen_add_items.dita"/>
+        <topicref href="complex_screens/complex_screen_dynamic_items.dita"/>
+    </topicref>
+    <topicref href="templates/templates.dita">
+        <topicref href="templates/template_configuration/template_configuration.dita">
+            <topicref href="templates/template_configuration/create_template.dita"/>
+            <topicref href="templates/template_configuration/add_items_triggers_graphs.dita"/>
+            <topicref href="templates/template_configuration/add_panels.dita"/>
+            <topicref href="templates/template_configuration/add_web_scenarios.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="users_and_user_groups/users_and_user_groups.dita">
+        <topicref href="users_and_user_groups/user_configuration/user_configuration.dita">
+            <topicref
+                href="users_and_user_groups/user_configuration/user_config_general_attributes.dita"/>
+            <topicref href="users_and_user_groups/user_configuration/user_notifications.dita"/>
+        </topicref>
+        <topicref href="users_and_user_groups/user_access_rights/user_access_rights.dita">
+            <topicref href="users_and_user_groups/user_access_rights/user_type.dita"/>
+            <topicref href="users_and_user_groups/user_access_rights/access_rights_host_groups.dita"
+            />
+        </topicref>
+        <topicref href="users_and_user_groups/user_groups/user_groups.dita">
+            <topicref href="users_and_user_groups/user_groups/user_groups_configuration.dita"/>
+            <topicref href="users_and_user_groups/user_groups/access_host_several_user_groups.dita"/>
+            <topicref href="users_and_user_groups/user_groups/user_groups_other_info.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="service%20monitoring/service_monitoring.dita">
+        <topicref href="service%20monitoring/service_configuration.dita"/>
+    </topicref>
+    <topicref href="hosts_and_triggers_service/hosts_and_triggers_service.dita">
+        <topicref href="hosts_and_triggers_service/service_period_configuration.dita"/>
+        <topicref href="hosts_and_triggers_service/service_status_review.dita"/>
+    </topicref>
+    <topicref href="distributed%20monitoring/distributed_monitoring.dita">
+        <topicref href="distributed%20monitoring/agent_server/agent_server.dita">
+            <topicref href="distributed%20monitoring/agent_server/agent_server_configuration.dita"/>
+        </topicref>
+    </topicref>
+</map>

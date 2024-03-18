@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_debuglevel">
+    <glossterm>ZBX_DEBUGLEVEL</glossterm>
+    <glossdef>
+        <p>Задает уровень журналирования:</p>
+        <ul id="ul_wk1_gph_grb">
+            <li>0 - основная информация о запуске и остановке процессов DATAPK ITM;</li>
+            <li>1 - критичная информация;</li>
+            <li>2 - информация об ошибках;</li>
+            <li>3 - предупреждения;</li>
+            <li>4 - для отладки (записывается очень много информации);</li>
+            <li>5 - расширенная отладка (записывается еще больше информации).</li>
+        </ul>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>3</p>
+        <p><b>Разрешенный диапазон значений:</b>0-5</p>
+    </glossdef>
+</glossentry>

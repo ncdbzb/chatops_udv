@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="ways_of_notification">
+    <glossterm>Способы оповещения</glossterm>
+    <glossdef>
+        <fig id="fig_exl_425_kqb">
+            <title>Страница «Способы оповещения»</title>
+            <image href="../../../images/Pages/administration_ways_of_notification.png" id="administration_ways_of_notification">
+                <alt>Страница «Способы оповещения»</alt>
+            </image>
+        </fig>
+    </glossdef>
+</glossentry>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>ITM-M страницы интерфейса</title>
+    <topicref href="itm_m_page_server_monitoring.dita" keys="itm_m_page_server_monitoring"/>
+    <topicref href="itm_m_page_object_monitoring.dita" keys="itm_m_page_object_monitoring"/>
+    <topicref href="itm_m_page_problems.dita" keys="itm_m_page_problems"/>
+    <topicref href="itm_m_page_configuration.dita" keys="itm_m_page_configuration">
+        <topicref href="itm_m_page_config_general.dita" keys="itm_m_page_config_general"/>
+        <topicref href="itm_m_page_config_users.dita" keys="itm_m_page_config_users"/>
+        <topicref href="itm_m_page_config_integration.dita" keys="itm_m_page_config_integration"/>
+    </topicref>
+</map>

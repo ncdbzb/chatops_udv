@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary Entry//EN" "glossaryentry.dtd">
+<glossentry id="zbx_vaulturl_0">
+    <glossterm>ZBX_VAULTURL</glossterm>
+    <glossdef>
+        <p>URL-адрес HTTP [S] сервера хранилища. Если SSLCALocation не указан, будет использоваться
+            общесистемный каталог сертификатов CA.</p>
+        <p><b>Значение в конфигурации ITM-K при поставке:</b>https://127.0.0.1:8200/</p>
+    </glossdef>
+</glossentry>
