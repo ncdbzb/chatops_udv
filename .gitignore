@@ -10,7 +10,6 @@ __pycache__/
 .Python
 .env
 /migrations
-alembic.ini
 env/
 build/
 develop-eggs/
