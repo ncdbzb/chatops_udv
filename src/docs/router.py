@@ -30,13 +30,13 @@ async def upload_form(
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN)
 
     try:
-        file_path = f"src/docs/temp/{dock_name}_{file.filename}"
+        new_name = f"{dock_name}.{file.filename.split('.')[-1]}"
+        file_path = f"src/docs/temp/{new_name}"
         with open(file_path, "wb") as file_object:
             shutil.copyfileobj(file.file, file_object)
+        print(f'file {new_name} saved at {file_path}')
 
         await send_file_to_llm(file_path)
-
-        os.remove(file_path)
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -7,7 +7,7 @@ from src.auth.schemas import UserRead, UserCreate, UserUpdate
 from src.auth.routers.verify_router import router as verify_router
 from src.auth.routers.forgot_pass_router import router as forgot_pass_router
 from src.docs.router import router as upload_docs_router
-from src.llm_service.utils import send_data_to_llm
+from src.llm_service.router import router as llm_service_router
 
 app = FastAPI(
     title="UDV LLM",
@@ -22,13 +22,15 @@ origins = [
 
 ]
 
+# headers = ["Content-Type", "Set-Cookie", "Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
+#            "Authorization", "Cookie", "Accept"]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS", "DELETE", "PATCH", "PUT"],
-    allow_headers=["Content-Type", "Set-Cookie", "Access-Control-Allow-Headers", "Access-Control-Allow-Origin",
-                   "Authorization"],
+    allow_headers=["*"],
 )
 
 app.include_router(
@@ -61,25 +63,6 @@ app.include_router(
     prefix="/docks",
     tags=["Docs"],
 )
-
-
-@app.get('/')
-async def hello():
-    return {'result': 'start_page'}
-
-
-@app.post("/get_answer")
-async def send_data(data: dict):
-    result = await send_data_to_llm('process_questions', data)
-    return {"result_from_gigachatAPI": result}
-
-
-@app.post("/get_test")
-async def send_data(data: dict):
-    result = await send_data_to_llm('process_data', data)
-    return {"result_from_gigachatAPI": result}
-
-
-@app.get("/protected-route")
-async def protected_route(user: AuthUser = Depends(current_user)):
-    return f"Hello, {user.name}"
+app.include_router(
+    llm_service_router,
+)
