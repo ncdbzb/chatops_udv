@@ -11,7 +11,6 @@ router = APIRouter()
 async def send_data(
         filename: str,
         question: str,
-        user: AuthUser = Depends(current_verified_user),
 ):
     data = {'filename': filename,
             'question': question}
@@ -23,7 +22,7 @@ async def send_data(
 async def send_data(
         filename: str,
         que_num: int,
-        user: AuthUser = Depends(current_verified_user),
+        #user: AuthUser = Depends(current_verified_user),
 ):
     data = {'filename': filename,
             'que_num': que_num}

@@ -54,13 +54,16 @@ async def main():
     runner = web.AppRunner(app)
     await runner.setup()
 
-    site = web.TCPSite(runner, '0.0.0.0', 8001)
+    site = web.TCPSite(runner, '0.0.0.0', 8080)
     await site.start()
 
     print("gigachatAPI started")
 
 
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
-    loop.create_task(main())
-    loop.run_forever()
+    try:
+        loop = asyncio.get_event_loop()
+        loop.create_task(main())
+        loop.run_forever()
+    except:
+        print('error')

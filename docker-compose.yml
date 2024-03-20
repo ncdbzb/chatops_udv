@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     environment:
-      DB_PASS: ${DB_PASS}
+      POSTGRES_PASSWORD: ${DB_PASS}
     command: -p 5433
     expose:
       - 5433
@@ -19,7 +19,7 @@ services:
     env_file:
       - ./fast_api/.env
     container_name: fastapi_app
-    command: ["/chatops_udv/docker/app.sh"]
+    command: ["/chatops_udv/fast_api/docker/app.sh"]
     restart: always
     ports:
       - "8000:8000"
@@ -34,7 +34,9 @@ services:
       - ./gigachat_api/.env
     container_name: gigachat_api
     ports:
-      - "8001:8001"
+      - "8080:8080"
+    depends_on:
+      - fastapi
 
   react:
     build:
