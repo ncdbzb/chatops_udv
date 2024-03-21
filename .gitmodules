@@ -1,3 +1,6 @@
 [submodule "gigachat_api"]
 	path = gigachat_api
 	url = git@github.com:ncdbzb/gigachat_api.git
+[submodule "react"]
+	path = react
+	url = https://github.com/Semen-Zharkov/frontend
