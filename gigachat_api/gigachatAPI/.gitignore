@@ -1,6 +1,0 @@
-.env
-.idea/
-venv/
-__pycache__/
-summarize
-prompt_stats

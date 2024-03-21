@@ -1,0 +1,3 @@
+[submodule "gigachat_api"]
+	path = gigachat_api
+	url = git@github.com:ncdbzb/gigachat_api.git
