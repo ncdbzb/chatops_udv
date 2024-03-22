@@ -5,7 +5,7 @@ services:
     container_name: postgres_db
     restart: always
     env_file:
-      - .env
+      - .env.dev
     environment:
       POSTGRES_PASSWORD: ${DB_PASS}
     command: -p 5433
@@ -17,7 +17,7 @@ services:
       context: ./fast_api
       dockerfile: Dockerfile.api
     env_file:
-      - ./fast_api/.env
+      - .env.dev
     container_name: fastapi_app
     command: ["/chatops_udv/fast_api/docker/app.sh"]
     restart: always
@@ -38,10 +38,10 @@ services:
     depends_on:
       - fastapi
 
-  react:
-    build:
-      context: ./react
-      dockerfile: Dockerfile.react
-    container_name: react
-    ports:
-      - "3000:3000"
+#  react:
+#    build:
+#      context: ./react
+#      dockerfile: Dockerfile.react
+#    container_name: react
+#    ports:
+#      - "3000:3000"
