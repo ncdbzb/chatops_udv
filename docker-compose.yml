@@ -5,19 +5,20 @@ services:
     container_name: postgres_db
     restart: always
     env_file:
-      - .env.dev
+      - .env
     environment:
-      POSTGRES_PASSWORD: ${DB_PASS}
-    command: -p 5433
-    expose:
-      - 5433
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
 
   fastapi:
     build:
       context: ./fast_api
       dockerfile: Dockerfile.api
     env_file:
-      - .env.dev
+      - .env
     container_name: fastapi_app
     command: ["/chatops_udv/fast_api/docker/app.sh"]
     restart: always
