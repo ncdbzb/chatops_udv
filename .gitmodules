@@ -4,3 +4,6 @@
 [submodule "react"]
 	path = react
 	url = git@github.com:Semen-Zharkov/frontend.git
+[submodule "fast_api"]
+	path = fast_api
+	url = git@github.com:ncdbzb/udv_llm_fastapi.git
