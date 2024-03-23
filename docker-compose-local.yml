@@ -39,6 +39,16 @@ services:
     depends_on:
       - fastapi
 
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pg_admin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8888:80"
+    restart: always
+
 #  react:
 #    build:
 #      context: ./react
