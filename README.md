@@ -21,8 +21,23 @@
 
    > **Примечание:** О том, как получить авторизационные данные для доступа к GigaChat, читайте в [официальной документации](https://developers.sber.ru/docs/ru/gigachat/api/integration).
 
-### 4. Запустите приложение с помощью Docker Compose и выполните миграции:
+### 4. Запуск и выполнение миграций базы данных:
+- С утилитой ***Make***:
    ```bash
-   docker compose up -d --build
-   docker compose exec fastapi alembic upgrade head
+   make up
+   make migrate
+   ```
+- Без утилиты ***Make***:
+   ```bash
+   docker compose -f docker-compose-local.yml up -d --build
+   docker compose -f docker-compose-local.yml exec fastapi alembic upgrade head
+   ```
+### 5. Остановка контейнеров:
+   ```bash
+   make down
+   ```
+или
+
+   ```bash
+   docker compose -f docker-compose-local.yml down
    ```
