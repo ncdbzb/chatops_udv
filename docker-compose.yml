@@ -20,7 +20,6 @@ services:
     env_file:
       - .env
     container_name: fastapi_app
-    command: ["/chatops_udv/fast_api/docker/app.sh"]
     restart: always
     ports:
       - "8000:8000"
@@ -31,6 +30,7 @@ services:
     build:
       context: ./gigachat_api
       dockerfile: Dockerfile.gigachat_api
+    restart: always
     env_file:
       - ./gigachat_api/.env
     container_name: gigachat_api
