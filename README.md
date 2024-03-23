@@ -21,7 +21,8 @@
 
    > **Примечание:** О том, как получить авторизационные данные для доступа к GigaChat, читайте в [официальной документации](https://developers.sber.ru/docs/ru/gigachat/api/integration).
 
-### 4. Запустите приложение с помощью Docker Compose:
+### 4. Запустите приложение с помощью Docker Compose и выполните миграции:
    ```bash
-   docker compose up --build
+   docker compose up -d --build
+   docker compose exec fastapi alembic upgrade head
    ```
