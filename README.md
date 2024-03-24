@@ -14,24 +14,44 @@
    ```
 
 ### 3. Создайте файл окружения в директории `gigachat_api`
-Создайте файл с именем .env и добавьте в него вашу авторизационную информацию вручную или перейдите в директорию `gigachat_api` и воспользуйтесь следующей командой:
-   ```bash
-   echo 'AU_DATA=ваши_авторизационные_данные' > .env
-   ```
+  Создайте файл `.env` в директории `gigachat_api` и добавьте в него следующую информацию
+  ```plaintext
+  AU_DATA=ваши_авторизационные_данные
+  ```
 
    > **Примечание:** О том, как получить авторизационные данные для доступа к GigaChat, читайте в [официальной документации](https://developers.sber.ru/docs/ru/gigachat/api/integration).
 
 ### 4. Запуск и выполнение миграций базы данных:
+
+<mark>Выполнить миграции нужно только 1 раз, при первом запуске!</mark>
+
 - С утилитой ***Make***:
    ```bash
    make up
+  ```
+  
+   ```bash
    make migrate
-   ```
+  ```
+
 - Без утилиты ***Make***:
    ```bash
    docker compose -f docker-compose-local.yml up -d --build
+     ```
+   ```bash
    docker compose -f docker-compose-local.yml exec fastapi alembic upgrade head
    ```
+
+#### Для просмотра логов используйте:
+   ```bash
+   make logs
+   ```
+или
+
+   ```bash
+   docker compose -f docker-compose-local.yml logs -f
+   ```
+
 ### 5. Остановка контейнеров:
    ```bash
    make down
