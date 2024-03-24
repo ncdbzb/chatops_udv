@@ -12,6 +12,8 @@ services:
       - POSTGRES_PASSWORD=${DB_PASS}
     ports:
       - ${DB_PORT}:${DB_PORT}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
   fastapi:
     build:
@@ -56,3 +58,6 @@ services:
 #    container_name: react
 #    ports:
 #      - "3000:3000"
+
+volumes:
+  pgdata:
