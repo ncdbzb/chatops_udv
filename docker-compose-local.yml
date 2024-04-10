@@ -38,18 +38,20 @@ services:
     container_name: gigachat_api
     ports:
       - "8080:8080"
+    volumes:
+      - gigachat_api_data:/chatops_udv/gigachat_api/gigachatAPI/data/
     depends_on:
       - fastapi
 
-  # pgadmin:
-  #   image: dpage/pgadmin4:latest
-  #   container_name: pg_admin
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
-  #     PGADMIN_DEFAULT_PASSWORD: admin
-  #   ports:  
-  #     - "8888:80"
-  #   restart: always
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pg_admin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:  
+      - "8888:80"
+    restart: always
 
   react:
     build:
@@ -61,3 +63,4 @@ services:
 
 volumes:
   pgdata:
+  gigachat_api_data:
