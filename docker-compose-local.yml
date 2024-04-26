@@ -18,7 +18,7 @@ services:
   fastapi:
     build:
       context: ./fast_api
-      dockerfile: Dockerfile.api
+      dockerfile: Dockerfile.fast_api.prod
     env_file:
       - .env
     container_name: fastapi_app
@@ -27,11 +27,12 @@ services:
       - "8000:8000"
     depends_on:
       - db
+      - gigachat_api
 
   gigachat_api:
     build:
       context: ./gigachat_api
-      dockerfile: Dockerfile.gigachat_api
+      dockerfile: Dockerfile.gigachat_api.prod
     restart: always
     env_file:
       - ./gigachat_api/.env
@@ -40,8 +41,6 @@ services:
       - "8080:8080"
     volumes:
       - gigachat_api_data:/chatops_udv/gigachat_api/gigachatAPI/data/
-    depends_on:
-      - fastapi
 
   pgadmin:
     image: dpage/pgadmin4:latest
