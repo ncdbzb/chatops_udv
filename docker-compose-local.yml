@@ -18,7 +18,7 @@ services:
   fastapi:
     build:
       context: ./fast_api
-      dockerfile: Dockerfile.fast_api.prod
+      dockerfile: Dockerfile.fast_api
     env_file:
       - .env
     container_name: fastapi_app
@@ -32,7 +32,9 @@ services:
   gigachat_api:
     build:
       context: ./gigachat_api
-      dockerfile: Dockerfile.gigachat_api.prod
+      dockerfile: Dockerfile.gigachat_api
+      args:
+        INSTALL_DEV: ${INSTALL_DEV-true}
     restart: always
     env_file:
       - ./gigachat_api/.env
