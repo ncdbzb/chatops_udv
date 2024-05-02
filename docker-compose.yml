@@ -1,0 +1,57 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  fastapi:
+    build:
+      context: ./fast_api
+      dockerfile: Dockerfile.fast_api
+    env_file:
+      - .env
+    container_name: fastapi_app
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - gigachat_api
+
+  gigachat_api:
+    build:
+      context: ./gigachat_api
+      dockerfile: Dockerfile.gigachat_api
+      args:
+        INSTALL_DEV: ${INSTALL_DEV-false}
+    restart: always
+    env_file:
+      - ./gigachat_api/.env
+    container_name: gigachat_api
+    ports:
+      - "8080:8080"
+    volumes:
+      - gigachat_api_data:/chatops_udv/gigachat_api/gigachatAPI/data/
+
+  react:
+    build:
+      context: ./react
+      dockerfile: Dockerfile.react
+    container_name: react
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
+  gigachat_api_data:
