@@ -38,7 +38,7 @@
       SECRET_JWT=SECRET
       SECRET_MANAGER=SECRET
 
-      origins=["http://localhost:3000", "http://localhost:8001"]
+      CORS_ORIGINS=["http://localhost:3000", "http://localhost:8001"]
 
       SMTP_PASSWORD=your_smtp_password
       SMTP_USER=your_smtp_login
