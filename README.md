@@ -24,16 +24,42 @@
   - Создайте файл `.env` в директории `react` и добавьте в него следующую информацию:
   	```plaintext
     REACT_APP_API_URL='http://localhost:8000'
+    REACT_APP_API_FRONT_URL = 'http://localhost:3000'
     ```
+
+   - Создайте файл `.env` в корневой директории и добавьте в него следующую информаицю:
+      ```plaintext
+      DB_HOST=db
+      DB_PORT=5432
+      DB_NAME=postgres
+      DB_USER=postgres
+      DB_PASS=postgres
+
+      SECRET_JWT=SECRET
+      SECRET_MANAGER=SECRET
+
+      origins=["http://localhost:3000", "http://localhost:8001"]
+
+      SMTP_PASSWORD=your_smtp_password
+      SMTP_USER=your_smtp_login
+
+      ADMIN_EMAIL=admin@admin.com
+      ADMIN_PASSWORD=admin123
+      ```
+      > **Примечание:** Для получения данных SMTP посетите [myaccount.google.com/apppasswords]() или обратитесь к администратору.
 
 ### 4. Запуск
 
    ```bash
    docker compose -f docker-compose-local.yml up -d --build
    ```
-   :warning: **При первом запуске контейнеров нужно выполнить миграции БД с помощью следующей команды:**
+   :warning: **При первом запуске контейнеров нужно выполнить следующие  команды:**
    ```bash
-   docker compose -f docker-compose-local.yml exec fastapi alembic upgrade head
+   #Миграции БД (создает таблицы)
+   docker compose -f docker-compose-local.yml exec fastapi poetry run alembic upgrade head
+
+   #Синхронизирует таблицу doc с папкой, содержащей предзагруженные документы 
+   docker compose -f docker-compose-local.yml exec fastapi poetry run python3 script.py
    ```
 
 #### Для просмотра логов используйте:
