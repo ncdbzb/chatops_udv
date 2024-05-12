@@ -23,8 +23,10 @@
 
   - Создайте файл `.env` в директории `react` и добавьте в него следующую информацию:
   	```plaintext
-    REACT_APP_API_URL='http://localhost:8000'
-    REACT_APP_API_FRONT_URL = 'http://localhost:3000'
+    REACT_APP_API_URL = 'https://localhost:8000'
+    REACT_APP_API_FRONT_URL = 'https://localhost'
+
+    HOST=localhost
     ```
 
    - Создайте файл `.env` в корневой директории и добавьте в него следующую информаицю:
@@ -38,7 +40,7 @@
       SECRET_JWT=SECRET
       SECRET_MANAGER=SECRET
 
-      CORS_ORIGINS=["http://localhost:3000", "http://localhost:8001"]
+      CORS_ORIGINS=["https://localhost", "http://localhost:8001"]
 
       SMTP_PASSWORD=your_smtp_password
       SMTP_USER=your_smtp_login
