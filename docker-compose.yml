@@ -50,7 +50,7 @@ services:
       dockerfile: Dockerfile.react
     container_name: react
     ports:
-      - "3000:3000"
+      - "443:443"
 
 volumes:
   pgdata:
