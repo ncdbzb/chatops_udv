@@ -55,14 +55,18 @@
    ```bash
    docker compose -f docker-compose-local.yml up -d --build
    ```
-   :warning: **При первом запуске контейнеров нужно выполнить следующие  команды:**
-   ```bash
-   #Миграции БД (создает таблицы)
-   docker compose -f docker-compose-local.yml exec fastapi poetry run alembic upgrade head
+   :warning: **При первом запуске контейнеров нужно выполнить следующие  команды:**<br>
 
-   #Синхронизирует таблицу doc с папкой, содержащей предзагруженные документы 
-   docker compose -f docker-compose-local.yml exec fastapi poetry run python3 script.py
-   ```
+   - Миграции БД (создает таблицы)
+      ```bash
+      docker compose -f docker-compose-local.yml exec fastapi poetry run alembic upgrade head
+      ```
+   - Синхронизация таблицы doc с папкой, содержащей предзагруженные документы
+      ```bash 
+      docker compose -f docker-compose-local.yml exec fastapi poetry run python3 script.py
+      ```
+
+   Теперь можете зайти на сайт, например, по адресу https://localhost
 
 #### Для просмотра логов используйте:
 
