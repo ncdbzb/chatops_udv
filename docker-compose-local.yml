@@ -42,7 +42,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - gigachat_api_data:/chatops_udv/gigachat_api/gigachatAPI/data/
+      - ./gigachat_api/gigachatAPI/data:/chatops_udv/gigachat_api/gigachatAPI/data/
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -64,4 +64,3 @@ services:
 
 volumes:
   pgdata:
-  gigachat_api_data:
