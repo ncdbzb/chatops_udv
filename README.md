@@ -23,10 +23,10 @@
 
   - Создайте файл `.env` в директории `react` и добавьте в него следующую информацию:
   	```plaintext
-    REACT_APP_API_URL = 'https://localhost:8000'
+    REACT_APP_API_URL = 'https://localhost/api'
     REACT_APP_API_FRONT_URL = 'https://localhost'
 
-    HOST=localhost
+    my_server_name=localhost
     ```
 
    - Создайте файл `.env` в корневой директории и добавьте в него следующую информаицю:
@@ -51,6 +51,7 @@
       > **Примечание:** Для получения данных SMTP посетите [myaccount.google.com/apppasswords]() или обратитесь к администратору.
 
 ### 4. Запуск
+   :bulb: Все следующие команды доступны с помощью утилиты **Make**, см. подробнее в `Makefile`
 
    ```bash
    docker compose -f docker-compose-local.yml up -d --build
