@@ -59,6 +59,8 @@ services:
       context: ./react
       dockerfile: Dockerfile.react
     container_name: react
+    env_file:
+      - ./react/.env
     ports:
       - "443:443"
 
