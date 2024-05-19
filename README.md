@@ -42,6 +42,8 @@
 
       CORS_ORIGINS=["https://localhost", "http://localhost:8001"]
 
+      SERVER_DOMEN=localhost
+
       SMTP_PASSWORD=your_smtp_password
       SMTP_USER=your_smtp_login
 

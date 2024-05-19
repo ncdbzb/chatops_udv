@@ -51,6 +51,9 @@ services:
     container_name: react
     ports:
       - "443:443"
+    restart: always
+    depends_on:
+      - fastapi
 
 volumes:
   pgdata:
