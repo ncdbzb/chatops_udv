@@ -3,12 +3,12 @@ up:
 	docker compose -f docker-compose-local.yml up -d --build
 
 #Миграции БД (создает таблицы)
-migrate:
-	docker compose -f docker-compose-local.yml exec fastapi poetry run alembic upgrade head
+# migrate:
+# 	docker compose -f docker-compose-local.yml exec fastapi poetry run alembic upgrade head
 
 #Синхронизирует таблицу doc с папкой, содержащей предзагруженные документы 
-init-docs:
-	docker compose -f docker-compose-local.yml exec fastapi poetry run python3 script.py
+# init-docs:
+# 	docker compose -f docker-compose-local.yml exec fastapi poetry run python3 check_doc_table.py
 
 #Вывод логов из всех контейнеров в консоль
 logs:
@@ -26,3 +26,7 @@ down:
 restart:
 	docker compose -f docker-compose-local.yml down
 	docker compose -f docker-compose-local.yml up -d --build
+
+#Запуск автотестов
+pytest:
+	docker compose -f docker-compose-local.yml exec gigachat_api poetry run pytest

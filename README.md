@@ -44,8 +44,8 @@
 
       SERVER_DOMEN=localhost
 
-      SMTP_PASSWORD=your_smtp_password
-      SMTP_USER=your_smtp_login
+      SMTP_PASSWORD=
+      SMTP_USER=
 
       ADMIN_EMAIL=admin@admin.com
       ADMIN_PASSWORD=admin123
@@ -58,16 +58,6 @@
    ```bash
    docker compose -f docker-compose-local.yml up -d --build
    ```
-   :warning: **При первом запуске контейнеров нужно выполнить следующие  команды:**<br>
-
-   - Миграции БД (создает таблицы)
-      ```bash
-      docker compose -f docker-compose-local.yml exec fastapi poetry run alembic upgrade head
-      ```
-   - Синхронизация таблицы doc с папкой, содержащей предзагруженные документы
-      ```bash 
-      docker compose -f docker-compose-local.yml exec fastapi poetry run python3 script.py
-      ```
 
    Теперь можете зайти на сайт, например, по адресу https://localhost
 
