@@ -15,6 +15,13 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  redis:
+    image: redis:7.0.11-alpine
+    env_file:
+      - .env
+    ports:
+      - ${REDIS_PORT}:${REDIS_PORT}
+
   fastapi:
     build:
       context: ./fast_api
@@ -28,6 +35,7 @@ services:
     depends_on:
       - db
       - gigachat_api
+      - redis
 
   gigachat_api:
     build:
@@ -53,6 +61,17 @@ services:
     ports:  
       - "8888:80"
     restart: always
+
+  flower:
+    image: mher/flower:latest
+    container_name: flower
+    env_file:
+      - .env
+    ports:
+      - "5555:5555"
+    command: celery --broker=redis://redis:${REDIS_PORT}/0 flower --port=5555
+    depends_on:
+      - redis
 
   react:
     build:

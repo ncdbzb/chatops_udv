@@ -49,6 +49,9 @@
 
       ADMIN_EMAIL=admin@admin.com
       ADMIN_PASSWORD=admin123
+      SEND_ADMIN_NOTICES=
+
+      REDIS_PORT=6379
       ```
       > **Примечание:** Для получения данных SMTP посетите [myaccount.google.com/apppasswords]() или обратитесь к администратору.
 
