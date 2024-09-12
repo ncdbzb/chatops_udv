@@ -72,6 +72,7 @@ services:
     command: celery --broker=redis://redis:${REDIS_PORT}/0 flower --port=5555
     depends_on:
       - redis
+      - fastapi
 
   react:
     build:
