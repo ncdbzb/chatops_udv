@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   db:
-    image: postgres:latest
+    image: postgres:16
     container_name: postgres_db
     restart: always
     env_file:
@@ -49,6 +49,22 @@ services:
     container_name: gigachat_api
     ports:
       - "8080:8080"
+    volumes:
+      - ./gigachat_api/gigachatAPI/data:/chatops_udv/gigachat_api/gigachatAPI/data/
+    depends_on:
+      - chromadb
+
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:0.5.4
+    container_name: chromadb
+    env_file:
+      - ./gigachat_api/.env
+    command: "--workers 1 --host 0.0.0.0 --port 8800 --proxy-headers --log-config chromadb/log_config.yml --timeout-keep-alive 30"
+    expose:
+      - "8800"
+    environment:
+      - ANONYMIZED_TELEMETRY=False
+      - IS_PERSISTENT=True
     volumes:
       - ./gigachat_api/gigachatAPI/data:/chatops_udv/gigachat_api/gigachatAPI/data/
 

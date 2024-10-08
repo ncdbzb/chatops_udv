@@ -17,6 +17,12 @@
   - Создайте файл `.env` в директории `gigachat_api` и добавьте в него следующую информацию:
     ```plaintext
     AU_DATA=ваши_авторизационные_данные
+    
+    PERSIST_DIRECTORY=/chatops_udv/gigachat_api/gigachatAPI/data/chroma
+    CHROMA_SERVER_AUTHN_CREDENTIALS=your_chroma_secret
+    CHROMA_SERVER_AUTHN_PROVIDER=chromadb.auth.token_authn.TokenAuthenticationServerProvider
+    CHROMA_CLIENT_AUTH_PROVIDER=chromadb.auth.token_authn.TokenAuthClientProvider
+    CHROMA_AUTH_TOKEN_TRANSPORT_HEADER="Authorization"
     ```
      > **Примечание:** О том, как получить авторизационные данные для доступа к GigaChat, читайте в [официальной документации](https://developers.sber.ru/docs/ru/gigachat/api/integration).
 
