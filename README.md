@@ -23,8 +23,10 @@
     CHROMA_SERVER_AUTHN_PROVIDER=chromadb.auth.token_authn.TokenAuthenticationServerProvider
     CHROMA_CLIENT_AUTH_PROVIDER=chromadb.auth.token_authn.TokenAuthClientProvider
     CHROMA_AUTH_TOKEN_TRANSPORT_HEADER="Authorization"
+    
+    USE_SEMANTIC_CACHE=
     ```
-     > **Примечание:** О том, как получить авторизационные данные для доступа к GigaChat, читайте в [официальной документации](https://developers.sber.ru/docs/ru/gigachat/api/integration).
+     > **Примечание:** О том, как получить авторизационные данные для доступа к GigaChat, читайте в [официальной документации](https://developers.sber.ru/docs/ru/gigachat/api/integration).<br><br>Для использования алгоритмов **Семантического кэширования**, установите **USE_SEMANTIC_CACHE**=**True**<br>*Читать [подробнее](https://www.redisvl.com/user_guide/llmcache_03.html) про Semantic Caching.*
 
 
   - Создайте файл `.env` в директории `react` и добавьте в него следующую информацию:
@@ -59,8 +61,8 @@
 
       REDIS_PORT=6379
       ```
-      > **Примечание:** Для получения данных SMTP посетите [myaccount.google.com/apppasswords]() или обратитесь к администратору.
-
+      > **Примечание:** Для получения данных SMTP посетите [myaccount.google.com/apppasswords]() или обратитесь к администратору.<br><br>Чтобы получать уведомления на почту администратора (**ADMIN_EMAIL**), установите **SEND_ADMIN_NOTICES**=**True**
+     
 ### 4. Запуск
    :bulb: Все следующие команды доступны с помощью утилиты **Make**, см. подробнее в `Makefile`
 
